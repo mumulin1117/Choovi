@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="26000" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="chovvi-launch-profile">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="26000"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="chovvi-launch-scene">
+            <objects>
+                <viewController id="chovvi-launch-profile" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="chovvi-launch-tasting">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chovviLaunchTasting" translatesAutoresizingMaskIntoConstraints="NO" id="chovvi-launch-aroma">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="chovvi-launch-infusion"/>
+                        <color key="backgroundColor" red="1" green="0.9490196078" blue="0.8901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="chovvi-launch-aroma" firstAttribute="top" secondItem="chovvi-launch-tasting" secondAttribute="top" id="chovvi-launch-top"/>
+                            <constraint firstItem="chovvi-launch-aroma" firstAttribute="leading" secondItem="chovvi-launch-tasting" secondAttribute="leading" id="chovvi-launch-leading"/>
+                            <constraint firstAttribute="trailing" secondItem="chovvi-launch-aroma" secondAttribute="trailing" id="chovvi-launch-trailing"/>
+                            <constraint firstAttribute="bottom" secondItem="chovvi-launch-aroma" secondAttribute="bottom" id="chovvi-launch-bottom"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chovvi-launch-bloom" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chovviLaunchTasting" width="375" height="812"/>
+    </resources>
+</document>
