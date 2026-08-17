@@ -5,10 +5,10 @@ extension UIViewController {
     func tastingReplySelection() -> Bool {
         guard !UserDefaults.standard.bool(forKey: "choovilogin") else { return true }
         if let tastingReplyCanvas = presentedViewController as? UINavigationController,
-           tastingReplyCanvas.viewControllers.first is ChovviFragrantProfile {
+           tastingReplyCanvas.viewControllers.first is ChovviFragrantBrew {
             return false
         }
-        let tastingReplyScroll = UINavigationController(rootViewController: ChovviFragrantProfile())
+        let tastingReplyScroll = UINavigationController(rootViewController: ChovviFragrantBrew())
         tastingReplyScroll.modalPresentationStyle = .pageSheet
         present(tastingReplyScroll, animated: true)
         return false

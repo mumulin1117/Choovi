@@ -1,7 +1,7 @@
 import UIKit
 import UniformTypeIdentifiers
 
-final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, UITextViewDelegate {
+final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITextViewDelegate {
     private var moodPourCanvas: URL?
     private var moodPourScroll = 0
     private let moodPourHeader = UIScrollView()
@@ -13,7 +13,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
     private let moodPourAction = UIButton(type: .system)
     private let moodPourLabel = UIButton(type: .system)
     private let moodPourStatus = CAShapeLayer()
-    private var moodPourRoute: ChovviThermalProfile?
+    private var moodPourRoute: ChovviThermalBrew?
     private var moodPourSection: NSLayoutConstraint?
     private var moodPourPreview = false
     private let moodPourChoice = [
@@ -49,7 +49,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        moodPourRoute?.goldenRitualStack()
+        moodPourRoute?.amberRitualStack()
     }
 
     override func viewDidLayoutSubviews() {
@@ -83,7 +83,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
         moodPourLabel.setTitle("Post", for: .normal)
         moodPourLabel.setTitleColor(.white, for: .normal)
         moodPourLabel.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        moodPourLabel.backgroundColor = ChovviRoastedProfile.discoveryShelfCanvas
+        moodPourLabel.backgroundColor = ChovviRoastedBrew.roastShelfCanvas
         moodPourLabel.layer.cornerRadius = 26
         moodPourLabel.addTarget(self, action: #selector(moodPourDestination), for: .touchUpInside)
         moodPourLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -107,7 +107,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
     private func moodPourLayout() { moodPourLayoutTrigger() }
 
     private lazy var moodPourLayoutTrigger: () -> Void = { [unowned self] in
-        moodPourCollection.backgroundColor = ChovviRoastedProfile.discoveryShelfHeader
+        moodPourCollection.backgroundColor = ChovviRoastedBrew.roastShelfHeader
         moodPourCollection.layer.cornerRadius = 16
         moodPourCollection.clipsToBounds = true
         moodPourCollection.heightAnchor.constraint(equalTo: moodPourCollection.widthAnchor, multiplier: 0.46).isActive = true
@@ -137,7 +137,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
         moodPourCollection.addSubview(moodPourAction)
 
         moodPourRender.text = "TODAY'S MOOD"
-        moodPourRender.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        moodPourRender.textColor = ChovviRoastedBrew.roastShelfScroll
         moodPourRender.font = UIFont.systemFont(ofSize: 12, weight: .black)
         moodPourArtwork.addArrangedSubview(moodPourRender)
 
@@ -152,7 +152,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
             moodPourChoice.backgroundColor = .white
             moodPourChoice.layer.cornerRadius = 11
             moodPourChoice.layer.borderWidth = moodPourSelection == 0 ? 2 : 1
-            moodPourChoice.layer.borderColor = (moodPourSelection == 0 ? ChovviRoastedProfile.discoveryShelfCanvas : UIColor.separator).cgColor
+            moodPourChoice.layer.borderColor = (moodPourSelection == 0 ? ChovviRoastedBrew.roastShelfCanvas : UIColor.separator).cgColor
             moodPourChoice.addTarget(self, action: #selector(moodPourSelection(_:)), for: .touchUpInside)
             moodPourChoice.translatesAutoresizingMaskIntoConstraints = false
             moodPourChoice.widthAnchor.constraint(equalToConstant: 50).isActive = true
@@ -163,7 +163,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
 
         let tastingReplyCanvas = UILabel()
         tastingReplyCanvas.text = "YOUR COFFEE MOMENT"
-        tastingReplyCanvas.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        tastingReplyCanvas.textColor = ChovviRoastedBrew.roastShelfScroll
         tastingReplyCanvas.font = UIFont.systemFont(ofSize: 12, weight: .black)
         moodPourArtwork.addArrangedSubview(tastingReplyCanvas)
 
@@ -176,7 +176,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
         moodPourArtwork.addArrangedSubview(tastingReplyScroll)
 
         moodPourState.backgroundColor = .clear
-        moodPourState.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        moodPourState.textColor = ChovviRoastedBrew.roastShelfScroll
         moodPourState.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         moodPourState.delegate = self
         moodPourState.translatesAutoresizingMaskIntoConstraints = false
@@ -211,7 +211,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
         moodPourCanvas = tastingReplyCanvas
         moodPourRoute?.removeFromSuperview()
 
-        let tastingReplyScroll = ChovviThermalProfile(goldenRitualArtwork: tastingReplyCanvas)
+        let tastingReplyScroll = ChovviThermalBrew(amberRitualArtwork: tastingReplyCanvas)
         tastingReplyScroll.layer.cornerRadius = 16
         tastingReplyScroll.translatesAutoresizingMaskIntoConstraints = false
         moodPourCollection.addSubview(tastingReplyScroll)
@@ -241,7 +241,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
         moodPourStack.arrangedSubviews.compactMap { $0 as? UIButton }.forEach { moodPourChoice in
             let tastingReplyCanvas = moodPourChoice.tag == moodPourScroll
             moodPourChoice.layer.borderWidth = tastingReplyCanvas ? 2 : 1
-            moodPourChoice.layer.borderColor = (tastingReplyCanvas ? ChovviRoastedProfile.discoveryShelfCanvas : UIColor.separator).cgColor
+            moodPourChoice.layer.borderColor = (tastingReplyCanvas ? ChovviRoastedBrew.roastShelfCanvas : UIColor.separator).cgColor
         }
     }
 
@@ -267,7 +267,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
         moodPourLabel.isEnabled = false
         moodPourLabel.setTitle("Posting...", for: .normal)
         moodPourLabel.alpha = 0.72
-        ChovviThermalCalibrationView.goldenRitualLayout(self, goldenRitualMenu: "Publishing your Coffee Moment...", goldenRitualUpdate: 1.0) { [weak self] in
+        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Publishing your Coffee Moment...", amberRitualUpdate: 1.0) { [weak self] in
             self?.moodPourImage(moodPourItem)
         }
     }
@@ -286,7 +286,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
                 .appendingPathExtension(tastingReplyCanvas.pathExtension.isEmpty ? "mov" : tastingReplyCanvas.pathExtension)
             try FileManager.default.copyItem(at: tastingReplyCanvas, to: tastingReplyHeader)
 
-            let tastingReplyArtwork = ChovviSilkyProfile(
+            let tastingReplyArtwork = ChovviSilkyBrew(
                 chovviSilkyAcidity: "chovvi-origin-\(UUID().uuidString)",
                 chovviSilkyAeropress: "chovvi-user-20",
                 chovviSilkyAftertaste: tastingReplyHeader.path,
@@ -296,7 +296,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
                 chovviSilkyBrewer: DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .short),
                 chovviSilkyBurr: self.moodPourChoice[moodPourScroll]
             )
-            var tastingReplyCollection = ChovviCitrusProfile.roastArchiveSection
+            var tastingReplyCollection = ChovviCitrusBrew.roastArchiveSection
             tastingReplyCollection.insert(tastingReplyArtwork, at: 0)
             let tastingReplyStack = try JSONEncoder().encode(tastingReplyCollection)
             UserDefaults.standard.set(tastingReplyStack, forKey: "chovviGranularTexture")
@@ -311,7 +311,7 @@ final class ChovviGranularProfile: UIViewController, UIDocumentPickerDelegate, U
     }
 
     private func moodPourCard(_ moodPourRecord: String, moodPourItem: String) {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: moodPourRecord, goldenRitualCanvas: moodPourItem, goldenRitualArtwork: .caution)
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: moodPourRecord, amberRitualCanvas: moodPourItem, amberRitualArtwork: .caution)
     }
 
     @objc private func moodPourUpdate() {

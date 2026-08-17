@@ -16,7 +16,7 @@ struct ChovviGentleTexture: Codable, Hashable {
     }
 }
 
-final class ChovviFragrantProfile: UIViewController {
+final class ChovviFragrantBrew: UIViewController {
     private var firstSipCanvas = false
     private let firstSipScroll = UIScrollView()
     private let firstSipHeader = UIStackView()
@@ -139,9 +139,9 @@ final class ChovviFragrantProfile: UIViewController {
     }
 
     private func firstSipAction(_ firstSipLabel: Bool) {
-        let firstSipStatus = ChovviGentleProfile(
+        let firstSipStatus = ChovviGentleBrew(
             beanPassportCanvas: "End User License Agreement",
-            beanPassportScroll: ChovviGentleProfile.beanPassportHeader,
+            beanPassportScroll: ChovviGentleBrew.beanPassportHeader,
             beanPassportArtwork: true
         ) { [weak self] firstSipRoute in
             UserDefaults.standard.set(firstSipRoute, forKey: "chovviFragrantTexture")
@@ -184,8 +184,8 @@ final class ChovviFragrantProfile: UIViewController {
 
     @objc private func firstSipMenu(_ firstSipUpdate: UIButton) {
         let firstSipDestination = firstSipUpdate.tag == 0 ? "Terms of Service" : "Privacy Policy"
-        let firstSipCard = firstSipUpdate.tag == 0 ? ChovviGentleProfile.beanPassportStack : ChovviGentleProfile.beanPassportState
-        navigationController?.pushViewController(ChovviGentleProfile(beanPassportCanvas: firstSipDestination, beanPassportScroll: firstSipCard, beanPassportArtwork: false, beanPassportCollection: nil), animated: true)
+        let firstSipCard = firstSipUpdate.tag == 0 ? ChovviGentleBrew.beanPassportStack : ChovviGentleBrew.beanPassportState
+        navigationController?.pushViewController(ChovviGentleBrew(beanPassportCanvas: firstSipDestination, beanPassportScroll: firstSipCard, beanPassportArtwork: false, beanPassportCollection: nil), animated: true)
     }
 
     @objc private func firstSipLabel() {
@@ -193,7 +193,7 @@ final class ChovviFragrantProfile: UIViewController {
     }
 }
 
-final class ChovviGentleProfile: UIViewController {
+final class ChovviGentleBrew: UIViewController {
     static let beanPassportHeader = """
     Choovi End User License Agreement
 
@@ -430,7 +430,7 @@ final class ChovviGentleProfile: UIViewController {
             let beanPassportStatus = UIButton(type: .system)
             beanPassportStatus.setTitle("Agree", for: .normal)
             beanPassportStatus.setTitleColor(.white, for: .normal)
-            beanPassportStatus.backgroundColor = ChovviCuppingProfile.cupKeeperStack
+            beanPassportStatus.backgroundColor = ChovviCuppingBrew.cupKeeperStack
             beanPassportStatus.layer.cornerRadius = 24
             beanPassportStatus.tag = 1
             beanPassportStatus.addTarget(self, action: #selector(beanPassportStatus(_:)), for: .touchUpInside)
@@ -565,7 +565,7 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
         beanPassportTrigger.setTitle("Next", for: .normal)
         beanPassportTrigger.setTitleColor(.white, for: .normal)
         beanPassportTrigger.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
-        beanPassportTrigger.backgroundColor = ChovviCuppingProfile.cupKeeperStack
+        beanPassportTrigger.backgroundColor = ChovviCuppingBrew.cupKeeperStack
         beanPassportTrigger.layer.cornerRadius = 28
         beanPassportTrigger.addTarget(self, action: #selector(beanPassportSection), for: .touchUpInside)
         beanPassportTrigger.heightAnchor.constraint(equalToConstant: 56).isActive = true
@@ -574,7 +574,7 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
 
         let beanPassportSource = UIButton(type: .system)
         let beanPassportMenu = NSMutableAttributedString(string: "Already have an account? ", attributes: [.foregroundColor: UIColor.secondaryLabel, .font: UIFont.systemFont(ofSize: 15, weight: .medium)])
-        beanPassportMenu.append(NSAttributedString(string: "Log In", attributes: [.foregroundColor: ChovviCuppingProfile.cupKeeperStack, .font: UIFont.systemFont(ofSize: 15, weight: .bold)]))
+        beanPassportMenu.append(NSAttributedString(string: "Log In", attributes: [.foregroundColor: ChovviCuppingBrew.cupKeeperStack, .font: UIFont.systemFont(ofSize: 15, weight: .bold)]))
         beanPassportSource.setAttributedTitle(beanPassportMenu, for: .normal)
         beanPassportSource.addTarget(self, action: #selector(beanPassportPreview), for: .touchUpInside)
         beanPassportSource.heightAnchor.constraint(equalToConstant: 44).isActive = true
@@ -620,7 +620,7 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
         let beanPassportMenu = UserDefaults.standard.bool(forKey: "chovviFragrantTexture")
         let beanPassportUpdate = beanPassportMenu ? "☑  I agree to the Terms & Privacy Policy" : "☐  I agree to the Terms & Privacy Policy"
         beanPassportState.setTitle(beanPassportUpdate, for: .normal)
-        beanPassportState.setTitleColor(beanPassportMenu ? ChovviCuppingProfile.cupKeeperStack : .secondaryLabel, for: .normal)
+        beanPassportState.setTitleColor(beanPassportMenu ? ChovviCuppingBrew.cupKeeperStack : .secondaryLabel, for: .normal)
     }
 
     @objc private func beanPassportSection() {
@@ -649,7 +649,7 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
             beanPassportCard("Passwords do not match", beanPassportItem: "Enter the same password in both password fields.")
             return
         }
-        ChovviThermalCalibrationView.goldenRitualLayout(self, goldenRitualMenu: "Creating your coffee profile...", goldenRitualUpdate: 1.0) { [weak self] in
+        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Creating your coffee profile...", amberRitualUpdate: 1.0) { [weak self] in
             guard let self else { return }
             var beanPassportLayout = (UserDefaults.standard.data(forKey: "chovviGentleTexture"))
                 .flatMap { try? JSONDecoder().decode([ChovviGentleTexture].self, from: $0) } ?? []
@@ -699,7 +699,7 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
     }
 
     private func beanPassportCard(_ beanPassportItem: String, beanPassportItem beanPassportSelection: String) {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: beanPassportItem, goldenRitualCanvas: beanPassportSelection, goldenRitualArtwork: .caution)
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: beanPassportItem, amberRitualCanvas: beanPassportSelection, amberRitualArtwork: .caution)
     }
 
     @objc private func beanPassportMenu(_ beanPassportUpdate: Notification) {

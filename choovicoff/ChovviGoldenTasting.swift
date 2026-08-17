@@ -1,7 +1,7 @@
 import PhotosUI
 import UIKit
 
-final class ChovviGoldenTasting: UIViewController, PHPickerViewControllerDelegate, UITextViewDelegate {
+final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate, UITextViewDelegate {
     private var brewGatheringCanvas: UIImage?
     private let brewGatheringScroll = UIScrollView()
     private let brewGatheringHeader = UIStackView()
@@ -287,7 +287,7 @@ final class ChovviGoldenTasting: UIViewController, PHPickerViewControllerDelegat
 
         brewGatheringStatus.isEnabled = false
         brewGatheringStatus.setTitle("Submitting...", for: .normal)
-        ChovviThermalCalibrationView.goldenRitualLayout(self, goldenRitualMenu: "Submitting your room for review...", goldenRitualUpdate: 1.0) { [weak self] in
+        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Submitting your room for review...", amberRitualUpdate: 1.0) { [weak self] in
             self?.brewGatheringItem(brewGatheringCanvas, brewGatheringSelection: brewGatheringImage, brewGatheringImage: brewGatheringChoice)
         }
     }
@@ -318,13 +318,13 @@ final class ChovviGoldenTasting: UIViewController, PHPickerViewControllerDelegat
             brewGatheringRecord("Unable to submit", brewGatheringItem: "The room request could not be stored. Please retry.")
             return
         }
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Submitted for Review", goldenRitualCanvas: "20 coins were used. After approval, you’ll receive an update in Notification Center.", goldenRitualHeader: "Sounds Good", goldenRitualArtwork: .success, goldenRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Submitted for Review", amberRitualCanvas: "20 coins were used. After approval, you’ll receive an update in Notification Center.", amberRitualHeader: "Sounds Good", amberRitualArtwork: .success, amberRitualStack: { [weak self] in
             self?.dismiss(animated: true)
         })
     }
 
     private func brewGatheringStoreRoom(coverPath: String, title: String, summary: String) -> Bool {
-        let brewGatheringChoice = ChovviBrightProfile(
+        let brewGatheringChoice = ChovviBrightBrew(
             chovviBrightAcidity: "pending-\(UUID().uuidString)",
             chovviBrightAeropress: title,
             chovviBrightAftertaste: summary,
@@ -334,10 +334,10 @@ final class ChovviGoldenTasting: UIViewController, PHPickerViewControllerDelegat
             chovviBrightBody: ["chovvi-user-20"],
             chovviBrightBrewer: []
         )
-        var brewGatheringCard = [ChovviBrightProfile]()
+        var brewGatheringCard = [ChovviBrightBrew]()
         if let brewGatheringArtwork = UserDefaults.standard.data(forKey: "chovviGoldenTexture")
             ?? UserDefaults.standard.data(forKey: "chovviGoldenTasting"),
-           let brewGatheringCollection = try? JSONDecoder().decode([ChovviBrightProfile].self, from: brewGatheringArtwork) {
+           let brewGatheringCollection = try? JSONDecoder().decode([ChovviBrightBrew].self, from: brewGatheringArtwork) {
             brewGatheringCard = brewGatheringCollection
         }
         brewGatheringCard.insert(brewGatheringChoice, at: 0)
@@ -353,15 +353,15 @@ final class ChovviGoldenTasting: UIViewController, PHPickerViewControllerDelegat
 
     private func brewGatheringReservePrompt(for brewGatheringIdentity: String) {
         let brewGatheringMarks = ChovviRoastReserve.availableMarks(for: brewGatheringIdentity)
-        ChovviThermalAlertView.goldenRitualSelection(
+        ChovviThermalAlertView.amberRitualSelection(
             self,
-            goldenRitualChoice: "More Coins Needed",
-            goldenRitualCanvas: "Creating a room requires 20 coins. You currently have \(brewGatheringMarks.formatted()). Recharge to continue.",
-            goldenRitualScroll: "Not Now",
-            goldenRitualHeader: "Recharge",
-            goldenRitualArtwork: .caution,
-            goldenRitualCollection: {},
-            goldenRitualStack: { [weak self] in self?.brewGatheringOpenReserve() }
+            amberRitualChoice: "More Coins Needed",
+            amberRitualCanvas: "Creating a room requires 20 coins. You currently have \(brewGatheringMarks.formatted()). Recharge to continue.",
+            amberRitualScroll: "Not Now",
+            amberRitualHeader: "Recharge",
+            amberRitualArtwork: .caution,
+            amberRitualCollection: {},
+            amberRitualStack: { [weak self] in self?.brewGatheringOpenReserve() }
         )
     }
 
@@ -391,7 +391,7 @@ final class ChovviGoldenTasting: UIViewController, PHPickerViewControllerDelegat
     }
 
     private func brewGatheringRecord(_ brewGatheringSelection: String, brewGatheringItem: String) {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: brewGatheringSelection, goldenRitualCanvas: brewGatheringItem, goldenRitualArtwork: .caution)
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: brewGatheringSelection, amberRitualCanvas: brewGatheringItem, amberRitualArtwork: .caution)
     }
 
     @objc private func brewGatheringSelection(_ brewGatheringItem: Notification) {

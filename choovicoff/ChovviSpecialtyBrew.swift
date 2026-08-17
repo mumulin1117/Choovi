@@ -1,26 +1,26 @@
 import UIKit
 import PhotosUI
 
-struct ChovviMicroProfile: Hashable {
+struct ChovviPetiteBrew: Hashable {
     let coffeeBulletinCanvas: String
     let coffeeBulletinScroll: String
     let coffeeBulletinHeader: String
     let coffeeBulletinArtwork: Bool
 
-    static let coffeeBulletinLabel: [ChovviMicroProfile] = [
-        ChovviMicroProfile(coffeeBulletinCanvas: "LatteArtChallenge", coffeeBulletinScroll: "2.3k active coffee lovers", coffeeBulletinHeader: "chovviBaristaBody", coffeeBulletinArtwork: true),
-        ChovviMicroProfile(coffeeBulletinCanvas: "PourOver", coffeeBulletinScroll: "4.8k posts", coffeeBulletinHeader: "chovviBaristaAcidity", coffeeBulletinArtwork: false),
-        ChovviMicroProfile(coffeeBulletinCanvas: "EspressoLovers", coffeeBulletinScroll: "8.2k posts", coffeeBulletinHeader: "chovviBaristaBrewer", coffeeBulletinArtwork: false),
-        ChovviMicroProfile(coffeeBulletinCanvas: "CoffeeBeans", coffeeBulletinScroll: "2.3k posts", coffeeBulletinHeader: "chovviBaristaBurr", coffeeBulletinArtwork: false),
-        ChovviMicroProfile(coffeeBulletinCanvas: "HomeCafe", coffeeBulletinScroll: "12.5k posts", coffeeBulletinHeader: "chovviBaristaCalibration", coffeeBulletinArtwork: false),
-        ChovviMicroProfile(coffeeBulletinCanvas: "BaristaLife", coffeeBulletinScroll: "6.7k posts", coffeeBulletinHeader: "chovviBaristaCascade", coffeeBulletinArtwork: false),
-        ChovviMicroProfile(coffeeBulletinCanvas: "CoffeeGear", coffeeBulletinScroll: "1.9k posts", coffeeBulletinHeader: "chovviBaristaGrinder", coffeeBulletinArtwork: false)
+    static let coffeeBulletinLabel: [ChovviPetiteBrew] = [
+        ChovviPetiteBrew(coffeeBulletinCanvas: "LatteArtChallenge", coffeeBulletinScroll: "23 active coffee lovers", coffeeBulletinHeader: "chovviBaristaBody", coffeeBulletinArtwork: true),
+        ChovviPetiteBrew(coffeeBulletinCanvas: "PourOver", coffeeBulletinScroll: "48 posts", coffeeBulletinHeader: "chovviBaristaAcidity", coffeeBulletinArtwork: false),
+        ChovviPetiteBrew(coffeeBulletinCanvas: "EspressoLovers", coffeeBulletinScroll: "82 posts", coffeeBulletinHeader: "chovviBaristaBrewer", coffeeBulletinArtwork: false),
+        ChovviPetiteBrew(coffeeBulletinCanvas: "CoffeeBeans", coffeeBulletinScroll: "23 posts", coffeeBulletinHeader: "chovviBaristaBurr", coffeeBulletinArtwork: false),
+        ChovviPetiteBrew(coffeeBulletinCanvas: "HomeCafe", coffeeBulletinScroll: "15 posts", coffeeBulletinHeader: "chovviBaristaCalibration", coffeeBulletinArtwork: false),
+        ChovviPetiteBrew(coffeeBulletinCanvas: "BaristaLife", coffeeBulletinScroll: "67 posts", coffeeBulletinHeader: "chovviBaristaCascade", coffeeBulletinArtwork: false),
+        ChovviPetiteBrew(coffeeBulletinCanvas: "CoffeeGear", coffeeBulletinScroll: "19 posts", coffeeBulletinHeader: "chovviBaristaGrinder", coffeeBulletinArtwork: false)
     ]
 }
 
-final class ChovviSpecialtyProfile: UIViewController, PHPickerViewControllerDelegate, UITextViewDelegate {
+final class ChovviSpecialtyBrew: UIViewController, PHPickerViewControllerDelegate, UITextViewDelegate {
     private var journalDraftCanvas: [UIImage] = []
-    private var journalDraftScroll: ChovviMicroProfile?
+    private var journalDraftScroll: ChovviPetiteBrew?
     private let journalDraftHeader = UIScrollView()
     private let journalDraftArtwork = UIStackView()
     private let journalDraftCollection = UIStackView()
@@ -239,7 +239,7 @@ final class ChovviSpecialtyProfile: UIViewController, PHPickerViewControllerDele
     }
 
     @objc private func journalDraftMenu() {
-        let coffeeBulletinCanvas = ChovviSensoryProfile { [weak self] coffeeBulletinScroll in
+        let coffeeBulletinCanvas = ChovviSensoryBrew { [weak self] coffeeBulletinScroll in
             self?.journalDraftScroll = coffeeBulletinScroll
             self?.journalDraftUpdate()
         }
@@ -259,11 +259,11 @@ final class ChovviSpecialtyProfile: UIViewController, PHPickerViewControllerDele
         journalDraftAction.isEnabled = false
         journalDraftAction.setTitle("Posting...", for: .normal)
         view.endEditing(true)
-        ChovviThermalCalibrationView.goldenRitualLayout(self, goldenRitualMenu: "Publishing your coffee post...", goldenRitualUpdate: 1.0) { [weak self] in
+        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Publishing your coffee post...", amberRitualUpdate: 1.0) { [weak self] in
             guard let self else { return }
             do {
                 let coffeeBulletinCanvas = try self.journalDraftRecord()
-                var coffeeBulletinScroll = ChovviCitrusProfile.roastArchivePreview
+                var coffeeBulletinScroll = ChovviCitrusBrew.roastArchivePreview
                 coffeeBulletinScroll.insert(coffeeBulletinCanvas, at: 0)
                 let coffeeBulletinHeader = try JSONEncoder().encode(coffeeBulletinScroll)
                 UserDefaults.standard.set(coffeeBulletinHeader, forKey: "chovviSpecialtyTexture")
@@ -276,7 +276,7 @@ final class ChovviSpecialtyProfile: UIViewController, PHPickerViewControllerDele
         }
     }
 
-    private func journalDraftRecord() throws -> ChovviCaramelProfile {
+    private func journalDraftRecord() throws -> ChovviCaramelBrew {
         let coffeeBulletinCanvas = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
         var coffeeBulletinScroll: [String] = []
         for coffeeBulletinHeader in journalDraftCanvas {
@@ -287,7 +287,7 @@ final class ChovviSpecialtyProfile: UIViewController, PHPickerViewControllerDele
         }
         guard !coffeeBulletinScroll.isEmpty else { throw CocoaError(.fileWriteUnknown) }
         let coffeeBulletinStack = journalDraftStack.text.trimmingCharacters(in: .whitespacesAndNewlines)
-        return ChovviCaramelProfile(
+        return ChovviCaramelBrew(
             chovviCaramelAcidity: "chovvi-origin-\(UUID().uuidString)",
             chovviCaramelAeropress: "chovvi-user-20",
             chovviCaramelAftertaste: coffeeBulletinScroll,
@@ -301,7 +301,7 @@ final class ChovviSpecialtyProfile: UIViewController, PHPickerViewControllerDele
     }
 
     private func journalDraftRecord(_ coffeeBulletinCanvas: String, coffeeBulletinScroll: String) {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: coffeeBulletinCanvas, goldenRitualCanvas: coffeeBulletinScroll, goldenRitualArtwork: .caution)
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: coffeeBulletinCanvas, amberRitualCanvas: coffeeBulletinScroll, amberRitualArtwork: .caution)
     }
 
     func textViewDidChange(_ coffeeBulletinCanvas: UITextView) {
@@ -335,17 +335,17 @@ final class ChovviSpecialtyProfile: UIViewController, PHPickerViewControllerDele
     }
 }
 
-final class ChovviSensoryProfile: UIViewController {
-    private let roastPreferencesCanvas: (ChovviMicroProfile) -> Void
+final class ChovviSensoryBrew: UIViewController {
+    private let roastPreferencesCanvas: (ChovviPetiteBrew) -> Void
     private let roastPreferencesScroll = UIScrollView()
     private let roastPreferencesHeader = UIStackView()
 
-    init(roastPreferencesCanvas: @escaping (ChovviMicroProfile) -> Void) {
+    init(roastPreferencesCanvas: @escaping (ChovviPetiteBrew) -> Void) {
         self.roastPreferencesCanvas = roastPreferencesCanvas
         super.init(nibName: nil, bundle: nil)
     }
 
-    convenience init(_ roastPreferencesCanvas: @escaping (ChovviMicroProfile) -> Void) {
+    convenience init(_ roastPreferencesCanvas: @escaping (ChovviPetiteBrew) -> Void) {
         self.init(roastPreferencesCanvas: roastPreferencesCanvas)
     }
 
@@ -373,13 +373,13 @@ final class ChovviSensoryProfile: UIViewController {
         roastPreferencesScroll.addSubview(roastPreferencesHeader)
 
         roastPreferencesHeader.addArrangedSubview(roastPreferencesCollection("Hot Topics"))
-        if let roastPreferencesStack = ChovviMicroProfile.coffeeBulletinLabel.first {
+        if let roastPreferencesStack = ChovviPetiteBrew.coffeeBulletinLabel.first {
             roastPreferencesHeader.addArrangedSubview(roastPreferencesState(roastPreferencesStack, roastPreferencesRender: true))
         }
         let roastPreferencesAction = roastPreferencesCollection("All Topics")
         roastPreferencesAction.setContentHuggingPriority(.required, for: .vertical)
         roastPreferencesHeader.addArrangedSubview(roastPreferencesAction)
-        for roastPreferencesLabel in ChovviMicroProfile.coffeeBulletinLabel.dropFirst() {
+        for roastPreferencesLabel in ChovviPetiteBrew.coffeeBulletinLabel.dropFirst() {
             roastPreferencesHeader.addArrangedSubview(roastPreferencesState(roastPreferencesLabel, roastPreferencesRender: false))
         }
 
@@ -399,11 +399,11 @@ final class ChovviSensoryProfile: UIViewController {
         return roastPreferencesState
     }
 
-    private func roastPreferencesState(_ roastPreferencesStack: ChovviMicroProfile, roastPreferencesRender: Bool) -> UIView {
+    private func roastPreferencesState(_ roastPreferencesStack: ChovviPetiteBrew, roastPreferencesRender: Bool) -> UIView {
         roastPreferencesStateTrigger(roastPreferencesStack, roastPreferencesRender)
     }
 
-    private lazy var roastPreferencesStateTrigger: (ChovviMicroProfile, Bool) -> UIView = { [unowned self] roastPreferencesStack, roastPreferencesRender in
+    private lazy var roastPreferencesStateTrigger: (ChovviPetiteBrew, Bool) -> UIView = { [unowned self] roastPreferencesStack, roastPreferencesRender in
         let roastPreferencesAction = UIButton(type: .custom)
         roastPreferencesAction.backgroundColor = .white
         roastPreferencesAction.layer.cornerRadius = 14

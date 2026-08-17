@@ -18,7 +18,7 @@ struct ChovviCuppingTexture: Codable, Hashable {
     }
 }
 
-final class ChovviCuppingReportProfile: UIViewController, UITextViewDelegate {
+final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
     private let cupKeeperCanvas: String
     private let cupKeeperScroll: String
     private let cupKeeperHeader: String
@@ -307,7 +307,7 @@ final class ChovviCuppingReportProfile: UIViewController, UITextViewDelegate {
         cupKeeperLabel.isEnabled = false
         cupKeeperArtwork()
 
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Report Submitted", goldenRitualCanvas: "Thank you for helping keep Choovi respectful. This report has been submitted for safety review.", goldenRitualArtwork: .success, goldenRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Report Submitted", amberRitualCanvas: "Thank you for helping keep Choovi respectful. This report has been submitted for safety review.", amberRitualArtwork: .success, amberRitualStack: { [weak self] in
             self?.dismiss(animated: true)
         })
     }
@@ -354,6 +354,6 @@ final class ChovviCuppingReportProfile: UIViewController, UITextViewDelegate {
     }
 
     private func cupKeeperTrigger(_ cupKeeperLayout: String, cupKeeperTrigger: String) {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: cupKeeperLayout, goldenRitualCanvas: cupKeeperTrigger, goldenRitualArtwork: .caution)
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: cupKeeperLayout, amberRitualCanvas: cupKeeperTrigger, amberRitualArtwork: .caution)
     }
 }

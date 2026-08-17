@@ -136,7 +136,7 @@ final class ChovviBaristaTasting: UIViewController, PHPickerViewControllerDelega
         beanIdentityDestination.setTitle("Save", for: .normal)
         beanIdentityDestination.setTitleColor(.white, for: .normal)
         beanIdentityDestination.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
-        beanIdentityDestination.backgroundColor = ChovviCuppingProfile.cupKeeperStack
+        beanIdentityDestination.backgroundColor = ChovviCuppingBrew.cupKeeperStack
         beanIdentityDestination.layer.cornerRadius = 28
         beanIdentityDestination.addTarget(self, action: #selector(beanIdentityCard), for: .touchUpInside)
         beanIdentityDestination.heightAnchor.constraint(equalToConstant: 56).isActive = true
@@ -158,7 +158,7 @@ final class ChovviBaristaTasting: UIViewController, PHPickerViewControllerDelega
     }
 
     private func beanIdentityTrigger() {
-        let beanIdentityLabel = ChovviCitrusProfile.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == "chovvi-user-20" }!
+        let beanIdentityLabel = ChovviCitrusBrew.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == "chovvi-user-20" }!
         beanIdentityArtwork.text = UserDefaults.standard.string(forKey: "chovviCuppingTexture") ?? beanIdentityLabel.chovviBotanicalAeropress
         beanIdentityCollection.text = UserDefaults.standard.string(forKey: "chovviCuppingVarietal") ?? beanIdentityLabel.chovviBotanicalBatch
         let beanIdentityStatus = UserDefaults.standard.string(forKey: "chovviCuppingRoast") ?? beanIdentityLabel.chovviBotanicalAroma
@@ -246,7 +246,7 @@ final class ChovviBaristaTasting: UIViewController, PHPickerViewControllerDelega
     }
 
     private func beanIdentityMenu(_ beanIdentityUpdate: String, beanIdentityMenu beanIdentityDestination: String) {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: beanIdentityUpdate, goldenRitualCanvas: beanIdentityDestination)
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: beanIdentityUpdate, amberRitualCanvas: beanIdentityDestination)
     }
 
     @objc private func beanIdentityItem(_ beanIdentitySelection: Notification) {

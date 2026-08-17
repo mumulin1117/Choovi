@@ -2,14 +2,14 @@ import Photos
 import PhotosUI
 import UIKit
 
-struct ChovviMicroTexture: Codable, Hashable {
+struct ChovviPetiteTexture: Codable, Hashable {
     let coffeeBulletinCanvas: String
     let coffeeBulletinScroll: String
     let coffeeBulletinHeader: Bool
     let coffeeBulletinArtwork: Bool
 }
 
-final class ChovviMicroFoamProfile: UILabel {
+final class ChovviPetiteFoamBrew: UILabel {
     var coffeeBulletinCanvas = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
 
     override func drawText(in rect: CGRect) {
@@ -22,7 +22,7 @@ final class ChovviMicroFoamProfile: UILabel {
     }
 }
 
-final class ChovviMicroMouthfeel: UIViewController {
+final class ChovviPetiteMouthfeel: UIViewController {
     private let coffeeBulletinCanvas = UIScrollView()
     private let coffeeBulletinScroll = UIStackView()
     fileprivate static let coffeeBulletinHeader = UIColor(red: 0.84, green: 0.61, blue: 0.31, alpha: 1)
@@ -183,11 +183,11 @@ final class ChovviMicroMouthfeel: UIViewController {
         return coffeeBulletinCard
     }
 
-    private func coffeeBulletinLayout(_ coffeeBulletinSource: ChovviBotanicalProfile, coffeeBulletinSource coffeeBulletinMenu: String, coffeeBulletinMenu coffeeBulletinUpdate: String, coffeeBulletinUpdate coffeeBulletinDestination: String) -> UIView {
+    private func coffeeBulletinLayout(_ coffeeBulletinSource: ChovviBotanicalBrew, coffeeBulletinSource coffeeBulletinMenu: String, coffeeBulletinMenu coffeeBulletinUpdate: String, coffeeBulletinUpdate coffeeBulletinDestination: String) -> UIView {
         coffeeBulletinLayoutTrigger(coffeeBulletinSource, coffeeBulletinMenu, coffeeBulletinUpdate, coffeeBulletinDestination)
     }
 
-    private lazy var coffeeBulletinLayoutTrigger: (ChovviBotanicalProfile, String, String, String) -> UIView = { [unowned self] coffeeBulletinSource, coffeeBulletinMenu, coffeeBulletinUpdate, coffeeBulletinDestination in
+    private lazy var coffeeBulletinLayoutTrigger: (ChovviBotanicalBrew, String, String, String) -> UIView = { [unowned self] coffeeBulletinSource, coffeeBulletinMenu, coffeeBulletinUpdate, coffeeBulletinDestination in
         let coffeeBulletinCard = UIView()
         coffeeBulletinCard.backgroundColor = .white
         coffeeBulletinCard.layer.cornerRadius = 17
@@ -253,7 +253,7 @@ final class ChovviMicroMouthfeel: UIViewController {
         coffeeBulletinCard.heightAnchor.constraint(equalToConstant: 94).isActive = true
         coffeeBulletinCard.addAction(UIAction { [weak self] coffeeBulletinLayout in
             _ = coffeeBulletinLayout
-            let coffeeBulletinUpdate = ChovviMicroCremaProfile(coffeeBulletinCanvas: coffeeBulletinSource)
+            let coffeeBulletinUpdate = ChovviPetiteCremaBrew(coffeeBulletinCanvas: coffeeBulletinSource)
             self?.navigationController?.pushViewController(coffeeBulletinUpdate, animated: true)
         }, for: .touchUpInside)
 
@@ -331,8 +331,8 @@ final class ChovviMicroMouthfeel: UIViewController {
         return coffeeBulletinCard
     }
 
-    private func coffeeBulletinProfile() -> ChovviBotanicalProfile? {
-        ChovviCitrusProfile.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == "chovvi-user-12" }
+    private func coffeeBulletinProfile() -> ChovviBotanicalBrew? {
+        ChovviCitrusBrew.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == "chovvi-user-12" }
     }
 
     private func coffeeBulletinFriend() {
@@ -343,7 +343,7 @@ final class ChovviMicroMouthfeel: UIViewController {
     }
 
     private func coffeeBulletinLast() -> String {
-        let coffeeBulletinSource = ChovviMicroCremaProfile.coffeeBulletinStore()
+        let coffeeBulletinSource = ChovviPetiteCremaBrew.coffeeBulletinStore()
         guard let coffeeBulletinRecord = coffeeBulletinSource.last else {
             return "Wow, that looks perfect! The bloom looks so rich."
         }
@@ -360,7 +360,7 @@ final class ChovviMicroMouthfeel: UIViewController {
         let coffeeBulletinMenu = coffeeBulletinArtwork.indices.contains(coffeeBulletinLayout.tag)
             ? coffeeBulletinArtwork[coffeeBulletinLayout.tag]
             : "Updates"
-        let coffeeBulletinUpdate = ChovviMicroRoast(coffeeBulletinCanvas: coffeeBulletinMenu)
+        let coffeeBulletinUpdate = ChovviPetiteRoast(coffeeBulletinCanvas: coffeeBulletinMenu)
         navigationController?.pushViewController(coffeeBulletinUpdate, animated: true)
     }
 
@@ -369,8 +369,8 @@ final class ChovviMicroMouthfeel: UIViewController {
     }
 }
 
-final class ChovviMicroCremaProfile: UIViewController, UITextFieldDelegate, PHPickerViewControllerDelegate {
-    private let coffeeBulletinCanvas: ChovviBotanicalProfile
+final class ChovviPetiteCremaBrew: UIViewController, UITextFieldDelegate, PHPickerViewControllerDelegate {
+    private let coffeeBulletinCanvas: ChovviBotanicalBrew
     private let coffeeBulletinScroll = UIScrollView()
     private let coffeeBulletinHeader = UIStackView()
     private let coffeeBulletinArtwork = UIView()
@@ -380,7 +380,7 @@ final class ChovviMicroCremaProfile: UIViewController, UITextFieldDelegate, PHPi
     private static let coffeeBulletinRender = UIColor(red: 0.84, green: 0.61, blue: 0.31, alpha: 1)
     private static let coffeeBulletinAction = UIColor(red: 0.15, green: 0.15, blue: 0.20, alpha: 1)
 
-    init(coffeeBulletinCanvas: ChovviBotanicalProfile) {
+    init(coffeeBulletinCanvas: ChovviBotanicalBrew) {
         self.coffeeBulletinCanvas = coffeeBulletinCanvas
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
@@ -585,7 +585,7 @@ final class ChovviMicroCremaProfile: UIViewController, UITextFieldDelegate, PHPi
     }
 
     private func coffeeBulletinBubble(_ coffeeBulletinCanvas: String, coffeeBulletinScroll: Bool) -> UILabel {
-        let coffeeBulletinRecord = ChovviMicroFoamProfile()
+        let coffeeBulletinRecord = ChovviPetiteFoamBrew()
         coffeeBulletinRecord.text = coffeeBulletinCanvas
         coffeeBulletinRecord.textColor = coffeeBulletinScroll ? .white : Self.coffeeBulletinAction
         coffeeBulletinRecord.font = .systemFont(ofSize: 19, weight: .regular)
@@ -621,11 +621,11 @@ final class ChovviMicroCremaProfile: UIViewController, UITextFieldDelegate, PHPi
     @objc private func coffeeBulletinDestination() {
         let coffeeBulletinRecord = coffeeBulletinCollection.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         guard !coffeeBulletinRecord.isEmpty else {
-            ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Message Required", goldenRitualCanvas: "Please type a message before sending.", goldenRitualArtwork: .caution)
+            ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Message Required", amberRitualCanvas: "Please type a message before sending.", amberRitualArtwork: .caution)
             return
         }
         var coffeeBulletinItem = Self.coffeeBulletinStore()
-        coffeeBulletinItem.append(ChovviMicroTexture(coffeeBulletinCanvas: UUID().uuidString, coffeeBulletinScroll: coffeeBulletinRecord, coffeeBulletinHeader: true, coffeeBulletinArtwork: false))
+        coffeeBulletinItem.append(ChovviPetiteTexture(coffeeBulletinCanvas: UUID().uuidString, coffeeBulletinScroll: coffeeBulletinRecord, coffeeBulletinHeader: true, coffeeBulletinArtwork: false))
         if let coffeeBulletinSource = try? JSONEncoder().encode(coffeeBulletinItem) {
             UserDefaults.standard.set(coffeeBulletinSource, forKey: Self.coffeeBulletinState)
         }
@@ -647,11 +647,11 @@ final class ChovviMicroCremaProfile: UIViewController, UITextFieldDelegate, PHPi
                     coffeeBulletinSource.delegate = self
                     self.present(coffeeBulletinSource, animated: true)
                 case .denied, .restricted:
-                    ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Photo Access Needed", goldenRitualCanvas: "Allow photo access to send a coffee image in this private chat.", goldenRitualArtwork: .caution)
+                    ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Photo Access Needed", amberRitualCanvas: "Allow photo access to send a coffee image in this private chat.", amberRitualArtwork: .caution)
                 case .notDetermined:
                     break
                 @unknown default:
-                    ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Photo Access Needed", goldenRitualCanvas: "Allow photo access to send a coffee image in this private chat.", goldenRitualArtwork: .caution)
+                    ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Photo Access Needed", amberRitualCanvas: "Allow photo access to send a coffee image in this private chat.", amberRitualArtwork: .caution)
                 }
             }
         }
@@ -665,11 +665,11 @@ final class ChovviMicroCremaProfile: UIViewController, UITextFieldDelegate, PHPi
             guard let self, let coffeeBulletinImage = coffeeBulletinSelection as? UIImage else { return }
             DispatchQueue.main.async {
                 guard let coffeeBulletinPath = self.coffeeBulletinStore(coffeeBulletinImage) else {
-                    ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Unable to Send", goldenRitualCanvas: "The selected image could not be prepared. Please choose it again.", goldenRitualArtwork: .caution)
+                    ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Unable to Send", amberRitualCanvas: "The selected image could not be prepared. Please choose it again.", amberRitualArtwork: .caution)
                     return
                 }
                 var coffeeBulletinCard = Self.coffeeBulletinStore()
-                coffeeBulletinCard.append(ChovviMicroTexture(coffeeBulletinCanvas: UUID().uuidString, coffeeBulletinScroll: coffeeBulletinPath, coffeeBulletinHeader: true, coffeeBulletinArtwork: true))
+                coffeeBulletinCard.append(ChovviPetiteTexture(coffeeBulletinCanvas: UUID().uuidString, coffeeBulletinScroll: coffeeBulletinPath, coffeeBulletinHeader: true, coffeeBulletinArtwork: true))
                 if let coffeeBulletinUpdate = try? JSONEncoder().encode(coffeeBulletinCard) {
                     UserDefaults.standard.set(coffeeBulletinUpdate, forKey: Self.coffeeBulletinState)
                 }
@@ -702,7 +702,7 @@ final class ChovviMicroCremaProfile: UIViewController, UITextFieldDelegate, PHPi
 
     private func coffeeBulletinArtwork(_ coffeeBulletinCollection: Bool) {
         if !coffeeBulletinCollection {
-            let coffeeBulletinRecord = ChovviCuppingReportProfile(
+            let coffeeBulletinRecord = ChovviCuppingNoticeBrew(
                 cupKeeperCanvas: coffeeBulletinCanvas.chovviBotanicalAeropress,
                 cupKeeperScroll: coffeeBulletinCanvas.chovviBotanicalAcidity,
                 cupKeeperHeader: "private message"
@@ -721,7 +721,7 @@ final class ChovviMicroCremaProfile: UIViewController, UITextFieldDelegate, PHPi
         var coffeeBulletinItem = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? [])
         coffeeBulletinItem.remove(coffeeBulletinCanvas.chovviBotanicalAcidity)
         UserDefaults.standard.set(Array(coffeeBulletinItem), forKey: "chovviCremaRoast")
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "User Blocked", goldenRitualCanvas: "This user has been added to your blocked list.", goldenRitualArtwork: .success, goldenRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "User Blocked", amberRitualCanvas: "This user has been added to your blocked list.", amberRitualArtwork: .success, amberRitualStack: { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         })
     }
@@ -756,7 +756,7 @@ final class ChovviMicroCremaProfile: UIViewController, UITextFieldDelegate, PHPi
     }
 
     @objc private func coffeeBulletinOpenProfile() {
-        let coffeeBulletinRecord = ChovviAromaticProfile(originPortraitCanvas: coffeeBulletinCanvas)
+        let coffeeBulletinRecord = ChovviAromaticBrew(originPortraitCanvas: coffeeBulletinCanvas)
         navigationController?.pushViewController(coffeeBulletinRecord, animated: true)
     }
 
@@ -786,16 +786,16 @@ final class ChovviMicroCremaProfile: UIViewController, UITextFieldDelegate, PHPi
         }
     }
 
-    static func coffeeBulletinStore() -> [ChovviMicroTexture] {
+    static func coffeeBulletinStore() -> [ChovviPetiteTexture] {
         guard let coffeeBulletinCanvas = UserDefaults.standard.data(forKey: coffeeBulletinState),
-              let coffeeBulletinScroll = try? JSONDecoder().decode([ChovviMicroTexture].self, from: coffeeBulletinCanvas) else {
+              let coffeeBulletinScroll = try? JSONDecoder().decode([ChovviPetiteTexture].self, from: coffeeBulletinCanvas) else {
             return []
         }
         return coffeeBulletinScroll
     }
 }
 
-final class ChovviMicroRoast: UIViewController {
+final class ChovviPetiteRoast: UIViewController {
     private let coffeeBulletinCanvas: String
 
     init(coffeeBulletinCanvas: String) {
@@ -819,7 +819,7 @@ final class ChovviMicroRoast: UIViewController {
         navigationController?.navigationBar.tintColor = .black
 
         let coffeeBulletinHeader = UIImageView(image: UIImage(systemName: coffeeBulletinArtwork(), withConfiguration: UIImage.SymbolConfiguration(pointSize: 38, weight: .medium)))
-        coffeeBulletinHeader.tintColor = ChovviMicroMouthfeel.coffeeBulletinHeader
+        coffeeBulletinHeader.tintColor = ChovviPetiteMouthfeel.coffeeBulletinHeader
         coffeeBulletinHeader.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(coffeeBulletinHeader)
 

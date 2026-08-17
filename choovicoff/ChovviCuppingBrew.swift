@@ -5,12 +5,12 @@ extension Notification.Name {
     static let cupKeeperUpdate = Notification.Name("chovviCuppingInfusion")
 }
 
-final class ChovviCuppingProfile: UIViewController {
+final class ChovviCuppingBrew: UIViewController {
     private let cupKeeperCanvas = UIScrollView()
     private let cupKeeperScroll = UIStackView()
     private var cupKeeperHeader = 0
-    private var cupKeeperArtwork: [ChovviCaramelProfile] = []
-    private var cupKeeperCollection: [ChovviSilkyProfile] = []
+    private var cupKeeperArtwork: [ChovviCaramelBrew] = []
+    private var cupKeeperCollection: [ChovviSilkyBrew] = []
     private let cupKeeperLabel = UIRefreshControl()
     static let cupKeeperStack = UIColor(red: 0.84, green: 0.61, blue: 0.31, alpha: 1)
 
@@ -63,8 +63,8 @@ final class ChovviCuppingProfile: UIViewController {
         }
         let cupKeeperLabel = UserDefaults.standard.bool(forKey: "choovilogin")
         cupKeeperStatus()
-        let cupKeeperRoute = ChovviCitrusProfile.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == "chovvi-user-20" }
-            ?? ChovviCitrusProfile.roastArchiveCanvas.last!
+        let cupKeeperRoute = ChovviCitrusBrew.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == "chovvi-user-20" }
+            ?? ChovviCitrusBrew.roastArchiveCanvas.last!
         cupKeeperSection(cupKeeperRoute, cupKeeperPreview: cupKeeperLabel)
         cupKeeperTrigger(cupKeeperRoute, cupKeeperLayout: cupKeeperLabel)
         cupKeeperSource(cupKeeperLabel)
@@ -81,16 +81,16 @@ final class ChovviCuppingProfile: UIViewController {
     }
 
     private func cupKeeperStatus() {
-        var cupKeeperRoute: [String: ChovviCaramelProfile] = [:]
-        (ChovviCitrusProfile.roastArchivePreview + ChovviCitrusProfile.roastArchiveHeader).forEach { cupKeeperSection in
+        var cupKeeperRoute: [String: ChovviCaramelBrew] = [:]
+        (ChovviCitrusBrew.roastArchivePreview + ChovviCitrusBrew.roastArchiveHeader).forEach { cupKeeperSection in
             cupKeeperRoute[cupKeeperSection.chovviCaramelAcidity] = cupKeeperSection
         }
         cupKeeperArtwork = Array(cupKeeperRoute.values)
             .filter { $0.chovviCaramelAeropress == "chovvi-user-20" }
             .sorted { $0.chovviCaramelBody > $1.chovviCaramelBody }
 
-        var cupKeeperPreview: [String: ChovviSilkyProfile] = [:]
-        (ChovviCitrusProfile.roastArchiveSection + ChovviCitrusProfile.roastArchiveStatus).forEach { cupKeeperTrigger in
+        var cupKeeperPreview: [String: ChovviSilkyBrew] = [:]
+        (ChovviCitrusBrew.roastArchiveSection + ChovviCitrusBrew.roastArchiveStatus).forEach { cupKeeperTrigger in
             cupKeeperPreview[cupKeeperTrigger.chovviSilkyAcidity] = cupKeeperTrigger
         }
         cupKeeperCollection = Array(cupKeeperPreview.values)
@@ -98,11 +98,11 @@ final class ChovviCuppingProfile: UIViewController {
             .sorted { $0.chovviSilkyBrewer > $1.chovviSilkyBrewer }
     }
 
-    private func cupKeeperSection(_ cupKeeperPreview: ChovviBotanicalProfile, cupKeeperPreview cupKeeperTrigger: Bool) {
+    private func cupKeeperSection(_ cupKeeperPreview: ChovviBotanicalBrew, cupKeeperPreview cupKeeperTrigger: Bool) {
         cupKeeperSectionTrigger(cupKeeperPreview, cupKeeperTrigger)
     }
 
-    private lazy var cupKeeperSectionTrigger: (ChovviBotanicalProfile, Bool) -> Void = { [unowned self] cupKeeperPreview, cupKeeperTrigger in
+    private lazy var cupKeeperSectionTrigger: (ChovviBotanicalBrew, Bool) -> Void = { [unowned self] cupKeeperPreview, cupKeeperTrigger in
         let cupKeeperLayout = UIView()
         cupKeeperLayout.clipsToBounds = false
         cupKeeperScroll.addArrangedSubview(cupKeeperLayout)
@@ -195,16 +195,16 @@ final class ChovviCuppingProfile: UIViewController {
         ])
     }
 
-    private func cupKeeperTrigger(_ cupKeeperLayout: ChovviBotanicalProfile, cupKeeperLayout cupKeeperSource: Bool) {
+    private func cupKeeperTrigger(_ cupKeeperLayout: ChovviBotanicalBrew, cupKeeperLayout cupKeeperSource: Bool) {
         cupKeeperTriggerArtwork(cupKeeperLayout, cupKeeperSource)
     }
 
-    private lazy var cupKeeperTriggerArtwork: (ChovviBotanicalProfile, Bool) -> Void = { [unowned self] cupKeeperLayout, cupKeeperSource in
+    private lazy var cupKeeperTriggerArtwork: (ChovviBotanicalBrew, Bool) -> Void = { [unowned self] cupKeeperLayout, cupKeeperSource in
         let cupKeeperMenu = UIStackView()
         cupKeeperMenu.axis = .horizontal
         cupKeeperMenu.distribution = .fillEqually
         cupKeeperMenu.heightAnchor.constraint(equalToConstant: 74).isActive = true
-        let cupKeeperUpdate = ChovviCitrusProfile.roastArchiveCanvas.filter { $0.chovviBotanicalBurr.contains("chovvi-user-20") }.count
+        let cupKeeperUpdate = ChovviCitrusBrew.roastArchiveCanvas.filter { $0.chovviBotanicalBurr.contains("chovvi-user-20") }.count
         let cupKeeperDestination = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? []).count
         let cupKeeperCard = [
             (cupKeeperSource ? "\(cupKeeperArtwork.count)" : "--", "Posts"),
@@ -247,7 +247,7 @@ final class ChovviCuppingProfile: UIViewController {
             cupKeeperRecord.addSubview(cupKeeperRoute)
             let cupKeeperSection = UILabel()
             let cupKeeperPreview = UserDefaults.standard.string(forKey: "hooviEmail")?.lowercased() ?? ""
-            cupKeeperSection.text = ChovviThermalRoast.goldenRitualCard(cupKeeperPreview).formatted()
+            cupKeeperSection.text = ChovviThermalRoast.amberRitualCard(cupKeeperPreview).formatted()
             cupKeeperSection.font = .systemFont(ofSize: 22, weight: .black)
             cupKeeperSection.textColor = Self.cupKeeperStack
             cupKeeperSection.translatesAutoresizingMaskIntoConstraints = false
@@ -330,7 +330,7 @@ final class ChovviCuppingProfile: UIViewController {
         }
     }
 
-    private func cupKeeperDestination(_ cupKeeperCard: [ChovviCaramelProfile]) -> UIView {
+    private func cupKeeperDestination(_ cupKeeperCard: [ChovviCaramelBrew]) -> UIView {
         guard !cupKeeperCard.isEmpty else { return cupKeeperImage("No posts yet. Share your first coffee moment when you’re ready.") }
         let cupKeeperRecord = UIStackView()
         cupKeeperRecord.axis = .vertical
@@ -368,11 +368,11 @@ final class ChovviCuppingProfile: UIViewController {
         return cupKeeperRecord
     }
 
-    private func cupKeeperCard(_ cupKeeperRecord: [ChovviSilkyProfile]) -> UIView {
+    private func cupKeeperCard(_ cupKeeperRecord: [ChovviSilkyBrew]) -> UIView {
         cupKeeperCardTrigger(cupKeeperRecord)
     }
 
-    private lazy var cupKeeperCardTrigger: ([ChovviSilkyProfile]) -> UIView = { [unowned self] cupKeeperRecord in
+    private lazy var cupKeeperCardTrigger: ([ChovviSilkyBrew]) -> UIView = { [unowned self] cupKeeperRecord in
         guard !cupKeeperRecord.isEmpty else { return cupKeeperImage("No diary entries yet. Your published coffee clips will appear here.") }
         let cupKeeperItem = UIStackView()
         cupKeeperItem.axis = .vertical
@@ -441,14 +441,14 @@ final class ChovviCuppingProfile: UIViewController {
 
     @objc private func cupKeeperSelection(_ cupKeeperImage: UIButton) {
         guard cupKeeperArtwork.indices.contains(cupKeeperImage.tag) else { return }
-        let cupKeeperChoice = UINavigationController(rootViewController: ChovviArtisanProfile(cremaStoryCanvas: cupKeeperArtwork[cupKeeperImage.tag]))
+        let cupKeeperChoice = UINavigationController(rootViewController: ChovviArtisanBrew(cremaStoryCanvas: cupKeeperArtwork[cupKeeperImage.tag]))
         cupKeeperChoice.modalPresentationStyle = .fullScreen
         present(cupKeeperChoice, animated: true)
     }
 
     @objc private func cupKeeperImage(_ cupKeeperChoice: UIButton) {
         guard cupKeeperCollection.indices.contains(cupKeeperChoice.tag) else { return }
-        let cupKeeperLabel = UINavigationController(rootViewController: ChovviOriginProfile(cupChronicleCanvas: cupKeeperCollection[cupKeeperChoice.tag]))
+        let cupKeeperLabel = UINavigationController(rootViewController: ChovviOriginBrew(cupChronicleCanvas: cupKeeperCollection[cupKeeperChoice.tag]))
         cupKeeperLabel.modalPresentationStyle = .fullScreen
         present(cupKeeperLabel, animated: true)
     }
@@ -471,7 +471,7 @@ final class ChovviCuppingProfile: UIViewController {
             cupKeeperLabel.modalPresentationStyle = .fullScreen
             present(cupKeeperLabel, animated: true)
         } else {
-            let cupKeeperLabel = UINavigationController(rootViewController: ChovviFragrantProfile())
+            let cupKeeperLabel = UINavigationController(rootViewController: ChovviFragrantBrew())
             cupKeeperLabel.modalPresentationStyle = .pageSheet
             present(cupKeeperLabel, animated: true)
         }
@@ -579,7 +579,7 @@ final class ChovviFragrantTasting: UIViewController, UITextFieldDelegate {
         firstSipStack.setTitle("Sign In", for: .normal)
         firstSipStack.setTitleColor(.white, for: .normal)
         firstSipStack.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
-        firstSipStack.backgroundColor = ChovviCuppingProfile.cupKeeperStack
+        firstSipStack.backgroundColor = ChovviCuppingBrew.cupKeeperStack
         firstSipStack.layer.cornerRadius = 27
         firstSipStack.addTarget(self, action: #selector(firstSipRoute), for: .touchUpInside)
         firstSipStack.heightAnchor.constraint(equalToConstant: 56).isActive = true
@@ -588,7 +588,7 @@ final class ChovviFragrantTasting: UIViewController, UITextFieldDelegate {
 
         let firstSipSource = UIButton(type: .system)
         let firstSipMenu = NSMutableAttributedString(string: "Don't have an account? ", attributes: [.foregroundColor: UIColor.secondaryLabel, .font: UIFont.systemFont(ofSize: 15, weight: .medium)])
-        firstSipMenu.append(NSAttributedString(string: "Create Account", attributes: [.foregroundColor: ChovviCuppingProfile.cupKeeperStack, .font: UIFont.systemFont(ofSize: 15, weight: .bold)]))
+        firstSipMenu.append(NSAttributedString(string: "Create Account", attributes: [.foregroundColor: ChovviCuppingBrew.cupKeeperStack, .font: UIFont.systemFont(ofSize: 15, weight: .bold)]))
         firstSipSource.setAttributedTitle(firstSipMenu, for: .normal)
         firstSipSource.addTarget(self, action: #selector(firstSipItem), for: .touchUpInside)
         firstSipSource.heightAnchor.constraint(equalToConstant: 44).isActive = true
@@ -648,7 +648,7 @@ final class ChovviFragrantTasting: UIViewController, UITextFieldDelegate {
         }
         let firstSipLayout = firstSipSection.lowercased()
         firstSipStack.isEnabled = false
-        ChovviThermalCalibrationView.goldenRitualLayout(self, goldenRitualMenu: "Signing in securely...") { [weak self] in
+        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Signing in securely...") { [weak self] in
             guard let self else { return }
             self.firstSipStack.isEnabled = true
             let firstSipItem = (UserDefaults.standard.data(forKey: "chovviGentleTexture"))
@@ -659,7 +659,7 @@ final class ChovviFragrantTasting: UIViewController, UITextFieldDelegate {
                     self.firstSipSource("Incorrect password", firstSipMenu: "Check your password and try again.")
                     return
                 }
-                guard let firstSipDestination = ChovviCitrusProfile.roastArchiveCanvas.first(where: { $0.chovviBotanicalAcidity == "chovvi-user-20" }) else {
+                guard let firstSipDestination = ChovviCitrusBrew.roastArchiveCanvas.first(where: { $0.chovviBotanicalAcidity == "chovvi-user-20" }) else {
                     self.firstSipSource("Unable to sign in", firstSipMenu: "Your profile is unavailable. Please retry.")
                     return
                 }
@@ -688,7 +688,7 @@ final class ChovviFragrantTasting: UIViewController, UITextFieldDelegate {
     }
 
     private func firstSipSource(_ firstSipMenu: String, firstSipMenu firstSipUpdate: String) {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: firstSipMenu, goldenRitualCanvas: firstSipUpdate, goldenRitualArtwork: .caution)
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: firstSipMenu, amberRitualCanvas: firstSipUpdate, amberRitualArtwork: .caution)
     }
 
     func textFieldShouldReturn(_ firstSipMenu: UITextField) -> Bool {

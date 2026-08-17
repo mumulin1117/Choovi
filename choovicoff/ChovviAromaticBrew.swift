@@ -1,12 +1,12 @@
 import UIKit
 import AVFoundation
 
-final class ChovviAromaticProfile: UIViewController {
-    private let originPortraitCanvas: ChovviBotanicalProfile
+final class ChovviAromaticBrew: UIViewController {
+    private let originPortraitCanvas: ChovviBotanicalBrew
     private let originPortraitScroll = UIScrollView()
     private let originPortraitHeader = UIStackView()
     private var originPortraitArtwork: [String] = []
-    private var originPortraitCollection: [ChovviSilkyProfile] = []
+    private var originPortraitCollection: [ChovviSilkyBrew] = []
     private let originPortraitStack = UIStackView()
     private var originPortraitState = 0
     private let originPortraitRender = UILabel()
@@ -20,7 +20,7 @@ final class ChovviAromaticProfile: UIViewController {
     private let originPortraitLayout = UIView()
     private var coffeeBulletinSource: [AVAssetImageGenerator] = []
 
-    init(originPortraitCanvas: ChovviBotanicalProfile) {
+    init(originPortraitCanvas: ChovviBotanicalBrew) {
         self.originPortraitCanvas = originPortraitCanvas
         super.init(nibName: nil, bundle: nil)
     }
@@ -43,12 +43,12 @@ final class ChovviAromaticProfile: UIViewController {
     }
 
     private func originPortraitSource() {
-        let originPortraitMenu = ChovviCitrusProfile.roastArchivePreview + ChovviCitrusProfile.roastArchiveRender
+        let originPortraitMenu = ChovviCitrusBrew.roastArchivePreview + ChovviCitrusBrew.roastArchiveRender
         originPortraitArtwork = originPortraitMenu
             .filter { originPortraitUpdate in originPortraitUpdate.chovviCaramelAeropress == originPortraitCanvas.chovviBotanicalAcidity }
             .flatMap(\.chovviCaramelAftertaste)
 
-        originPortraitCollection = (ChovviCitrusProfile.roastArchiveSection + ChovviCitrusProfile.roastArchiveStatus)
+        originPortraitCollection = (ChovviCitrusBrew.roastArchiveSection + ChovviCitrusBrew.roastArchiveStatus)
             .filter { originPortraitDestination in originPortraitDestination.chovviSilkyAeropress == originPortraitCanvas.chovviBotanicalAcidity }
     }
 
@@ -136,11 +136,11 @@ final class ChovviAromaticProfile: UIViewController {
         originPortraitItem.addSubview(originPortraitSelection)
 
         originPortraitRoute.setTitle("Message", for: .normal)
-        originPortraitRoute.setTitleColor(ChovviRoastedProfile.discoveryShelfCanvas, for: .normal)
+        originPortraitRoute.setTitleColor(ChovviRoastedBrew.roastShelfCanvas, for: .normal)
         originPortraitRoute.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         originPortraitRoute.layer.cornerRadius = 16
         originPortraitRoute.layer.borderWidth = 1
-        originPortraitRoute.layer.borderColor = ChovviRoastedProfile.discoveryShelfCanvas.cgColor
+        originPortraitRoute.layer.borderColor = ChovviRoastedBrew.roastShelfCanvas.cgColor
         originPortraitRoute.addTarget(self, action: #selector(coffeeBulletinStack), for: .touchUpInside)
         originPortraitRoute.translatesAutoresizingMaskIntoConstraints = false
         originPortraitItem.addSubview(originPortraitRoute)
@@ -148,14 +148,14 @@ final class ChovviAromaticProfile: UIViewController {
         originPortraitStatus.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         originPortraitStatus.layer.cornerRadius = 16
         originPortraitStatus.layer.borderWidth = 1
-        originPortraitStatus.layer.borderColor = ChovviRoastedProfile.discoveryShelfCanvas.cgColor
+        originPortraitStatus.layer.borderColor = ChovviRoastedBrew.roastShelfCanvas.cgColor
         originPortraitStatus.addTarget(self, action: #selector(coffeeBulletinStatus), for: .touchUpInside)
         originPortraitStatus.translatesAutoresizingMaskIntoConstraints = false
         originPortraitItem.addSubview(originPortraitStatus)
 
         let originPortraitImage = UILabel()
         originPortraitImage.text = originPortraitCanvas.chovviBotanicalAeropress
-        originPortraitImage.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        originPortraitImage.textColor = ChovviRoastedBrew.roastShelfScroll
         originPortraitImage.font = UIFont.systemFont(ofSize: 19, weight: .black)
         originPortraitImage.translatesAutoresizingMaskIntoConstraints = false
         originPortraitItem.addSubview(originPortraitImage)
@@ -192,7 +192,7 @@ final class ChovviAromaticProfile: UIViewController {
 
         [originPortraitRender, originPortraitAction, originPortraitLabel].forEach { originPortraitChoice in
             originPortraitChoice.textAlignment = .center
-            originPortraitChoice.textColor = ChovviRoastedProfile.discoveryShelfScroll
+            originPortraitChoice.textColor = ChovviRoastedBrew.roastShelfScroll
             originPortraitChoice.numberOfLines = 2
             originPortraitChoice.font = UIFont.systemFont(ofSize: 13, weight: .bold)
             originPortraitImage.addArrangedSubview(originPortraitChoice)
@@ -214,7 +214,7 @@ final class ChovviAromaticProfile: UIViewController {
             coffeeBulletinCanvas.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
             originPortraitChoice.addArrangedSubview(coffeeBulletinCanvas)
         }
-        originPortraitLayout.backgroundColor = ChovviRoastedProfile.discoveryShelfCanvas
+        originPortraitLayout.backgroundColor = ChovviRoastedBrew.roastShelfCanvas
         originPortraitLayout.translatesAutoresizingMaskIntoConstraints = false
         originPortraitSelection.addSubview(originPortraitLayout)
         NSLayoutConstraint.activate([
@@ -281,11 +281,11 @@ final class ChovviAromaticProfile: UIViewController {
         originPortraitStack.layoutMargins = UIEdgeInsets(top: 10, left: 16, bottom: 20, right: 16)
     }
 
-    private func originPortraitState(_ originPortraitDestination: ChovviSilkyProfile) -> UIView {
+    private func originPortraitState(_ originPortraitDestination: ChovviSilkyBrew) -> UIView {
         originPortraitStateTrigger(originPortraitDestination)
     }
 
-    private lazy var originPortraitStateTrigger: (ChovviSilkyProfile) -> UIView = { [unowned self] originPortraitDestination in
+    private lazy var originPortraitStateTrigger: (ChovviSilkyBrew) -> UIView = { [unowned self] originPortraitDestination in
         let originPortraitCard = UIView()
         originPortraitCard.backgroundColor = UIColor(red: 0.93, green: 0.95, blue: 0.96, alpha: 1)
         originPortraitCard.layer.cornerRadius = 12
@@ -301,7 +301,7 @@ final class ChovviAromaticProfile: UIViewController {
 
         let originPortraitItem = UILabel()
         originPortraitItem.text = originPortraitDestination.chovviSilkyAroma
-        originPortraitItem.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        originPortraitItem.textColor = ChovviRoastedBrew.roastShelfScroll
         originPortraitItem.font = UIFont.systemFont(ofSize: 13, weight: .bold)
         originPortraitItem.numberOfLines = 3
         originPortraitItem.translatesAutoresizingMaskIntoConstraints = false
@@ -314,7 +314,7 @@ final class ChovviAromaticProfile: UIViewController {
         originPortraitSelection.translatesAutoresizingMaskIntoConstraints = false
         originPortraitCard.addSubview(originPortraitSelection)
 
-        let originPortraitImage = UIImageView(image: UIImage(named: ChovviCitrusProfile.roastArchiveCard(originPortraitDestination.chovviSilkyBurr)))
+        let originPortraitImage = UIImageView(image: UIImage(named: ChovviCitrusBrew.roastArchiveCard(originPortraitDestination.chovviSilkyBurr)))
         originPortraitImage.contentMode = .scaleAspectFit
         originPortraitImage.translatesAutoresizingMaskIntoConstraints = false
         originPortraitCard.addSubview(originPortraitImage)
@@ -322,11 +322,11 @@ final class ChovviAromaticProfile: UIViewController {
         let originPortraitChoice = UIButton(type: .system)
         originPortraitChoice.setImage(UIImage(systemName: "arrow.up.right"), for: .normal)
         originPortraitChoice.tintColor = .white
-        originPortraitChoice.backgroundColor = ChovviRoastedProfile.discoveryShelfScroll
+        originPortraitChoice.backgroundColor = ChovviRoastedBrew.roastShelfScroll
         originPortraitChoice.layer.cornerRadius = 18
         originPortraitChoice.addAction(UIAction { [weak self] coffeeBulletinCanvas in
             _ = coffeeBulletinCanvas
-            let coffeeBulletinScroll = ChovviOriginProfile(cupChronicleCanvas: originPortraitDestination)
+            let coffeeBulletinScroll = ChovviOriginBrew(cupChronicleCanvas: originPortraitDestination)
             let coffeeBulletinHeader = UINavigationController(rootViewController: coffeeBulletinScroll)
             coffeeBulletinHeader.modalPresentationStyle = .fullScreen
             self?.present(coffeeBulletinHeader, animated: true)
@@ -348,8 +348,8 @@ final class ChovviAromaticProfile: UIViewController {
         let originPortraitCard = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? [])
         let coffeeBulletinRecord = originPortraitCard.contains(originPortraitCanvas.chovviBotanicalAcidity)
         originPortraitStatus.setTitle(coffeeBulletinRecord ? "Following" : "Follow", for: .normal)
-        originPortraitStatus.setTitleColor(coffeeBulletinRecord ? ChovviRoastedProfile.discoveryShelfCanvas : .white, for: .normal)
-        originPortraitStatus.backgroundColor = coffeeBulletinRecord ? .clear : ChovviRoastedProfile.discoveryShelfCanvas
+        originPortraitStatus.setTitleColor(coffeeBulletinRecord ? ChovviRoastedBrew.roastShelfCanvas : .white, for: .normal)
+        originPortraitStatus.backgroundColor = coffeeBulletinRecord ? .clear : ChovviRoastedBrew.roastShelfCanvas
 
         let originPortraitItem = originPortraitRecord(originPortraitCanvas.chovviBotanicalAcidity)
         let originPortraitSelection = min(9, originPortraitItem + (coffeeBulletinRecord ? 1 : 0))
@@ -359,8 +359,8 @@ final class ChovviAromaticProfile: UIViewController {
         originPortraitLabel.text = "\(originPortraitImage)\nFollowing"
 
         let originPortraitChoice = originPortraitState == 0
-        originPortraitPreview.setTitleColor(originPortraitChoice ? ChovviRoastedProfile.discoveryShelfCanvas : .secondaryLabel, for: .normal)
-        originPortraitTrigger.setTitleColor(originPortraitChoice ? .secondaryLabel : ChovviRoastedProfile.discoveryShelfCanvas, for: .normal)
+        originPortraitPreview.setTitleColor(originPortraitChoice ? ChovviRoastedBrew.roastShelfCanvas : .secondaryLabel, for: .normal)
+        originPortraitTrigger.setTitleColor(originPortraitChoice ? .secondaryLabel : ChovviRoastedBrew.roastShelfCanvas, for: .normal)
         originPortraitLayout.transform = CGAffineTransform(translationX: originPortraitChoice ? 0 : view.bounds.width * 0.5, y: 0)
     }
 
@@ -419,7 +419,7 @@ final class ChovviAromaticProfile: UIViewController {
 
         let coffeeBulletinCanvas = UILabel()
         coffeeBulletinCanvas.text = originPortraitItem ? "You Follow Each Other" : "Follow Each Other to Message"
-        coffeeBulletinCanvas.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        coffeeBulletinCanvas.textColor = ChovviRoastedBrew.roastShelfScroll
         coffeeBulletinCanvas.font = UIFont.systemFont(ofSize: 17, weight: .bold)
         coffeeBulletinCanvas.textAlignment = .center
         coffeeBulletinCanvas.translatesAutoresizingMaskIntoConstraints = false
@@ -490,7 +490,7 @@ final class ChovviAromaticProfile: UIViewController {
 
     private func coffeeBulletinArtwork(_ coffeeBulletinCollection: Bool) {
         if !coffeeBulletinCollection {
-            let coffeeBulletinCanvas = ChovviCuppingReportProfile(
+            let coffeeBulletinCanvas = ChovviCuppingNoticeBrew(
                 cupKeeperCanvas: originPortraitCanvas.chovviBotanicalAeropress,
                 cupKeeperScroll: originPortraitCanvas.chovviBotanicalAcidity,
                 cupKeeperHeader: "profile"
@@ -508,7 +508,7 @@ final class ChovviAromaticProfile: UIViewController {
         coffeeBulletinScroll.insert(originPortraitCanvas.chovviBotanicalAcidity)
         UserDefaults.standard.set(Array(coffeeBulletinScroll), forKey: coffeeBulletinCanvas)
 
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: coffeeBulletinCollection ? "User Blocked" : "Report Received", goldenRitualCanvas: coffeeBulletinCollection ? "This user has been added to your blocked list." : "Thank you. This profile has been submitted for safety review.", goldenRitualArtwork: .success, goldenRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: coffeeBulletinCollection ? "User Blocked" : "Report Received", amberRitualCanvas: coffeeBulletinCollection ? "This user has been added to your blocked list." : "Thank you. This profile has been submitted for safety review.", amberRitualArtwork: .success, amberRitualStack: { [weak self] in
             if coffeeBulletinCollection {
                 self?.navigationController?.dismiss(animated: true)
             }

@@ -1,8 +1,8 @@
 import UIKit
 
-final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
-    private let cremaStoryCanvas: ChovviCaramelProfile
-    private let cremaStoryScroll: ChovviBotanicalProfile?
+final class ChovviArtisanBrew: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
+    private let cremaStoryCanvas: ChovviCaramelBrew
+    private let cremaStoryScroll: ChovviBotanicalBrew?
     private let cremaStoryHeader = UIScrollView()
     private let cremaStoryArtwork = UIStackView()
     private let cremaStoryCollection = UIScrollView()
@@ -15,11 +15,11 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
     private let cremaStoryRoute = UILabel()
     private let cremaStorySection = UIButton(type: .system)
     private var cremaStoryPreview: NSLayoutConstraint?
-    private var cremaStoryTrigger: [ChovviHarvestProfile] = []
+    private var cremaStoryTrigger: [ChovviHarvestBrew] = []
 
-    init(cremaStoryCanvas: ChovviCaramelProfile) {
+    init(cremaStoryCanvas: ChovviCaramelBrew) {
         self.cremaStoryCanvas = cremaStoryCanvas
-        cremaStoryScroll = ChovviCitrusProfile.roastArchiveCanvas.first { cremaStoryHeader in
+        cremaStoryScroll = ChovviCitrusBrew.roastArchiveCanvas.first { cremaStoryHeader in
             cremaStoryHeader.chovviBotanicalAcidity == cremaStoryCanvas.chovviCaramelAeropress
         }
         super.init(nibName: nil, bundle: nil)
@@ -90,7 +90,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
 
         cremaStoryAction.placeholder = "Add a comment..."
         cremaStoryAction.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-        cremaStoryAction.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        cremaStoryAction.textColor = ChovviRoastedBrew.roastShelfScroll
         cremaStoryAction.backgroundColor = UIColor(red: 0.92, green: 0.94, blue: 0.96, alpha: 1)
         cremaStoryAction.layer.cornerRadius = 22
         cremaStoryAction.returnKeyType = .send
@@ -100,7 +100,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
         cremaStoryRender.addSubview(cremaStoryAction)
 
         cremaStoryLabel.tintColor = .white
-        cremaStoryLabel.backgroundColor = ChovviRoastedProfile.discoveryShelfCanvas
+        cremaStoryLabel.backgroundColor = ChovviRoastedBrew.roastShelfCanvas
         cremaStoryLabel.layer.cornerRadius = 22
         cremaStoryLabel.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
         cremaStoryLabel.accessibilityLabel = "Publish comment"
@@ -131,7 +131,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
 
         cremaStoryStack.numberOfPages = max(1, cremaStoryCanvas.chovviCaramelAftertaste.count)
         cremaStoryStack.currentPage = 0
-        cremaStoryStack.currentPageIndicatorTintColor = ChovviRoastedProfile.discoveryShelfCanvas
+        cremaStoryStack.currentPageIndicatorTintColor = ChovviRoastedBrew.roastShelfCanvas
         cremaStoryStack.pageIndicatorTintColor = .systemGray4
         cremaStoryStack.isUserInteractionEnabled = false
         cremaStoryStack.hidesForSinglePage = true
@@ -140,7 +140,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
 
         let cremaStoryTrigger = UILabel()
         cremaStoryTrigger.text = cremaStoryCanvas.chovviCaramelAroma
-        cremaStoryTrigger.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        cremaStoryTrigger.textColor = ChovviRoastedBrew.roastShelfScroll
         cremaStoryTrigger.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         cremaStoryTrigger.numberOfLines = 0
         cremaStoryArtwork.addArrangedSubview(cremaStoryTrigger)
@@ -150,7 +150,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
 
         let cremaStoryDestination = UILabel()
         cremaStoryDestination.text = "Comments"
-        cremaStoryDestination.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        cremaStoryDestination.textColor = ChovviRoastedBrew.roastShelfScroll
         cremaStoryDestination.font = UIFont.systemFont(ofSize: 19, weight: .bold)
         cremaStoryArtwork.addArrangedSubview(cremaStoryDestination)
 
@@ -176,7 +176,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
 
         let cremaStoryPreview = UILabel()
         cremaStoryPreview.text = cremaStoryScroll?.chovviBotanicalAeropress ?? "Choovi Creator"
-        cremaStoryPreview.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        cremaStoryPreview.textColor = ChovviRoastedBrew.roastShelfScroll
         cremaStoryPreview.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         cremaStoryPreview.isUserInteractionEnabled = true
         cremaStoryPreview.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(coffeeBulletinState)))
@@ -193,7 +193,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
         cremaStorySection.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         cremaStorySection.layer.cornerRadius = 19
         cremaStorySection.layer.borderWidth = 1
-        cremaStorySection.layer.borderColor = ChovviRoastedProfile.discoveryShelfCanvas.cgColor
+        cremaStorySection.layer.borderColor = ChovviRoastedBrew.roastShelfCanvas.cgColor
         cremaStorySection.addTarget(self, action: #selector(coffeeBulletinSection), for: .touchUpInside)
         cremaStorySection.translatesAutoresizingMaskIntoConstraints = false
         cremaStoryStatus.addSubview(cremaStorySection)
@@ -255,7 +255,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
 
         let cremaStoryMenu = UILabel()
         cremaStoryMenu.text = "#\(coffeeBulletinRecord(cremaStoryCanvas.chovviCaramelBurr.first ?? "CoffeeMoment"))"
-        cremaStoryMenu.textColor = ChovviRoastedProfile.discoveryShelfCanvas
+        cremaStoryMenu.textColor = ChovviRoastedBrew.roastShelfCanvas
         cremaStoryMenu.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         cremaStoryMenu.textAlignment = .center
         cremaStoryMenu.backgroundColor = UIColor(red: 0.97, green: 0.93, blue: 0.88, alpha: 1)
@@ -279,12 +279,12 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
         cremaStoryDestination.addSubview(cremaStoryCard)
 
         cremaStoryStatus.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
-        cremaStoryStatus.tintColor = ChovviRoastedProfile.discoveryShelfCanvas
+        cremaStoryStatus.tintColor = ChovviRoastedBrew.roastShelfCanvas
         cremaStoryStatus.addTarget(self, action: #selector(coffeeBulletinStack), for: .touchUpInside)
         cremaStoryStatus.translatesAutoresizingMaskIntoConstraints = false
         cremaStoryDestination.addSubview(cremaStoryStatus)
 
-        cremaStoryRoute.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        cremaStoryRoute.textColor = ChovviRoastedBrew.roastShelfScroll
         cremaStoryRoute.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         cremaStoryRoute.textAlignment = .right
         cremaStoryRoute.translatesAutoresizingMaskIntoConstraints = false
@@ -304,17 +304,17 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
     }
 
     private func cremaStoryMenu() {
-        let cremaStoryUpdate = ChovviCitrusProfile.roastArchiveCanvas
+        let cremaStoryUpdate = ChovviCitrusBrew.roastArchiveCanvas
         let cremaStoryDestination = Int(cremaStoryCanvas.chovviCaramelAcidity.hashValue.magnitude % UInt(max(1, cremaStoryUpdate.count)))
         let cremaStoryCard = coffeeBulletinRecord(cremaStoryCanvas.chovviCaramelBurr.first ?? "CoffeeMoment")
         let cremaStoryRecord = String(cremaStoryCanvas.chovviCaramelAroma.prefix(56))
         cremaStoryTrigger = [
-            ChovviHarvestProfile(
+            ChovviHarvestBrew(
                 tastingReplyCanvas: cremaStoryUpdate[cremaStoryDestination].chovviBotanicalAcidity,
                 tastingReplyScroll: "The #\(cremaStoryCard) theme comes through clearly in this photo set.",
                 tastingReplyHeader: "2m ago"
             ),
-            ChovviHarvestProfile(
+            ChovviHarvestBrew(
                 tastingReplyCanvas: cremaStoryUpdate[(cremaStoryDestination + 3) % cremaStoryUpdate.count].chovviBotanicalAcidity,
                 tastingReplyScroll: "Your note about “\(cremaStoryRecord)” makes this coffee moment feel personal.",
                 tastingReplyHeader: "5m ago"
@@ -322,7 +322,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
         ]
         let cremaStoryItem = UserDefaults.standard.stringArray(forKey: "chovviArtisanTexture.\(cremaStoryCanvas.chovviCaramelAcidity)") ?? []
         cremaStoryItem.forEach { cremaStorySelection in
-            cremaStoryTrigger.append(ChovviHarvestProfile(tastingReplyCanvas: "chovvi-user-20", tastingReplyScroll: cremaStorySelection, tastingReplyHeader: "Just now"))
+            cremaStoryTrigger.append(ChovviHarvestBrew(tastingReplyCanvas: "chovvi-user-20", tastingReplyScroll: cremaStorySelection, tastingReplyHeader: "Just now"))
         }
         cremaStoryChoice()
     }
@@ -338,10 +338,10 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
         cremaStoryItem()
     }
 
-    private func cremaStoryRecord(_ cremaStoryItem: ChovviHarvestProfile) -> UIView {
+    private func cremaStoryRecord(_ cremaStoryItem: ChovviHarvestBrew) -> UIView {
         let cremaStorySelection = UIView()
         cremaStorySelection.heightAnchor.constraint(greaterThanOrEqualToConstant: 55).isActive = true
-        let cremaStoryImage = ChovviCitrusProfile.roastArchiveCanvas.first { cremaStoryChoice in
+        let cremaStoryImage = ChovviCitrusBrew.roastArchiveCanvas.first { cremaStoryChoice in
             cremaStoryChoice.chovviBotanicalAcidity == cremaStoryItem.tastingReplyCanvas
         }
         let coffeeBulletinCanvas = UIImageView(image: UIImage(named: cremaStoryImage?.chovviBotanicalAroma ?? "chovviAromaticKettle"))
@@ -353,7 +353,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
 
         let coffeeBulletinScroll = UILabel()
         coffeeBulletinScroll.text = cremaStoryImage?.chovviBotanicalAeropress ?? "Choovi Member"
-        coffeeBulletinScroll.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        coffeeBulletinScroll.textColor = ChovviRoastedBrew.roastShelfScroll
         coffeeBulletinScroll.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         coffeeBulletinScroll.translatesAutoresizingMaskIntoConstraints = false
         cremaStorySelection.addSubview(coffeeBulletinScroll)
@@ -367,7 +367,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
 
         let coffeeBulletinArtwork = UILabel()
         coffeeBulletinArtwork.text = cremaStoryItem.tastingReplyScroll
-        coffeeBulletinArtwork.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        coffeeBulletinArtwork.textColor = ChovviRoastedBrew.roastShelfScroll
         coffeeBulletinArtwork.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         coffeeBulletinArtwork.numberOfLines = 0
         coffeeBulletinArtwork.translatesAutoresizingMaskIntoConstraints = false
@@ -385,8 +385,8 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
         let cremaStoryItem = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? [])
         let cremaStorySelection = cremaStoryItem.contains(cremaStoryCanvas.chovviCaramelAeropress)
         cremaStorySection.setTitle(cremaStorySelection ? "Following" : "Follow", for: .normal)
-        cremaStorySection.backgroundColor = cremaStorySelection ? .clear : ChovviRoastedProfile.discoveryShelfCanvas
-        cremaStorySection.setTitleColor(cremaStorySelection ? ChovviRoastedProfile.discoveryShelfCanvas : .white, for: .normal)
+        cremaStorySection.backgroundColor = cremaStorySelection ? .clear : ChovviRoastedBrew.roastShelfCanvas
+        cremaStorySection.setTitleColor(cremaStorySelection ? ChovviRoastedBrew.roastShelfCanvas : .white, for: .normal)
     }
 
     private func cremaStoryItem() {
@@ -413,7 +413,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
     private func cremaStoryRecord(cremaStoryImage: Bool) {
         guard cremaStoryRecord(cremaStoryItem: true) else { return }
         if !cremaStoryImage {
-            let coffeeBulletinCanvas = ChovviCuppingReportProfile(
+            let coffeeBulletinCanvas = ChovviCuppingNoticeBrew(
                 cupKeeperCanvas: "this coffee post",
                 cupKeeperScroll: cremaStoryCanvas.chovviCaramelAcidity,
                 cupKeeperHeader: "post"
@@ -430,7 +430,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
         var coffeeBulletinCanvas = Set(UserDefaults.standard.stringArray(forKey: cremaStoryChoice) ?? [])
         coffeeBulletinCanvas.insert(cremaStoryImage ? cremaStoryCanvas.chovviCaramelAeropress : cremaStoryCanvas.chovviCaramelAcidity)
         UserDefaults.standard.set(Array(coffeeBulletinCanvas), forKey: cremaStoryChoice)
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: cremaStoryImage ? "Creator Blocked" : "Report Received", goldenRitualCanvas: cremaStoryImage ? "This creator has been added to your blocked list." : "This post has been submitted for safety review.", goldenRitualArtwork: .success, goldenRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: cremaStoryImage ? "Creator Blocked" : "Report Received", amberRitualCanvas: cremaStoryImage ? "This creator has been added to your blocked list." : "This post has been submitted for safety review.", amberRitualArtwork: .success, amberRitualStack: { [weak self] in
             self?.navigationController?.dismiss(animated: true)
         })
     }
@@ -468,17 +468,17 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
         let coffeeBulletinItem = cremaStoryAction.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         guard cremaStoryRecord(cremaStoryItem: true) else { return }
         guard !coffeeBulletinItem.isEmpty else {
-            ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Comment Required", goldenRitualCanvas: "Please enter a comment before sending.", goldenRitualHeader: "Add Comment", goldenRitualArtwork: .caution)
+            ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Comment Required", amberRitualCanvas: "Please enter a comment before sending.", amberRitualHeader: "Add Comment", amberRitualArtwork: .caution)
             return
         }
         cremaStoryAction.resignFirstResponder()
         cremaStoryLabel.isEnabled = false
-        ChovviThermalCalibrationView.goldenRitualLayout(self, goldenRitualMenu: "Posting your comment...", goldenRitualUpdate: 0.65) { [weak self] in
+        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Posting your comment...", amberRitualUpdate: 0.65) { [weak self] in
             guard let self else { return }
             var coffeeBulletinCanvas = UserDefaults.standard.stringArray(forKey: "chovviArtisanTexture.\(self.cremaStoryCanvas.chovviCaramelAcidity)") ?? []
             coffeeBulletinCanvas.append(coffeeBulletinItem)
             UserDefaults.standard.set(coffeeBulletinCanvas, forKey: "chovviArtisanTexture.\(self.cremaStoryCanvas.chovviCaramelAcidity)")
-            self.cremaStoryTrigger.append(ChovviHarvestProfile(tastingReplyCanvas: "chovvi-user-20", tastingReplyScroll: coffeeBulletinItem, tastingReplyHeader: "Just now"))
+            self.cremaStoryTrigger.append(ChovviHarvestBrew(tastingReplyCanvas: "chovvi-user-20", tastingReplyScroll: coffeeBulletinItem, tastingReplyHeader: "Just now"))
             self.cremaStoryAction.text = ""
             self.cremaStoryLabel.isEnabled = true
             self.cremaStoryChoice()
@@ -499,7 +499,7 @@ final class ChovviArtisanProfile: UIViewController, UITextFieldDelegate, UIScrol
 
     @objc private func coffeeBulletinState() {
         guard let cremaStoryScroll else { return }
-        let cremaStoryItem = ChovviAromaticProfile(originPortraitCanvas: cremaStoryScroll)
+        let cremaStoryItem = ChovviAromaticBrew(originPortraitCanvas: cremaStoryScroll)
         let cremaStorySelection = UINavigationController(rootViewController: cremaStoryItem)
         cremaStorySelection.modalPresentationStyle = .fullScreen
         present(cremaStorySelection, animated: true)

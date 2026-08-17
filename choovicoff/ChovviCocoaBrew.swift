@@ -1,7 +1,7 @@
 import UIKit
 import AVFoundation
 
-final class ChovviCocoaProfile: UITabBarController {
+final class ChovviCocoaBrew: UITabBarController {
     private var dailyBrewScroll = false
 
     override func viewDidLoad() {
@@ -13,18 +13,18 @@ final class ChovviCocoaProfile: UITabBarController {
         super.viewDidAppear(animated)
         guard !dailyBrewScroll else { return }
         dailyBrewScroll = true
-        ChovviThermalCalibrationView.goldenRitualLayout(
+        ChovviThermalCalibrationView.amberRitualLayout(
             self,
-            goldenRitualMenu: "Loading fresh coffee moments...",
-            goldenRitualUpdate: 0.8
+            amberRitualMenu: "Loading fresh coffee moments...",
+            amberRitualUpdate: 0.8
         ) {}
     }
 
     private func dailyBrewCanvas() {
-        let dailyBrewScroll = ChovviCraftedProfile()
-        let dailyBrewHeader = ChovviCremaProfile()
-        let dailyBrewArtwork = ChovviMylayertProfile()
-        let dailyBrewCollection = ChovviCuppingProfile()
+        let dailyBrewScroll = ChovviCraftedBrew()
+        let dailyBrewHeader = ChovviCremaBrew()
+        let dailyBrewArtwork = ChovviMylayertBrew()
+        let dailyBrewCollection = ChovviCuppingBrew()
 
         dailyBrewScroll.tabBarItem = UITabBarItem(
             title: nil,
@@ -56,7 +56,7 @@ final class ChovviCocoaProfile: UITabBarController {
         dailyBrewCollection.tabBarItem.tag = 3
         viewControllers = [dailyBrewScroll, dailyBrewHeader, dailyBrewArtwork, dailyBrewCollection]
 
-        tabBar.tintColor = ChovviRoastedProfile.discoveryShelfCanvas
+        tabBar.tintColor = ChovviRoastedBrew.roastShelfCanvas
         tabBar.unselectedItemTintColor = UIColor(red: 182 / 255, green: 182 / 255, blue: 182 / 255, alpha: 1)
         tabBar.backgroundColor = UIColor(white: 0.96, alpha: 0.98)
         tabBar.layer.cornerRadius = 28
@@ -64,95 +64,95 @@ final class ChovviCocoaProfile: UITabBarController {
     }
 }
 
-class ChovviRoastedProfile: UIViewController {
-    static let discoveryShelfCanvas = UIColor(red: 206 / 255, green: 150 / 255, blue: 84 / 255, alpha: 1)
-    static let discoveryShelfScroll = UIColor(red: 39 / 255, green: 39 / 255, blue: 53 / 255, alpha: 1)
-    static let discoveryShelfHeader = UIColor(red: 236 / 255, green: 240 / 255, blue: 243 / 255, alpha: 1)
+class ChovviRoastedBrew: UIViewController {
+    static let roastShelfCanvas = UIColor(red: 206 / 255, green: 150 / 255, blue: 84 / 255, alpha: 1)
+    static let roastShelfScroll = UIColor(red: 39 / 255, green: 39 / 255, blue: 53 / 255, alpha: 1)
+    static let roastShelfHeader = UIColor(red: 236 / 255, green: 240 / 255, blue: 243 / 255, alpha: 1)
 
-    let discoveryShelfArtwork = UIScrollView()
-    let discoveryShelfCollection = UIStackView()
-    let discoveryShelfStack = UIStackView()
-    let discoveryShelfState = UIStackView()
-    let discoveryShelfAction = UIScrollView()
-    private let discoveryShelfStatus = UIRefreshControl()
+    let roastShelfArtwork = UIScrollView()
+    let roastShelfCollection = UIStackView()
+    let roastShelfStack = UIStackView()
+    let roastShelfState = UIStackView()
+    let roastShelfAction = UIScrollView()
+    private let roastShelfStatus = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        discoveryShelfRender()
+        roastShelfRender()
     }
 
-    func discoveryShelfRender() {
+    func roastShelfRender() {
         view.backgroundColor = UIColor(red: 248 / 255, green: 250 / 255, blue: 252 / 255, alpha: 1)
-        discoveryShelfArtwork.translatesAutoresizingMaskIntoConstraints = false
-        discoveryShelfArtwork.alwaysBounceVertical = true
-        discoveryShelfArtwork.showsVerticalScrollIndicator = false
-        discoveryShelfStatus.tintColor = Self.discoveryShelfCanvas
-        discoveryShelfStatus.addTarget(self, action: #selector(discoveryShelfSource), for: .valueChanged)
-        discoveryShelfArtwork.refreshControl = discoveryShelfStatus
-        view.addSubview(discoveryShelfArtwork)
+        roastShelfArtwork.translatesAutoresizingMaskIntoConstraints = false
+        roastShelfArtwork.alwaysBounceVertical = true
+        roastShelfArtwork.showsVerticalScrollIndicator = false
+        roastShelfStatus.tintColor = Self.roastShelfCanvas
+        roastShelfStatus.addTarget(self, action: #selector(roastShelfSource), for: .valueChanged)
+        roastShelfArtwork.refreshControl = roastShelfStatus
+        view.addSubview(roastShelfArtwork)
 
-        discoveryShelfCollection.axis = .vertical
-        discoveryShelfCollection.spacing = 14
-        discoveryShelfCollection.translatesAutoresizingMaskIntoConstraints = false
-        discoveryShelfArtwork.addSubview(discoveryShelfCollection)
+        roastShelfCollection.axis = .vertical
+        roastShelfCollection.spacing = 14
+        roastShelfCollection.translatesAutoresizingMaskIntoConstraints = false
+        roastShelfArtwork.addSubview(roastShelfCollection)
 
-        discoveryShelfStack.axis = .horizontal
-        discoveryShelfStack.spacing = 14
-        discoveryShelfStack.alignment = .fill
-        discoveryShelfStack.translatesAutoresizingMaskIntoConstraints = false
+        roastShelfStack.axis = .horizontal
+        roastShelfStack.spacing = 14
+        roastShelfStack.alignment = .fill
+        roastShelfStack.translatesAutoresizingMaskIntoConstraints = false
 
-        discoveryShelfAction.translatesAutoresizingMaskIntoConstraints = false
-        discoveryShelfAction.showsHorizontalScrollIndicator = false
-        discoveryShelfAction.alwaysBounceHorizontal = true
-        discoveryShelfAction.addSubview(discoveryShelfStack)
-        discoveryShelfCollection.addArrangedSubview(discoveryShelfAction)
+        roastShelfAction.translatesAutoresizingMaskIntoConstraints = false
+        roastShelfAction.showsHorizontalScrollIndicator = false
+        roastShelfAction.alwaysBounceHorizontal = true
+        roastShelfAction.addSubview(roastShelfStack)
+        roastShelfCollection.addArrangedSubview(roastShelfAction)
 
-        discoveryShelfState.axis = .vertical
-        discoveryShelfState.spacing = 14
-        discoveryShelfCollection.addArrangedSubview(discoveryShelfState)
+        roastShelfState.axis = .vertical
+        roastShelfState.spacing = 14
+        roastShelfCollection.addArrangedSubview(roastShelfState)
 
         NSLayoutConstraint.activate([
-            discoveryShelfArtwork.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor), discoveryShelfArtwork.leadingAnchor.constraint(equalTo: view.leadingAnchor), discoveryShelfArtwork.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            discoveryShelfArtwork.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor), discoveryShelfCollection.topAnchor.constraint(equalTo: discoveryShelfArtwork.contentLayoutGuide.topAnchor, constant: 18), discoveryShelfCollection.leadingAnchor.constraint(equalTo: discoveryShelfArtwork.contentLayoutGuide.leadingAnchor, constant: 15),
-            discoveryShelfCollection.trailingAnchor.constraint(equalTo: discoveryShelfArtwork.contentLayoutGuide.trailingAnchor, constant: -15), discoveryShelfCollection.bottomAnchor.constraint(equalTo: discoveryShelfArtwork.contentLayoutGuide.bottomAnchor, constant: -24), discoveryShelfCollection.widthAnchor.constraint(equalTo: discoveryShelfArtwork.frameLayoutGuide.widthAnchor, constant: -30),
-            discoveryShelfStack.topAnchor.constraint(equalTo: discoveryShelfAction.contentLayoutGuide.topAnchor), discoveryShelfStack.leadingAnchor.constraint(equalTo: discoveryShelfAction.contentLayoutGuide.leadingAnchor), discoveryShelfStack.trailingAnchor.constraint(equalTo: discoveryShelfAction.contentLayoutGuide.trailingAnchor),
-            discoveryShelfStack.bottomAnchor.constraint(equalTo: discoveryShelfAction.contentLayoutGuide.bottomAnchor), discoveryShelfStack.heightAnchor.constraint(equalTo: discoveryShelfAction.frameLayoutGuide.heightAnchor)
+            roastShelfArtwork.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor), roastShelfArtwork.leadingAnchor.constraint(equalTo: view.leadingAnchor), roastShelfArtwork.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            roastShelfArtwork.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor), roastShelfCollection.topAnchor.constraint(equalTo: roastShelfArtwork.contentLayoutGuide.topAnchor, constant: 18), roastShelfCollection.leadingAnchor.constraint(equalTo: roastShelfArtwork.contentLayoutGuide.leadingAnchor, constant: 15),
+            roastShelfCollection.trailingAnchor.constraint(equalTo: roastShelfArtwork.contentLayoutGuide.trailingAnchor, constant: -15), roastShelfCollection.bottomAnchor.constraint(equalTo: roastShelfArtwork.contentLayoutGuide.bottomAnchor, constant: -24), roastShelfCollection.widthAnchor.constraint(equalTo: roastShelfArtwork.frameLayoutGuide.widthAnchor, constant: -30),
+            roastShelfStack.topAnchor.constraint(equalTo: roastShelfAction.contentLayoutGuide.topAnchor), roastShelfStack.leadingAnchor.constraint(equalTo: roastShelfAction.contentLayoutGuide.leadingAnchor), roastShelfStack.trailingAnchor.constraint(equalTo: roastShelfAction.contentLayoutGuide.trailingAnchor),
+            roastShelfStack.bottomAnchor.constraint(equalTo: roastShelfAction.contentLayoutGuide.bottomAnchor), roastShelfStack.heightAnchor.constraint(equalTo: roastShelfAction.frameLayoutGuide.heightAnchor)
         ])
     }
 
-    func discoveryShelfLabel(_ discoveryShelfStatus: String) -> UILabel {
-        let discoveryShelfRoute = UILabel()
-        discoveryShelfRoute.text = discoveryShelfStatus
-        discoveryShelfRoute.textColor = Self.discoveryShelfScroll
-        discoveryShelfRoute.font = UIFont.systemFont(ofSize: 28, weight: .black)
-        discoveryShelfRoute.numberOfLines = 0
-        return discoveryShelfRoute
+    func roastShelfLabel(_ roastShelfStatus: String) -> UILabel {
+        let roastShelfRoute = UILabel()
+        roastShelfRoute.text = roastShelfStatus
+        roastShelfRoute.textColor = Self.roastShelfScroll
+        roastShelfRoute.font = UIFont.systemFont(ofSize: 28, weight: .black)
+        roastShelfRoute.numberOfLines = 0
+        return roastShelfRoute
     }
 
-    func discoveryShelfSection(_ discoveryShelfPreview: String) -> UILabel {
-        let discoveryShelfTrigger = UILabel()
-        discoveryShelfTrigger.text = discoveryShelfPreview
-        discoveryShelfTrigger.textColor = Self.discoveryShelfScroll
-        discoveryShelfTrigger.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        return discoveryShelfTrigger
+    func roastShelfSection(_ roastShelfPreview: String) -> UILabel {
+        let roastShelfTrigger = UILabel()
+        roastShelfTrigger.text = roastShelfPreview
+        roastShelfTrigger.textColor = Self.roastShelfScroll
+        roastShelfTrigger.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        return roastShelfTrigger
     }
 
-    func discoveryShelfUpdate() {}
+    func roastShelfUpdate() {}
 
-    @objc private func discoveryShelfSource() {
+    @objc private func roastShelfSource() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
             guard let self else { return }
-            self.discoveryShelfUpdate()
-            self.discoveryShelfStatus.endRefreshing()
+            self.roastShelfUpdate()
+            self.roastShelfStatus.endRefreshing()
             UIAccessibility.post(notification: .announcement, argument: "Content refreshed")
         }
     }
 }
 
-final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDelegate {
+final class ChovviCraftedBrew: ChovviRoastedBrew, UIGestureRecognizerDelegate {
     private var brewGatheringCanvas: Timer?
     private var brewGatheringScroll = 0
-    private var goldenRitualCanvas: [ChovviThermalProfile] = []
+    private var amberRitualCanvas: [ChovviThermalBrew] = []
     private var moodPourCanvas = Set<String>()
 
     override func viewDidLoad() {
@@ -173,27 +173,27 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         brewGatheringArtwork()
-        goldenRitualCanvas.forEach { goldenRitualScroll in
-            goldenRitualScroll.goldenRitualStack()
+        amberRitualCanvas.forEach { amberRitualScroll in
+            amberRitualScroll.amberRitualStack()
         }
     }
 
-    override func discoveryShelfUpdate() {
+    override func roastShelfUpdate() {
         moodGalleryImage()
     }
 
     private func moodGalleryCanvas() {
-        discoveryShelfCollection.insertArrangedSubview(discoveryShelfLabel("Share Your Feelings Today"), at: 0)
+        roastShelfCollection.insertArrangedSubview(roastShelfLabel("Share Your Feelings Today"), at: 0)
         let moodGalleryImage = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedRoast") ?? [])
-        let moodGalleryChoice = Set(ChovviCitrusProfile.roastArchiveRoute.map(\.chovviSilkyAcidity))
+        let moodGalleryChoice = Set(ChovviCitrusBrew.roastArchiveRoute.map(\.chovviSilkyAcidity))
 
-        for moodGalleryScroll in ChovviCitrusProfile.roastArchiveRoute where !moodGalleryImage.contains(moodGalleryScroll.chovviSilkyAeropress) {
+        for moodGalleryScroll in ChovviCitrusBrew.roastArchiveRoute where !moodGalleryImage.contains(moodGalleryScroll.chovviSilkyAeropress) {
             moodPourCanvas.insert(moodGalleryScroll.chovviSilkyAcidity)
             let moodGalleryHeader = moodGalleryArtwork(moodGalleryScroll)
-            discoveryShelfStack.addArrangedSubview(moodGalleryHeader)
+            roastShelfStack.addArrangedSubview(moodGalleryHeader)
             moodGalleryHeader.widthAnchor.constraint(equalToConstant: 256).isActive = true
         }
-        discoveryShelfStack.superview?.heightAnchor.constraint(equalToConstant: 270).isActive = true
+        roastShelfStack.superview?.heightAnchor.constraint(equalToConstant: 270).isActive = true
 
         let brewGatheringCollection = UIImageView(image: UIImage(named: "chovviGoldenProfile"))
         brewGatheringCollection.contentMode = .scaleAspectFit
@@ -202,25 +202,25 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
         brewGatheringCollection.accessibilityLabel = "Create a new Coffee Moment"
         brewGatheringCollection.heightAnchor.constraint(equalTo: brewGatheringCollection.widthAnchor, multiplier: 99 / 349).isActive = true
         brewGatheringCollection.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(brewGatheringStack)))
-        discoveryShelfCollection.insertArrangedSubview(brewGatheringCollection, at: 2)
+        roastShelfCollection.insertArrangedSubview(brewGatheringCollection, at: 2)
 
-        for moodGalleryCollection in ChovviCitrusProfile.roastArchiveStatus
+        for moodGalleryCollection in ChovviCitrusBrew.roastArchiveStatus
         where !moodGalleryChoice.contains(moodGalleryCollection.chovviSilkyAcidity)
             && !moodGalleryImage.contains(moodGalleryCollection.chovviSilkyAeropress) {
             moodPourCanvas.insert(moodGalleryCollection.chovviSilkyAcidity)
-            discoveryShelfState.addArrangedSubview(moodGalleryStack(moodGalleryCollection))
+            roastShelfState.addArrangedSubview(moodGalleryStack(moodGalleryCollection))
         }
     }
 
     private func moodGalleryImage() {
         let moodPourScroll = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedRoast") ?? [])
-        ChovviCitrusProfile.roastArchiveSection.reversed().forEach { moodPourHeader in
+        ChovviCitrusBrew.roastArchiveSection.reversed().forEach { moodPourHeader in
             guard
                 !moodPourCanvas.contains(moodPourHeader.chovviSilkyAcidity),
                 !moodPourScroll.contains(moodPourHeader.chovviSilkyAeropress)
             else { return }
             moodPourCanvas.insert(moodPourHeader.chovviSilkyAcidity)
-            discoveryShelfState.insertArrangedSubview(moodGalleryStack(moodPourHeader), at: 0)
+            roastShelfState.insertArrangedSubview(moodGalleryStack(moodPourHeader), at: 0)
         }
     }
 
@@ -243,32 +243,32 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
     }
 
     private func brewGatheringTrigger() {
-        let brewGatheringLayout = discoveryShelfStack.arrangedSubviews.count
-        guard brewGatheringLayout > 0, !discoveryShelfAction.isDragging, !discoveryShelfAction.isDecelerating else { return }
+        let brewGatheringLayout = roastShelfStack.arrangedSubviews.count
+        guard brewGatheringLayout > 0, !roastShelfAction.isDragging, !roastShelfAction.isDecelerating else { return }
         brewGatheringScroll = (brewGatheringScroll + 1) % brewGatheringLayout
         let brewGatheringSource = CGFloat(brewGatheringScroll) * 270
-        let brewGatheringMenu = max(0, discoveryShelfAction.contentSize.width - discoveryShelfAction.bounds.width)
-        discoveryShelfAction.setContentOffset(CGPoint(x: min(brewGatheringSource, brewGatheringMenu), y: 0), animated: true)
+        let brewGatheringMenu = max(0, roastShelfAction.contentSize.width - roastShelfAction.bounds.width)
+        roastShelfAction.setContentOffset(CGPoint(x: min(brewGatheringSource, brewGatheringMenu), y: 0), animated: true)
     }
 
     @objc private func brewGatheringStack() {
         guard tastingReplySelection() else { return }
-        let brewGatheringDestination = ChovviGranularProfile()
+        let brewGatheringDestination = ChovviGranularBrew()
         let brewGatheringCard = UINavigationController(rootViewController: brewGatheringDestination)
         brewGatheringCard.modalPresentationStyle = .fullScreen
         present(brewGatheringCard, animated: true)
     }
 
-    private func moodGalleryArtwork(_ moodGalleryCollection: ChovviSilkyProfile) -> UIView {
+    private func moodGalleryArtwork(_ moodGalleryCollection: ChovviSilkyBrew) -> UIView {
         moodGalleryArtworkTrigger(moodGalleryCollection)
     }
 
-    private lazy var moodGalleryArtworkTrigger: (ChovviSilkyProfile) -> UIView = { [unowned self] moodGalleryCollection in
+    private lazy var moodGalleryArtworkTrigger: (ChovviSilkyBrew) -> UIView = { [unowned self] moodGalleryCollection in
         let moodGalleryStack = UIView()
-        moodGalleryStack.backgroundColor = Self.discoveryShelfScroll
+        moodGalleryStack.backgroundColor = Self.roastShelfScroll
         moodGalleryStack.layer.cornerRadius = 28
         moodGalleryStack.layer.borderWidth = 2
-        moodGalleryStack.layer.borderColor = Self.discoveryShelfCanvas.cgColor
+        moodGalleryStack.layer.borderColor = Self.roastShelfCanvas.cgColor
         moodGalleryStack.clipsToBounds = true
         moodGalleryStack.accessibilityIdentifier = moodGalleryCollection.chovviSilkyAcidity
         moodGalleryStack.isUserInteractionEnabled = true
@@ -321,13 +321,13 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
         return moodGalleryStack
     }
 
-    private func moodGalleryStack(_ moodGalleryCard: ChovviSilkyProfile) -> UIView {
+    private func moodGalleryStack(_ moodGalleryCard: ChovviSilkyBrew) -> UIView {
         moodGalleryStackTrigger(moodGalleryCard)
     }
 
-    private lazy var moodGalleryStackTrigger: (ChovviSilkyProfile) -> UIView = { [unowned self] moodGalleryCard in
+    private lazy var moodGalleryStackTrigger: (ChovviSilkyBrew) -> UIView = { [unowned self] moodGalleryCard in
         let moodGalleryLabel = UIView()
-        moodGalleryLabel.backgroundColor = Self.discoveryShelfHeader
+        moodGalleryLabel.backgroundColor = Self.roastShelfHeader
         moodGalleryLabel.layer.cornerRadius = 20
         moodGalleryLabel.accessibilityIdentifier = moodGalleryCard.chovviSilkyAcidity
         moodGalleryLabel.heightAnchor.constraint(equalToConstant: 218).isActive = true
@@ -339,13 +339,13 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
 
         let moodGalleryRoute = UILabel()
         moodGalleryRoute.text = moodGalleryCard.chovviSilkyAroma
-        moodGalleryRoute.textColor = Self.discoveryShelfScroll
+        moodGalleryRoute.textColor = Self.roastShelfScroll
         moodGalleryRoute.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         moodGalleryRoute.numberOfLines = 3
         moodGalleryRoute.translatesAutoresizingMaskIntoConstraints = false
         moodGalleryLabel.addSubview(moodGalleryRoute)
 
-        let moodGalleryPreview = ChovviCitrusProfile.roastArchiveCanvas.first { moodGalleryTrigger in
+        let moodGalleryPreview = ChovviCitrusBrew.roastArchiveCanvas.first { moodGalleryTrigger in
             moodGalleryTrigger.chovviBotanicalAcidity == moodGalleryCard.chovviSilkyAeropress
         }
 
@@ -355,7 +355,7 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
 
         let moodGalleryTrigger = UILabel()
         moodGalleryTrigger.text = moodGalleryPreview?.chovviBotanicalAeropress ?? "Choovi Creator"
-        moodGalleryTrigger.textColor = Self.discoveryShelfScroll
+        moodGalleryTrigger.textColor = Self.roastShelfScroll
         moodGalleryTrigger.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         moodGalleryTrigger.adjustsFontSizeToFitWidth = true
         moodGalleryTrigger.minimumScaleFactor = 0.78
@@ -375,7 +375,7 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
 
         let moodGalleryMenu = UIButton(type: .system)
         moodGalleryMenu.tintColor = .white
-        moodGalleryMenu.backgroundColor = Self.discoveryShelfScroll
+        moodGalleryMenu.backgroundColor = Self.roastShelfScroll
         moodGalleryMenu.layer.cornerRadius = 24
         moodGalleryMenu.setImage(UIImage(systemName: "arrow.up.right"), for: .normal)
         moodGalleryMenu.accessibilityLabel = "Open details"
@@ -387,7 +387,7 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
         moodGalleryLabel.addSubview(moodGalleryMenu)
 
         let moodGalleryCard = self.moodGalleryRoute(moodGalleryCard)
-        moodGalleryCard.tintColor = Self.discoveryShelfScroll
+        moodGalleryCard.tintColor = Self.roastShelfScroll
         moodGalleryCard.translatesAutoresizingMaskIntoConstraints = false
         moodGalleryLabel.addSubview(moodGalleryCard)
 
@@ -407,18 +407,18 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
     }
 
     private func moodGalleryLabel(_ moodGalleryItem: String) -> UIImageView {
-        let moodGallerySelection = UIImageView(image: UIImage(named: ChovviCitrusProfile.roastArchiveCard(moodGalleryItem)))
+        let moodGallerySelection = UIImageView(image: UIImage(named: ChovviCitrusBrew.roastArchiveCard(moodGalleryItem)))
         moodGallerySelection.contentMode = .scaleAspectFit
         moodGallerySelection.backgroundColor = UIColor.white.withAlphaComponent(0.96)
         moodGallerySelection.layer.cornerRadius = 12
         moodGallerySelection.layer.borderWidth = 1
-        moodGallerySelection.layer.borderColor = Self.discoveryShelfCanvas.cgColor
+        moodGallerySelection.layer.borderColor = Self.roastShelfCanvas.cgColor
         moodGallerySelection.clipsToBounds = true
         moodGallerySelection.accessibilityLabel = "Selected coffee mood"
         return moodGallerySelection
     }
 
-    private func moodGalleryStatus(_ moodGalleryImage: ChovviBotanicalProfile?) -> UIImageView {
+    private func moodGalleryStatus(_ moodGalleryImage: ChovviBotanicalBrew?) -> UIImageView {
         let moodGalleryChoice = UIImageView(image: UIImage(named: moodGalleryImage?.chovviBotanicalAroma ?? ""))
         moodGalleryChoice.contentMode = .scaleAspectFill
         moodGalleryChoice.clipsToBounds = true
@@ -427,7 +427,7 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
         return moodGalleryChoice
     }
 
-    private func moodGalleryRoute(_ moodGallerySection: ChovviSilkyProfile) -> UIButton {
+    private func moodGalleryRoute(_ moodGallerySection: ChovviSilkyBrew) -> UIButton {
         let moodGalleryPreview = UIButton(type: .system)
         moodGalleryPreview.setImage(UIImage(systemName: "ellipsis"), for: .normal)
         moodGalleryPreview.backgroundColor = UIColor.white.withAlphaComponent(0.9)
@@ -438,7 +438,7 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
         return moodGalleryPreview
     }
 
-    private func moodGallerySource(_ moodGalleryTrigger: ChovviSilkyProfile) -> UIMenu {
+    private func moodGallerySource(_ moodGalleryTrigger: ChovviSilkyBrew) -> UIMenu {
         let moodGalleryLayout = UIAction(title: "Report", image: UIImage(systemName: "flag")) { [weak self] moodGalleryMenu in
             _ = moodGalleryMenu
             self?.moodGalleryUpdate(moodGalleryTrigger, moodGalleryDestination: false)
@@ -450,12 +450,12 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
         return UIMenu(children: [moodGalleryLayout, moodGalleryCard])
     }
 
-    private func moodGalleryUpdate(_ moodGalleryItem: ChovviSilkyProfile, moodGalleryDestination: Bool) {
+    private func moodGalleryUpdate(_ moodGalleryItem: ChovviSilkyBrew, moodGalleryDestination: Bool) {
         guard tastingReplySelection() else { return }
 
         let moodGalleryImage = moodGalleryPreview(moodGalleryItem.chovviSilkyAeropress)
         if !moodGalleryDestination {
-            let brewGatheringCanvas = ChovviCuppingReportProfile(
+            let brewGatheringCanvas = ChovviCuppingNoticeBrew(
                 cupKeeperCanvas: "this Coffee Moment",
                 cupKeeperScroll: moodGalleryItem.chovviSilkyAcidity,
                 cupKeeperHeader: "moment"
@@ -471,22 +471,22 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
         let brewGatheringCanvas = moodGalleryDestination
             ? "Hide future content from \(moodGalleryImage?.chovviBotanicalAeropress ?? "this creator")?"
             : "Send this Coffee Moment for safety review?"
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: moodGalleryChoice, goldenRitualCanvas: brewGatheringCanvas, goldenRitualScroll: "Not Now", goldenRitualHeader: "Confirm", goldenRitualArtwork: moodGalleryDestination ? .destructive : .caution) { } goldenRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: moodGalleryChoice, amberRitualCanvas: brewGatheringCanvas, amberRitualScroll: "Not Now", amberRitualHeader: "Confirm", amberRitualArtwork: moodGalleryDestination ? .destructive : .caution) { } amberRitualStack: { [weak self] in
             self?.moodGalleryItem(moodGalleryItem, moodGallerySelection: moodGalleryDestination)
         }
     }
 
-    private func moodGalleryItem(_ moodGalleryImage: ChovviSilkyProfile, moodGallerySelection: Bool) {
+    private func moodGalleryItem(_ moodGalleryImage: ChovviSilkyBrew, moodGallerySelection: Bool) {
         let moodGalleryChoice = moodGallerySelection ? "chovviCraftedRoast" : "chovviCraftedTasting"
         var brewGatheringCanvas = Set(UserDefaults.standard.stringArray(forKey: moodGalleryChoice) ?? [])
         brewGatheringCanvas.insert(moodGallerySelection ? moodGalleryImage.chovviSilkyAeropress : moodGalleryImage.chovviSilkyAcidity)
         UserDefaults.standard.set(Array(brewGatheringCanvas), forKey: moodGalleryChoice)
 
         if moodGallerySelection {
-            let brewGatheringScroll = ChovviCitrusProfile.roastArchiveStatus
+            let brewGatheringScroll = ChovviCitrusBrew.roastArchiveStatus
                 .filter { brewGatheringHeader in brewGatheringHeader.chovviSilkyAeropress == moodGalleryImage.chovviSilkyAeropress }
                 .map(\.chovviSilkyAcidity)
-            [discoveryShelfStack, discoveryShelfState].forEach { brewGatheringArtwork in
+            [roastShelfStack, roastShelfState].forEach { brewGatheringArtwork in
                 brewGatheringArtwork.arrangedSubviews
                     .filter { brewGatheringCollection in brewGatheringScroll.contains(brewGatheringCollection.accessibilityIdentifier ?? "") }
                     .forEach { brewGatheringStack in
@@ -496,16 +496,16 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
             }
         }
 
-        ChovviThermalAlertView.goldenRitualSelection(
+        ChovviThermalAlertView.amberRitualSelection(
             self,
-            goldenRitualChoice: moodGallerySelection ? "Creator Blocked" : "Report Received",
-            goldenRitualCanvas: moodGallerySelection ? "This creator has been added to your blocked list." : "Thank you. This item has been submitted for safety review.",
-            goldenRitualArtwork: .success
+            amberRitualChoice: moodGallerySelection ? "Creator Blocked" : "Report Received",
+            amberRitualCanvas: moodGallerySelection ? "This creator has been added to your blocked list." : "Thank you. This item has been submitted for safety review.",
+            amberRitualArtwork: .success
         )
     }
 
-    private func moodGalleryDestination(_ moodGalleryCard: ChovviSilkyProfile) {
-        let moodGalleryRecord = ChovviOriginProfile(cupChronicleCanvas: moodGalleryCard)
+    private func moodGalleryDestination(_ moodGalleryCard: ChovviSilkyBrew) {
+        let moodGalleryRecord = ChovviOriginBrew(cupChronicleCanvas: moodGalleryCard)
         let moodGalleryItem = UINavigationController(rootViewController: moodGalleryRecord)
         moodGalleryItem.modalPresentationStyle = .fullScreen
         present(moodGalleryItem, animated: true)
@@ -514,7 +514,7 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
     @objc private func moodGalleryRecord(_ moodGalleryItem: UITapGestureRecognizer) {
         guard
             let moodGallerySelection = moodGalleryItem.view?.accessibilityIdentifier,
-            let moodGalleryImage = (ChovviCitrusProfile.roastArchiveSection + ChovviCitrusProfile.roastArchiveStatus).first(where: { moodGalleryChoice in
+            let moodGalleryImage = (ChovviCitrusBrew.roastArchiveSection + ChovviCitrusBrew.roastArchiveStatus).first(where: { moodGalleryChoice in
                 moodGalleryChoice.chovviSilkyAcidity == moodGallerySelection
             })
         else { return }
@@ -531,90 +531,90 @@ final class ChovviCraftedProfile: ChovviRoastedProfile, UIGestureRecognizerDeleg
         return true
     }
 
-    private func moodGalleryPreview(_ moodGalleryTrigger: String) -> ChovviBotanicalProfile? {
-        ChovviCitrusProfile.roastArchiveCanvas.first { moodGalleryLayout in
+    private func moodGalleryPreview(_ moodGalleryTrigger: String) -> ChovviBotanicalBrew? {
+        ChovviCitrusBrew.roastArchiveCanvas.first { moodGalleryLayout in
             moodGalleryLayout.chovviBotanicalAcidity == moodGalleryTrigger
         }
     }
 
-    private func moodGalleryAction(_ moodGalleryLabel: String) -> ChovviThermalProfile {
+    private func moodGalleryAction(_ moodGalleryLabel: String) -> ChovviThermalBrew {
         let moodGalleryStatus = moodGalleryLabel.hasPrefix("/")
             ? URL(fileURLWithPath: moodGalleryLabel)
             : Bundle.main.url(forResource: moodGalleryLabel, withExtension: "mp4")
-        let moodGalleryRoute = ChovviThermalProfile(goldenRitualArtwork: moodGalleryStatus)
-        goldenRitualCanvas.append(moodGalleryRoute)
+        let moodGalleryRoute = ChovviThermalBrew(amberRitualArtwork: moodGalleryStatus)
+        amberRitualCanvas.append(moodGalleryRoute)
         return moodGalleryRoute
     }
 }
 
-final class ChovviThermalProfile: UIView {
-    private let goldenRitualCanvas: AVPlayer?
-    private let goldenRitualScroll: AVPlayerLayer
-    private let goldenRitualHeader = UIButton(type: .system)
+final class ChovviThermalBrew: UIView {
+    private let amberRitualCanvas: AVPlayer?
+    private let amberRitualScroll: AVPlayerLayer
+    private let amberRitualHeader = UIButton(type: .system)
 
-    init(goldenRitualArtwork: URL?) {
-        if let goldenRitualCollection = goldenRitualArtwork {
-            let goldenRitualStack = AVPlayer(url: goldenRitualCollection)
-            goldenRitualStack.isMuted = true
-            goldenRitualCanvas = goldenRitualStack
+    init(amberRitualArtwork: URL?) {
+        if let amberRitualCollection = amberRitualArtwork {
+            let amberRitualStack = AVPlayer(url: amberRitualCollection)
+            amberRitualStack.isMuted = true
+            amberRitualCanvas = amberRitualStack
         } else {
-            goldenRitualCanvas = nil
+            amberRitualCanvas = nil
         }
-        goldenRitualScroll = AVPlayerLayer(player: goldenRitualCanvas)
+        amberRitualScroll = AVPlayerLayer(player: amberRitualCanvas)
         super.init(frame: .zero)
-        goldenRitualRender()
+        amberRitualRender()
     }
 
     required init?(coder: NSCoder) {
-        goldenRitualCanvas = nil
-        goldenRitualScroll = AVPlayerLayer()
+        amberRitualCanvas = nil
+        amberRitualScroll = AVPlayerLayer()
         super.init(coder: coder)
-        goldenRitualRender()
+        amberRitualRender()
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        goldenRitualScroll.frame = bounds
+        amberRitualScroll.frame = bounds
     }
 
-    private func goldenRitualRender() {
-        backgroundColor = ChovviRoastedProfile.discoveryShelfScroll
+    private func amberRitualRender() {
+        backgroundColor = ChovviRoastedBrew.roastShelfScroll
         clipsToBounds = true
-        goldenRitualScroll.videoGravity = .resizeAspectFill
-        layer.insertSublayer(goldenRitualScroll, at: 0)
-        goldenRitualHeader.tintColor = .white
-        goldenRitualHeader.backgroundColor = UIColor(red: 39 / 255, green: 39 / 255, blue: 53 / 255, alpha: 0.78)
-        goldenRitualHeader.layer.cornerRadius = 22
-        goldenRitualHeader.setImage(UIImage(systemName: "play.fill"), for: .normal)
-        goldenRitualHeader.addTarget(self, action: #selector(goldenRitualCollection), for: .touchUpInside)
-        goldenRitualHeader.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(goldenRitualHeader)
+        amberRitualScroll.videoGravity = .resizeAspectFill
+        layer.insertSublayer(amberRitualScroll, at: 0)
+        amberRitualHeader.tintColor = .white
+        amberRitualHeader.backgroundColor = UIColor(red: 39 / 255, green: 39 / 255, blue: 53 / 255, alpha: 0.78)
+        amberRitualHeader.layer.cornerRadius = 22
+        amberRitualHeader.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        amberRitualHeader.addTarget(self, action: #selector(amberRitualCollection), for: .touchUpInside)
+        amberRitualHeader.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(amberRitualHeader)
         NSLayoutConstraint.activate([
-            goldenRitualHeader.centerXAnchor.constraint(equalTo: centerXAnchor), goldenRitualHeader.centerYAnchor.constraint(equalTo: centerYAnchor), goldenRitualHeader.widthAnchor.constraint(equalToConstant: 44),
-            goldenRitualHeader.heightAnchor.constraint(equalToConstant: 44)
+            amberRitualHeader.centerXAnchor.constraint(equalTo: centerXAnchor), amberRitualHeader.centerYAnchor.constraint(equalTo: centerYAnchor), amberRitualHeader.widthAnchor.constraint(equalToConstant: 44),
+            amberRitualHeader.heightAnchor.constraint(equalToConstant: 44)
         ])
-        NotificationCenter.default.addObserver(self, selector: #selector(goldenRitualState), name: .AVPlayerItemDidPlayToEndTime, object: goldenRitualCanvas?.currentItem)
+        NotificationCenter.default.addObserver(self, selector: #selector(amberRitualState), name: .AVPlayerItemDidPlayToEndTime, object: amberRitualCanvas?.currentItem)
     }
 
-    @objc private func goldenRitualCollection() {
-        guard let goldenRitualStack = goldenRitualCanvas else { return }
-        if goldenRitualStack.timeControlStatus == .playing {
-            goldenRitualStack.pause()
-            goldenRitualHeader.setImage(UIImage(systemName: "play.fill"), for: .normal)
+    @objc private func amberRitualCollection() {
+        guard let amberRitualStack = amberRitualCanvas else { return }
+        if amberRitualStack.timeControlStatus == .playing {
+            amberRitualStack.pause()
+            amberRitualHeader.setImage(UIImage(systemName: "play.fill"), for: .normal)
         } else {
-            goldenRitualStack.play()
-            goldenRitualHeader.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+            amberRitualStack.play()
+            amberRitualHeader.setImage(UIImage(systemName: "pause.fill"), for: .normal)
         }
     }
 
-    @objc private func goldenRitualState(_ goldenRitualRender: Notification) {
-        goldenRitualCanvas?.seek(to: .zero)
-        goldenRitualHeader.setImage(UIImage(systemName: "play.fill"), for: .normal)
+    @objc private func amberRitualState(_ amberRitualRender: Notification) {
+        amberRitualCanvas?.seek(to: .zero)
+        amberRitualHeader.setImage(UIImage(systemName: "play.fill"), for: .normal)
     }
 
-    func goldenRitualStack() {
-        goldenRitualCanvas?.pause()
-        goldenRitualHeader.setImage(UIImage(systemName: "play.fill"), for: .normal)
+    func amberRitualStack() {
+        amberRitualCanvas?.pause()
+        amberRitualHeader.setImage(UIImage(systemName: "play.fill"), for: .normal)
     }
 
     deinit {
@@ -622,7 +622,7 @@ final class ChovviThermalProfile: UIView {
     }
 }
 
-final class ChovviCremaProfile: ChovviRoastedProfile {
+final class ChovviCremaBrew: ChovviRoastedBrew {
     private let coffeeJournalCanvas = UIStackView()
     private let coffeeJournalPopular = UIStackView()
     private var coffeeJournalScroll = 0
@@ -638,23 +638,23 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         coffeeJournalRender()
     }
 
-    override func discoveryShelfUpdate() {
+    override func roastShelfUpdate() {
         coffeeJournalState()
         coffeeJournalRender()
     }
 
     private func coffeeJournalHeader() {
-        discoveryShelfCollection.insertArrangedSubview(coffeeJournalArtwork(), at: 0)
-        discoveryShelfStack.superview?.heightAnchor.constraint(equalToConstant: 132).isActive = true
+        roastShelfCollection.insertArrangedSubview(coffeeJournalArtwork(), at: 0)
+        roastShelfStack.superview?.heightAnchor.constraint(equalToConstant: 132).isActive = true
 
-        discoveryShelfState.addArrangedSubview(coffeeJournalLabel("popular"))
+        roastShelfState.addArrangedSubview(coffeeJournalLabel("popular"))
         coffeeJournalPopular.axis = .vertical
         coffeeJournalPopular.spacing = 12
-        discoveryShelfState.addArrangedSubview(coffeeJournalPopular)
-        discoveryShelfState.addArrangedSubview(coffeeJournalRoute())
+        roastShelfState.addArrangedSubview(coffeeJournalPopular)
+        roastShelfState.addArrangedSubview(coffeeJournalRoute())
         coffeeJournalCanvas.axis = .vertical
         coffeeJournalCanvas.spacing = 12
-        discoveryShelfState.addArrangedSubview(coffeeJournalCanvas)
+        roastShelfState.addArrangedSubview(coffeeJournalCanvas)
         coffeeJournalRender()
         coffeeJournalState()
     }
@@ -663,7 +663,7 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         let coffeeJournalCollection = UIView()
         coffeeJournalCollection.heightAnchor.constraint(equalToConstant: 58).isActive = true
 
-        let coffeeJournalStack = discoveryShelfLabel("Coffee Community")
+        let coffeeJournalStack = roastShelfLabel("Coffee Community")
         coffeeJournalStack.font = UIFont.systemFont(ofSize: 27, weight: .black)
         coffeeJournalStack.numberOfLines = 1
         coffeeJournalStack.adjustsFontSizeToFitWidth = true
@@ -689,11 +689,11 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         return coffeeJournalCollection
     }
 
-    private func coffeeJournalCollection(_ coffeeJournalStack: ChovviBotanicalProfile) -> UIView {
+    private func coffeeJournalCollection(_ coffeeJournalStack: ChovviBotanicalBrew) -> UIView {
         coffeeJournalCollectionTrigger(coffeeJournalStack)
     }
 
-    private lazy var coffeeJournalCollectionTrigger: (ChovviBotanicalProfile) -> UIView = { [unowned self] coffeeJournalStack in
+    private lazy var coffeeJournalCollectionTrigger: (ChovviBotanicalBrew) -> UIView = { [unowned self] coffeeJournalStack in
         let coffeeJournalState = UIStackView()
         coffeeJournalState.axis = .vertical
         coffeeJournalState.alignment = .center
@@ -731,7 +731,7 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
 
         let coffeeJournalLabel = UIButton(type: .system)
         coffeeJournalLabel.setTitle(coffeeJournalStack.chovviBotanicalAeropress.components(separatedBy: " ").first, for: .normal)
-        coffeeJournalLabel.setTitleColor(Self.discoveryShelfScroll, for: .normal)
+        coffeeJournalLabel.setTitleColor(Self.roastShelfScroll, for: .normal)
         coffeeJournalLabel.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         coffeeJournalLabel.addAction(UIAction { [weak self] coffeeJournalStatus in
             _ = coffeeJournalStatus
@@ -799,7 +799,7 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         return coffeeJournalSection
     }
 
-    private func coffeeJournalStatus(_ coffeeJournalRoute: [ChovviCaramelProfile]) -> UIView {
+    private func coffeeJournalStatus(_ coffeeJournalRoute: [ChovviCaramelBrew]) -> UIView {
         let coffeeJournalSection = UIStackView()
         coffeeJournalSection.axis = .vertical
         coffeeJournalSection.spacing = 12
@@ -821,13 +821,13 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         return coffeeJournalSection
     }
 
-    private func coffeeJournalCard(_ coffeeJournalRecord: ChovviCaramelProfile) -> UIView {
+    private func coffeeJournalCard(_ coffeeJournalRecord: ChovviCaramelBrew) -> UIView {
         coffeeJournalCardTrigger(coffeeJournalRecord)
     }
 
-    private lazy var coffeeJournalCardTrigger: (ChovviCaramelProfile) -> UIView = { [unowned self] coffeeJournalRecord in
+    private lazy var coffeeJournalCardTrigger: (ChovviCaramelBrew) -> UIView = { [unowned self] coffeeJournalRecord in
         let coffeeJournalItem = UIView()
-        coffeeJournalItem.backgroundColor = Self.discoveryShelfHeader
+        coffeeJournalItem.backgroundColor = Self.roastShelfHeader
         coffeeJournalItem.layer.cornerRadius = 20
         coffeeJournalItem.clipsToBounds = true
         coffeeJournalItem.heightAnchor.constraint(equalToConstant: 222).isActive = true
@@ -842,7 +842,7 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         let coffeeJournalImage = UIButton(type: .system)
         coffeeJournalImage.accessibilityIdentifier = coffeeJournalRecord.chovviCaramelAcidity
         coffeeJournalImage.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        coffeeJournalImage.setTitleColor(Self.discoveryShelfScroll, for: .normal)
+        coffeeJournalImage.setTitleColor(Self.roastShelfScroll, for: .normal)
         coffeeJournalImage.backgroundColor = UIColor.white.withAlphaComponent(0.94)
         coffeeJournalImage.layer.cornerRadius = 12
         coffeeJournalImage.addAction(UIAction { [weak self, weak coffeeJournalImage] coffeeJournalChoice in
@@ -855,7 +855,7 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
 
         let coffeeJournalChoice = UILabel()
         coffeeJournalChoice.text = coffeeJournalRecord.chovviCaramelAroma
-        coffeeJournalChoice.textColor = Self.discoveryShelfScroll
+        coffeeJournalChoice.textColor = Self.roastShelfScroll
         coffeeJournalChoice.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         coffeeJournalChoice.numberOfLines = 2
         coffeeJournalChoice.translatesAutoresizingMaskIntoConstraints = false
@@ -863,7 +863,7 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
 
         let brewTableCanvas = UIButton(type: .system)
         brewTableCanvas.tintColor = .white
-        brewTableCanvas.backgroundColor = Self.discoveryShelfScroll
+        brewTableCanvas.backgroundColor = Self.roastShelfScroll
         brewTableCanvas.layer.cornerRadius = 21
         brewTableCanvas.setImage(UIImage(systemName: "arrow.up.right"), for: .normal)
         brewTableCanvas.addAction(UIAction { [weak self] brewTableScroll in
@@ -874,7 +874,7 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         coffeeJournalItem.addSubview(brewTableCanvas)
 
         let coffeeJournalStatus = coffeeJournalRoute(coffeeJournalRecord)
-        coffeeJournalStatus.tintColor = Self.discoveryShelfScroll
+        coffeeJournalStatus.tintColor = Self.roastShelfScroll
         coffeeJournalStatus.translatesAutoresizingMaskIntoConstraints = false
         coffeeJournalItem.addSubview(coffeeJournalStatus)
 
@@ -889,7 +889,7 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         return coffeeJournalItem
     }
 
-    private func coffeeJournalRoute(_ coffeeJournalRecord: ChovviCaramelProfile) -> UIButton {
+    private func coffeeJournalRoute(_ coffeeJournalRecord: ChovviCaramelBrew) -> UIButton {
         let coffeeJournalItem = UIButton(type: .system)
         coffeeJournalItem.setImage(UIImage(systemName: "ellipsis"), for: .normal)
         coffeeJournalItem.backgroundColor = UIColor.white.withAlphaComponent(0.9)
@@ -900,7 +900,7 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         return coffeeJournalItem
     }
 
-    private func coffeeJournalSelection(_ coffeeJournalRecord: ChovviCaramelProfile) -> UIMenu {
+    private func coffeeJournalSelection(_ coffeeJournalRecord: ChovviCaramelBrew) -> UIMenu {
         let coffeeJournalItem = UIAction(title: "Report", image: UIImage(systemName: "flag")) { [weak self] coffeeJournalAction in
             _ = coffeeJournalAction
             self?.coffeeJournalArtwork(coffeeJournalRecord, coffeeJournalCard: false)
@@ -912,13 +912,13 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         return UIMenu(children: [coffeeJournalItem, coffeeJournalLabel])
     }
 
-    private func coffeeJournalArtwork(_ coffeeJournalRecord: ChovviCaramelProfile, coffeeJournalCard: Bool) {
+    private func coffeeJournalArtwork(_ coffeeJournalRecord: ChovviCaramelBrew, coffeeJournalCard: Bool) {
         guard coffeeJournalMenu() else { return }
-        let coffeeJournalItem = ChovviCitrusProfile.roastArchiveCanvas.first { coffeeJournalTrigger in
+        let coffeeJournalItem = ChovviCitrusBrew.roastArchiveCanvas.first { coffeeJournalTrigger in
             coffeeJournalTrigger.chovviBotanicalAcidity == coffeeJournalRecord.chovviCaramelAeropress
         }
         if !coffeeJournalCard {
-            let coffeeJournalLabel = ChovviCuppingReportProfile(
+            let coffeeJournalLabel = ChovviCuppingNoticeBrew(
                 cupKeeperCanvas: "this Coffee Moment",
                 cupKeeperScroll: coffeeJournalRecord.chovviCaramelAcidity,
                 cupKeeperHeader: "moment"
@@ -932,19 +932,19 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
             present(coffeeJournalLabel, animated: true)
             return
         }
-        ChovviThermalAlertView.goldenRitualSelection(
+        ChovviThermalAlertView.amberRitualSelection(
             self,
-            goldenRitualChoice: "Block Creator",
-            goldenRitualCanvas: "Hide future content from \(coffeeJournalItem?.chovviBotanicalAeropress ?? "this creator")?",
-            goldenRitualScroll: "Not Now",
-            goldenRitualHeader: "Confirm",
-            goldenRitualArtwork: .destructive
-        ) { } goldenRitualStack: { [weak self] in
+            amberRitualChoice: "Block Creator",
+            amberRitualCanvas: "Hide future content from \(coffeeJournalItem?.chovviBotanicalAeropress ?? "this creator")?",
+            amberRitualScroll: "Not Now",
+            amberRitualHeader: "Confirm",
+            amberRitualArtwork: .destructive
+        ) { } amberRitualStack: { [weak self] in
             self?.coffeeJournalItem(coffeeJournalRecord, coffeeJournalSelection: true)
         }
     }
 
-    private func coffeeJournalItem(_ coffeeJournalRecord: ChovviCaramelProfile, coffeeJournalSelection: Bool) {
+    private func coffeeJournalItem(_ coffeeJournalRecord: ChovviCaramelBrew, coffeeJournalSelection: Bool) {
         let coffeeJournalLabel = coffeeJournalSelection ? "chovviCraftedRoast" : "chovviCraftedTasting"
         var coffeeJournalAction = Set(UserDefaults.standard.stringArray(forKey: coffeeJournalLabel) ?? [])
         coffeeJournalAction.insert(coffeeJournalSelection ? coffeeJournalRecord.chovviCaramelAeropress : coffeeJournalRecord.chovviCaramelAcidity)
@@ -956,11 +956,11 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         }
         coffeeJournalRender()
         coffeeJournalState()
-        ChovviThermalAlertView.goldenRitualSelection(
+        ChovviThermalAlertView.amberRitualSelection(
             self,
-            goldenRitualChoice: coffeeJournalSelection ? "Creator Blocked" : "Report Received",
-            goldenRitualCanvas: coffeeJournalSelection ? "This creator has been added to your blocked list." : "This item has been submitted for safety review.",
-            goldenRitualArtwork: .success
+            amberRitualChoice: coffeeJournalSelection ? "Creator Blocked" : "Report Received",
+            amberRitualCanvas: coffeeJournalSelection ? "This creator has been added to your blocked list." : "This item has been submitted for safety review.",
+            amberRitualArtwork: .success
         )
     }
 
@@ -971,11 +971,11 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         }
         let coffeeJournalRecord = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedRoast") ?? [])
         let coffeeJournalItem = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedTasting") ?? [])
-        let coffeeJournalAction = (ChovviCitrusProfile.roastArchivePreview + Array(ChovviCitrusProfile.roastArchiveRender.dropFirst(2))).filter { coffeeJournalSelection in
+        let coffeeJournalAction = (ChovviCitrusBrew.roastArchivePreview + Array(ChovviCitrusBrew.roastArchiveRender.dropFirst(2))).filter { coffeeJournalSelection in
             !coffeeJournalRecord.contains(coffeeJournalSelection.chovviCaramelAeropress)
                 && !coffeeJournalItem.contains(coffeeJournalSelection.chovviCaramelAcidity)
         }
-        let coffeeJournalLabel: [ChovviCaramelProfile]
+        let coffeeJournalLabel: [ChovviCaramelBrew]
         if coffeeJournalScroll == 1 {
             let coffeeJournalStatus = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? [])
             coffeeJournalLabel = coffeeJournalAction.filter { coffeeJournalRoute in
@@ -998,16 +998,16 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
     }
 
     private func coffeeJournalRender() {
-        discoveryShelfStack.arrangedSubviews.forEach { coffeeJournalAction in
-            discoveryShelfStack.removeArrangedSubview(coffeeJournalAction)
+        roastShelfStack.arrangedSubviews.forEach { coffeeJournalAction in
+            roastShelfStack.removeArrangedSubview(coffeeJournalAction)
             coffeeJournalAction.removeFromSuperview()
         }
         let coffeeJournalRecord = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedRoast") ?? [])
-        ChovviCitrusProfile.roastArchiveState
+        ChovviCitrusBrew.roastArchiveState
             .filter { !coffeeJournalRecord.contains($0.chovviBotanicalAcidity) }
             .forEach { coffeeJournalScroll in
                 let coffeeJournalHeader = coffeeJournalCollection(coffeeJournalScroll)
-                discoveryShelfStack.addArrangedSubview(coffeeJournalHeader)
+                roastShelfStack.addArrangedSubview(coffeeJournalHeader)
                 coffeeJournalHeader.widthAnchor.constraint(equalToConstant: 88).isActive = true
             }
 
@@ -1016,7 +1016,7 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
             coffeeJournalAction.removeFromSuperview()
         }
         let coffeeJournalItem = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedTasting") ?? [])
-        let coffeeJournalAction = ChovviCitrusProfile.roastArchiveRender.filter { coffeeJournalSelection in
+        let coffeeJournalAction = ChovviCitrusBrew.roastArchiveRender.filter { coffeeJournalSelection in
             !coffeeJournalRecord.contains(coffeeJournalSelection.chovviCaramelAeropress)
                 && !coffeeJournalItem.contains(coffeeJournalSelection.chovviCaramelAcidity)
         }
@@ -1032,7 +1032,7 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
             coffeeJournalPopular.addArrangedSubview(coffeeJournalStatus(Array(coffeeJournalAction.prefix(2))))
         }
 
-        discoveryShelfStack.arrangedSubviews.compactMap { coffeeJournalAction in
+        roastShelfStack.arrangedSubviews.compactMap { coffeeJournalAction in
             coffeeJournalAction.subviews.compactMap { $0 as? UIButton }.first { $0.accessibilityIdentifier != nil }
         }.forEach { coffeeJournalLabel in
             coffeeJournalTrigger(coffeeJournalLabel, coffeeJournalMenu: coffeeJournalLabel.accessibilityIdentifier ?? "")
@@ -1050,10 +1050,10 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         let coffeeJournalDestination = coffeeJournalUpdate.contains(coffeeJournalMenu)
         coffeeJournalLayout.setTitle(coffeeJournalDestination ? "Followed" : "Follow", for: .normal)
         coffeeJournalLayout.setTitleColor(coffeeJournalDestination ? .lightGray : .white, for: .normal)
-        coffeeJournalLayout.backgroundColor = coffeeJournalDestination ? Self.discoveryShelfScroll : UIColor(red: 1, green: 138 / 255, blue: 0, alpha: 1)
+        coffeeJournalLayout.backgroundColor = coffeeJournalDestination ? Self.roastShelfScroll : UIColor(red: 1, green: 138 / 255, blue: 0, alpha: 1)
     }
 
-    private func coffeeJournalPreview(_ coffeeJournalTrigger: ChovviBotanicalProfile, coffeeJournalLayout: UIButton?) {
+    private func coffeeJournalPreview(_ coffeeJournalTrigger: ChovviBotanicalBrew, coffeeJournalLayout: UIButton?) {
         guard coffeeJournalMenu() else { return }
         var coffeeJournalUpdate = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? [])
         if coffeeJournalUpdate.contains(coffeeJournalTrigger.chovviBotanicalAcidity) {
@@ -1068,13 +1068,13 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         if coffeeJournalScroll == 1 { coffeeJournalState() }
     }
 
-    private func coffeeJournalDestination(_ coffeeJournalCard: UIButton?, coffeeJournalRecord: ChovviCaramelProfile) {
+    private func coffeeJournalDestination(_ coffeeJournalCard: UIButton?, coffeeJournalRecord: ChovviCaramelBrew) {
         let coffeeJournalItem = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaTasting") ?? [])
         let coffeeJournalSelection = coffeeJournalItem.contains(coffeeJournalRecord.chovviCaramelAcidity)
         coffeeJournalCard?.setTitle("🔥 \(coffeeJournalRecord.chovviCaramelBatch + (coffeeJournalSelection ? 1 : 0))", for: .normal)
     }
 
-    private func coffeeJournalUpdate(_ coffeeJournalDestination: ChovviCaramelProfile, coffeeJournalCard: UIButton?) {
+    private func coffeeJournalUpdate(_ coffeeJournalDestination: ChovviCaramelBrew, coffeeJournalCard: UIButton?) {
         guard coffeeJournalMenu() else { return }
         var coffeeJournalRecord = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaTasting") ?? [])
         if coffeeJournalRecord.contains(coffeeJournalDestination.chovviCaramelAcidity) {
@@ -1090,15 +1090,15 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         tastingReplySelection()
     }
 
-    private func coffeeJournalSection(_ coffeeJournalPreview: ChovviBotanicalProfile) {
-        let coffeeJournalTrigger = ChovviAromaticProfile(originPortraitCanvas: coffeeJournalPreview)
+    private func coffeeJournalSection(_ coffeeJournalPreview: ChovviBotanicalBrew) {
+        let coffeeJournalTrigger = ChovviAromaticBrew(originPortraitCanvas: coffeeJournalPreview)
         let coffeeJournalLayout = UINavigationController(rootViewController: coffeeJournalTrigger)
         coffeeJournalLayout.modalPresentationStyle = .fullScreen
         present(coffeeJournalLayout, animated: true)
     }
 
-    private func coffeeJournalRecord(_ coffeeJournalItem: ChovviCaramelProfile) {
-        let coffeeJournalSelection = ChovviArtisanProfile(cremaStoryCanvas: coffeeJournalItem)
+    private func coffeeJournalRecord(_ coffeeJournalItem: ChovviCaramelBrew) {
+        let coffeeJournalSelection = ChovviArtisanBrew(cremaStoryCanvas: coffeeJournalItem)
         let brewTableCanvas = UINavigationController(rootViewController: coffeeJournalSelection)
         brewTableCanvas.modalPresentationStyle = .fullScreen
         present(brewTableCanvas, animated: true)
@@ -1118,14 +1118,14 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
 
     @objc private func coffeeJournalAction() {
         guard coffeeJournalMenu() else { return }
-        let coffeeJournalLabel = ChovviSpecialtyProfile()
+        let coffeeJournalLabel = ChovviSpecialtyBrew()
         let coffeeJournalStatus = UINavigationController(rootViewController: coffeeJournalLabel)
         coffeeJournalStatus.modalPresentationStyle = .fullScreen
         present(coffeeJournalStatus, animated: true)
     }
 }
 
-final class ChovviFloralProfile: UIViewController {
+final class ChovviFloralBrew: UIViewController {
     private let brewTableCanvas: String
     private let brewTableScroll: String
 
@@ -1155,7 +1155,7 @@ final class ChovviFloralProfile: UIViewController {
         }
         let brewTableHeader = UILabel()
         brewTableHeader.text = brewTableCanvas
-        brewTableHeader.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        brewTableHeader.textColor = ChovviRoastedBrew.roastShelfScroll
         brewTableHeader.font = UIFont.systemFont(ofSize: 28, weight: .black)
         brewTableHeader.translatesAutoresizingMaskIntoConstraints = false
         let brewTableArtwork = UILabel()

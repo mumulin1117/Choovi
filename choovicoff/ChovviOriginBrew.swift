@@ -1,6 +1,6 @@
 import UIKit
 
-struct ChovviHarvestProfile: Codable, Hashable {
+struct ChovviHarvestBrew: Codable, Hashable {
     let tastingReplyCanvas: String
     let tastingReplyScroll: String
     let tastingReplyHeader: String
@@ -12,9 +12,9 @@ struct ChovviHarvestProfile: Codable, Hashable {
     }
 }
 
-final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
-    private let cupChronicleCanvas: ChovviSilkyProfile
-    private let cupChronicleScroll: ChovviBotanicalProfile?
+final class ChovviOriginBrew: UIViewController, UITextFieldDelegate {
+    private let cupChronicleCanvas: ChovviSilkyBrew
+    private let cupChronicleScroll: ChovviBotanicalBrew?
     private let cupChronicleHeader = UIScrollView()
     private let cupChronicleArtwork = UIStackView()
     private let cupChronicleCollection = UIStackView()
@@ -25,18 +25,18 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
     private let cupChronicleLabel = UIButton(type: .system)
     private let cupChronicleStatus = UILabel()
     private var cupChronicleRoute: NSLayoutConstraint?
-    private var cupChronicleSection: [ChovviHarvestProfile] = []
+    private var cupChronicleSection: [ChovviHarvestBrew] = []
 
-    private lazy var cupChroniclePreview: ChovviThermalProfile = {
+    private lazy var cupChroniclePreview: ChovviThermalBrew = {
         let cupChronicleTrigger = cupChronicleCanvas.chovviSilkyAftertaste.hasPrefix("/")
             ? URL(fileURLWithPath: cupChronicleCanvas.chovviSilkyAftertaste)
             : Bundle.main.url(forResource: cupChronicleCanvas.chovviSilkyAftertaste, withExtension: "mp4")
-        return ChovviThermalProfile(goldenRitualArtwork: cupChronicleTrigger)
+        return ChovviThermalBrew(amberRitualArtwork: cupChronicleTrigger)
     }()
 
-    init(cupChronicleCanvas: ChovviSilkyProfile) {
+    init(cupChronicleCanvas: ChovviSilkyBrew) {
         self.cupChronicleCanvas = cupChronicleCanvas
-        cupChronicleScroll = ChovviCitrusProfile.roastArchiveCanvas.first { cupChronicleHeader in
+        cupChronicleScroll = ChovviCitrusBrew.roastArchiveCanvas.first { cupChronicleHeader in
             cupChronicleHeader.chovviBotanicalAcidity == cupChronicleCanvas.chovviSilkyAeropress
         }
         super.init(nibName: nil, bundle: nil)
@@ -73,7 +73,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        cupChroniclePreview.goldenRitualStack()
+        cupChroniclePreview.amberRitualStack()
     }
 
     private func cupChronicleLayout() { cupChronicleLayoutTrigger() }
@@ -122,7 +122,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
         cupChronicleStack.addSubview(cupChronicleState)
 
         cupChronicleRender.tintColor = .white
-        cupChronicleRender.backgroundColor = ChovviRoastedProfile.discoveryShelfCanvas
+        cupChronicleRender.backgroundColor = ChovviRoastedBrew.roastShelfCanvas
         cupChronicleRender.layer.cornerRadius = 20
         cupChronicleRender.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
         cupChronicleRender.accessibilityLabel = "Publish comment"
@@ -158,7 +158,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
 
         let journalDraftCanvas = UILabel()
         journalDraftCanvas.text = cupChronicleCanvas.chovviSilkyAroma
-        journalDraftCanvas.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        journalDraftCanvas.textColor = ChovviRoastedBrew.roastShelfScroll
         journalDraftCanvas.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         journalDraftCanvas.numberOfLines = 0
         cupChronicleArtwork.addArrangedSubview(journalDraftCanvas)
@@ -172,7 +172,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
 
         let journalDraftArtwork = UILabel()
         journalDraftArtwork.text = "Comments"
-        journalDraftArtwork.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        journalDraftArtwork.textColor = ChovviRoastedBrew.roastShelfScroll
         journalDraftArtwork.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         cupChronicleArtwork.addArrangedSubview(journalDraftArtwork)
 
@@ -198,7 +198,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
 
         let journalDraftHeader = UILabel()
         journalDraftHeader.text = cupChronicleScroll?.chovviBotanicalAeropress ?? "Choovi Creator"
-        journalDraftHeader.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        journalDraftHeader.textColor = ChovviRoastedBrew.roastShelfScroll
         journalDraftHeader.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         journalDraftHeader.isUserInteractionEnabled = true
         journalDraftHeader.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(journalDraftState)))
@@ -212,12 +212,12 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
         journalDraftArtwork.translatesAutoresizingMaskIntoConstraints = false
         journalDraftCanvas.addSubview(journalDraftArtwork)
 
-        let journalDraftCollection = UIImageView(image: UIImage(named: ChovviCitrusProfile.roastArchiveCard(cupChronicleCanvas.chovviSilkyBurr)))
+        let journalDraftCollection = UIImageView(image: UIImage(named: ChovviCitrusBrew.roastArchiveCard(cupChronicleCanvas.chovviSilkyBurr)))
         journalDraftCollection.contentMode = .scaleAspectFit
         journalDraftCollection.backgroundColor = UIColor.white
         journalDraftCollection.layer.cornerRadius = 12
         journalDraftCollection.layer.borderWidth = 1
-        journalDraftCollection.layer.borderColor = ChovviRoastedProfile.discoveryShelfCanvas.cgColor
+        journalDraftCollection.layer.borderColor = ChovviRoastedBrew.roastShelfCanvas.cgColor
         journalDraftCollection.clipsToBounds = true
         journalDraftCollection.translatesAutoresizingMaskIntoConstraints = false
         journalDraftCanvas.addSubview(journalDraftCollection)
@@ -225,7 +225,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
         cupChronicleAction.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .bold)
         cupChronicleAction.layer.cornerRadius = 16
         cupChronicleAction.layer.borderWidth = 1
-        cupChronicleAction.layer.borderColor = ChovviRoastedProfile.discoveryShelfCanvas.cgColor
+        cupChronicleAction.layer.borderColor = ChovviRoastedBrew.roastShelfCanvas.cgColor
         cupChronicleAction.addTarget(self, action: #selector(journalDraftStack), for: .touchUpInside)
         cupChronicleAction.translatesAutoresizingMaskIntoConstraints = false
         journalDraftCanvas.addSubview(cupChronicleAction)
@@ -248,11 +248,11 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
         journalDraftState.distribution = .equalSpacing
 
         cupChronicleLabel.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
-        cupChronicleLabel.tintColor = ChovviRoastedProfile.discoveryShelfCanvas
+        cupChronicleLabel.tintColor = ChovviRoastedBrew.roastShelfCanvas
         cupChronicleLabel.addTarget(self, action: #selector(journalDraftLabel), for: .touchUpInside)
         journalDraftState.addArrangedSubview(cupChronicleLabel)
 
-        cupChronicleStatus.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        cupChronicleStatus.textColor = ChovviRoastedBrew.roastShelfScroll
         cupChronicleStatus.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         journalDraftState.addArrangedSubview(cupChronicleStatus)
 
@@ -262,18 +262,18 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
     }
 
     private func cupChronicleMenu() {
-        let journalDraftSection = ChovviCitrusProfile.roastArchiveCanvas
+        let journalDraftSection = ChovviCitrusBrew.roastArchiveCanvas
         let journalDraftPreview = cupChronicleCanvas.chovviSilkyBatch % max(1, journalDraftSection.count)
         let journalDraftTrigger = journalDraftSection[journalDraftPreview].chovviBotanicalAcidity
         let journalDraftLayout = journalDraftSection[(journalDraftPreview + 3) % journalDraftSection.count].chovviBotanicalAcidity
         let journalDraftSource = String(cupChronicleCanvas.chovviSilkyAroma.prefix(56))
         cupChronicleSection = [
-            ChovviHarvestProfile(
+            ChovviHarvestBrew(
                 tastingReplyCanvas: journalDraftTrigger,
                 tastingReplyScroll: "Your “\(journalDraftSource)” moment feels personal and thoughtfully captured.",
                 tastingReplyHeader: "2m ago"
             ),
-            ChovviHarvestProfile(
+            ChovviHarvestBrew(
                 tastingReplyCanvas: journalDraftLayout,
                 tastingReplyScroll: "The selected coffee mood fits the colors and brewing details beautifully.",
                 tastingReplyHeader: "5m ago"
@@ -283,7 +283,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
         let journalDraftMenu = UserDefaults.standard.stringArray(forKey: "chovviOriginTexture.\(cupChronicleCanvas.chovviSilkyAcidity)") ?? []
         journalDraftMenu.forEach { journalDraftUpdate in
             cupChronicleSection.append(
-                ChovviHarvestProfile(tastingReplyCanvas: "chovvi-user-20", tastingReplyScroll: journalDraftUpdate, tastingReplyHeader: "Just now")
+                ChovviHarvestBrew(tastingReplyCanvas: "chovvi-user-20", tastingReplyScroll: journalDraftUpdate, tastingReplyHeader: "Just now")
             )
         }
         journalDraftUpdate()
@@ -300,10 +300,10 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
         journalDraftRoute()
     }
 
-    private func journalDraftRecord(_ journalDraftItem: ChovviHarvestProfile) -> UIView {
+    private func journalDraftRecord(_ journalDraftItem: ChovviHarvestBrew) -> UIView {
         let journalDraftSelection = UIView()
         journalDraftSelection.heightAnchor.constraint(greaterThanOrEqualToConstant: 54).isActive = true
-        let journalDraftImage = ChovviCitrusProfile.roastArchiveCanvas.first { journalDraftChoice in
+        let journalDraftImage = ChovviCitrusBrew.roastArchiveCanvas.first { journalDraftChoice in
             journalDraftChoice.chovviBotanicalAcidity == journalDraftItem.tastingReplyCanvas
         }
 
@@ -316,7 +316,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
 
         let tastingReplyScroll = UILabel()
         tastingReplyScroll.text = journalDraftImage?.chovviBotanicalAeropress ?? "Choovi Member"
-        tastingReplyScroll.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        tastingReplyScroll.textColor = ChovviRoastedBrew.roastShelfScroll
         tastingReplyScroll.font = UIFont.systemFont(ofSize: 13, weight: .bold)
         tastingReplyScroll.translatesAutoresizingMaskIntoConstraints = false
         journalDraftSelection.addSubview(tastingReplyScroll)
@@ -330,7 +330,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
 
         let tastingReplyArtwork = UILabel()
         tastingReplyArtwork.text = journalDraftItem.tastingReplyScroll
-        tastingReplyArtwork.textColor = ChovviRoastedProfile.discoveryShelfScroll
+        tastingReplyArtwork.textColor = ChovviRoastedBrew.roastShelfScroll
         tastingReplyArtwork.font = UIFont.systemFont(ofSize: 13, weight: .medium)
         tastingReplyArtwork.numberOfLines = 0
         tastingReplyArtwork.translatesAutoresizingMaskIntoConstraints = false
@@ -349,8 +349,8 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
         let journalDraftAction = Set(UserDefaults.standard.stringArray(forKey: "chovviOriginRoast") ?? [])
         let journalDraftLabel = journalDraftAction.contains(cupChronicleCanvas.chovviSilkyAeropress)
         cupChronicleAction.setTitle(journalDraftLabel ? "Following" : "Follow", for: .normal)
-        cupChronicleAction.backgroundColor = journalDraftLabel ? UIColor.clear : ChovviRoastedProfile.discoveryShelfCanvas
-        cupChronicleAction.setTitleColor(journalDraftLabel ? ChovviRoastedProfile.discoveryShelfCanvas : .white, for: .normal)
+        cupChronicleAction.backgroundColor = journalDraftLabel ? UIColor.clear : ChovviRoastedBrew.roastShelfCanvas
+        cupChronicleAction.setTitleColor(journalDraftLabel ? ChovviRoastedBrew.roastShelfCanvas : .white, for: .normal)
     }
 
     private func journalDraftStatus() {
@@ -380,7 +380,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
     private func journalDraftSource(journalDraftMenu: Bool) {
         guard journalDraftCard() else { return }
         if !journalDraftMenu {
-            let journalDraftRecord = ChovviCuppingReportProfile(
+            let journalDraftRecord = ChovviCuppingNoticeBrew(
                 cupKeeperCanvas: "this Coffee Moment",
                 cupKeeperScroll: cupChronicleCanvas.chovviSilkyAcidity,
                 cupKeeperHeader: "moment"
@@ -398,7 +398,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
         journalDraftItem.insert(journalDraftMenu ? cupChronicleCanvas.chovviSilkyAeropress : cupChronicleCanvas.chovviSilkyAcidity)
         UserDefaults.standard.set(Array(journalDraftItem), forKey: journalDraftRecord)
 
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: journalDraftMenu ? "Creator Blocked" : "Report Received", goldenRitualCanvas: journalDraftMenu ? "This creator has been added to your blocked list." : "This item has been submitted for safety review.", goldenRitualArtwork: .success, goldenRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: journalDraftMenu ? "Creator Blocked" : "Report Received", amberRitualCanvas: journalDraftMenu ? "This creator has been added to your blocked list." : "This item has been submitted for safety review.", amberRitualArtwork: .success, amberRitualStack: { [weak self] in
             if journalDraftMenu { self?.dismiss(animated: true) }
         })
     }
@@ -435,19 +435,19 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
         let cupChronicleSelection = cupChronicleState.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         guard journalDraftCard() else { return }
         guard !cupChronicleSelection.isEmpty else {
-            ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Comment Required", goldenRitualCanvas: "Please enter a comment before sending.", goldenRitualHeader: "Add Comment", goldenRitualArtwork: .caution)
+            ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Comment Required", amberRitualCanvas: "Please enter a comment before sending.", amberRitualHeader: "Add Comment", amberRitualArtwork: .caution)
             return
         }
 
         cupChronicleState.resignFirstResponder()
         cupChronicleRender.isEnabled = false
-        ChovviThermalCalibrationView.goldenRitualLayout(self, goldenRitualMenu: "Posting your comment...", goldenRitualUpdate: 0.65) { [weak self] in
+        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Posting your comment...", amberRitualUpdate: 0.65) { [weak self] in
             guard let self else { return }
             var cupChronicleImage = UserDefaults.standard.stringArray(forKey: "chovviOriginTexture.\(self.cupChronicleCanvas.chovviSilkyAcidity)") ?? []
             cupChronicleImage.append(cupChronicleSelection)
             UserDefaults.standard.set(cupChronicleImage, forKey: "chovviOriginTexture.\(self.cupChronicleCanvas.chovviSilkyAcidity)")
             self.cupChronicleSection.append(
-                ChovviHarvestProfile(tastingReplyCanvas: "chovvi-user-20", tastingReplyScroll: cupChronicleSelection, tastingReplyHeader: "Just now")
+                ChovviHarvestBrew(tastingReplyCanvas: "chovvi-user-20", tastingReplyScroll: cupChronicleSelection, tastingReplyHeader: "Just now")
             )
             self.cupChronicleState.text = ""
             self.cupChronicleRender.isEnabled = true
@@ -466,7 +466,7 @@ final class ChovviOriginProfile: UIViewController, UITextFieldDelegate {
 
     @objc private func journalDraftState() {
         guard let cupChronicleScroll else { return }
-        let journalDraftRender = ChovviAromaticProfile(originPortraitCanvas: cupChronicleScroll)
+        let journalDraftRender = ChovviAromaticBrew(originPortraitCanvas: cupChronicleScroll)
         let journalDraftAction = UINavigationController(rootViewController: journalDraftRender)
         journalDraftAction.modalPresentationStyle = .fullScreen
         present(journalDraftAction, animated: true)

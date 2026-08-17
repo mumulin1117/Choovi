@@ -20,7 +20,7 @@ struct ChovviFloralTexture: Codable, Hashable {
 }
 
 final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, PHPickerViewControllerDelegate {
-    private let brewTableCanvas: ChovviBrightProfile
+    private let brewTableCanvas: ChovviBrightBrew
     private var brewTableScroll: [ChovviFloralTexture] = []
     private let brewTableHeader = UITableView(frame: .zero, style: .plain)
     private let brewTableArtwork = UIView()
@@ -34,13 +34,13 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
     private var brewTableAction: UIImage?
     fileprivate static let brewTableLabel = UIColor(red: 0.84, green: 0.61, blue: 0.31, alpha: 1)
 
-    init(brewTableCanvas: ChovviBrightProfile) {
+    init(brewTableCanvas: ChovviBrightBrew) {
         self.brewTableCanvas = brewTableCanvas
         super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder: NSCoder) {
-        brewTableCanvas = ChovviBrightProfile(
+        brewTableCanvas = ChovviBrightBrew(
             chovviBrightAcidity: "room-preview",
             chovviBrightAeropress: "Coffee Room",
             chovviBrightAftertaste: "Coffee notes and everyday brewing ideas.",
@@ -374,7 +374,7 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
 
     private func brewTableLabel() {
         guard brewTableDestination() else { return }
-        let brewTableLayout = ChovviCuppingReportProfile(
+        let brewTableLayout = ChovviCuppingNoticeBrew(
             cupKeeperCanvas: brewTableCanvas.chovviBrightAeropress,
             cupKeeperScroll: brewTableCanvas.chovviBrightAcidity,
             cupKeeperHeader: "room"
@@ -390,7 +390,7 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
     private func brewTableState(_ brewTableLayout: Bool) {
         _ = brewTableLayout
         guard brewTableDestination() else { return }
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Leave this group?", goldenRitualCanvas: "You can join again later if the room remains available.", goldenRitualScroll: "Keep Exploring", goldenRitualHeader: "Leave", goldenRitualArtwork: .destructive) { } goldenRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Leave this group?", amberRitualCanvas: "You can join again later if the room remains available.", amberRitualScroll: "Keep Exploring", amberRitualHeader: "Leave", amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
             guard let self else { return }
             var brewTableMenu = Set(UserDefaults.standard.stringArray(forKey: "chovviGoldenRoast") ?? [])
             brewTableMenu.remove(self.brewTableCanvas.chovviBrightAcidity)
@@ -408,7 +408,7 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
         let brewTableSource = brewTableLayout.first ?? "chovvi-user-01"
         let brewTableMenu = brewTableLayout.dropFirst().first ?? "chovvi-user-03"
         let brewTableUpdate = brewTableCanvas.chovviBrightBrewer.compactMap { brewTableDestination in
-            ChovviCitrusProfile.roastArchiveHeader.first { $0.chovviCaramelAcidity == brewTableDestination }
+            ChovviCitrusBrew.roastArchiveHeader.first { $0.chovviCaramelAcidity == brewTableDestination }
         }.first
         let brewTableDestination = brewTableUpdate?.chovviCaramelAftertaste.first ?? brewTableCanvas.chovviBrightAroma
         let brewTableCard = brewTableAction(brewTableCanvas.chovviBrightAeropress)
@@ -477,7 +477,7 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
     }
 
     private func brewTableTrigger(_ brewTableLayout: String, brewTableLayout brewTableSource: String) {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: brewTableLayout, goldenRitualCanvas: brewTableSource, goldenRitualArtwork: .caution)
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: brewTableLayout, amberRitualCanvas: brewTableSource, amberRitualArtwork: .caution)
     }
 
     @objc private func brewTableSource() {
@@ -524,7 +524,7 @@ final class ChovviFloralRoast: UITableViewCell {
 
     private lazy var brewTableRecordTrigger: (ChovviFloralTexture) -> Void = { [unowned self] brewTableLayout in
         contentView.subviews.forEach { $0.removeFromSuperview() }
-        let brewTableSource = ChovviCitrusProfile.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == brewTableLayout.brewTableScroll }
+        let brewTableSource = ChovviCitrusBrew.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == brewTableLayout.brewTableScroll }
         let brewTableMenu = UIImageView(image: UIImage(named: brewTableSource?.chovviBotanicalAroma ?? "chovviAromaticKettle"))
         brewTableMenu.contentMode = .scaleAspectFill
         brewTableMenu.clipsToBounds = true

@@ -144,9 +144,9 @@ final class ChovviSensoryTasting: UIViewController {
         case 0:
             navigationController?.pushViewController(ChovviSensoryTexture(), animated: true)
         case 1:
-            roastPreferencesItem("Terms of Service", roastPreferencesItem: ChovviGentleProfile.beanPassportStack)
+            roastPreferencesItem("Terms of Service", roastPreferencesItem: ChovviGentleBrew.beanPassportStack)
         case 2:
-            roastPreferencesItem("Privacy Policy", roastPreferencesItem: ChovviGentleProfile.beanPassportState)
+            roastPreferencesItem("Privacy Policy", roastPreferencesItem: ChovviGentleBrew.beanPassportState)
         case 3:
             roastPreferencesImage("About Choovi", roastPreferencesImage: "Choovi is a coffee journal for sharing coffee moments, moods, brewing ideas, and respectful group participation.\n\nContact: choovi@gmail.com")
         default:
@@ -156,22 +156,22 @@ final class ChovviSensoryTasting: UIViewController {
 
     private func roastPreferencesItem(_ roastPreferencesSelection: String, roastPreferencesItem roastPreferencesImage: String) {
         navigationController?.setNavigationBarHidden(false, animated: false)
-        navigationController?.pushViewController(ChovviGentleProfile(beanPassportCanvas: roastPreferencesSelection, beanPassportScroll: roastPreferencesImage, beanPassportArtwork: false, beanPassportCollection: nil), animated: true)
+        navigationController?.pushViewController(ChovviGentleBrew(beanPassportCanvas: roastPreferencesSelection, beanPassportScroll: roastPreferencesImage, beanPassportArtwork: false, beanPassportCollection: nil), animated: true)
     }
 
     private func roastPreferencesImage(_ roastPreferencesChoice: String, roastPreferencesImage roastPreferencesRecord: String) {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: roastPreferencesChoice, goldenRitualCanvas: roastPreferencesRecord, goldenRitualArtwork: .caution)
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: roastPreferencesChoice, amberRitualCanvas: roastPreferencesRecord, amberRitualArtwork: .caution)
     }
 
     @objc private func roastPreferencesDestination() {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Log Out?", goldenRitualCanvas: "You can sign in again with the same account.", goldenRitualScroll: "Keep Brewing", goldenRitualHeader: "Log Out", goldenRitualArtwork: .destructive) { } goldenRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Log Out?", amberRitualCanvas: "You can sign in again with the same account.", amberRitualScroll: "Keep Brewing", amberRitualHeader: "Log Out", amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
             UserDefaults.standard.set(false, forKey: "choovilogin")
             self?.dismiss(animated: true)
         }
     }
 
     @objc private func roastPreferencesRecord() {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Delete Account?", goldenRitualCanvas: "This permanently removes the current account, profile, and associated content. This action cannot be undone.", goldenRitualScroll: "Not Now", goldenRitualHeader: "Delete", goldenRitualArtwork: .destructive) { } goldenRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Delete Account?", amberRitualCanvas: "This permanently removes the current account, profile, and associated content. This action cannot be undone.", amberRitualScroll: "Not Now", amberRitualHeader: "Delete", amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
             self?.roastPreferencesChoice()
         }
     }
@@ -316,7 +316,7 @@ final class ChovviSensoryTexture: UIViewController, UITableViewDataSource, UITab
         var roastPreferencesState = Set<String>()
         roastPreferencesCanvas = roastPreferencesStack.compactMap { roastPreferencesAction in
             guard roastPreferencesState.insert(roastPreferencesAction).inserted else { return nil }
-            if let roastPreferencesLabel = ChovviCitrusProfile.roastArchiveCanvas.first(where: { $0.chovviBotanicalAcidity == roastPreferencesAction }) {
+            if let roastPreferencesLabel = ChovviCitrusBrew.roastArchiveCanvas.first(where: { $0.chovviBotanicalAcidity == roastPreferencesAction }) {
                 return ChovviSensoryRoast(
                     roastPreferencesCanvas: roastPreferencesLabel.chovviBotanicalAcidity,
                     roastPreferencesScroll: roastPreferencesLabel.chovviBotanicalAeropress,
@@ -356,7 +356,7 @@ final class ChovviSensoryTexture: UIViewController, UITableViewDataSource, UITab
     }
 
     private func roastPreferencesLabel(_ roastPreferencesItem: ChovviSensoryRoast) {
-        ChovviThermalAlertView.goldenRitualSelection(self, goldenRitualChoice: "Remove from blacklist?", goldenRitualCanvas: "You will see content from \(roastPreferencesItem.roastPreferencesScroll) again, and they may interact with you according to your current settings.", goldenRitualScroll: "Keep Blocked", goldenRitualHeader: "Remove", goldenRitualArtwork: .destructive) { } goldenRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Remove from blacklist?", amberRitualCanvas: "You will see content from \(roastPreferencesItem.roastPreferencesScroll) again, and they may interact with you according to your current settings.", amberRitualScroll: "Keep Blocked", amberRitualHeader: "Remove", amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
             guard let self else { return }
             var roastPreferencesChoice = UserDefaults.standard.stringArray(forKey: "chovviCraftedRoast") ?? []
             roastPreferencesChoice.removeAll { $0 == roastPreferencesItem.roastPreferencesCanvas }
