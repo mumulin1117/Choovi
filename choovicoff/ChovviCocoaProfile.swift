@@ -624,6 +624,7 @@ final class ChovviThermalProfile: UIView {
 
 final class ChovviCremaProfile: ChovviRoastedProfile {
     private let coffeeJournalCanvas = UIStackView()
+    private let coffeeJournalPopular = UIStackView()
     private var coffeeJournalScroll = 0
 
     override func viewDidLoad() {
@@ -644,19 +645,17 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
 
     private func coffeeJournalHeader() {
         discoveryShelfCollection.insertArrangedSubview(coffeeJournalArtwork(), at: 0)
-        for coffeeJournalScroll in ChovviCitrusProfile.roastArchiveState {
-            let coffeeJournalHeader = coffeeJournalCollection(coffeeJournalScroll)
-            discoveryShelfStack.addArrangedSubview(coffeeJournalHeader)
-            coffeeJournalHeader.widthAnchor.constraint(equalToConstant: 88).isActive = true
-        }
         discoveryShelfStack.superview?.heightAnchor.constraint(equalToConstant: 132).isActive = true
 
         discoveryShelfState.addArrangedSubview(coffeeJournalLabel("popular"))
-        discoveryShelfState.addArrangedSubview(coffeeJournalStatus(Array(ChovviCitrusProfile.roastArchiveRender.prefix(2))))
+        coffeeJournalPopular.axis = .vertical
+        coffeeJournalPopular.spacing = 12
+        discoveryShelfState.addArrangedSubview(coffeeJournalPopular)
         discoveryShelfState.addArrangedSubview(coffeeJournalRoute())
         coffeeJournalCanvas.axis = .vertical
         coffeeJournalCanvas.spacing = 12
         discoveryShelfState.addArrangedSubview(coffeeJournalCanvas)
+        coffeeJournalRender()
         coffeeJournalState()
     }
 
@@ -874,14 +873,95 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
         brewTableCanvas.translatesAutoresizingMaskIntoConstraints = false
         coffeeJournalItem.addSubview(brewTableCanvas)
 
+        let coffeeJournalStatus = coffeeJournalRoute(coffeeJournalRecord)
+        coffeeJournalStatus.tintColor = Self.discoveryShelfScroll
+        coffeeJournalStatus.translatesAutoresizingMaskIntoConstraints = false
+        coffeeJournalItem.addSubview(coffeeJournalStatus)
+
         NSLayoutConstraint.activate([
             coffeeJournalSelection.topAnchor.constraint(equalTo: coffeeJournalItem.topAnchor), coffeeJournalSelection.leadingAnchor.constraint(equalTo: coffeeJournalItem.leadingAnchor), coffeeJournalSelection.trailingAnchor.constraint(equalTo: coffeeJournalItem.trailingAnchor),
-            coffeeJournalSelection.heightAnchor.constraint(equalTo: coffeeJournalItem.widthAnchor, multiplier: 0.74), coffeeJournalImage.leadingAnchor.constraint(equalTo: coffeeJournalItem.leadingAnchor, constant: 8), coffeeJournalImage.bottomAnchor.constraint(equalTo: coffeeJournalSelection.bottomAnchor, constant: -8),
+            coffeeJournalSelection.heightAnchor.constraint(equalTo: coffeeJournalItem.widthAnchor, multiplier: 0.74), coffeeJournalStatus.topAnchor.constraint(equalTo: coffeeJournalItem.topAnchor, constant: 8), coffeeJournalStatus.trailingAnchor.constraint(equalTo: coffeeJournalItem.trailingAnchor, constant: -8),
+            coffeeJournalStatus.widthAnchor.constraint(equalToConstant: 34), coffeeJournalStatus.heightAnchor.constraint(equalToConstant: 34), coffeeJournalImage.leadingAnchor.constraint(equalTo: coffeeJournalItem.leadingAnchor, constant: 8), coffeeJournalImage.bottomAnchor.constraint(equalTo: coffeeJournalSelection.bottomAnchor, constant: -8),
             coffeeJournalImage.heightAnchor.constraint(equalToConstant: 24), coffeeJournalChoice.topAnchor.constraint(equalTo: coffeeJournalSelection.bottomAnchor, constant: 8), coffeeJournalChoice.leadingAnchor.constraint(equalTo: coffeeJournalItem.leadingAnchor, constant: 9),
             coffeeJournalChoice.trailingAnchor.constraint(equalTo: coffeeJournalItem.trailingAnchor, constant: -9), brewTableCanvas.trailingAnchor.constraint(equalTo: coffeeJournalItem.trailingAnchor, constant: -9), brewTableCanvas.bottomAnchor.constraint(equalTo: coffeeJournalItem.bottomAnchor, constant: -9),
             brewTableCanvas.widthAnchor.constraint(equalToConstant: 42), brewTableCanvas.heightAnchor.constraint(equalTo: brewTableCanvas.widthAnchor)
         ])
         return coffeeJournalItem
+    }
+
+    private func coffeeJournalRoute(_ coffeeJournalRecord: ChovviCaramelProfile) -> UIButton {
+        let coffeeJournalItem = UIButton(type: .system)
+        coffeeJournalItem.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        coffeeJournalItem.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        coffeeJournalItem.layer.cornerRadius = 17
+        coffeeJournalItem.showsMenuAsPrimaryAction = true
+        coffeeJournalItem.menu = coffeeJournalSelection(coffeeJournalRecord)
+        coffeeJournalItem.accessibilityLabel = "More post actions"
+        return coffeeJournalItem
+    }
+
+    private func coffeeJournalSelection(_ coffeeJournalRecord: ChovviCaramelProfile) -> UIMenu {
+        let coffeeJournalItem = UIAction(title: "Report", image: UIImage(systemName: "flag")) { [weak self] coffeeJournalAction in
+            _ = coffeeJournalAction
+            self?.coffeeJournalArtwork(coffeeJournalRecord, coffeeJournalCard: false)
+        }
+        let coffeeJournalLabel = UIAction(title: "Block Creator", image: UIImage(systemName: "hand.raised"), attributes: .destructive) { [weak self] coffeeJournalAction in
+            _ = coffeeJournalAction
+            self?.coffeeJournalArtwork(coffeeJournalRecord, coffeeJournalCard: true)
+        }
+        return UIMenu(children: [coffeeJournalItem, coffeeJournalLabel])
+    }
+
+    private func coffeeJournalArtwork(_ coffeeJournalRecord: ChovviCaramelProfile, coffeeJournalCard: Bool) {
+        guard coffeeJournalMenu() else { return }
+        let coffeeJournalItem = ChovviCitrusProfile.roastArchiveCanvas.first { coffeeJournalTrigger in
+            coffeeJournalTrigger.chovviBotanicalAcidity == coffeeJournalRecord.chovviCaramelAeropress
+        }
+        if !coffeeJournalCard {
+            let coffeeJournalLabel = ChovviCuppingReportProfile(
+                cupKeeperCanvas: "this Coffee Moment",
+                cupKeeperScroll: coffeeJournalRecord.chovviCaramelAcidity,
+                cupKeeperHeader: "moment"
+            ) { [weak self] in
+                var coffeeJournalAction = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedTasting") ?? [])
+                coffeeJournalAction.insert(coffeeJournalRecord.chovviCaramelAcidity)
+                UserDefaults.standard.set(Array(coffeeJournalAction), forKey: "chovviCraftedTasting")
+                self?.coffeeJournalRender()
+                self?.coffeeJournalState()
+            }
+            present(coffeeJournalLabel, animated: true)
+            return
+        }
+        ChovviThermalAlertView.goldenRitualSelection(
+            self,
+            goldenRitualChoice: "Block Creator",
+            goldenRitualCanvas: "Hide future content from \(coffeeJournalItem?.chovviBotanicalAeropress ?? "this creator")?",
+            goldenRitualScroll: "Not Now",
+            goldenRitualHeader: "Confirm",
+            goldenRitualArtwork: .destructive
+        ) { } goldenRitualStack: { [weak self] in
+            self?.coffeeJournalItem(coffeeJournalRecord, coffeeJournalSelection: true)
+        }
+    }
+
+    private func coffeeJournalItem(_ coffeeJournalRecord: ChovviCaramelProfile, coffeeJournalSelection: Bool) {
+        let coffeeJournalLabel = coffeeJournalSelection ? "chovviCraftedRoast" : "chovviCraftedTasting"
+        var coffeeJournalAction = Set(UserDefaults.standard.stringArray(forKey: coffeeJournalLabel) ?? [])
+        coffeeJournalAction.insert(coffeeJournalSelection ? coffeeJournalRecord.chovviCaramelAeropress : coffeeJournalRecord.chovviCaramelAcidity)
+        UserDefaults.standard.set(Array(coffeeJournalAction), forKey: coffeeJournalLabel)
+        if coffeeJournalSelection {
+            var coffeeJournalStatus = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? [])
+            coffeeJournalStatus.remove(coffeeJournalRecord.chovviCaramelAeropress)
+            UserDefaults.standard.set(Array(coffeeJournalStatus), forKey: "chovviCremaRoast")
+        }
+        coffeeJournalRender()
+        coffeeJournalState()
+        ChovviThermalAlertView.goldenRitualSelection(
+            self,
+            goldenRitualChoice: coffeeJournalSelection ? "Creator Blocked" : "Report Received",
+            goldenRitualCanvas: coffeeJournalSelection ? "This creator has been added to your blocked list." : "This item has been submitted for safety review.",
+            goldenRitualArtwork: .success
+        )
     }
 
     private func coffeeJournalState() {
@@ -918,6 +998,40 @@ final class ChovviCremaProfile: ChovviRoastedProfile {
     }
 
     private func coffeeJournalRender() {
+        discoveryShelfStack.arrangedSubviews.forEach { coffeeJournalAction in
+            discoveryShelfStack.removeArrangedSubview(coffeeJournalAction)
+            coffeeJournalAction.removeFromSuperview()
+        }
+        let coffeeJournalRecord = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedRoast") ?? [])
+        ChovviCitrusProfile.roastArchiveState
+            .filter { !coffeeJournalRecord.contains($0.chovviBotanicalAcidity) }
+            .forEach { coffeeJournalScroll in
+                let coffeeJournalHeader = coffeeJournalCollection(coffeeJournalScroll)
+                discoveryShelfStack.addArrangedSubview(coffeeJournalHeader)
+                coffeeJournalHeader.widthAnchor.constraint(equalToConstant: 88).isActive = true
+            }
+
+        coffeeJournalPopular.arrangedSubviews.forEach { coffeeJournalAction in
+            coffeeJournalPopular.removeArrangedSubview(coffeeJournalAction)
+            coffeeJournalAction.removeFromSuperview()
+        }
+        let coffeeJournalItem = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedTasting") ?? [])
+        let coffeeJournalAction = ChovviCitrusProfile.roastArchiveRender.filter { coffeeJournalSelection in
+            !coffeeJournalRecord.contains(coffeeJournalSelection.chovviCaramelAeropress)
+                && !coffeeJournalItem.contains(coffeeJournalSelection.chovviCaramelAcidity)
+        }
+        if coffeeJournalAction.isEmpty {
+            let coffeeJournalLabel = UILabel()
+            coffeeJournalLabel.text = "Blocked creators and reviewed posts are hidden from Popular."
+            coffeeJournalLabel.textColor = .secondaryLabel
+            coffeeJournalLabel.textAlignment = .center
+            coffeeJournalLabel.numberOfLines = 0
+            coffeeJournalLabel.heightAnchor.constraint(equalToConstant: 90).isActive = true
+            coffeeJournalPopular.addArrangedSubview(coffeeJournalLabel)
+        } else {
+            coffeeJournalPopular.addArrangedSubview(coffeeJournalStatus(Array(coffeeJournalAction.prefix(2))))
+        }
+
         discoveryShelfStack.arrangedSubviews.compactMap { coffeeJournalAction in
             coffeeJournalAction.subviews.compactMap { $0 as? UIButton }.first { $0.accessibilityIdentifier != nil }
         }.forEach { coffeeJournalLabel in

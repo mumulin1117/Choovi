@@ -208,71 +208,68 @@ final class ChovviThermalTasting: UIViewController {
         goldenRitualArtwork.hidesWhenStopped = true
         goldenRitualScroll.addArrangedSubview(goldenRitualArtwork)
 
-        var goldenRitualSource = 0
-        while goldenRitualSource < ChovviThermalRoast.goldenRitualScroll.count {
-            let goldenRitualMenu = UIStackView()
-            goldenRitualMenu.axis = .horizontal
-            goldenRitualMenu.spacing = 10
-            goldenRitualMenu.distribution = .fillEqually
-            for goldenRitualUpdate in 0..<3 {
-                let goldenRitualDestination = goldenRitualSource + goldenRitualUpdate
-                if ChovviThermalRoast.goldenRitualScroll.indices.contains(goldenRitualDestination) {
-                    let goldenRitualCard = UIButton(type: .custom)
-                    goldenRitualCard.tag = goldenRitualDestination
-                    goldenRitualCard.backgroundColor = UIColor(red: 0.94, green: 0.80, blue: 0.63, alpha: 1)
-                    goldenRitualCard.layer.cornerRadius = 22
-                    goldenRitualCard.addTarget(self, action: #selector(goldenRitualItem(_:)), for: .touchUpInside)
-                    let goldenRitualRecord = ChovviThermalRoast.goldenRitualScroll[goldenRitualDestination]
-                    let goldenRitualSelection = ChovviThermalRoast.goldenRitualHeader[goldenRitualRecord] ?? 0
-                    let goldenRitualChoice = ChovviThermalRoast.goldenRitualRender[goldenRitualRecord] ?? ""
+        let goldenRitualSource = ChovviThermalRoast.goldenRitualScroll.sorted {
+            (ChovviThermalRoast.goldenRitualHeader[$0] ?? 0) < (ChovviThermalRoast.goldenRitualHeader[$1] ?? 0)
+        }
+        goldenRitualSource.forEach { goldenRitualRecord in
+            let goldenRitualCard = UIButton(type: .custom)
+            goldenRitualCard.accessibilityIdentifier = goldenRitualRecord
+            goldenRitualCard.backgroundColor = UIColor(red: 0.94, green: 0.80, blue: 0.63, alpha: 1)
+            goldenRitualCard.layer.cornerRadius = 22
+            goldenRitualCard.addTarget(self, action: #selector(goldenRitualItem(_:)), for: .touchUpInside)
+            goldenRitualCard.heightAnchor.constraint(equalToConstant: 92).isActive = true
 
-                    let coffeeBulletinCanvas = UIImageView(image: UIImage(named: "Rbeijigsmall"))
-                    coffeeBulletinCanvas.contentMode = .scaleAspectFit
-                    coffeeBulletinCanvas.isUserInteractionEnabled = false
-                    coffeeBulletinCanvas.translatesAutoresizingMaskIntoConstraints = false
-                    goldenRitualCard.addSubview(coffeeBulletinCanvas)
+            let goldenRitualSelection = ChovviThermalRoast.goldenRitualHeader[goldenRitualRecord] ?? 0
+            let goldenRitualChoice = ChovviThermalRoast.goldenRitualRender[goldenRitualRecord] ?? ""
 
-                    let coffeeBulletinScroll = UILabel()
-                    coffeeBulletinScroll.text = goldenRitualSelection.formatted()
-                    coffeeBulletinScroll.font = .systemFont(ofSize: 20, weight: .black)
-                    coffeeBulletinScroll.textColor = UIColor(red: 0.08, green: 0.08, blue: 0.11, alpha: 1)
-                    coffeeBulletinScroll.textAlignment = .center
-                    coffeeBulletinScroll.isUserInteractionEnabled = false
-                    coffeeBulletinScroll.translatesAutoresizingMaskIntoConstraints = false
-                    goldenRitualCard.addSubview(coffeeBulletinScroll)
+            let coffeeBulletinCanvas = UIImageView(image: UIImage(named: "Rbeijigsmall"))
+            coffeeBulletinCanvas.contentMode = .scaleAspectFit
+            coffeeBulletinCanvas.isUserInteractionEnabled = false
+            coffeeBulletinCanvas.translatesAutoresizingMaskIntoConstraints = false
+            goldenRitualCard.addSubview(coffeeBulletinCanvas)
 
-                    let coffeeBulletinArtwork = UIView()
-                    coffeeBulletinArtwork.backgroundColor = .white
-                    coffeeBulletinArtwork.layer.cornerRadius = 19
-                    coffeeBulletinArtwork.isUserInteractionEnabled = false
-                    coffeeBulletinArtwork.translatesAutoresizingMaskIntoConstraints = false
-                    goldenRitualCard.addSubview(coffeeBulletinArtwork)
+            let coffeeBulletinScroll = UILabel()
+            coffeeBulletinScroll.text = goldenRitualSelection.formatted()
+            coffeeBulletinScroll.font = .systemFont(ofSize: 22, weight: .black)
+            coffeeBulletinScroll.textColor = UIColor(red: 0.08, green: 0.08, blue: 0.11, alpha: 1)
+            coffeeBulletinScroll.isUserInteractionEnabled = false
+            coffeeBulletinScroll.translatesAutoresizingMaskIntoConstraints = false
+            goldenRitualCard.addSubview(coffeeBulletinScroll)
 
-                    let coffeeBulletinCollection = UILabel()
-                    coffeeBulletinCollection.text = goldenRitualChoice
-                    coffeeBulletinCollection.font = .systemFont(ofSize: 17, weight: .black)
-                    coffeeBulletinCollection.textColor = UIColor(red: 0.08, green: 0.08, blue: 0.11, alpha: 1)
-                    coffeeBulletinCollection.textAlignment = .center
-                    coffeeBulletinCollection.translatesAutoresizingMaskIntoConstraints = false
-                    coffeeBulletinArtwork.addSubview(coffeeBulletinCollection)
+            let coffeeBulletinRecord = UILabel()
+            coffeeBulletinRecord.text = "Coins"
+            coffeeBulletinRecord.font = .systemFont(ofSize: 13, weight: .bold)
+            coffeeBulletinRecord.textColor = UIColor(red: 0.42, green: 0.30, blue: 0.18, alpha: 1)
+            coffeeBulletinRecord.isUserInteractionEnabled = false
+            coffeeBulletinRecord.translatesAutoresizingMaskIntoConstraints = false
+            goldenRitualCard.addSubview(coffeeBulletinRecord)
 
-                    NSLayoutConstraint.activate([
-                        coffeeBulletinCanvas.topAnchor.constraint(equalTo: goldenRitualCard.topAnchor, constant: 12), coffeeBulletinCanvas.centerXAnchor.constraint(equalTo: goldenRitualCard.centerXAnchor), coffeeBulletinCanvas.widthAnchor.constraint(equalToConstant: 38),
-                        coffeeBulletinCanvas.heightAnchor.constraint(equalTo: coffeeBulletinCanvas.widthAnchor), coffeeBulletinScroll.topAnchor.constraint(equalTo: coffeeBulletinCanvas.bottomAnchor, constant: 3), coffeeBulletinScroll.leadingAnchor.constraint(equalTo: goldenRitualCard.leadingAnchor, constant: 5),
-                        coffeeBulletinScroll.trailingAnchor.constraint(equalTo: goldenRitualCard.trailingAnchor, constant: -5), coffeeBulletinArtwork.leadingAnchor.constraint(equalTo: goldenRitualCard.leadingAnchor, constant: 10), coffeeBulletinArtwork.trailingAnchor.constraint(equalTo: goldenRitualCard.trailingAnchor, constant: -10),
-                        coffeeBulletinArtwork.bottomAnchor.constraint(equalTo: goldenRitualCard.bottomAnchor, constant: -12), coffeeBulletinArtwork.heightAnchor.constraint(equalToConstant: 38), coffeeBulletinCollection.topAnchor.constraint(equalTo: coffeeBulletinArtwork.topAnchor),
-                        coffeeBulletinCollection.leadingAnchor.constraint(equalTo: coffeeBulletinArtwork.leadingAnchor, constant: 4), coffeeBulletinCollection.trailingAnchor.constraint(equalTo: coffeeBulletinArtwork.trailingAnchor, constant: -4), coffeeBulletinCollection.bottomAnchor.constraint(equalTo: coffeeBulletinArtwork.bottomAnchor)
-                    ])
+            let coffeeBulletinArtwork = UIView()
+            coffeeBulletinArtwork.backgroundColor = .white
+            coffeeBulletinArtwork.layer.cornerRadius = 21
+            coffeeBulletinArtwork.isUserInteractionEnabled = false
+            coffeeBulletinArtwork.translatesAutoresizingMaskIntoConstraints = false
+            goldenRitualCard.addSubview(coffeeBulletinArtwork)
 
-                    goldenRitualMenu.addArrangedSubview(goldenRitualCard)
-                    goldenRitualStack.append(goldenRitualCard)
-                } else {
-                    goldenRitualMenu.addArrangedSubview(UIView())
-                }
-            }
-            goldenRitualMenu.heightAnchor.constraint(equalToConstant: 168).isActive = true
-            goldenRitualScroll.addArrangedSubview(goldenRitualMenu)
-            goldenRitualSource += 3
+            let coffeeBulletinCollection = UILabel()
+            coffeeBulletinCollection.text = goldenRitualChoice
+            coffeeBulletinCollection.font = .systemFont(ofSize: 17, weight: .black)
+            coffeeBulletinCollection.textColor = UIColor(red: 0.08, green: 0.08, blue: 0.11, alpha: 1)
+            coffeeBulletinCollection.textAlignment = .center
+            coffeeBulletinCollection.translatesAutoresizingMaskIntoConstraints = false
+            coffeeBulletinArtwork.addSubview(coffeeBulletinCollection)
+
+            NSLayoutConstraint.activate([
+                coffeeBulletinCanvas.leadingAnchor.constraint(equalTo: goldenRitualCard.leadingAnchor, constant: 18), coffeeBulletinCanvas.centerYAnchor.constraint(equalTo: goldenRitualCard.centerYAnchor), coffeeBulletinCanvas.widthAnchor.constraint(equalToConstant: 42),
+                coffeeBulletinCanvas.heightAnchor.constraint(equalTo: coffeeBulletinCanvas.widthAnchor), coffeeBulletinScroll.leadingAnchor.constraint(equalTo: coffeeBulletinCanvas.trailingAnchor, constant: 14), coffeeBulletinScroll.centerYAnchor.constraint(equalTo: goldenRitualCard.centerYAnchor, constant: -9),
+                coffeeBulletinScroll.trailingAnchor.constraint(lessThanOrEqualTo: coffeeBulletinArtwork.leadingAnchor, constant: -12), coffeeBulletinRecord.leadingAnchor.constraint(equalTo: coffeeBulletinScroll.leadingAnchor), coffeeBulletinRecord.topAnchor.constraint(equalTo: coffeeBulletinScroll.bottomAnchor, constant: 2),
+                coffeeBulletinArtwork.trailingAnchor.constraint(equalTo: goldenRitualCard.trailingAnchor, constant: -16), coffeeBulletinArtwork.centerYAnchor.constraint(equalTo: goldenRitualCard.centerYAnchor), coffeeBulletinArtwork.widthAnchor.constraint(equalToConstant: 106),
+                coffeeBulletinArtwork.heightAnchor.constraint(equalToConstant: 42), coffeeBulletinCollection.topAnchor.constraint(equalTo: coffeeBulletinArtwork.topAnchor), coffeeBulletinCollection.leadingAnchor.constraint(equalTo: coffeeBulletinArtwork.leadingAnchor, constant: 4),
+                coffeeBulletinCollection.trailingAnchor.constraint(equalTo: coffeeBulletinArtwork.trailingAnchor, constant: -4), coffeeBulletinCollection.bottomAnchor.constraint(equalTo: coffeeBulletinArtwork.bottomAnchor)
+            ])
+
+            goldenRitualScroll.addArrangedSubview(goldenRitualCard)
+            goldenRitualStack.append(goldenRitualCard)
         }
 
         NSLayoutConstraint.activate([
@@ -299,7 +296,7 @@ final class ChovviThermalTasting: UIViewController {
             filterRitualMenu("Sign in required", goldenRitualMenu: "Sign in before selecting an item.")
             return
         }
-        let goldenRitualChoice = ChovviThermalRoast.goldenRitualScroll[goldenRitualSelection.tag]
+        let goldenRitualChoice = goldenRitualSelection.accessibilityIdentifier ?? ChovviThermalRoast.goldenRitualScroll[goldenRitualSelection.tag]
         goldenRitualStack.forEach { $0.isEnabled = false }
         goldenRitualArtwork.startAnimating()
         Task {

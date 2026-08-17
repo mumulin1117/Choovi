@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  choovicoff
 //
-//  Created by 林倩 on 2026/8/3.
+//  Created by choovicoff on 2026/7/3.
 //
 
 import UIKit

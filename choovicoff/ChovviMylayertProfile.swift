@@ -9,11 +9,30 @@ final class ChovviMylayertProfile: UIViewController {
     private let brewGatheringStack = UIButton(type: .system)
     private let brewGatheringState = UIButton(type: .system)
     private let brewGatheringTrigger = UIRefreshControl()
+    private var brewGatheringUpdate = false
     private static let brewGatheringRender = UIColor(red: 0.84, green: 0.61, blue: 0.31, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         brewGatheringAction()
+        brewGatheringMenu(false, brewGatheringLayout: false)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard !brewGatheringUpdate else { return }
+        brewGatheringUpdate = true
+        brewGatheringMenu(false, brewGatheringLayout: false)
+        ChovviThermalCalibrationView.goldenRitualLayout(
+            self,
+            goldenRitualMenu: "Loading chat rooms...",
+            goldenRitualUpdate: 0.9
+        ) { [weak self] in
+            guard let self else { return }
+            self.brewGatheringLabel()
+            self.brewGatheringStatus()
+            self.brewGatheringMenu(true, brewGatheringLayout: true)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -279,6 +298,27 @@ final class ChovviMylayertProfile: UIViewController {
         brewGatheringArtwork.hasPrefix("/")
             ? UIImage(contentsOfFile: brewGatheringArtwork)
             : UIImage(named: brewGatheringArtwork)
+    }
+
+    private func brewGatheringMenu(_ brewGatheringPreview: Bool, brewGatheringLayout: Bool) {
+        let brewGatheringChoice: CGFloat = brewGatheringPreview ? 1 : 0
+        brewGatheringScroll.isUserInteractionEnabled = brewGatheringPreview
+        brewGatheringState.isUserInteractionEnabled = brewGatheringPreview
+        if brewGatheringLayout && !UIAccessibility.isReduceMotionEnabled {
+            brewGatheringScroll.transform = CGAffineTransform(translationX: 0, y: 14)
+            brewGatheringState.transform = CGAffineTransform(scaleX: 0.88, y: 0.88)
+            UIView.animate(withDuration: 0.28, delay: 0, options: [.curveEaseOut]) {
+                self.brewGatheringScroll.alpha = brewGatheringChoice
+                self.brewGatheringState.alpha = brewGatheringChoice
+                self.brewGatheringScroll.transform = .identity
+                self.brewGatheringState.transform = .identity
+            }
+        } else {
+            brewGatheringScroll.alpha = brewGatheringChoice
+            brewGatheringState.alpha = brewGatheringChoice
+            brewGatheringScroll.transform = .identity
+            brewGatheringState.transform = .identity
+        }
     }
 
     @objc private func brewGatheringSelection(_ brewGatheringImage: UIButton) {
