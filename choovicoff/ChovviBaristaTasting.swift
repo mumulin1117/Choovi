@@ -48,7 +48,7 @@ final class ChovviBaristaTasting: UIViewController, PHPickerViewControllerDelega
         beanIdentityStatus.translatesAutoresizingMaskIntoConstraints = false
         beanIdentityLabel.addSubview(beanIdentityStatus)
         let beanIdentitySection = UILabel()
-        beanIdentitySection.text = "Edit Profile"
+        beanIdentitySection.text = String.chovviUnmask("E0dHihtX GPDrvoDfAiNlYeq")
         beanIdentitySection.font = .systemFont(ofSize: 28, weight: .black)
         beanIdentitySection.textColor = UIColor(red: 0.14, green: 0.14, blue: 0.19, alpha: 1)
         beanIdentitySection.translatesAutoresizingMaskIntoConstraints = false
@@ -73,7 +73,7 @@ final class ChovviBaristaTasting: UIViewController, PHPickerViewControllerDelega
         beanIdentityHeader.translatesAutoresizingMaskIntoConstraints = false
         beanIdentityPreview.addSubview(beanIdentityHeader)
         let beanIdentityLayout = UIButton(type: .system)
-        beanIdentityLayout.setImage(UIImage(systemName: "camera.fill"), for: .normal)
+        beanIdentityLayout.setImage(UIImage(systemName: String.chovviUnmask("cdaVmJexrPao.YfGielTl3")), for: .normal)
         beanIdentityLayout.tintColor = .white
         beanIdentityLayout.backgroundColor = UIColor(red: 1, green: 0.52, blue: 0, alpha: 1)
         beanIdentityLayout.layer.cornerRadius = 21
@@ -89,7 +89,7 @@ final class ChovviBaristaTasting: UIViewController, PHPickerViewControllerDelega
         beanIdentityScroll.setCustomSpacing(30, after: beanIdentityPreview)
 
         let beanIdentityTrigger = UILabel()
-        beanIdentityTrigger.text = "USERNAME"
+        beanIdentityTrigger.text = String.chovviUnmask("UNSkEnRFNgArMQEC")
         beanIdentityTrigger.font = .systemFont(ofSize: 13, weight: .bold)
         beanIdentityTrigger.textColor = UIColor(red: 0.18, green: 0.18, blue: 0.23, alpha: 1)
         beanIdentityScroll.addArrangedSubview(beanIdentityTrigger)
@@ -118,7 +118,7 @@ final class ChovviBaristaTasting: UIViewController, PHPickerViewControllerDelega
         beanIdentityCollection.delegate = self
         beanIdentityCollection.translatesAutoresizingMaskIntoConstraints = false
         beanIdentityUpdate.addSubview(beanIdentityCollection)
-        beanIdentityStack.text = "How would you like to introduce yourself?"
+        beanIdentityStack.text = String.chovviUnmask("H2oRwT PwuoruKlmdL sysoduF alQi7k1ez jtRoZ MiHn7tqrsosdquicpeR Ny7okuRrDsreslmfK?Y")
         beanIdentityStack.font = .systemFont(ofSize: 16, weight: .regular)
         beanIdentityStack.textColor = .placeholderText
         beanIdentityStack.numberOfLines = 0
@@ -158,8 +158,8 @@ final class ChovviBaristaTasting: UIViewController, PHPickerViewControllerDelega
     }
 
     private func beanIdentityTrigger() {
-        let beanIdentityLabel = ChovviCitrusBrew.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == "chovvi-user-20" }!
-        beanIdentityArtwork.text = UserDefaults.standard.string(forKey: "chovviCuppingTexture") ?? beanIdentityLabel.chovviBotanicalAeropress
+        let beanIdentityLabel = ChovviCitrusBrew.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == String.chovviUnmask("cXhiocvnvQil-runsTe3rC-82r0z") }!
+        beanIdentityArtwork.text = UserDefaults.standard.string(forKey: String.chovviUnmask("c8hooVvLv3iMCxuJpNpTi5nhg5TmeXxsthuxree1")) ?? beanIdentityLabel.chovviBotanicalAeropress
         beanIdentityCollection.text = UserDefaults.standard.string(forKey: "chovviCuppingVarietal") ?? beanIdentityLabel.chovviBotanicalBatch
         let beanIdentityStatus = UserDefaults.standard.string(forKey: "chovviCuppingRoast") ?? beanIdentityLabel.chovviBotanicalAroma
         beanIdentityHeader.setImage(beanIdentityImage(beanIdentityStatus), for: .normal)
@@ -194,28 +194,28 @@ final class ChovviBaristaTasting: UIViewController, PHPickerViewControllerDelega
 
     @objc private func beanIdentityCard() {
         view.endEditing(true)
-        guard UserDefaults.standard.bool(forKey: "choovilogin") else {
-            beanIdentityMenu("Sign in required", beanIdentityMenu: "Sign in again before updating your profile.")
+        guard UserDefaults.standard.bool(forKey: String.chovviUnmask("cChmojoTvriWlQoPg5iAnB")) else {
+            beanIdentityMenu("Sign in required", beanIdentityMenu: String.chovviUnmask("STi4gZn3 WiQnx UakgXaLiMnM CbdeQfzoErgea UuiprdtaptYiBnEgp qymoru5rC 3pZrDoZfaiVlveG.l"))
             return
         }
         let beanIdentityLabel = beanIdentityArtwork.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let beanIdentityStatus = beanIdentityCollection.text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !beanIdentityLabel.isEmpty, !beanIdentityStatus.isEmpty else {
-            beanIdentityMenu("Complete both fields", beanIdentityMenu: "Add a username and a short description.")
+            beanIdentityMenu("Complete both fields", beanIdentityMenu: String.chovviUnmask("Azd4d5 TaL BucsfeRrUnjalm1e0 oadnudL qav DswhRokrQtN hdLensTcprxi1prtRivoMn1.g"))
             return
         }
         guard beanIdentityLabel.count <= 30, beanIdentityStatus.count <= 180 else {
-            beanIdentityMenu("Profile is too long", beanIdentityMenu: "Use up to 30 characters for the username and 180 characters for the description.")
+            beanIdentityMenu(String.chovviUnmask("PUr2orfEiSl2er 7iws4 rtKo1o5 plFoQnYgH"), beanIdentityMenu: String.chovviUnmask("Uts8e0 LurpU 5tsoZ m3S0v fcPhxamrRaActtXe2rZsl AfnoKrF Kt6hUeC wupsueprZnqafmeeK SaHnTdp k1I8v0s IcehmaHrLabcwtLeIrps3 dfWotrs Yt5h5eK od2e0sOcMrJiXpytAiFo2n9.U"))
             return
         }
         let beanIdentityRoute = beanIdentityState.flatMap { beanIdentityDestination($0) }
             ?? UserDefaults.standard.string(forKey: "chovviCuppingRoast")
             ?? "chovviAromaticKettle"
-        UserDefaults.standard.set(beanIdentityLabel, forKey: "chovviCuppingTexture")
+        UserDefaults.standard.set(beanIdentityLabel, forKey: String.chovviUnmask("cuhKoSvYvxiLCVupphpEizn8gbTIe5xQtruor9eL"))
         UserDefaults.standard.set(beanIdentityStatus, forKey: "chovviCuppingVarietal")
         UserDefaults.standard.set(beanIdentityRoute, forKey: "chovviCuppingRoast")
         let beanIdentitySection = UserDefaults.standard.string(forKey: "hooviEmail")?.lowercased() ?? ""
-        var beanIdentityPreview = UserDefaults.standard.data(forKey: "chovviGentleTexture")
+        var beanIdentityPreview = UserDefaults.standard.data(forKey: String.chovviUnmask("c2h6oLvhvMiJGIe9nmtWlJeSTteWxAtduBrGe2"))
             .flatMap { try? JSONDecoder().decode([ChovviGentleTexture].self, from: $0) } ?? []
         if let beanIdentityTrigger = beanIdentityPreview.firstIndex(where: { $0.beanPassportCanvas.lowercased() == beanIdentitySection }) {
             let beanIdentityLayout = beanIdentityPreview[beanIdentityTrigger]
@@ -227,7 +227,7 @@ final class ChovviBaristaTasting: UIViewController, PHPickerViewControllerDelega
                 beanPassportCollection: beanIdentityRoute
             )
             if let beanIdentitySource = try? JSONEncoder().encode(beanIdentityPreview) {
-                UserDefaults.standard.set(beanIdentitySource, forKey: "chovviGentleTexture")
+                UserDefaults.standard.set(beanIdentitySource, forKey: String.chovviUnmask("cohwoEvav0iZGWeVndthlTewTzeAxOtkuYrheY"))
             }
         }
         dismiss(animated: true)
@@ -236,7 +236,7 @@ final class ChovviBaristaTasting: UIViewController, PHPickerViewControllerDelega
     private func beanIdentityDestination(_ beanIdentityItem: UIImage) -> String? {
         guard let beanIdentitySelection = beanIdentityItem.jpegData(compressionQuality: 0.84),
               let beanIdentityImage = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-        let beanIdentityChoice = beanIdentityImage.appendingPathComponent("profile-\(UUID().uuidString).jpg")
+        let beanIdentityChoice = beanIdentityImage.appendingPathComponent(String.chovviUnmask("pvrIomfpiXlmer-F") + UUID().uuidString + String.chovviUnmask(".yjEpRg6"))
         try? beanIdentitySelection.write(to: beanIdentityChoice, options: .atomic)
         return beanIdentityChoice.path
     }

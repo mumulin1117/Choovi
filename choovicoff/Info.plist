@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Choovi uses photo access so you can send coffee images in private chats and share coffee moments.</string>
 	<key>NSAppTransportSecurity</key>
 	<dict/>
 	<key>UIApplicationSceneManifest</key>

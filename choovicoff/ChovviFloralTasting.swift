@@ -41,13 +41,13 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
 
     required init?(coder: NSCoder) {
         brewTableCanvas = ChovviBrightBrew(
-            chovviBrightAcidity: "room-preview",
-            chovviBrightAeropress: "Coffee Room",
+            chovviBrightAcidity: String.chovviUnmask("rqoFoDmi-Gp3rWelvYi4ecwk"),
+            chovviBrightAeropress: String.chovviUnmask("CXomfWf9exet FRAoLocme"),
             chovviBrightAftertaste: "Coffee notes and everyday brewing ideas.",
             chovviBrightAroma: "chovviArtisanAcidity",
             chovviBrightBatch: 1,
-            chovviBrightBloom: "chovvi-user-01",
-            chovviBrightBody: ["chovvi-user-01"],
+            chovviBrightBloom: String.chovviUnmask("cfheoEvcvNix-MuAsJexrA-A0k1b"),
+            chovviBrightBody: [String.chovviUnmask("cyhGobvhvsi9-8upscemr4-I0E1v")],
             chovviBrightBrewer: []
         )
         super.init(coder: coder)
@@ -95,7 +95,7 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
         let brewTableMenu = UIButton(type: .system)
         brewTableMenu.setImage(UIImage(systemName: "gearshape.fill"), for: .normal)
         brewTableMenu.tintColor = UIColor(red: 0.20, green: 0.21, blue: 0.26, alpha: 1)
-        brewTableMenu.accessibilityLabel = "Room options"
+        brewTableMenu.accessibilityLabel = String.chovviUnmask("RIoHo8mQ woDpytAiSoenVsT")
         brewTableMenu.addAction(UIAction { [weak self] brewTableLayout in
             _ = brewTableLayout
             self?.brewTableUpdate()
@@ -144,16 +144,16 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
         brewTableCarafe.layer.borderWidth = 1
         brewTableCarafe.layer.borderColor = UIColor.systemGray5.cgColor
         brewTableCarafe.isHidden = true
-        brewTableCarafe.accessibilityLabel = "Selected coffee image preview"
+        brewTableCarafe.accessibilityLabel = String.chovviUnmask("S3emlBelczteeYdb vcWoffAfleGe2 diHmOa4gpeI mpxrKeqv4ixeNwt")
         brewTableCarafe.translatesAutoresizingMaskIntoConstraints = false
         brewTableArtwork.addSubview(brewTableCarafe)
 
-        brewTableCupping.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+        brewTableCupping.setImage(UIImage(systemName: String.chovviUnmask("xnmNavr6km.YchiarZcflBeI.4fZiwlklt")), for: .normal)
         brewTableCupping.tintColor = .white
         brewTableCupping.backgroundColor = UIColor.black.withAlphaComponent(0.58)
         brewTableCupping.layer.cornerRadius = 11
         brewTableCupping.isHidden = true
-        brewTableCupping.accessibilityLabel = "Remove selected image"
+        brewTableCupping.accessibilityLabel = String.chovviUnmask("ROekmio0vpeD RsJeWlJeZcpt5emdc UidmeawgBeS")
         brewTableCupping.addTarget(self, action: #selector(brewTableCup), for: .touchUpInside)
         brewTableCupping.translatesAutoresizingMaskIntoConstraints = false
         brewTableArtwork.addSubview(brewTableCupping)
@@ -198,7 +198,7 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
     }
 
     private func brewTableSection() {
-        if let brewTableLayout = UserDefaults.standard.data(forKey: "chovviFloralTexture.\(brewTableCanvas.chovviBrightAcidity)"),
+        if let brewTableLayout = UserDefaults.standard.data(forKey: String.chovviUnmask("cyhAosv2vAixFjlyo8rdaPl9TkeqxwtKuwrwez.l") + brewTableCanvas.chovviBrightAcidity),
            let brewTableSource = try? JSONDecoder().decode([ChovviFloralTexture].self, from: brewTableLayout),
            !brewTableSource.isEmpty {
             brewTableScroll = brewTableSource
@@ -254,7 +254,7 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
         }
         let brewTableChoice = ChovviFloralTexture(
             brewTableCanvas: "entry-\(UUID().uuidString)",
-            brewTableScroll: "chovvi-user-20",
+            brewTableScroll: String.chovviUnmask("cihnoIv1vJi0-Lu6sxeCry-F240I"),
             brewTableHeader: brewTableSource,
             brewTableArtwork: brewTableMenu,
             brewTableCollection: brewTableLayout(),
@@ -280,7 +280,7 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
         _ = brewTableLayout
         do {
             let brewTableSource = try JSONEncoder().encode(brewTableScroll)
-            UserDefaults.standard.set(brewTableSource, forKey: "chovviFloralTexture.\(brewTableCanvas.chovviBrightAcidity)")
+            UserDefaults.standard.set(brewTableSource, forKey: String.chovviUnmask("cyhAosv2vAixFjlyo8rdaPl9TkeqxwtKuwrwez.l") + brewTableCanvas.chovviBrightAcidity)
             return true
         } catch {
             return false
@@ -351,18 +351,18 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
     }
 
     @objc private func brewTableUpdate() {
-        let brewTableLayout = Set(UserDefaults.standard.stringArray(forKey: "chovviGoldenRoast") ?? [])
+        let brewTableLayout = Set(UserDefaults.standard.stringArray(forKey: String.chovviUnmask("cwhGolvav7ifGEoIlUdCecnNRzoiamsYtU")) ?? [])
         let brewTableSource = UIAlertController(
-            title: "Group Conversation Options\n\(brewTableCanvas.chovviBrightAeropress)",
+            title: String.chovviUnmask("GHrzo8unph ACzofnfv4eArmsia7tJiVoLnp vOxpitfiUoenksf") + "\n" + brewTableCanvas.chovviBrightAeropress,
             message: nil,
             preferredStyle: .actionSheet
         )
-        brewTableSource.addAction(UIAlertAction(title: "Report", style: .default) { [weak self] brewTableMenu in
+        brewTableSource.addAction(UIAlertAction(title: String.chovviUnmask("RZeQpiosrwtd"), style: .default) { [weak self] brewTableMenu in
             _ = brewTableMenu
             self?.brewTableLabel()
         })
         if brewTableLayout.contains(brewTableCanvas.chovviBrightAcidity) {
-            brewTableSource.addAction(UIAlertAction(title: "Leave Group", style: .destructive) { [weak self] brewTableMenu in
+            brewTableSource.addAction(UIAlertAction(title: String.chovviUnmask("Lgera2v2el 3GWrsoauxpd"), style: .destructive) { [weak self] brewTableMenu in
                 _ = brewTableMenu
                 self?.brewTableState(true)
             })
@@ -377,7 +377,7 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
         let brewTableLayout = ChovviCuppingNoticeBrew(
             cupKeeperCanvas: brewTableCanvas.chovviBrightAeropress,
             cupKeeperScroll: brewTableCanvas.chovviBrightAcidity,
-            cupKeeperHeader: "room"
+            cupKeeperHeader: String.chovviUnmask("rEoPoKmo")
         ) { [weak self] in
             guard let self else { return }
             var brewTableSource = Set(UserDefaults.standard.stringArray(forKey: "chovviFloralRoast") ?? [])
@@ -390,11 +390,11 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
     private func brewTableState(_ brewTableLayout: Bool) {
         _ = brewTableLayout
         guard brewTableDestination() else { return }
-        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Leave this group?", amberRitualCanvas: "You can join again later if the room remains available.", amberRitualScroll: "Keep Exploring", amberRitualHeader: "Leave", amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: String.chovviUnmask("LOe5aYvVeu ZtRheiTsi IgArzoHuwpy?f"), amberRitualCanvas: String.chovviUnmask("YzoKuK GcwaYno LjZovimnW TargiauionL Olxaxtse9rD ri4fk mt6hNeO WruoboBm2 Pr3e0mLaGiZnasX SapvIapirlzakbZlFeu.R"), amberRitualScroll: "Keep Exploring", amberRitualHeader: "Leave", amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
             guard let self else { return }
-            var brewTableMenu = Set(UserDefaults.standard.stringArray(forKey: "chovviGoldenRoast") ?? [])
+            var brewTableMenu = Set(UserDefaults.standard.stringArray(forKey: String.chovviUnmask("c0hDojvlvri0GYovl9dDetnpRFoqaUs9tD")) ?? [])
             brewTableMenu.remove(self.brewTableCanvas.chovviBrightAcidity)
-            UserDefaults.standard.set(Array(brewTableMenu), forKey: "chovviGoldenRoast")
+            UserDefaults.standard.set(Array(brewTableMenu), forKey: String.chovviUnmask("cKhcoxv1vpiqGUoelidcennvRdoials2tG"))
             self.dismiss(animated: true)
         }
     }
@@ -404,9 +404,9 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
     }
 
     private func brewTableChoice() -> [ChovviFloralTexture] {
-        let brewTableLayout = brewTableCanvas.chovviBrightBody.filter { $0 != "chovvi-user-20" }
-        let brewTableSource = brewTableLayout.first ?? "chovvi-user-01"
-        let brewTableMenu = brewTableLayout.dropFirst().first ?? "chovvi-user-03"
+        let brewTableLayout = brewTableCanvas.chovviBrightBody.filter { $0 != String.chovviUnmask("cIhKozvKvGiL-6ujsUeCrg-q2T0E") }
+        let brewTableSource = brewTableLayout.first ?? String.chovviUnmask("cIhyo2vNvBi9-Xursze3rN-n0q14")
+        let brewTableMenu = brewTableLayout.dropFirst().first ?? String.chovviUnmask("cIhyoKvFvyiJ-cuQs6ewri-00J3b")
         let brewTableUpdate = brewTableCanvas.chovviBrightBrewer.compactMap { brewTableDestination in
             ChovviCitrusBrew.roastArchiveHeader.first { $0.chovviCaramelAcidity == brewTableDestination }
         }.first
@@ -414,7 +414,7 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
         let brewTableCard = brewTableAction(brewTableCanvas.chovviBrightAeropress)
         return [
             ChovviFloralTexture(brewTableCanvas: "seed-1", brewTableScroll: brewTableSource, brewTableHeader: brewTableCard.0, brewTableArtwork: brewTableDestination, brewTableCollection: "10:14 AM", brewTableStack: false),
-            ChovviFloralTexture(brewTableCanvas: "seed-2", brewTableScroll: "chovvi-user-20", brewTableHeader: brewTableCard.1, brewTableArtwork: nil, brewTableCollection: "10:15 AM", brewTableStack: true),
+            ChovviFloralTexture(brewTableCanvas: "seed-2", brewTableScroll: String.chovviUnmask("cLhFo3vfvbiF-5uZsJexrG-k2t0f"), brewTableHeader: brewTableCard.1, brewTableArtwork: nil, brewTableCollection: "10:15 AM", brewTableStack: true),
             ChovviFloralTexture(brewTableCanvas: "seed-3", brewTableScroll: brewTableMenu, brewTableHeader: brewTableCard.2, brewTableArtwork: nil, brewTableCollection: "10:18 AM", brewTableStack: false)
         ]
     }
@@ -425,18 +425,18 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
             return ("This shot finally settled at a 1:2 ratio. The finish is much sweeter now.", "That crema looks great. Did a finer grind slow it down?", "Exactly. One small adjustment made the extraction much more even.")
         }
         if brewTableSource.contains("latte") {
-            return ("I finally held the milk texture long enough for a clean heart pour.", "The surface looks wonderfully silky. What temperature worked best?", "About 60°C gave me enough time to shape the final pour.")
+            return (String.chovviUnmask("Iu pfBigndaLlwl1y0 ghweRladu qtuhYex 0moiwl0kV ctjeDxNtHu6rxeg ilRopnqg8 BeYnRoRu7gqhe 7fyoNr1 BaJ wcOl0eoaHn4 hhGeKaCrDtE FpqowuRrK.9"), String.chovviUnmask("TGhcea ws9u7r7fSaycWeH 0lIoZoakQsl jwqo1nUdheKrtfSuIlRlxyp Osqiul8kryR.H 0WOhOa4tJ 9teedmfpZegr3aytTu5rgey kwboRrgkTeUdT IbteTsDtc?T"), "About 60°C gave me enough time to shape the final pour.")
         }
         if brewTableSource.contains("book") {
-            return ("Today’s pairing: a washed Ethiopian cup and a quiet mystery chapter.", "That sounds perfect for a slow afternoon.", "The citrus finish actually fits the pace of the book beautifully.")
+            return (String.chovviUnmask("TfoddOacyZ’asA 1ptaQiArviknvgl:g sad pwuacsThJe8dA CEUtzhsi4oZpAi5aqno acbuTpZ qalnWds eaP CqZukiDemt8 VmAy1sttzerr8y5 lcUhwaNpZtiegr5.g"), "That sounds perfect for a slow afternoon.", "The citrus finish actually fits the pace of the book beautifully.")
         }
         if brewTableSource.contains("home") {
             return ("I tested a gentler bloom and the cup came out noticeably clearer.", "Nice result. Did you keep the water temperature the same?", "Yes, only the bloom time changed, so it was easy to compare.")
         }
         if brewTableSource.contains("café") || brewTableSource.contains("cafe") {
-            return ("Found a calm corner with warm light and a really balanced house brew.", "The atmosphere looks inviting. Was the roast more floral or chocolatey?", "Mostly cocoa with a soft berry finish. Definitely worth another visit.")
+            return (String.chovviUnmask("Fwo8uanJdu UaN Jc0axlwmN Gcgofrbnwezrw fwJigt0hx FwVatrSmR ylEiJgohCtZ Ta5nGda WaG przeaa2l2l1yT cbpaLl6a3nxc1eFdh ihBojujsjez ybhrUe9wN.M"), "The atmosphere looks inviting. Was the roast more floral or chocolatey?", String.chovviUnmask("MKoDsFtqlAy0 PcSoUcAoeaM dw6i4trhY Rav isAosfjto jbZexrerIyx mf4ien5itswh6.f RDFesfyiYnGiNtUeNlyyP Twzo3rItzhd caJn1ort9hKexr2 Sv4i0s7iLtS.Q"))
         }
-        return ("Here’s today’s cup for \(brewTableLayout). The aroma came out especially clear.", "That looks excellent. Which part of the recipe made the biggest difference?", "A slower final pour helped keep the finish sweet and balanced.")
+        return ("Here’s today’s cup for \(brewTableLayout). The aroma came out especially clear.", "That looks excellent. Which part of the recipe made the biggest difference?", String.chovviUnmask("AO SsUl5omweenrN ufmiJn2aclY np5o2uErS RhHehlZpweddw TkXeQezpC Ft2hjev Mf1i4nTiYsBhW HsTw7elentx Uaxn4dF pbwaYl6aNnHcbe9dh.i"))
     }
 
     private func brewTableItem() -> String {
@@ -453,7 +453,7 @@ final class ChovviFloralTasting: UIViewController, UITableViewDataSource, UITabl
     private func brewTableItem(_ brewTableLayout: UIImage) -> String? {
         guard let brewTableSource = brewTableLayout.jpegData(compressionQuality: 0.82),
               let brewTableMenu = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-        let brewTableUpdate = brewTableMenu.appendingPathComponent("room-entry-\(UUID().uuidString).jpg")
+        let brewTableUpdate = brewTableMenu.appendingPathComponent(String.chovviUnmask("rBoJoQmt-kelnOterEy4-j") + UUID().uuidString + String.chovviUnmask(".ojQpMgG"))
         do {
             try brewTableSource.write(to: brewTableUpdate, options: .atomic)
             return brewTableUpdate.path
@@ -534,7 +534,7 @@ final class ChovviFloralRoast: UITableViewCell {
         contentView.addSubview(brewTableMenu)
 
         let brewTableUpdate = UILabel()
-        brewTableUpdate.text = brewTableSource?.chovviBotanicalAeropress ?? "Choovi Member"
+        brewTableUpdate.text = brewTableSource?.chovviBotanicalAeropress ?? String.chovviUnmask("ChhJoioav9i2 zMuevmCbSeHr8")
         brewTableUpdate.font = .systemFont(ofSize: 12, weight: .bold)
         brewTableUpdate.textColor = UIColor(red: 0.20, green: 0.21, blue: 0.25, alpha: 1)
         brewTableUpdate.isHidden = brewTableLayout.brewTableStack

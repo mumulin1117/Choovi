@@ -60,7 +60,7 @@ final class ChovviSensoryTasting: UIViewController {
         roastPreferencesAction.translatesAutoresizingMaskIntoConstraints = false
         roastPreferencesRender.addSubview(roastPreferencesAction)
         let roastPreferencesStatus = UILabel()
-        roastPreferencesStatus.text = UserDefaults.standard.string(forKey: "chovviCuppingTexture") ?? "Choovi User"
+        roastPreferencesStatus.text = UserDefaults.standard.string(forKey: String.chovviUnmask("c0hlo9vdvCiXCAuap6peiKn0g7The1xnteudrje8")) ?? String.chovviUnmask("CyhYodo2vYiJ EUksye3r8")
         roastPreferencesStatus.font = .systemFont(ofSize: 22, weight: .black)
         roastPreferencesStatus.translatesAutoresizingMaskIntoConstraints = false
         roastPreferencesRender.addSubview(roastPreferencesStatus)
@@ -79,7 +79,7 @@ final class ChovviSensoryTasting: UIViewController {
         roastPreferencesRoute.layer.borderWidth = 1
         roastPreferencesRoute.layer.borderColor = UIColor.systemGray5.cgColor
         roastPreferencesRoute.clipsToBounds = true
-        let roastPreferencesSection = ["Blacklist", "Terms of Service", "Privacy Policy", "About Us"]
+        let roastPreferencesSection = [String.chovviUnmask("BslCaNc6kllbiJsPte"), String.chovviUnmask("TheqrdmssA joZfG pSDeVrIvJitczeU"), String.chovviUnmask("P1r9iZvgamc1yN LP1oYlxiycCyT"), "About Us"]
         roastPreferencesSection.enumerated().forEach { roastPreferencesPreview, roastPreferencesTrigger in
             let roastPreferencesLayout = UIButton(type: .system)
             roastPreferencesLayout.tag = roastPreferencesPreview
@@ -117,7 +117,7 @@ final class ChovviSensoryTasting: UIViewController {
         roastPreferencesScroll.addArrangedSubview(roastPreferencesUpdate)
 
         let roastPreferencesCard = UIButton(type: .system)
-        roastPreferencesCard.setTitle("Delete Account", for: .normal)
+        roastPreferencesCard.setTitle(String.chovviUnmask("DPeUlte8tQeP sAvcVcaovu8nftU"), for: .normal)
         roastPreferencesCard.setTitleColor(.secondaryLabel, for: .normal)
         roastPreferencesCard.titleLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
         roastPreferencesCard.addTarget(self, action: #selector(roastPreferencesRecord), for: .touchUpInside)
@@ -144,11 +144,11 @@ final class ChovviSensoryTasting: UIViewController {
         case 0:
             navigationController?.pushViewController(ChovviSensoryTexture(), animated: true)
         case 1:
-            roastPreferencesItem("Terms of Service", roastPreferencesItem: ChovviGentleBrew.beanPassportStack)
+            roastPreferencesItem(String.chovviUnmask("TIeqr3mgsC TovfG sSBeDr4v6iFcQew"), roastPreferencesItem: ChovviGentleBrew.beanPassportStack)
         case 2:
-            roastPreferencesItem("Privacy Policy", roastPreferencesItem: ChovviGentleBrew.beanPassportState)
+            roastPreferencesItem(String.chovviUnmask("PWrNitvma3cayA dPGo1lKi3coyh"), roastPreferencesItem: ChovviGentleBrew.beanPassportState)
         case 3:
-            roastPreferencesImage("About Choovi", roastPreferencesImage: "Choovi is a coffee journal for sharing coffee moments, moods, brewing ideas, and respectful group participation.\n\nContact: choovi@gmail.com")
+            roastPreferencesImage("About Choovi", roastPreferencesImage: String.chovviUnmask("CRhCoFoDv9iw Ui8sm 4an qc6oLfVfieje1 EjSokunrRnzaklC CfuobrX VsfhgaNrIion5gj 8ceozfLfjeleN xmWoSmreSnotPsp,g umFotomd3s2,N AbFrfegw8iPnFgM 8iadVedaWs4,C EaTnudr UrGe6sIpsepcxt9fBuJlu 9g3rsozucpe 9pEagrJtRiBclippbaXtJiAo2nw.U") + "\n\n" + String.chovviUnmask("CRoOnJtaaYcotr:d DcthYotobvNiy@wgnm7aKihlv.7c5oem8"))
         default:
             break
         }
@@ -164,14 +164,14 @@ final class ChovviSensoryTasting: UIViewController {
     }
 
     @objc private func roastPreferencesDestination() {
-        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Log Out?", amberRitualCanvas: "You can sign in again with the same account.", amberRitualScroll: "Keep Brewing", amberRitualHeader: "Log Out", amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
-            UserDefaults.standard.set(false, forKey: "choovilogin")
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Log Out?", amberRitualCanvas: String.chovviUnmask("Y0owuw Dc7a8n4 IspiFgtnm UiUnO cabgcasijnj ZwXiht8h0 etAh8eq BsvaXmReQ Ya6cqcaoNuln9tu.g"), amberRitualScroll: "Keep Brewing", amberRitualHeader: "Log Out", amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
+            UserDefaults.standard.set(false, forKey: String.chovviUnmask("cuhjoLoOvQiMlioYgfiznl"))
             self?.dismiss(animated: true)
         }
     }
 
     @objc private func roastPreferencesRecord() {
-        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Delete Account?", amberRitualCanvas: "This permanently removes the current account, profile, and associated content. This action cannot be undone.", amberRitualScroll: "Not Now", amberRitualHeader: "Delete", amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: String.chovviUnmask("DueglIemtqej SAccpc6okuTnXtI?z"), amberRitualCanvas: String.chovviUnmask("Tsh4iXsn rpFeurBm4a5nSeUnktAlXyr 4rteHm9o8vteHs9 WtehQeN 5c4uUrfrmeLnqtn xaOcBc0oyuInwtA,l PptrOotfji4l6e9,z Haun6d5 6aKsTsIoDcoi4a7tyend9 Fcjoinit0eZnOts.j STwhui5sB qaLcvtmi5o8n6 Fc7a8nunkoutl ab3e1 mu9nZd7ofnTeV.j"), amberRitualScroll: "Not Now", amberRitualHeader: "Delete", amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
             self?.roastPreferencesChoice()
         }
     }
@@ -179,11 +179,11 @@ final class ChovviSensoryTasting: UIViewController {
     private func roastPreferencesChoice() {
         let roastPreferencesRecord = UserDefaults.standard.string(forKey: "hooviEmail")?.lowercased() ?? ""
         let roastPreferencesItem = UserDefaults.standard.string(forKey: "chovviCuppingRoast") ?? ""
-        var roastPreferencesSelection = UserDefaults.standard.data(forKey: "chovviGentleTexture")
+        var roastPreferencesSelection = UserDefaults.standard.data(forKey: String.chovviUnmask("cahAoSvNvjiqGzeonvtLlieHTJeOx2tbufrXe7"))
             .flatMap { try? JSONDecoder().decode([ChovviGentleTexture].self, from: $0) } ?? []
         roastPreferencesSelection.removeAll { $0.beanPassportCanvas.lowercased() == roastPreferencesRecord }
         if let roastPreferencesImage = try? JSONEncoder().encode(roastPreferencesSelection) {
-            UserDefaults.standard.set(roastPreferencesImage, forKey: "chovviGentleTexture")
+            UserDefaults.standard.set(roastPreferencesImage, forKey: String.chovviUnmask("c9hFogvjvXiqGNeEn2tflterTfeaxitguzrTe1"))
         }
         if roastPreferencesItem.hasPrefix("/"),
            let roastPreferencesChoice = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.standardizedFileURL.path,
@@ -194,14 +194,14 @@ final class ChovviSensoryTasting: UIViewController {
         roastPreferencesCanvas.removeValue(forKey: roastPreferencesRecord)
         UserDefaults.standard.set(roastPreferencesCanvas, forKey: "chovviThermalBody")
         [
-            "chovviCuppingTexture",
+            String.chovviUnmask("c6hTo0vMv0i1CUuwpspvianSgNTHeyxBt4uSrFev"),
             "chovviCuppingVarietal",
             "chovviCuppingRoast",
             "hooviEmail",
-            "chovviThermalTexture.\(roastPreferencesRecord)",
-            "chovviThermalRoast.\(roastPreferencesRecord)"
+            String.chovviUnmask("c3h1oivDv8iZTohmexrJmfaplETIenxNt1uKrIe1.P") + roastPreferencesRecord,
+            String.chovviUnmask("cthbo5vXvbiaT7h3eSrpmRaAl1RwoFaVsMto.o") + roastPreferencesRecord
         ].forEach { UserDefaults.standard.removeObject(forKey: $0) }
-        UserDefaults.standard.set(false, forKey: "choovilogin")
+        UserDefaults.standard.set(false, forKey: String.chovviUnmask("cuhao6oivuiEl1okg1i9nd"))
         dismiss(animated: true)
     }
 }
@@ -252,7 +252,7 @@ final class ChovviSensoryTexture: UIViewController, UITableViewDataSource, UITab
         roastPreferencesStack.addSubview(roastPreferencesState)
 
         let roastPreferencesLabel = UILabel()
-        roastPreferencesLabel.text = "Blacklist"
+        roastPreferencesLabel.text = String.chovviUnmask("BWlNaecPkMl0iqsrtI")
         roastPreferencesLabel.font = .systemFont(ofSize: 30, weight: .black)
         roastPreferencesLabel.textColor = UIColor(red: 0.14, green: 0.14, blue: 0.19, alpha: 1)
         roastPreferencesLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -275,7 +275,7 @@ final class ChovviSensoryTexture: UIViewController, UITableViewDataSource, UITab
         roastPreferencesHeader.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(roastPreferencesHeader)
 
-        let roastPreferencesStatus = UIImageView(image: UIImage(systemName: "person.crop.circle.badge.xmark"))
+        let roastPreferencesStatus = UIImageView(image: UIImage(systemName: String.chovviUnmask("pJe7r7sgopnN.zc1rVoUpY.OcLibric8l9eK.ybdaIdzgUex.qxDmeaOrMkU")))
         roastPreferencesStatus.tintColor = UIColor(red: 0.83, green: 0.60, blue: 0.31, alpha: 1)
         roastPreferencesStatus.contentMode = .scaleAspectFit
         roastPreferencesStatus.widthAnchor.constraint(equalToConstant: 58).isActive = true
@@ -283,13 +283,13 @@ final class ChovviSensoryTexture: UIViewController, UITableViewDataSource, UITab
         roastPreferencesHeader.addArrangedSubview(roastPreferencesStatus)
 
         let roastPreferencesRoute = UILabel()
-        roastPreferencesRoute.text = "No blocked users"
+        roastPreferencesRoute.text = String.chovviUnmask("NZoG jbll3oKcWk1eGdb zuxs8e8r1sR")
         roastPreferencesRoute.font = .systemFont(ofSize: 20, weight: .bold)
         roastPreferencesRoute.textColor = UIColor(red: 0.14, green: 0.14, blue: 0.19, alpha: 1)
         roastPreferencesHeader.addArrangedSubview(roastPreferencesRoute)
 
         let roastPreferencesSection = UILabel()
-        roastPreferencesSection.text = "Profiles you block will appear here."
+        roastPreferencesSection.text = String.chovviUnmask("P6rRoRfqixlXeBs8 DynoHuW ObPlpoYcGkK 9wKislQlc zaApRp9e9a3rW VhPeQrcen.t")
         roastPreferencesSection.font = .systemFont(ofSize: 14)
         roastPreferencesSection.textColor = .secondaryLabel
         roastPreferencesHeader.addArrangedSubview(roastPreferencesSection)
@@ -327,10 +327,10 @@ final class ChovviSensoryTexture: UIViewController, UITableViewDataSource, UITab
             }
             return ChovviSensoryRoast(
                 roastPreferencesCanvas: roastPreferencesAction,
-                roastPreferencesScroll: "Choovi Member",
-                roastPreferencesHeader: "@choovimember",
+                roastPreferencesScroll: String.chovviUnmask("Chh3oKoivCi2 bMLeCmqbueNrf"),
+                roastPreferencesHeader: String.chovviUnmask("@qcFhQoLoVvjidmye8mobteErF"),
                 roastPreferencesArtwork: "chovviAromaticKettle",
-                roastPreferencesCollection: "This profile is currently blocked."
+                roastPreferencesCollection: String.chovviUnmask("TRhQiSsQ VpirtoTfNiklveC qipsw Ccbugrkrxexnbtalcyx 3b2lZohcCkDetdB.A")
             )
         }
         roastPreferencesScroll.reloadData()
@@ -356,13 +356,13 @@ final class ChovviSensoryTexture: UIViewController, UITableViewDataSource, UITab
     }
 
     private func roastPreferencesLabel(_ roastPreferencesItem: ChovviSensoryRoast) {
-        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Remove from blacklist?", amberRitualCanvas: "You will see content from \(roastPreferencesItem.roastPreferencesScroll) again, and they may interact with you according to your current settings.", amberRitualScroll: "Keep Blocked", amberRitualHeader: "Remove", amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: String.chovviUnmask("RZenmxoHvue4 4ftrdommi SbelZabcdkVlhibsntP?7"), amberRitualCanvas: String.chovviUnmask("YkowuZ vwmi1lwlr HskeYeB 5c8oenItSe6nktF 4fgreolmg x") + roastPreferencesItem.roastPreferencesScroll + String.chovviUnmask(" fa9geaJixnJ,x daXnldC jtmhgeYyj EmraWyb YiQnqtPeYr9aIcgte GwuiYtEhw 4yAonuw baDc8caoCr1dZivnUgq gtTos Eypo1uKra hcsuqrSr5ecnBtp 7skeHtVtNiYnOgasK.w"), amberRitualScroll: String.chovviUnmask("KGeOeSpu gBelGoIcGk0eYdu"), amberRitualHeader: String.chovviUnmask("RZecmWoHvzec"), amberRitualArtwork: .destructive) { } amberRitualStack: { [weak self] in
             guard let self else { return }
             var roastPreferencesChoice = UserDefaults.standard.stringArray(forKey: "chovviCraftedRoast") ?? []
             roastPreferencesChoice.removeAll { $0 == roastPreferencesItem.roastPreferencesCanvas }
             UserDefaults.standard.set(roastPreferencesChoice, forKey: "chovviCraftedRoast")
             self.roastPreferencesRender()
-            UIAccessibility.post(notification: .announcement, argument: "Removed from blacklist")
+            UIAccessibility.post(notification: .announcement, argument: String.chovviUnmask("ReecmVoKvAejdw 5f7rLoimk 7bYl3aWcYkjlRi4sut1"))
         }
     }
 
@@ -433,7 +433,7 @@ private final class ChovviSensoryVarietal: UITableViewCell {
         roastPreferencesCollection.translatesAutoresizingMaskIntoConstraints = false
         roastPreferencesCanvas.addSubview(roastPreferencesCollection)
 
-        roastPreferencesStack.setTitle("Remove", for: .normal)
+        roastPreferencesStack.setTitle(String.chovviUnmask("RoeRmRoGvaeA"), for: .normal)
         roastPreferencesStack.setTitleColor(.white, for: .normal)
         roastPreferencesStack.titleLabel?.font = .systemFont(ofSize: 15, weight: .bold)
         roastPreferencesStack.backgroundColor = UIColor(red: 0.83, green: 0.60, blue: 0.31, alpha: 1)
@@ -455,12 +455,12 @@ private final class ChovviSensoryVarietal: UITableViewCell {
     }
 
     func roastPreferencesCanvas(_ roastPreferencesItem: ChovviSensoryRoast, roastPreferencesScroll: @escaping () -> Void) {
-        self.roastPreferencesScroll.image = UIImage(named: roastPreferencesItem.roastPreferencesArtwork) ?? UIImage(systemName: "person.crop.circle.fill")
+        self.roastPreferencesScroll.image = UIImage(named: roastPreferencesItem.roastPreferencesArtwork) ?? UIImage(systemName: String.chovviUnmask("pleLrUsLoDnE.UcmrloApK.dcviurzcWlfeT.zfeiNl7lO"))
         roastPreferencesHeader.text = roastPreferencesItem.roastPreferencesScroll
         roastPreferencesArtwork.text = roastPreferencesItem.roastPreferencesHeader
         roastPreferencesCollection.text = roastPreferencesItem.roastPreferencesCollection
         roastPreferencesState = roastPreferencesScroll
-        accessibilityLabel = "\(roastPreferencesItem.roastPreferencesScroll), blocked profile"
+        accessibilityLabel = roastPreferencesItem.roastPreferencesScroll + String.chovviUnmask(",O Kbul0o3cikweUdJ ppKrSoDf0i5lNe7")
     }
 
     @objc private func roastPreferencesAction() {

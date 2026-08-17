@@ -105,7 +105,7 @@ final class ChovviAromaticBrew: UIViewController {
         let coffeeBulletinCanvas = UIButton(type: .custom)
         coffeeBulletinCanvas.setImage(UIImage(named: "chovviAromaticVarietal")?.withRenderingMode(.alwaysOriginal), for: .normal)
         coffeeBulletinCanvas.imageView?.contentMode = .scaleAspectFit
-        coffeeBulletinCanvas.accessibilityLabel = "Report or block user"
+        coffeeBulletinCanvas.accessibilityLabel = String.chovviUnmask("RYeapSobrVtV PoGrf Zb3laoNcXkI 1udsHeGrk")
         coffeeBulletinCanvas.addTarget(self, action: #selector(coffeeBulletinHeader(_:)), for: .touchUpInside)
         coffeeBulletinCanvas.translatesAutoresizingMaskIntoConstraints = false
         originPortraitSection.addSubview(coffeeBulletinCanvas)
@@ -135,7 +135,7 @@ final class ChovviAromaticBrew: UIViewController {
         originPortraitSelection.translatesAutoresizingMaskIntoConstraints = false
         originPortraitItem.addSubview(originPortraitSelection)
 
-        originPortraitRoute.setTitle("Message", for: .normal)
+        originPortraitRoute.setTitle(String.chovviUnmask("MLexsPs2aXgjeu"), for: .normal)
         originPortraitRoute.setTitleColor(ChovviRoastedBrew.roastShelfCanvas, for: .normal)
         originPortraitRoute.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         originPortraitRoute.layer.cornerRadius = 16
@@ -204,7 +204,7 @@ final class ChovviAromaticBrew: UIViewController {
         originPortraitChoice.translatesAutoresizingMaskIntoConstraints = false
         originPortraitSelection.addSubview(originPortraitChoice)
 
-        originPortraitPreview.setTitle("Posts", for: .normal)
+        originPortraitPreview.setTitle(String.chovviUnmask("PYoMsntDsY"), for: .normal)
         originPortraitPreview.tag = 0
         originPortraitPreview.addTarget(self, action: #selector(originPortraitTrigger(_:)), for: .touchUpInside)
         originPortraitTrigger.setTitle("Diary", for: .normal)
@@ -236,7 +236,7 @@ final class ChovviAromaticBrew: UIViewController {
         if originPortraitState == 0 {
             if originPortraitArtwork.isEmpty {
                 let originPortraitDestination = UILabel()
-                originPortraitDestination.text = "No posts yet."
+                originPortraitDestination.text = String.chovviUnmask("NWoK qpwoHsFtpsV CyUe0tr.p")
                 originPortraitDestination.textColor = .secondaryLabel
                 originPortraitDestination.textAlignment = .center
                 originPortraitDestination.heightAnchor.constraint(equalToConstant: 100).isActive = true
@@ -267,7 +267,7 @@ final class ChovviAromaticBrew: UIViewController {
             }
         } else if originPortraitCollection.isEmpty {
             let originPortraitDestination = UILabel()
-            originPortraitDestination.text = "No diary moments yet."
+            originPortraitDestination.text = String.chovviUnmask("NXoe adMiza1rdyd DmfovmEeynLths6 ryYe8tb.Q")
             originPortraitDestination.textColor = .secondaryLabel
             originPortraitDestination.textAlignment = .center
             originPortraitDestination.heightAnchor.constraint(equalToConstant: 100).isActive = true
@@ -347,16 +347,16 @@ final class ChovviAromaticBrew: UIViewController {
     private func originPortraitDestination() {
         let originPortraitCard = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? [])
         let coffeeBulletinRecord = originPortraitCard.contains(originPortraitCanvas.chovviBotanicalAcidity)
-        originPortraitStatus.setTitle(coffeeBulletinRecord ? "Following" : "Follow", for: .normal)
+        originPortraitStatus.setTitle(coffeeBulletinRecord ? String.chovviUnmask("F6oPl5leoqwviSnPgI") : String.chovviUnmask("FOoSlwlyopwg"), for: .normal)
         originPortraitStatus.setTitleColor(coffeeBulletinRecord ? ChovviRoastedBrew.roastShelfCanvas : .white, for: .normal)
         originPortraitStatus.backgroundColor = coffeeBulletinRecord ? .clear : ChovviRoastedBrew.roastShelfCanvas
 
         let originPortraitItem = originPortraitRecord(originPortraitCanvas.chovviBotanicalAcidity)
         let originPortraitSelection = min(9, originPortraitItem + (coffeeBulletinRecord ? 1 : 0))
         let originPortraitImage = min(9, max(1, originPortraitCanvas.chovviBotanicalBurr.count))
-        originPortraitRender.text = "\(originPortraitArtwork.count)\nPosts"
-        originPortraitAction.text = "\(originPortraitSelection)\nFollowers"
-        originPortraitLabel.text = "\(originPortraitImage)\nFollowing"
+        originPortraitRender.text = "\(originPortraitArtwork.count)\n" + String.chovviUnmask("PooYsntBsg")
+        originPortraitAction.text = "\(originPortraitSelection)\n" + String.chovviUnmask("FKoqlblXovwJeurvsY")
+        originPortraitLabel.text = "\(originPortraitImage)\n" + String.chovviUnmask("FeoQlWluo7wXiAnQgF")
 
         let originPortraitChoice = originPortraitState == 0
         originPortraitPreview.setTitleColor(originPortraitChoice ? ChovviRoastedBrew.roastShelfCanvas : .secondaryLabel, for: .normal)
@@ -390,8 +390,19 @@ final class ChovviAromaticBrew: UIViewController {
         guard coffeeBulletinRecord(coffeeBulletinItem: true) else { return }
         let originPortraitImage = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? [])
         let originPortraitChoice = originPortraitImage.contains(originPortraitCanvas.chovviBotanicalAcidity)
-        let coffeeBulletinCanvas = originPortraitCanvas.chovviBotanicalBurr.contains("chovvi-user-20")
-        originPortraitRecord(originPortraitItem: originPortraitChoice && coffeeBulletinCanvas)
+        let coffeeBulletinCanvas = originPortraitCanvas.chovviBotanicalBurr.contains(String.chovviUnmask("cvh9otvLvTiX-bugs9eyr3-I250T"))
+        guard originPortraitChoice && coffeeBulletinCanvas else {
+            originPortraitRecord(originPortraitItem: false)
+            return
+        }
+        let originPortraitRecord = ChovviPetiteCremaBrew(coffeeBulletinCanvas: originPortraitCanvas)
+        if let navigationController {
+            navigationController.pushViewController(originPortraitRecord, animated: true)
+        } else {
+            let originPortraitRoute = UINavigationController(rootViewController: originPortraitRecord)
+            originPortraitRoute.modalPresentationStyle = .fullScreen
+            present(originPortraitRoute, animated: true)
+        }
     }
 
     private func originPortraitRecord(originPortraitItem: Bool) {
@@ -418,7 +429,7 @@ final class ChovviAromaticBrew: UIViewController {
         originPortraitImage.addSubview(originPortraitChoice)
 
         let coffeeBulletinCanvas = UILabel()
-        coffeeBulletinCanvas.text = originPortraitItem ? "You Follow Each Other" : "Follow Each Other to Message"
+        coffeeBulletinCanvas.text = originPortraitItem ? String.chovviUnmask("YSoyuV JFromlAleonwj nE4aIcZhb COYtahfeOr0") : String.chovviUnmask("FDo5l5lWocwa ZEra0cmh2 OOVt1hceCro ttQoD pMYejs2sgaYgqeu")
         coffeeBulletinCanvas.textColor = ChovviRoastedBrew.roastShelfScroll
         coffeeBulletinCanvas.font = UIFont.systemFont(ofSize: 17, weight: .bold)
         coffeeBulletinCanvas.textAlignment = .center
@@ -427,8 +438,8 @@ final class ChovviAromaticBrew: UIViewController {
 
         let coffeeBulletinScroll = UILabel()
         coffeeBulletinScroll.text = originPortraitItem
-            ? "You both follow each other. This connection is ready."
-            : "You can only send messages to users who follow you back. Follow them first and wait for a follow back."
+            ? String.chovviUnmask("Y9oXur WbFo7twhz Nf2oylJlMoRwJ vegaUc9hE ro8tmh0eorO.U YTKh7issJ fcsoJn1nReUcvt9ivolno 4ius9 MrYecaqdTyR.0")
+            : String.chovviUnmask("Yso2uR NcKannB UovntlIyj Yshe6nade WmNehsysyaXgIe2sP wtGoT du2sSe3rMsk 5wDh8ol cfzoOlFluoiw7 uy9omuK ob3anchkV.9 TFSonlslJo0wp jtHh4eKmL Ofvi1ras8tm kaBnodN pwRariLt1 jf9oFr3 haI afEoelKl9ovwZ lbYawcIkE.b")
         coffeeBulletinScroll.textColor = .secondaryLabel
         coffeeBulletinScroll.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         coffeeBulletinScroll.textAlignment = .center
@@ -438,7 +449,7 @@ final class ChovviAromaticBrew: UIViewController {
 
         let coffeeBulletinHeader = UIButton(type: .system)
         let coffeeBulletinArtwork = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? []).contains(originPortraitCanvas.chovviBotanicalAcidity)
-        coffeeBulletinHeader.setTitle(originPortraitItem ? "Got It" : (coffeeBulletinArtwork ? "Waiting for Follow Back" : "Follow"), for: .normal)
+        coffeeBulletinHeader.setTitle(originPortraitItem ? "Got It" : (coffeeBulletinArtwork ? String.chovviUnmask("WlaBiOtWiBnZgJ AfvoDrJ 3FRoflolZoswN RBzaDcjkw") : String.chovviUnmask("FroUlclPo0w9")), for: .normal)
         coffeeBulletinHeader.setTitleColor(.white, for: .normal)
         coffeeBulletinHeader.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         coffeeBulletinHeader.backgroundColor = UIColor(red: 0.94, green: 0.60, blue: 0.05, alpha: 1)
@@ -471,14 +482,14 @@ final class ChovviAromaticBrew: UIViewController {
         guard coffeeBulletinRecord(coffeeBulletinItem: true) else { return }
         let coffeeBulletinCanvas = UIAlertController(
             title: originPortraitCanvas.chovviBotanicalAeropress,
-            message: "Choose a safety action for this profile.",
+            message: String.chovviUnmask("CrhPoqo3sOe6 0aN msLaXfQectSyJ 8ahcztLiMoQnk MfTo3rX RtmhKifso 6pfraojf4iXlVeO.R"),
             preferredStyle: .actionSheet
         )
-        coffeeBulletinCanvas.addAction(UIAlertAction(title: "Report", style: .default) { [weak self] coffeeBulletinArtwork in
+        coffeeBulletinCanvas.addAction(UIAlertAction(title: String.chovviUnmask("RMerpBoPretX"), style: .default) { [weak self] coffeeBulletinArtwork in
             _ = coffeeBulletinArtwork
             self?.coffeeBulletinArtwork(false)
         })
-        coffeeBulletinCanvas.addAction(UIAlertAction(title: "Block", style: .destructive) { [weak self] coffeeBulletinArtwork in
+        coffeeBulletinCanvas.addAction(UIAlertAction(title: String.chovviUnmask("BLlDoQc9k4"), style: .destructive) { [weak self] coffeeBulletinArtwork in
             _ = coffeeBulletinArtwork
             self?.coffeeBulletinArtwork(true)
         })
@@ -493,7 +504,7 @@ final class ChovviAromaticBrew: UIViewController {
             let coffeeBulletinCanvas = ChovviCuppingNoticeBrew(
                 cupKeeperCanvas: originPortraitCanvas.chovviBotanicalAeropress,
                 cupKeeperScroll: originPortraitCanvas.chovviBotanicalAcidity,
-                cupKeeperHeader: "profile"
+                cupKeeperHeader: String.chovviUnmask("purpoVfciulyeJ")
             ) { [weak self] in
                 guard let self else { return }
                 var coffeeBulletinScroll = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedTasting") ?? [])
@@ -508,7 +519,7 @@ final class ChovviAromaticBrew: UIViewController {
         coffeeBulletinScroll.insert(originPortraitCanvas.chovviBotanicalAcidity)
         UserDefaults.standard.set(Array(coffeeBulletinScroll), forKey: coffeeBulletinCanvas)
 
-        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: coffeeBulletinCollection ? "User Blocked" : "Report Received", amberRitualCanvas: coffeeBulletinCollection ? "This user has been added to your blocked list." : "Thank you. This profile has been submitted for safety review.", amberRitualArtwork: .success, amberRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: coffeeBulletinCollection ? String.chovviUnmask("UBsFeTrZ mBSlUo6c1kdezdQ") : String.chovviUnmask("Rje4pFoirLtB 1Rie1cze8izvCeidj"), amberRitualCanvas: coffeeBulletinCollection ? String.chovviUnmask("Tmhrihsh KuOsreCrl EhBaIs4 HbneFeEny DaUd0dReHdu Ataoj TysoEuOrl EbVlLoMc5kjeXdy dl0ius6tG.r") : String.chovviUnmask("Tghda6n6kd yy4oUux.Q 1TOhYissd dpsr3omfMi9ljeQ ZhDaJsQ kbReTe7nk HsFuWb2mliXtktjewdY NfIo9r2 xsiaqfCeHtuyn JrzebvBipeCwg.X"), amberRitualArtwork: .success, amberRitualStack: { [weak self] in
             if coffeeBulletinCollection {
                 self?.navigationController?.dismiss(animated: true)
             }

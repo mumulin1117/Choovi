@@ -36,7 +36,7 @@ final class ChovviFragrantBrew: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        guard !firstSipCanvas, !UserDefaults.standard.bool(forKey: "chovviFragrantTexture") else { return }
+        guard !firstSipCanvas, !UserDefaults.standard.bool(forKey: String.chovviUnmask("crhNoJvgvDimFArpabgcr3avngtcThehxotnulrGe8")) else { return }
         firstSipCanvas = true
         firstSipAction(true)
     }
@@ -83,7 +83,7 @@ final class ChovviFragrantBrew: UIViewController {
        
         let firstSipStatus = firstSipRoute("Log In", firstSipSection: Self.firstSipCollection, firstSipPreview: #selector(firstSipTrigger))
         firstSipHeader.addArrangedSubview(firstSipStatus)
-        let firstSipRoute = firstSipRoute("Create Account", firstSipSection: Self.firstSipStack, firstSipPreview: #selector(firstSipLayout))
+        let firstSipRoute = firstSipRoute(String.chovviUnmask("CDrAeQaztLeN iAocXcuohunnVt9"), firstSipSection: Self.firstSipStack, firstSipPreview: #selector(firstSipLayout))
         firstSipHeader.addArrangedSubview(firstSipRoute)
         firstSipHeader.setCustomSpacing(28, after: firstSipRoute)
 
@@ -99,13 +99,13 @@ final class ChovviFragrantBrew: UIViewController {
         firstSipSection.distribution = .fillEqually
         firstSipSection.spacing = 12
         let firstSipPreview = UIButton(type: .system)
-        firstSipPreview.setTitle("Terms of Service", for: .normal)
+        firstSipPreview.setTitle(String.chovviUnmask("TyevromwsO kowfC 5Sre9rYvyiscBef"), for: .normal)
         firstSipPreview.setTitleColor(Self.firstSipCollection, for: .normal)
         firstSipPreview.titleLabel?.font = .systemFont(ofSize: 13, weight: .bold)
         firstSipPreview.tag = 0
         firstSipPreview.addTarget(self, action: #selector(firstSipMenu(_:)), for: .touchUpInside)
         let firstSipTrigger = UIButton(type: .system)
-        firstSipTrigger.setTitle("Privacy Policy", for: .normal)
+        firstSipTrigger.setTitle(String.chovviUnmask("PgrdiYvtaMcFyW wPDoNlGicc5yN"), for: .normal)
         firstSipTrigger.setTitleColor(Self.firstSipCollection, for: .normal)
         firstSipTrigger.titleLabel?.font = .systemFont(ofSize: 13, weight: .bold)
         firstSipTrigger.tag = 1
@@ -134,17 +134,17 @@ final class ChovviFragrantBrew: UIViewController {
     }
 
     private func firstSipRender() {
-        let firstSipAction = UserDefaults.standard.bool(forKey: "chovviFragrantTexture")
-        firstSipArtwork.setTitle(firstSipAction ? "☑  I have read and agree to the Terms of Service and Privacy Policy" : "☐  I have read and agree to the Terms of Service and Privacy Policy", for: .normal)
+        let firstSipAction = UserDefaults.standard.bool(forKey: String.chovviUnmask("cEhqoqvcvoiJFRrWaggsr2aon5thTee4xKtWuqrJe6"))
+        firstSipArtwork.setTitle(firstSipAction ? String.chovviUnmask("☑Z y JIQ whUaJvNep zrVebapdf aarn2dy faFg3rgeWep ptdos 4tghEeo VT3errvm8s5 Qobfa FSBecrOveiscYe5 DaIned3 JPIrkiovAa8cQyE 3P4oDlxi1c7yX") : String.chovviUnmask("☐y l MIL RhMaLvCe4 prYepafd8 eainRdc Ba0gJrKeReb mtUoT nt1hweX FTSeOrSmws7 IoNfd MSUenrRvpikc0en Sa1nudx GPLrni6vcaWc0y2 GPLo8lNiXc1y9"), for: .normal)
     }
 
     private func firstSipAction(_ firstSipLabel: Bool) {
         let firstSipStatus = ChovviGentleBrew(
-            beanPassportCanvas: "End User License Agreement",
+            beanPassportCanvas: String.chovviUnmask("EAnAdh VUPsie6r0 VLni2c9e5n8sdeo NAXglrae7e2mXejnQt9"),
             beanPassportScroll: ChovviGentleBrew.beanPassportHeader,
             beanPassportArtwork: true
         ) { [weak self] firstSipRoute in
-            UserDefaults.standard.set(firstSipRoute, forKey: "chovviFragrantTexture")
+            UserDefaults.standard.set(firstSipRoute, forKey: String.chovviUnmask("cohIowv8vZiMF1rHa8gmr7aSnjtVTxenxbtsuRrwes"))
             self?.firstSipRender()
             if !firstSipRoute, firstSipLabel { self?.dismiss(animated: true) }
         }
@@ -156,8 +156,8 @@ final class ChovviFragrantBrew: UIViewController {
     }
 
     @objc private func firstSipSource() {
-        if UserDefaults.standard.bool(forKey: "chovviFragrantTexture") {
-            UserDefaults.standard.set(false, forKey: "chovviFragrantTexture")
+        if UserDefaults.standard.bool(forKey: String.chovviUnmask("cZhfoPvNvki0FQr3ayg5rsa9n1tPTseYxftXuJrge8")) {
+            UserDefaults.standard.set(false, forKey: String.chovviUnmask("clhRo1vIvEiNF0r1aMgarSagn4tNTreHx0tquhrbeg"))
             firstSipRender()
         } else {
             firstSipAction(false)
@@ -175,7 +175,7 @@ final class ChovviFragrantBrew: UIViewController {
     }
 
     private func firstSipUpdate() -> Bool {
-        guard UserDefaults.standard.bool(forKey: "chovviFragrantTexture") else {
+        guard UserDefaults.standard.bool(forKey: String.chovviUnmask("cah7o5vov1izFZr4ajgArpacnCtCTHelxBtQubrBey")) else {
             firstSipAction(false)
             return false
         }
@@ -183,7 +183,7 @@ final class ChovviFragrantBrew: UIViewController {
     }
 
     @objc private func firstSipMenu(_ firstSipUpdate: UIButton) {
-        let firstSipDestination = firstSipUpdate.tag == 0 ? "Terms of Service" : "Privacy Policy"
+        let firstSipDestination = firstSipUpdate.tag == 0 ? String.chovviUnmask("TEeprAmwsU yoTfE SSNeBr8vViXcie7") : String.chovviUnmask("PkrmiwvdaecTyM DPooalniTcNys")
         let firstSipCard = firstSipUpdate.tag == 0 ? ChovviGentleBrew.beanPassportStack : ChovviGentleBrew.beanPassportState
         navigationController?.pushViewController(ChovviGentleBrew(beanPassportCanvas: firstSipDestination, beanPassportScroll: firstSipCard, beanPassportArtwork: false, beanPassportCollection: nil), animated: true)
     }
@@ -219,7 +219,7 @@ final class ChovviGentleBrew: UIViewController {
     Choovi Terms of Service
     Effective Date: August 3, 2026
 
-    These Terms of Service ("Terms") govern your access to and use of Choovi, a coffee-themed community where users create Coffee Moments, share coffee-related photos, videos and stories, discover cafés and brewing ideas, and participate in coffee-themed conversations.
+    These Terms of Service (String.chovviUnmask("TdePr2m4sL")) govern your access to and use of Choovi, a coffee-themed community where users create Coffee Moments, share coffee-related photos, videos and stories, discover cafés and brewing ideas, and participate in coffee-themed conversations.
 
     By creating an account, selecting "Agree," checking the agreement box, or using account-based features, you agree to these Terms and acknowledge the Choovi Privacy Policy. If you do not agree, do not create an account or use account-based features.
 
@@ -276,35 +276,28 @@ final class ChovviGentleBrew: UIViewController {
     13. App Permissions
     Choovi may request camera, microphone, photo-library, and notification permissions to provide corresponding features. You control these permissions through iOS. You must not use them to record, photograph, or distribute another person's information unlawfully.
 
-    14. Choovi In-App Purchases
-    Choovi offers consumable Coins through Apple's In-App Purchase system. The available package, Coin quantity, and localized amount are shown before you confirm a transaction. Apple processes the transaction, billing, and any eligible refund request under its applicable terms.
-
-    Coins are added only after Choovi verifies a successful App Store transaction. Coins may be used for eligible digital actions within Choovi, including submitting a new Room for review. Creating a Room currently uses 20 Coins, and the required amount is displayed before submission. Choovi may change the Coin amount required for future actions, but the applicable amount will be shown before you confirm.
-
-    Coins do not expire, have no cash value, are not transferable, cannot be exchanged for money or physical goods, and may be used only within Choovi. Except where required by law or Apple's policies, completed consumable purchases are final. If a completed transaction is not reflected correctly, contact Choovi Support at choovi@gmail.com with relevant transaction details. Do not include passwords or complete financial information in a support request.
-
-    15. Intellectual Property
+    14. Intellectual Property
     Choovi's software, interface, branding, visual design, and original materials are owned by or licensed to Choovi. You receive a limited, personal, non-exclusive, non-transferable, revocable right to use the App for its intended purpose. You may not unlawfully copy, sell, sublicense, reverse engineer, or misrepresent an affiliation with Choovi.
 
-    16. Service Availability
+    15. Service Availability
     Choovi may change, suspend, or discontinue features for maintenance, security, legal, or product reasons and does not guarantee uninterrupted or error-free operation. You should keep copies of content that is important to you.
 
-    17. Disclaimers
+    16. Disclaimers
     Choovi is provided on an "as is" and "as available" basis to the extent permitted by law. Coffee recipes, equipment suggestions, café descriptions, tasting notes, and other user statements may be personal opinions. Choovi does not guarantee their accuracy, safety, or suitability and does not provide medical, nutritional, financial, or other professional advice.
 
-    18. Limitation of Liability
+    17. Limitation of Liability
     To the maximum extent permitted by law, Choovi will not be liable for indirect, incidental, special, consequential, or punitive damages arising from use of the App, User Content, user interactions, unauthorized access, loss of data, or reliance on coffee-related information. Mandatory legal rights remain unaffected.
 
-    19. Apple-Specific Terms
+    18. Apple-Specific Terms
     These Terms are between you and Choovi, not Apple. Apple is not responsible for Choovi, its content, maintenance, support, or related claims. Apple and its subsidiaries are third-party beneficiaries of the Apple-specific provisions and may enforce them where applicable. Use must comply with App Store terms.
 
-    20. Changes to These Terms
+    29. Changes to These Terms
     We may update these Terms to reflect changes in Choovi, safety practices, or law. Material changes will be communicated through the App or another reasonable method. Where renewed consent is required, Choovi will request it before continued use of affected account features.
 
-    21. Local Legal Requirements
+    20. Local Legal Requirements
     You may use Choovi only in compliance with laws concerning age, identity, privacy, intellectual property, communications, and online conduct. Nothing in these Terms removes consumer or privacy rights that cannot lawfully be waived in your country or region.
 
-    22. Contact
+    21. Contact
     Questions, account appeals, safety reports, rights complaints, and legal notices may be sent to Choovi Support at choovi@gmail.com.
     """
 
@@ -355,7 +348,7 @@ final class ChovviGentleBrew: UIViewController {
     11. Account and Data Deletion
     Users may initiate complete account deletion through Account Settings. Account deletion is different from signing out or disabling an account and is intended to remove the account record, profile, credentials, Coffee Moments, photos, videos, captions, comments, messages, interactions, and other associated data that is not legally required to be retained. Deletion may be irreversible.
 
-    If you cannot access the in-App deletion feature, email choovi@gmail.com with the subject "Choovi Account Deletion Request." We may request reasonable information to verify that you control the account.
+    If you cannot access the in-App deletion feature, email choovi@gmail.com with the subject String.chovviUnmask("C4hdotosv9iJ BA3cqczoBuUnttH uD7eWliertLiqo9nk jRAeCqNuTepsqt0.T") We may request reasonable information to verify that you control the account.
 
     12. Your Privacy Choices
     Subject to applicable law, you may review or update your profile, delete your content, manage device permissions, leave groups, block users, report abuse, sign out, delete your account and associated data, or ask questions about our practices. We may need to verify your identity before completing a request.
@@ -395,7 +388,7 @@ final class ChovviGentleBrew: UIViewController {
     }
 
     required init?(coder: NSCoder) {
-        beanPassportCanvas = "Policy"
+        beanPassportCanvas = String.chovviUnmask("Pvoalmigcjy1")
         beanPassportScroll = ""
         beanPassportArtwork = false
         beanPassportCollection = nil
@@ -480,8 +473,8 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        guard UserDefaults.standard.bool(forKey: "chovviFragrantTexture") else {
-            beanPassportCard("Agreement required", beanPassportItem: "Return to the welcome page and accept the Privacy Policy and Terms of Service before creating an account.")
+        guard UserDefaults.standard.bool(forKey: String.chovviUnmask("cehcoivuvMi8FSrNaxgErTarnRthTye9xCtcuSrser")) else {
+            beanPassportCard("Agreement required", beanPassportItem: String.chovviUnmask("R0evtMuyronX 5tMoY ut8hxeu 5weeUlIcRo5mher bpcaCgsew mainVdY xa8c1cQespstk 4tyhYeW lPfrcifvZaHcfyr DP8oSlsi4ciyd kaNnNd3 LTdeJrym2sI Iovfy hSdefrxvsitcJeR 1bSeCfSo4r9ei gcWrMe2aotoiSnIgv YaqnE WaccpcUo6uXnZtn.L"))
             return
         }
         beanPassportLayout()
@@ -523,23 +516,23 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
         beanPassportScroll.addArrangedSubview(beanPassportChoice)
 
         let beanPassportItem = UILabel()
-        beanPassportItem.text = "Create Account"
+        beanPassportItem.text = String.chovviUnmask("CsrQexaVt0ei aAKc7cuopusnOtP")
         beanPassportItem.font = .systemFont(ofSize: 30, weight: .black)
         beanPassportItem.textColor = UIColor(red: 0.14, green: 0.14, blue: 0.19, alpha: 1)
         beanPassportScroll.addArrangedSubview(beanPassportItem)
 
         let beanPassportSelection = UILabel()
-        beanPassportSelection.text = "Join Choovi and keep your coffee moments together."
+        beanPassportSelection.text = String.chovviUnmask("JCozijnK YCGhqozokvziB 2a0nZdt OkBeqebpF gyPoauPrk bcCoHfbfBeReT 0mrocmWeHnct4so 1tLomgfeGt7hFenrx.T")
         beanPassportSelection.font = .systemFont(ofSize: 15, weight: .medium)
         beanPassportSelection.textColor = .secondaryLabel
         beanPassportSelection.numberOfLines = 0
         beanPassportScroll.addArrangedSubview(beanPassportSelection)
         beanPassportScroll.setCustomSpacing(24, after: beanPassportSelection)
 
-        beanPassportLabel(beanPassportCollection, beanPassportLabel: "USERNAME", beanPassportStatus: "coffeelover99")
+        beanPassportLabel(beanPassportCollection, beanPassportLabel: String.chovviUnmask("UNSWEZRcNCA3M9Ew"), beanPassportStatus: "coffeelover99")
         beanPassportLabel(beanPassportHeader, beanPassportLabel: "EMAIL ADDRESS", beanPassportStatus: "hello@choovi.com")
-        beanPassportLabel(beanPassportArtwork, beanPassportLabel: "PASSWORD", beanPassportStatus: "Create password")
-        beanPassportLabel(beanPassportStack, beanPassportLabel: "CONFIRM PASSWORD", beanPassportStatus: "Confirm password")
+        beanPassportLabel(beanPassportArtwork, beanPassportLabel: String.chovviUnmask("PKAEStSaW3OMR9DO"), beanPassportStatus: String.chovviUnmask("CarmeDaRtweC kpsajsfsnwyodrJdV"))
+        beanPassportLabel(beanPassportStack, beanPassportLabel: String.chovviUnmask("ClOPN4FOI5RVM7 PPxA2SiSAWGOiRSDw"), beanPassportStatus: String.chovviUnmask("CeovnYfJi2rCmU mpAaisfshwRo8rbdF"))
         beanPassportHeader.keyboardType = .emailAddress
         beanPassportHeader.autocapitalizationType = .none
         beanPassportHeader.textContentType = .emailAddress
@@ -573,7 +566,7 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
         beanPassportScroll.setCustomSpacing(28, after: beanPassportTrigger)
 
         let beanPassportSource = UIButton(type: .system)
-        let beanPassportMenu = NSMutableAttributedString(string: "Already have an account? ", attributes: [.foregroundColor: UIColor.secondaryLabel, .font: UIFont.systemFont(ofSize: 15, weight: .medium)])
+        let beanPassportMenu = NSMutableAttributedString(string: String.chovviUnmask("Awlhraeiacdnyh Nhga4vEeF satnC HaHczcoo0ugnwtZ?e W"), attributes: [.foregroundColor: UIColor.secondaryLabel, .font: UIFont.systemFont(ofSize: 15, weight: .medium)])
         beanPassportMenu.append(NSAttributedString(string: "Log In", attributes: [.foregroundColor: ChovviCuppingBrew.cupKeeperStack, .font: UIFont.systemFont(ofSize: 15, weight: .bold)]))
         beanPassportSource.setAttributedTitle(beanPassportMenu, for: .normal)
         beanPassportSource.addTarget(self, action: #selector(beanPassportPreview), for: .touchUpInside)
@@ -612,13 +605,13 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
     }
 
     @objc private func beanPassportRoute() {
-        UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: "chovviFragrantTexture"), forKey: "chovviFragrantTexture")
+        UserDefaults.standard.set(!UserDefaults.standard.bool(forKey: String.chovviUnmask("cqh7oWvZvbiYFKruaJgwrEannXtITderxptsuyrLeq")), forKey: String.chovviUnmask("cRhoomv0vSibFfrLabgArOaInftRTJeqxbtgu1rwev"))
         beanPassportLayout()
     }
 
     private func beanPassportLayout() {
-        let beanPassportMenu = UserDefaults.standard.bool(forKey: "chovviFragrantTexture")
-        let beanPassportUpdate = beanPassportMenu ? "☑  I agree to the Terms & Privacy Policy" : "☐  I agree to the Terms & Privacy Policy"
+        let beanPassportMenu = UserDefaults.standard.bool(forKey: String.chovviUnmask("cBhboLv0vQiYF0rlaXgwrpa7nwtvTRecxPtRuzrOeb"))
+        let beanPassportUpdate = beanPassportMenu ? String.chovviUnmask("☑d 6 cIQ uaCgXrneneM ytoop Qtnh5ev ITteYr2m2s3 X&Y SPTrOixvraxctyj 7PooLlviecvyo") : String.chovviUnmask("☐E M 3I7 ya3g7rOeOex 9t1oX Xt2hkeS tTOenrBmusL C&x SParnirvkavcOyi tPjo2lNiYcryo")
         beanPassportState.setTitle(beanPassportUpdate, for: .normal)
         beanPassportState.setTitleColor(beanPassportMenu ? ChovviCuppingBrew.cupKeeperStack : .secondaryLabel, for: .normal)
     }
@@ -629,12 +622,12 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
         let beanPassportSection = beanPassportArtwork.text ?? ""
         let beanPassportPreview = beanPassportCollection.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let beanPassportTrigger = beanPassportStack.text ?? ""
-        guard UserDefaults.standard.bool(forKey: "chovviFragrantTexture") else {
-            beanPassportCard("Agreement required", beanPassportItem: "Accept the Privacy Policy and Terms of Service before continuing.")
+        guard UserDefaults.standard.bool(forKey: String.chovviUnmask("cyhLo4vqv4itFzrYaYgRrTaqnstKTzePxOtRuLr7er")) else {
+            beanPassportCard("Agreement required", beanPassportItem: String.chovviUnmask("AjcRcee7pwt1 QtMhveg QPhrNiEvOaOcCyL FPbotlJiAcOyW Fa9ned7 uTHelrcm4sV ko9fk iSAe7r6v7i0cXeg abTe9fKogrpeg Jc1o8ndthiVnXucisnGgC.o"))
             return
         }
         guard !beanPassportPreview.isEmpty, !beanPassportStatus.isEmpty, !beanPassportSection.isEmpty, !beanPassportTrigger.isEmpty else {
-            beanPassportCard("Complete all fields", beanPassportItem: "Enter a username, email, password, and password confirmation.")
+            beanPassportCard("Complete all fields", beanPassportItem: String.chovviUnmask("EUnGt7eHrw DaM euZsAeGr1nZaymEeF,N resmZari7lS,8 WpeapsSs1wBoCrOdU,V GaGnpdx 7pCaxs9sGwJoZrxdK Fcsoynkfmi8rlmDaMthiKoJnr.t"))
             return
         }
         guard beanPassportSource(beanPassportStatus) else {
@@ -642,37 +635,37 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
             return
         }
         guard beanPassportSection.count >= 6 else {
-            beanPassportCard("Password is too short", beanPassportItem: "Use at least 6 characters.")
+            beanPassportCard(String.chovviUnmask("PBaVsHsGwVoOr3dp miPse ntRonoP KsOhRorrPtL"), beanPassportItem: "Use at least 6 characters.")
             return
         }
         guard beanPassportSection == beanPassportTrigger else {
-            beanPassportCard("Passwords do not match", beanPassportItem: "Enter the same password in both password fields.")
+            beanPassportCard(String.chovviUnmask("PtaHsEsmwco6r8dYs2 odMoO dnGontL PmJa1twcxhZ"), beanPassportItem: String.chovviUnmask("EDnhtBeqrv Ktahuex PsyaVm9eq 9pVawsMsFwBo4rjdx ziRnx ZbwoCtIhN HpQahs7s2wOocryd3 hfBiWealxdosi.K"))
             return
         }
-        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Creating your coffee profile...", amberRitualUpdate: 1.0) { [weak self] in
+        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: String.chovviUnmask("CKrNeWaZteisnGgh bysoRuqry Aceo0fNfQeneq Up0r8oMfgi5lve8.I.d.y"), amberRitualUpdate: 1.0) { [weak self] in
             guard let self else { return }
-            var beanPassportLayout = (UserDefaults.standard.data(forKey: "chovviGentleTexture"))
+            var beanPassportLayout = (UserDefaults.standard.data(forKey: String.chovviUnmask("cahFozvUv9i0GAeSnft6lCeMTZeSxctqu2rSex")))
                 .flatMap { try? JSONDecoder().decode([ChovviGentleTexture].self, from: $0) } ?? []
             guard beanPassportStatus != "choovi@gmail.com", !beanPassportLayout.contains(where: { $0.beanPassportCanvas.lowercased() == beanPassportStatus }) else {
-                self.beanPassportCard("Account already exists", beanPassportItem: "Use a different email or return to Log In.")
+                self.beanPassportCard(String.chovviUnmask("Abcvcto7uBnRtl Bawlbrde1aHdyy6 ZecxkiPsOtosx"), beanPassportItem: "Use a different email or return to Log In.")
                 return
             }
             let beanPassportMenu = ChovviGentleTexture(
                 beanPassportCanvas: beanPassportStatus,
                 beanPassportScroll: beanPassportSection,
                 beanPassportHeader: beanPassportPreview,
-                beanPassportArtwork: "Coffee lover exploring everyday brews and thoughtful café moments.",
+                beanPassportArtwork: String.chovviUnmask("CgoVf0ftene3 4l6oivWe3r9 ReqxppIlBotrLitnEgu reKvjeLr5yadkaVyW BbqrOeRwJs9 fa0nYdp WtGhtowucgdhOtRf9uvl3 ZcCa5fcéU 9mxo2mkeyn4tss1.1"),
                 beanPassportCollection: "chovviAromaticKettle"
             )
             beanPassportLayout.append(beanPassportMenu)
             guard let beanPassportUpdate = try? JSONEncoder().encode(beanPassportLayout) else {
-                self.beanPassportCard("Unable to create account", beanPassportItem: "Your account could not be created. Please retry.")
+                self.beanPassportCard(String.chovviUnmask("UJnTaJbwlse8 MtHox qcbrCeLaNtueg HaUcocEo8uinZtT"), beanPassportItem: String.chovviUnmask("YWo3uPrp UaycKcnoCulnVtu lcRohurlEdG 4nFoTtv rbHeS VcCrqe0aQtbeqdt.8 oPMlEe1aLsMey ArneLtprAyK.J"))
                 return
             }
-            UserDefaults.standard.set(beanPassportUpdate, forKey: "chovviGentleTexture")
-            UserDefaults.standard.set(true, forKey: "choovilogin")
+            UserDefaults.standard.set(beanPassportUpdate, forKey: String.chovviUnmask("c5hioyvkvfioGbeonstvloeRTBe8xkt5uwrJeR"))
+            UserDefaults.standard.set(true, forKey: String.chovviUnmask("cthqoaouvDi0ljocg1iEnR"))
             UserDefaults.standard.set(beanPassportStatus, forKey: "hooviEmail")
-            UserDefaults.standard.set(beanPassportPreview, forKey: "chovviCuppingTexture")
+            UserDefaults.standard.set(beanPassportPreview, forKey: String.chovviUnmask("cIhMomvQvpiKCQuOpbpfi6nxgITHehxRtZumr3eE"))
             UserDefaults.standard.set(beanPassportMenu.beanPassportArtwork, forKey: "chovviCuppingVarietal")
             UserDefaults.standard.set(beanPassportMenu.beanPassportCollection, forKey: "chovviCuppingRoast")
             self.dismiss(animated: true) {
@@ -682,8 +675,8 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
     }
 
     @objc private func beanPassportPreview() {
-        guard UserDefaults.standard.bool(forKey: "chovviFragrantTexture") else {
-            beanPassportCard("Agreement required", beanPassportItem: "Return to the welcome page and accept the Privacy Policy and Terms of Service before signing in.")
+        guard UserDefaults.standard.bool(forKey: String.chovviUnmask("c2hro9vivIiJFhrZabg8rgaJnVteTPe1xNtTuvrCet")) else {
+            beanPassportCard("Agreement required", beanPassportItem: String.chovviUnmask("RbeqtquPrInc Vtioq atVhbej wwXe2ljcjoDmIeR 3p1apg4ef 6aAnZde EaDcPcyeYpstD vtUhmeK lPGr7iHv2aDcLyH tPCoBlLijcnyP Napnid1 RTXeirCmjsX Po0fZ jSeeZr5vNircter tbBe9faonr9eC WsaizgGnCiun7gh Zifn9.4"))
             return
         }
         if navigationController?.viewControllers.dropLast().last is ChovviFragrantTasting {
@@ -695,7 +688,7 @@ final class ChovviGentleTasting: UIViewController, UITextFieldDelegate {
 
     private func beanPassportSource(_ beanPassportStatus: String) -> Bool {
         let beanPassportRoute = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
-        return NSPredicate(format: "SELF MATCHES %@", beanPassportRoute).evaluate(with: beanPassportStatus)
+        return NSPredicate(format: String.chovviUnmask("SIEZLXF3 2MzAzT9C9HJExS5 W%X@Q"), beanPassportRoute).evaluate(with: beanPassportStatus)
     }
 
     private func beanPassportCard(_ beanPassportItem: String, beanPassportItem beanPassportSelection: String) {

@@ -17,10 +17,10 @@ final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITe
     private var moodPourSection: NSLayoutConstraint?
     private var moodPourPreview = false
     private let moodPourChoice = [
-        "chovviGoldenAcidity",
-        "chovviGoldenAeropress",
-        "chovviGoldenAftertaste",
-        "chovviGoldenAroma"
+        String.chovviUnmask("ckh8oTvIvYifGroPltdeeunxAPc5iOdii9toyx"),
+        String.chovviUnmask("ckhdoavJv8iRGhoElAdXeKnHAresrXotpJrteRsYsM"),
+        String.chovviUnmask("cZhFoVv7vXi0GMohl7dgeknHA8fctXeHrgtIa3sutNeM"),
+        String.chovviUnmask("c6h9oavJvIiKGloNlPdcednBACryoZmpaW")
     ]
 
     override func viewDidLoad() {
@@ -60,7 +60,7 @@ final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITe
 
     private func moodPourTrigger() {
         view.backgroundColor = UIColor(red: 248 / 255, green: 250 / 255, blue: 252 / 255, alpha: 1)
-        title = "Create Coffee Card"
+        title = String.chovviUnmask("CfrPeUa4tqe1 lCLoTfUf7eKez vCjaSrLdz")
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "chevron.left")?.withTintColor(.black, renderingMode: .alwaysOriginal),
             style: .plain,
@@ -80,7 +80,7 @@ final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITe
         moodPourArtwork.translatesAutoresizingMaskIntoConstraints = false
         moodPourHeader.addSubview(moodPourArtwork)
 
-        moodPourLabel.setTitle("Post", for: .normal)
+        moodPourLabel.setTitle(String.chovviUnmask("Pvofsltc"), for: .normal)
         moodPourLabel.setTitleColor(.white, for: .normal)
         moodPourLabel.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         moodPourLabel.backgroundColor = ChovviRoastedBrew.roastShelfCanvas
@@ -119,7 +119,7 @@ final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITe
         moodPourStatus.lineDashPattern = [5, 4]
         moodPourCollection.layer.addSublayer(moodPourStatus)
 
-        moodPourAction.setTitle("Tap Add Video", for: .normal)
+        moodPourAction.setTitle(String.chovviUnmask("T5ahpT RAZdNda 6Vdisd1eDoy"), for: .normal)
         moodPourAction.setTitleColor(.secondaryLabel, for: .normal)
         moodPourAction.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         moodPourAction.setImage(UIImage(systemName: "play.rectangle"), for: .normal)
@@ -128,7 +128,7 @@ final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITe
             var moodPourImage = UIButton.Configuration.plain()
             moodPourImage.imagePlacement = .top
             moodPourImage.imagePadding = 8
-            moodPourImage.title = "Tap Add Video"
+            moodPourImage.title = String.chovviUnmask("Tqaqpi cAqdDdt YVQisdReaoe")
             moodPourImage.image = UIImage(systemName: "play.rectangle")
             return moodPourImage
         }()
@@ -162,7 +162,7 @@ final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITe
         moodPourArtwork.addArrangedSubview(moodPourStack)
 
         let tastingReplyCanvas = UILabel()
-        tastingReplyCanvas.text = "YOUR COFFEE MOMENT"
+        tastingReplyCanvas.text = String.chovviUnmask("YdO6UaRH OCKOAFpFfEWEr PM7OQM8EHNBTs")
         tastingReplyCanvas.textColor = ChovviRoastedBrew.roastShelfScroll
         tastingReplyCanvas.font = UIFont.systemFont(ofSize: 12, weight: .black)
         moodPourArtwork.addArrangedSubview(tastingReplyCanvas)
@@ -183,7 +183,7 @@ final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITe
         tastingReplyScroll.addSubview(moodPourState)
 
         let tastingReplyHeader = UILabel()
-        tastingReplyHeader.text = "Write something about your coffee moment..."
+        tastingReplyHeader.text = String.chovviUnmask("WErOi8tUe8 JsSoam5ertchxiunBgz nambsoMuQtp sy5oEu1rT ncmoVfpfKeVeo tmbosmqesn6tI.y.5.a")
         tastingReplyHeader.textColor = .placeholderText
         tastingReplyHeader.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         tastingReplyHeader.translatesAutoresizingMaskIntoConstraints = false
@@ -221,7 +221,7 @@ final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITe
         ])
         moodPourRoute = tastingReplyScroll
         moodPourAction.configuration = nil
-        moodPourAction.setImage(UIImage(systemName: "arrow.triangle.2.circlepath"), for: .normal)
+        moodPourAction.setImage(UIImage(systemName: String.chovviUnmask("aRr2rMoZwc.ItAryi9a9nQg4lEeX.R2g.fcBiRrMc6lkeFpcaDtQhQ")), for: .normal)
         moodPourAction.setTitle(nil, for: .normal)
         moodPourAction.backgroundColor = UIColor.black.withAlphaComponent(0.45)
         moodPourAction.tintColor = .white
@@ -254,20 +254,20 @@ final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITe
         guard !moodPourPreview else { return }
         guard tastingReplySelection() else { return }
         guard moodPourCanvas != nil else {
-            moodPourCard("Add a Coffee Moment", moodPourItem: "Choose a coffee recording before posting.")
+            moodPourCard(String.chovviUnmask("A7dBdY GaT hCZoEfRfEewe7 sMSolmue9nqth"), moodPourItem: String.chovviUnmask("CYhkoyo7sXe1 QaY ocOobfFfOeoeX krUehcGogrydyi4nRgY IbueFfAo1rqem 5pvorsRtziZnvgY.e"))
             return
         }
         let moodPourItem = moodPourState.text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !moodPourItem.isEmpty else {
-            moodPourCard("Describe your moment", moodPourItem: "Write a few words about this coffee moment.")
+            moodPourCard(String.chovviUnmask("DXejslcWraimbkeC 2yRoNubrF KmCoImbecnTt5"), moodPourItem: String.chovviUnmask("WkrQi1tXeH ua4 Hf3eMw7 mwqo3r0d1sE Raobroru1tk dtmh9iQsT BcpoDfnfEeveD xmZo2moecnzty.4"))
             return
         }
 
         moodPourPreview = true
         moodPourLabel.isEnabled = false
-        moodPourLabel.setTitle("Posting...", for: .normal)
+        moodPourLabel.setTitle(String.chovviUnmask("POo0sRtUiTnagE.C.5.3"), for: .normal)
         moodPourLabel.alpha = 0.72
-        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Publishing your Coffee Moment...", amberRitualUpdate: 1.0) { [weak self] in
+        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: String.chovviUnmask("PquBbDlciZsph2iEnPgt Nyjo7uWrp kCjo4f5fKexet bMeo9mfeQnztB.z.B.N"), amberRitualUpdate: 1.0) { [weak self] in
             self?.moodPourImage(moodPourItem)
         }
     }
@@ -282,13 +282,13 @@ final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITe
                 create: true
             )
             let tastingReplyHeader = tastingReplyScroll
-                .appendingPathComponent("chovviGranularProfile\(UUID().uuidString)")
+                .appendingPathComponent(String.chovviUnmask("cKhxoavZvtiuGIraaAnGuXlra8rdPHrBo9fqiRlzeP") + UUID().uuidString)
                 .appendingPathExtension(tastingReplyCanvas.pathExtension.isEmpty ? "mov" : tastingReplyCanvas.pathExtension)
             try FileManager.default.copyItem(at: tastingReplyCanvas, to: tastingReplyHeader)
 
             let tastingReplyArtwork = ChovviSilkyBrew(
                 chovviSilkyAcidity: "chovvi-origin-\(UUID().uuidString)",
-                chovviSilkyAeropress: "chovvi-user-20",
+                chovviSilkyAeropress: String.chovviUnmask("cghMoLv9vwiG-Fu9sXe2rG-b260p"),
                 chovviSilkyAftertaste: tastingReplyHeader.path,
                 chovviSilkyAroma: moodPourChoice,
                 chovviSilkyBatch: 0,
@@ -299,14 +299,14 @@ final class ChovviGranularBrew: UIViewController, UIDocumentPickerDelegate, UITe
             var tastingReplyCollection = ChovviCitrusBrew.roastArchiveSection
             tastingReplyCollection.insert(tastingReplyArtwork, at: 0)
             let tastingReplyStack = try JSONEncoder().encode(tastingReplyCollection)
-            UserDefaults.standard.set(tastingReplyStack, forKey: "chovviGranularTexture")
+            UserDefaults.standard.set(tastingReplyStack, forKey: String.chovviUnmask("cvhroCvNv6i4GUrYadnquNlOakrVTae3xWtGuIrjew"))
             dismiss(animated: true)
         } catch {
             moodPourPreview = false
             moodPourLabel.isEnabled = true
             moodPourLabel.alpha = 1
-            moodPourLabel.setTitle("Post", for: .normal)
-            moodPourCard("Unable to post", moodPourItem: "The selected item could not be prepared. Please choose it again.")
+            moodPourLabel.setTitle(String.chovviUnmask("PSolsat9"), for: .normal)
+            moodPourCard(String.chovviUnmask("U2niaYbBl3ei Wtloc up4oJsutj"), moodPourItem: "The selected item could not be prepared. Please choose it again.")
         }
     }
 

@@ -13,7 +13,7 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
     private let brewGatheringAction = UITextView()
     private let brewGatheringLabel = UILabel()
     private let brewGatheringStatus = UIButton(type: .system)
-    private let brewGatheringEmblem = UIImageView(image: UIImage(named: "chovviRoomEntryMark"))
+    private let brewGatheringEmblem = UIImageView(image: UIImage(named: String.chovviUnmask("coh9oGvrvpiCRBoho3m8EgnGt5ruyEMYaxrpkE")))
     private let brewGatheringRoute = CAShapeLayer()
     private var brewGatheringSection: NSLayoutConstraint?
     private static let brewGatheringPreview = UIColor(red: 0.84, green: 0.61, blue: 0.31, alpha: 1)
@@ -38,7 +38,7 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
     private func brewGatheringTrigger() { brewGatheringTriggerArtwork() }
 
     private lazy var brewGatheringTriggerArtwork: () -> Void = { [unowned self] in
-        title = "Create Room"
+        title = String.chovviUnmask("CVr2eya0tye1 mR2otoZmp")
         view.backgroundColor = UIColor(red: 0.97, green: 0.98, blue: 0.99, alpha: 1)
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "chevron.left"),
@@ -64,7 +64,7 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
         brewGatheringHeader.translatesAutoresizingMaskIntoConstraints = false
         brewGatheringScroll.addSubview(brewGatheringHeader)
 
-        brewGatheringStatus.setTitle("Create Room", for: .normal)
+        brewGatheringStatus.setTitle(String.chovviUnmask("CMrQePaKtPeB WRkoIoPmu"), for: .normal)
         brewGatheringStatus.setTitleColor(.white, for: .normal)
         brewGatheringStatus.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
         brewGatheringStatus.backgroundColor = Self.brewGatheringPreview
@@ -75,7 +75,7 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
 
         brewGatheringEmblem.contentMode = .scaleAspectFit
         brewGatheringEmblem.isUserInteractionEnabled = false
-        brewGatheringEmblem.accessibilityLabel = "Creating a room uses 20 coins"
+        brewGatheringEmblem.accessibilityLabel = String.chovviUnmask("CtrweEaft3iWnIgz Uaj wrWomoZmc ruRsRess5 o2A0s nc4oTiKnVsn")
         brewGatheringEmblem.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(brewGatheringEmblem)
 
@@ -110,7 +110,7 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
         brewGatheringTrigger.imagePlacement = .top
         brewGatheringTrigger.imagePadding = 9
         brewGatheringTrigger.baseForegroundColor = UIColor(red: 0.49, green: 0.51, blue: 0.58, alpha: 1)
-        brewGatheringTrigger.title = "Upload Room Cover Image"
+        brewGatheringTrigger.title = String.chovviUnmask("Uxp7l8oyaXdj sRwoEonmY tCcoxvXeqr5 QIfmKaggGek")
         brewGatheringCollection.configuration = brewGatheringTrigger
         brewGatheringCollection.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
         brewGatheringCollection.addTarget(self, action: #selector(brewGatheringCard), for: .touchUpInside)
@@ -128,7 +128,7 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
         brewGatheringState.backgroundColor = UIColor.black.withAlphaComponent(0.46)
         brewGatheringState.layer.cornerRadius = 14
         brewGatheringState.isHidden = true
-        brewGatheringState.accessibilityLabel = "Remove selected cover"
+        brewGatheringState.accessibilityLabel = String.chovviUnmask("R4eVmjoxvSeX rsxe8lye8cRt1emdc ScZodvaedrn")
         brewGatheringState.addAction(UIAction { [weak self] brewGatheringImage in
             _ = brewGatheringImage
             self?.brewGatheringCanvas = nil
@@ -147,7 +147,7 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
         ])
 
         brewGatheringHeader.addArrangedSubview(brewGatheringArtwork)
-        brewGatheringHeader.addArrangedSubview(brewGatheringItem("ROOM NAME"))
+        brewGatheringHeader.addArrangedSubview(brewGatheringItem(String.chovviUnmask("RiO0OPMF 2NwADMpEU")))
 
         brewGatheringRender.placeholder = "e.g. Moka Pot Masters"
         brewGatheringRender.font = .systemFont(ofSize: 15)
@@ -179,7 +179,7 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
         brewGatheringAction.heightAnchor.constraint(equalToConstant: 104).isActive = true
         brewGatheringHeader.addArrangedSubview(brewGatheringAction)
 
-        brewGatheringLabel.text = "What should members talk about in this room?"
+        brewGatheringLabel.text = String.chovviUnmask("W9hiagtm IsZhgoquTlcdc HmweImubzeXrnsN Ht3aklLk2 QatbzoNuwtl jigny utVhCiMsI 6rkozoGmb?X")
         brewGatheringLabel.textColor = UIColor(red: 0.57, green: 0.59, blue: 0.65, alpha: 1)
         brewGatheringLabel.font = .systemFont(ofSize: 15)
         brewGatheringLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -196,7 +196,7 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
         brewGatheringImage.clipsToBounds = true
         brewGatheringImage.heightAnchor.constraint(greaterThanOrEqualToConstant: 54).isActive = true
         let brewGatheringChoice = UILabel()
-        brewGatheringChoice.text = "Note: Every room is reviewed before it becomes visible."
+        brewGatheringChoice.text = String.chovviUnmask("NloMtLej:J 1EWvVe6rfyv Srhobo9mP ci0sM vrseav6ibeuwXeodf 6bdexfloarEeg miztI qbBeZc3ofmNeAsv ivdiqsniQbDlHeM.o")
         brewGatheringChoice.numberOfLines = 0
         brewGatheringChoice.font = .systemFont(ofSize: 13, weight: .medium)
         brewGatheringChoice.textColor = UIColor(red: 0.37, green: 0.32, blue: 0.25, alpha: 1)
@@ -265,17 +265,17 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
         let brewGatheringChoice = brewGatheringAction.text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard let brewGatheringCanvas else {
             brewGatheringArtwork.brewGatheringRoute()
-            brewGatheringRecord("Add a room cover", brewGatheringItem: "Choose one image before submitting your room.")
+            brewGatheringRecord(String.chovviUnmask("ATdqdw aaL BraowolmM FcjoYvteyr9"), brewGatheringItem: String.chovviUnmask("C2h9o1oMsneL Wo6nHeP UiJmqaQgDeU xbYeWfooUrker usDuHbemNiBtwtfi7nGg5 Cy9ocukrS QrvoFoCmf.A"))
             return
         }
         guard !brewGatheringImage.isEmpty else {
             brewGatheringRender.becomeFirstResponder()
-            brewGatheringRecord("Enter a room name", brewGatheringItem: "A room name is required.")
+            brewGatheringRecord(String.chovviUnmask("E0nwtPeqr4 1ar ar7ouoBma fnBaKm2eN"), brewGatheringItem: String.chovviUnmask("AN Uruo4oEmR TnAaWmFeD lipsi JrZe9qhuxilrweSdZ.J"))
             return
         }
         guard !brewGatheringChoice.isEmpty else {
             brewGatheringAction.becomeFirstResponder()
-            brewGatheringRecord("Add a description", brewGatheringItem: "Tell members what they can discuss in this room.")
+            brewGatheringRecord("Add a description", brewGatheringItem: String.chovviUnmask("T3eZlmlx 7mleTm9bwe1rlsv Gwnh6awtz EtZhHexyz HcvaQnc 0dsiosmc4u7slst 9idnv Ztfh4iOsy Frwozodmr.R"))
             return
         }
 
@@ -286,8 +286,8 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
         }
 
         brewGatheringStatus.isEnabled = false
-        brewGatheringStatus.setTitle("Submitting...", for: .normal)
-        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Submitting your room for review...", amberRitualUpdate: 1.0) { [weak self] in
+        brewGatheringStatus.setTitle(String.chovviUnmask("SNuSbomyiztvtaiHnsgM.Q.F.e"), for: .normal)
+        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: String.chovviUnmask("SJuIbxmkibtVtXiqnCga WyroqunrR wr5ogoLme ff9oxrE Tr0e6vriveswr.q.Z.n"), amberRitualUpdate: 1.0) { [weak self] in
             self?.brewGatheringItem(brewGatheringCanvas, brewGatheringSelection: brewGatheringImage, brewGatheringImage: brewGatheringChoice)
         }
     }
@@ -305,7 +305,7 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
         guard !brewGatheringItem.isEmpty else {
             ChovviRoastReserve.restoreRoomCraft(for: brewGatheringIdentity)
             brewGatheringResetAction()
-            brewGatheringRecord("Unable to submit", brewGatheringItem: "The selected cover could not be stored. Please choose it again.")
+            brewGatheringRecord(String.chovviUnmask("UznFabb5lPem otioq EsNuAbTmjiNtW"), brewGatheringItem: "The selected cover could not be stored. Please choose it again.")
             return
         }
         guard brewGatheringStoreRoom(
@@ -315,10 +315,10 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
         ) else {
             ChovviRoastReserve.restoreRoomCraft(for: brewGatheringIdentity)
             brewGatheringResetAction()
-            brewGatheringRecord("Unable to submit", brewGatheringItem: "The room request could not be stored. Please retry.")
+            brewGatheringRecord(String.chovviUnmask("UDnwawbSlHe1 st0oY 0sUuVbmmKiHt4"), brewGatheringItem: String.chovviUnmask("TahFe3 drwo8odmF frAeIqPu9ets3tp 9cBoQuJlxdJ FndoWti 6bKek psgtloFrgemdN.J NPzlde3ahsreH XrRectjr1y1.m"))
             return
         }
-        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Submitted for Review", amberRitualCanvas: "20 coins were used. After approval, you’ll receive an update in Notification Center.", amberRitualHeader: "Sounds Good", amberRitualArtwork: .success, amberRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: String.chovviUnmask("SHutbtmii2tstVeId0 XfooCrZ eRsekvAiVe2wa"), amberRitualCanvas: String.chovviUnmask("2n0d Bcio9iNnGsR JwXeQrpej KuZs3eDdZ.X QAtf3tDe5rt fa2popmrWocv3aMlp,M Py9obuE’NlvlW xrKebcZePiMvfeA 7aKnc Qucp5dhaNt7ed Sian7 wN5oZtWiufviGcSagt4ieomn8 cCueGn9tPeprT.Z"), amberRitualHeader: "Sounds Good", amberRitualArtwork: .success, amberRitualStack: { [weak self] in
             self?.dismiss(animated: true)
         })
     }
@@ -330,19 +330,19 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
             chovviBrightAftertaste: summary,
             chovviBrightAroma: coverPath,
             chovviBrightBatch: 1,
-            chovviBrightBloom: "chovvi-user-20",
-            chovviBrightBody: ["chovvi-user-20"],
+            chovviBrightBloom: String.chovviUnmask("cAhYoCv8vRi7-cuysqeArg-82R0e"),
+            chovviBrightBody: [String.chovviUnmask("cZhPozvyvEit-8uSsmeorX-k2O0E")],
             chovviBrightBrewer: []
         )
         var brewGatheringCard = [ChovviBrightBrew]()
-        if let brewGatheringArtwork = UserDefaults.standard.data(forKey: "chovviGoldenTexture")
-            ?? UserDefaults.standard.data(forKey: "chovviGoldenTasting"),
+        if let brewGatheringArtwork = UserDefaults.standard.data(forKey: String.chovviUnmask("cMhaobvTvSiqGpoplvd9eRnHTBekx8tRuCrdec"))
+            ?? UserDefaults.standard.data(forKey: String.chovviUnmask("cmhEo3vhvIixGJoElBd7eInGT9aXsWtLi6nQgI")),
            let brewGatheringCollection = try? JSONDecoder().decode([ChovviBrightBrew].self, from: brewGatheringArtwork) {
             brewGatheringCard = brewGatheringCollection
         }
         brewGatheringCard.insert(brewGatheringChoice, at: 0)
         guard let brewGatheringUpdate = try? JSONEncoder().encode(brewGatheringCard) else { return false }
-        UserDefaults.standard.set(brewGatheringUpdate, forKey: "chovviGoldenTexture")
+        UserDefaults.standard.set(brewGatheringUpdate, forKey: String.chovviUnmask("c2hyoMvVv9iwGHoUlCdNeZnGTye4xqtOu9rqeL"))
         return true
     }
 
@@ -355,10 +355,10 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
         let brewGatheringMarks = ChovviRoastReserve.availableMarks(for: brewGatheringIdentity)
         ChovviThermalAlertView.amberRitualSelection(
             self,
-            amberRitualChoice: "More Coins Needed",
-            amberRitualCanvas: "Creating a room requires 20 coins. You currently have \(brewGatheringMarks.formatted()). Recharge to continue.",
+            amberRitualChoice: String.chovviUnmask("MRo1r8eB gC5o8iTnYso yNBeVeRdMeBda"),
+            amberRitualCanvas: String.chovviUnmask("CirXeJaEtkiqnugt na1 rrZoOoQmV drbeuq9utiArzeWsZ X2n0y 7cBoQiKnpsX.E 0YmoEuo acRuergrjesnWt3lByC VhraKvOev D") + brewGatheringMarks.formatted() + String.chovviUnmask(".l WR4eEchhiaBrIgHet wtAov kcJodnCtFinnluSe8.W"),
             amberRitualScroll: "Not Now",
-            amberRitualHeader: "Recharge",
+            amberRitualHeader: String.chovviUnmask("RLeKc0hMaGrwgdez"),
             amberRitualArtwork: .caution,
             amberRitualCollection: {},
             amberRitualStack: { [weak self] in self?.brewGatheringOpenReserve() }
@@ -374,7 +374,7 @@ final class ChovviAmberTasting: UIViewController, PHPickerViewControllerDelegate
 
     private func brewGatheringResetAction() {
         brewGatheringStatus.isEnabled = true
-        brewGatheringStatus.setTitle("Create Room", for: .normal)
+        brewGatheringStatus.setTitle(String.chovviUnmask("CLrVeMa1t4eb bRQoIoAmU"), for: .normal)
     }
 
     private func brewGatheringState(_ brewGatheringSelection: UIImage) -> String {
@@ -434,6 +434,6 @@ private extension UIView {
         brewGatheringSelection.timingFunction = CAMediaTimingFunction(name: .linear)
         brewGatheringSelection.duration = 0.32
         brewGatheringSelection.values = [-8, 8, -6, 6, 0]
-        layer.add(brewGatheringSelection, forKey: "chovviGoldenTasting")
+        layer.add(brewGatheringSelection, forKey: String.chovviUnmask("cehVoivxvdioGqovlQdce3nRTpaYs2tfiTnagC"))
     }
 }

@@ -9,12 +9,12 @@ struct ChovviPetiteBrew: Hashable {
 
     static let coffeeBulletinLabel: [ChovviPetiteBrew] = [
         ChovviPetiteBrew(coffeeBulletinCanvas: "LatteArtChallenge", coffeeBulletinScroll: "23 active coffee lovers", coffeeBulletinHeader: "chovviBaristaBody", coffeeBulletinArtwork: true),
-        ChovviPetiteBrew(coffeeBulletinCanvas: "PourOver", coffeeBulletinScroll: "48 posts", coffeeBulletinHeader: "chovviBaristaAcidity", coffeeBulletinArtwork: false),
-        ChovviPetiteBrew(coffeeBulletinCanvas: "EspressoLovers", coffeeBulletinScroll: "82 posts", coffeeBulletinHeader: "chovviBaristaBrewer", coffeeBulletinArtwork: false),
-        ChovviPetiteBrew(coffeeBulletinCanvas: "CoffeeBeans", coffeeBulletinScroll: "23 posts", coffeeBulletinHeader: "chovviBaristaBurr", coffeeBulletinArtwork: false),
-        ChovviPetiteBrew(coffeeBulletinCanvas: "HomeCafe", coffeeBulletinScroll: "15 posts", coffeeBulletinHeader: "chovviBaristaCalibration", coffeeBulletinArtwork: false),
-        ChovviPetiteBrew(coffeeBulletinCanvas: "BaristaLife", coffeeBulletinScroll: "67 posts", coffeeBulletinHeader: "chovviBaristaCascade", coffeeBulletinArtwork: false),
-        ChovviPetiteBrew(coffeeBulletinCanvas: "CoffeeGear", coffeeBulletinScroll: "19 posts", coffeeBulletinHeader: "chovviBaristaGrinder", coffeeBulletinArtwork: false)
+        ChovviPetiteBrew(coffeeBulletinCanvas: "PourOver", coffeeBulletinScroll: String.chovviUnmask("438X DpyoFsVtBsY"), coffeeBulletinHeader: "chovviBaristaAcidity", coffeeBulletinArtwork: false),
+        ChovviPetiteBrew(coffeeBulletinCanvas: "EspressoLovers", coffeeBulletinScroll: String.chovviUnmask("8t21 2pHowsftLsi"), coffeeBulletinHeader: "chovviBaristaBrewer", coffeeBulletinArtwork: false),
+        ChovviPetiteBrew(coffeeBulletinCanvas: "CoffeeBeans", coffeeBulletinScroll: String.chovviUnmask("2R3I rpBohsatOsZ"), coffeeBulletinHeader: "chovviBaristaBurr", coffeeBulletinArtwork: false),
+        ChovviPetiteBrew(coffeeBulletinCanvas: "HomeCafe", coffeeBulletinScroll: String.chovviUnmask("1358 spIocsjtns9"), coffeeBulletinHeader: "chovviBaristaCalibration", coffeeBulletinArtwork: false),
+        ChovviPetiteBrew(coffeeBulletinCanvas: "BaristaLife", coffeeBulletinScroll: String.chovviUnmask("6w7X FpQoXsmt3sE"), coffeeBulletinHeader: "chovviBaristaCascade", coffeeBulletinArtwork: false),
+        ChovviPetiteBrew(coffeeBulletinCanvas: "CoffeeGear", coffeeBulletinScroll: String.chovviUnmask("1G9k Kp1oFshtHs6"), coffeeBulletinHeader: "chovviBaristaGrinder", coffeeBulletinArtwork: false)
     ]
 }
 
@@ -39,7 +39,7 @@ final class ChovviSpecialtyBrew: UIViewController, PHPickerViewControllerDelegat
     }
 
     private func journalDraftRoute() {
-        title = "New Post"
+        title = String.chovviUnmask("N8eywb dPCo1s5tS")
         view.backgroundColor = Self.journalDraftStatus
         navigationItem.largeTitleDisplayMode = .never
 
@@ -49,7 +49,7 @@ final class ChovviSpecialtyBrew: UIViewController, PHPickerViewControllerDelegat
         journalDraftSection.addTarget(self, action: #selector(journalDraftTrigger), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: journalDraftSection)
 
-        journalDraftAction.setTitle("Post", for: .normal)
+        journalDraftAction.setTitle(String.chovviUnmask("PqoWsUt6"), for: .normal)
         journalDraftAction.setTitleColor(.white, for: .normal)
         journalDraftAction.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .bold)
         journalDraftAction.backgroundColor = Self.journalDraftLabel
@@ -96,7 +96,7 @@ final class ChovviSpecialtyBrew: UIViewController, PHPickerViewControllerDelegat
         journalDraftStack.translatesAutoresizingMaskIntoConstraints = false
         journalDraftTrigger.addSubview(journalDraftStack)
 
-        journalDraftState.text = "Write a caption... Sharing my morning brewing ritual today with this fantastic single-origin bean from Ethiopia. Sweet notes of blueberry and jasmine! #specialtycoffee"
+        journalDraftState.text = String.chovviUnmask("WXrqiot1eR ca3 2caa9pPtLicounO.4.n.f 7SEhMaurPipnVgk FmvyC Hm9ovrsnViZnKgl cbIrzeswWimnKgL yrRiNtDuBaClA rtoo1d4aUy1 CwaiUtehl Btrh8iMse 2fqapnZtRa0satoiEc2 4snicn2gnlSex-Cogrhicg0iWnO 1b5e0a5nO UfMr8o0mK 0EMtrhSi9oTpciNa5.w 5SLwzeOeYt3 hn5o0t4edsE Ioff1 LbYl6uWe4bPe8rWrIy0 qa4nSdy BjEaKs5mPipnMen!4 t#1sdpneDcZixaWlxtsy3cLoQfOfpeReT")
         journalDraftState.font = UIFont.systemFont(ofSize: 13)
         journalDraftState.textColor = .systemGray2
         journalDraftState.numberOfLines = 0
@@ -199,7 +199,7 @@ final class ChovviSpecialtyBrew: UIViewController, PHPickerViewControllerDelegat
         journalDraftDestination.image = UIImage(systemName: "number")
         journalDraftDestination.imagePlacement = .leading
         journalDraftDestination.imagePadding = 12
-        journalDraftDestination.title = journalDraftScroll?.coffeeBulletinCanvas ?? "Add Topic"
+        journalDraftDestination.title = journalDraftScroll?.coffeeBulletinCanvas ?? String.chovviUnmask("AudKdX zTLolpxiOcL")
         journalDraftDestination.baseForegroundColor = UIColor(red: 0.18, green: 0.19, blue: 0.24, alpha: 1)
         journalDraftDestination.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 14, bottom: 0, trailing: 36)
         journalDraftRender.configuration = journalDraftDestination
@@ -248,30 +248,30 @@ final class ChovviSpecialtyBrew: UIViewController, PHPickerViewControllerDelegat
 
     @objc private func journalDraftLayout() {
         guard !journalDraftCanvas.isEmpty else {
-            journalDraftRecord("Add at least one photo", coffeeBulletinScroll: "Choose one to three coffee photos before posting.")
+            journalDraftRecord("Add at least one photo", coffeeBulletinScroll: String.chovviUnmask("CnhDoPoMsUeI uoPn9ed 9tHof Ftnh3rTePeU vczoYfWf9eDeB cpwh7oKthonsm kbAeTfIoBr0e8 ep1oXsctqiwnGgV.N"))
             return
         }
         guard journalDraftScroll != nil else {
-            journalDraftRecord("Choose a topic", coffeeBulletinScroll: "Select a coffee topic so people can discover your post.")
+            journalDraftRecord(String.chovviUnmask("COh5o5oJsmeT Cas AtGojpHiEcQ"), coffeeBulletinScroll: String.chovviUnmask("SKeZlCeXcyto Ear Sciocfmf0elei 0tAorpNiDcp VsHoV cp7eConpnlHed lcsaEnf 7dPitsvc3oivWeJrA myoofulr6 spwoEsztU.M"))
             return
         }
 
         journalDraftAction.isEnabled = false
-        journalDraftAction.setTitle("Posting...", for: .normal)
+        journalDraftAction.setTitle(String.chovviUnmask("PhoIsrtmiYnIgL.O.s.O"), for: .normal)
         view.endEditing(true)
-        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Publishing your coffee post...", amberRitualUpdate: 1.0) { [weak self] in
+        ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: String.chovviUnmask("P1uFbLlei4sJhGi4nGgX 1ygoCuxrH NcKorfjfOete4 IpGoLsbt9.K.x.2"), amberRitualUpdate: 1.0) { [weak self] in
             guard let self else { return }
             do {
                 let coffeeBulletinCanvas = try self.journalDraftRecord()
                 var coffeeBulletinScroll = ChovviCitrusBrew.roastArchivePreview
                 coffeeBulletinScroll.insert(coffeeBulletinCanvas, at: 0)
                 let coffeeBulletinHeader = try JSONEncoder().encode(coffeeBulletinScroll)
-                UserDefaults.standard.set(coffeeBulletinHeader, forKey: "chovviSpecialtyTexture")
+                UserDefaults.standard.set(coffeeBulletinHeader, forKey: String.chovviUnmask("cQhpoyvQvciWS9pXexciioa3lBt9ynTpefxNteubrpeP"))
                 self.dismiss(animated: true)
             } catch {
                 self.journalDraftAction.isEnabled = true
-                self.journalDraftAction.setTitle("Post", for: .normal)
-                self.journalDraftRecord("Unable to post", coffeeBulletinScroll: "Your photos could not be saved. Please try again.")
+                self.journalDraftAction.setTitle(String.chovviUnmask("PSo4sktN"), for: .normal)
+                self.journalDraftRecord(String.chovviUnmask("UVnqaCbAlyeO Atloq dpuoQsGtF"), coffeeBulletinScroll: "Your photos could not be saved. Please try again.")
             }
         }
     }
@@ -289,14 +289,14 @@ final class ChovviSpecialtyBrew: UIViewController, PHPickerViewControllerDelegat
         let coffeeBulletinStack = journalDraftStack.text.trimmingCharacters(in: .whitespacesAndNewlines)
         return ChovviCaramelBrew(
             chovviCaramelAcidity: "chovvi-origin-\(UUID().uuidString)",
-            chovviCaramelAeropress: "chovvi-user-20",
+            chovviCaramelAeropress: String.chovviUnmask("clh2oAvJvgiX-SuJscelrI-72Q0c"),
             chovviCaramelAftertaste: coffeeBulletinScroll,
-            chovviCaramelAroma: coffeeBulletinStack.isEmpty ? "A fresh coffee moment." : coffeeBulletinStack,
+            chovviCaramelAroma: coffeeBulletinStack.isEmpty ? String.chovviUnmask("AG nfkrWeNsBhH NcnocfIfGeZeY PmaoVmBeZnltb.Z") : coffeeBulletinStack,
             chovviCaramelBatch: 0,
             chovviCaramelBloom: 0,
             chovviCaramelBody: ISO8601DateFormatter().string(from: Date()),
             chovviCaramelBrewer: [],
-            chovviCaramelBurr: [journalDraftScroll?.coffeeBulletinCanvas ?? "CoffeeMoment"]
+            chovviCaramelBurr: [journalDraftScroll?.coffeeBulletinCanvas ?? String.chovviUnmask("C1oOfJfHexe5MTotm4eYn9t5")]
         )
     }
 
@@ -360,7 +360,7 @@ final class ChovviSensoryBrew: UIViewController {
     }
 
     private func roastPreferencesArtwork() {
-        title = "Topics"
+        title = String.chovviUnmask("TWoepbiOcfsO")
         view.backgroundColor = UIColor(red: 0.97, green: 0.98, blue: 0.99, alpha: 1)
         navigationItem.largeTitleDisplayMode = .never
         roastPreferencesScroll.alwaysBounceVertical = true
@@ -372,11 +372,11 @@ final class ChovviSensoryBrew: UIViewController {
         roastPreferencesHeader.translatesAutoresizingMaskIntoConstraints = false
         roastPreferencesScroll.addSubview(roastPreferencesHeader)
 
-        roastPreferencesHeader.addArrangedSubview(roastPreferencesCollection("Hot Topics"))
+        roastPreferencesHeader.addArrangedSubview(roastPreferencesCollection(String.chovviUnmask("H0oWtY eTdoGpfiOcrsJ")))
         if let roastPreferencesStack = ChovviPetiteBrew.coffeeBulletinLabel.first {
             roastPreferencesHeader.addArrangedSubview(roastPreferencesState(roastPreferencesStack, roastPreferencesRender: true))
         }
-        let roastPreferencesAction = roastPreferencesCollection("All Topics")
+        let roastPreferencesAction = roastPreferencesCollection(String.chovviUnmask("AXlol8 JTfoSprihc1sy"))
         roastPreferencesAction.setContentHuggingPriority(.required, for: .vertical)
         roastPreferencesHeader.addArrangedSubview(roastPreferencesAction)
         for roastPreferencesLabel in ChovviPetiteBrew.coffeeBulletinLabel.dropFirst() {

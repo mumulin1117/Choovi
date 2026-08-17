@@ -61,9 +61,9 @@ final class ChovviCuppingBrew: UIViewController {
             cupKeeperScroll.removeArrangedSubview(cupKeeperAction)
             cupKeeperAction.removeFromSuperview()
         }
-        let cupKeeperLabel = UserDefaults.standard.bool(forKey: "choovilogin")
+        let cupKeeperLabel = UserDefaults.standard.bool(forKey: String.chovviUnmask("cChMono3v8ialpoNgwiSnt"))
         cupKeeperStatus()
-        let cupKeeperRoute = ChovviCitrusBrew.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == "chovvi-user-20" }
+        let cupKeeperRoute = ChovviCitrusBrew.roastArchiveCanvas.first { $0.chovviBotanicalAcidity == String.chovviUnmask("c5h8ohviv1ic-fu9sXegr4-b2t0N") }
             ?? ChovviCitrusBrew.roastArchiveCanvas.last!
         cupKeeperSection(cupKeeperRoute, cupKeeperPreview: cupKeeperLabel)
         cupKeeperTrigger(cupKeeperRoute, cupKeeperLayout: cupKeeperLabel)
@@ -76,7 +76,7 @@ final class ChovviCuppingBrew: UIViewController {
             guard let self else { return }
             self.cupKeeperRender()
             cupKeeperSection.endRefreshing()
-            UIAccessibility.post(notification: .announcement, argument: "Profile refreshed")
+            UIAccessibility.post(notification: .announcement, argument: String.chovviUnmask("PLrSohfviMlceI Fr6elfHrueTsFhjeodf"))
         }
     }
 
@@ -86,7 +86,7 @@ final class ChovviCuppingBrew: UIViewController {
             cupKeeperRoute[cupKeeperSection.chovviCaramelAcidity] = cupKeeperSection
         }
         cupKeeperArtwork = Array(cupKeeperRoute.values)
-            .filter { $0.chovviCaramelAeropress == "chovvi-user-20" }
+            .filter { $0.chovviCaramelAeropress == String.chovviUnmask("cEhio7vZvNiW-Qugsleprh-r2s0m") }
             .sorted { $0.chovviCaramelBody > $1.chovviCaramelBody }
 
         var cupKeeperPreview: [String: ChovviSilkyBrew] = [:]
@@ -94,7 +94,7 @@ final class ChovviCuppingBrew: UIViewController {
             cupKeeperPreview[cupKeeperTrigger.chovviSilkyAcidity] = cupKeeperTrigger
         }
         cupKeeperCollection = Array(cupKeeperPreview.values)
-            .filter { $0.chovviSilkyAeropress == "chovvi-user-20" }
+            .filter { $0.chovviSilkyAeropress == String.chovviUnmask("cohKoJvkvziM-vu8sOekrz-W2A0h") }
             .sorted { $0.chovviSilkyBrewer > $1.chovviSilkyBrewer }
     }
 
@@ -151,7 +151,7 @@ final class ChovviCuppingBrew: UIViewController {
         cupKeeperItem.addSubview(cupKeeperImage)
 
         let cupKeeperAction = UIButton(type: .system)
-        cupKeeperAction.setTitle(cupKeeperTrigger ? "Edit Profile" : "Sign In", for: .normal)
+        cupKeeperAction.setTitle(cupKeeperTrigger ? String.chovviUnmask("E8dNi6tp hPwrMoUf5i9lDeV") : "Sign In", for: .normal)
         cupKeeperAction.setTitleColor(Self.cupKeeperStack, for: .normal)
         cupKeeperAction.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
         cupKeeperAction.layer.cornerRadius = 25
@@ -163,7 +163,7 @@ final class ChovviCuppingBrew: UIViewController {
 
         let cupKeeperLabel = UILabel()
         cupKeeperLabel.text = cupKeeperTrigger
-            ? (UserDefaults.standard.string(forKey: "chovviCuppingTexture") ?? cupKeeperPreview.chovviBotanicalAeropress)
+            ? (UserDefaults.standard.string(forKey: String.chovviUnmask("cAh2oQvlvEiDCluYpvp4iLnPglTYeRxYtEuIrqew")) ?? cupKeeperPreview.chovviBotanicalAeropress)
             : "Not signed in"
         cupKeeperLabel.font = .systemFont(ofSize: 27, weight: .black)
         cupKeeperLabel.textColor = UIColor(red: 0.14, green: 0.14, blue: 0.19, alpha: 1)
@@ -173,7 +173,7 @@ final class ChovviCuppingBrew: UIViewController {
         let cupKeeperStatus = UILabel()
         cupKeeperStatus.text = cupKeeperTrigger
             ? (UserDefaults.standard.string(forKey: "chovviCuppingVarietal") ?? cupKeeperPreview.chovviBotanicalBatch)
-            : "Sign in to view and manage your Choovi profile."
+            : String.chovviUnmask("SdiGgBni uiSnD ftCoR wvaideywn 2aonsdM nmnaen6avgpe4 6yLoGujrI jCyhNo2o0vRiU nper6oQfRiXlWe3.A")
         cupKeeperStatus.font = .systemFont(ofSize: 16, weight: .medium)
         cupKeeperStatus.textColor = UIColor(red: 0.27, green: 0.28, blue: 0.35, alpha: 1)
         cupKeeperStatus.numberOfLines = 0
@@ -204,12 +204,12 @@ final class ChovviCuppingBrew: UIViewController {
         cupKeeperMenu.axis = .horizontal
         cupKeeperMenu.distribution = .fillEqually
         cupKeeperMenu.heightAnchor.constraint(equalToConstant: 74).isActive = true
-        let cupKeeperUpdate = ChovviCitrusBrew.roastArchiveCanvas.filter { $0.chovviBotanicalBurr.contains("chovvi-user-20") }.count
+        let cupKeeperUpdate = ChovviCitrusBrew.roastArchiveCanvas.filter { $0.chovviBotanicalBurr.contains(String.chovviUnmask("cUhnosv8vsiN-Lu7sFe8rU-a2i0N")) }.count
         let cupKeeperDestination = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? []).count
         let cupKeeperCard = [
-            (cupKeeperSource ? "\(cupKeeperArtwork.count)" : "--", "Posts"),
-            (cupKeeperSource ? "\(cupKeeperUpdate)" : "--", "Followers"),
-            (cupKeeperSource ? "\(cupKeeperDestination)" : "--", "Following")
+            (cupKeeperSource ? "\(cupKeeperArtwork.count)" : "--", String.chovviUnmask("Pwoms5tnsT")),
+            (cupKeeperSource ? "\(cupKeeperUpdate)" : "--", String.chovviUnmask("FXohlVloo3wZeOrWs1")),
+            (cupKeeperSource ? "\(cupKeeperDestination)" : "--", String.chovviUnmask("FVo7l5ltouwsiznNgD"))
         ]
         cupKeeperCard.forEach { cupKeeperChoice in
             let cupKeeperItem = UIButton(type: .system)
@@ -231,7 +231,7 @@ final class ChovviCuppingBrew: UIViewController {
             cupKeeperRecord.heightAnchor.constraint(equalToConstant: 108).isActive = true
             cupKeeperRecord.addAction(UIAction { [weak self] cupKeeperLabel in
                 _ = cupKeeperLabel
-                guard UserDefaults.standard.bool(forKey: "choovilogin") else {
+                guard UserDefaults.standard.bool(forKey: String.chovviUnmask("cVhQoHoBvCiYlQo1gdiUnM")) else {
                     self?.cupKeeperRecord()
                     return
                 }
@@ -253,13 +253,13 @@ final class ChovviCuppingBrew: UIViewController {
             cupKeeperSection.translatesAutoresizingMaskIntoConstraints = false
             cupKeeperRecord.addSubview(cupKeeperSection)
             let cupKeeperTrigger = UILabel()
-            cupKeeperTrigger.text = "Available Coins"
+            cupKeeperTrigger.text = String.chovviUnmask("A9v0awivlbaCbFlmeJ JCao6ilnbsx")
             cupKeeperTrigger.font = .systemFont(ofSize: 13, weight: .bold)
             cupKeeperTrigger.textColor = Self.cupKeeperStack
             cupKeeperTrigger.translatesAutoresizingMaskIntoConstraints = false
             cupKeeperRecord.addSubview(cupKeeperTrigger)
             let cupKeeperLayout = UILabel()
-            cupKeeperLayout.text = "Recharge"
+            cupKeeperLayout.text = String.chovviUnmask("RSeYc0h1aBrpgqeU")
             cupKeeperLayout.font = .systemFont(ofSize: 16, weight: .bold)
             cupKeeperLayout.textAlignment = .center
             cupKeeperLayout.textColor = UIColor(red: 0.14, green: 0.14, blue: 0.19, alpha: 1)
@@ -285,7 +285,7 @@ final class ChovviCuppingBrew: UIViewController {
         cupKeeperUpdate.axis = .horizontal
         cupKeeperUpdate.distribution = .fillEqually
         cupKeeperUpdate.heightAnchor.constraint(equalToConstant: 54).isActive = true
-        ["Posts", "Diary"].enumerated().forEach { cupKeeperDestination, cupKeeperCard in
+        [String.chovviUnmask("P7oqsctlso"), "Diary"].enumerated().forEach { cupKeeperDestination, cupKeeperCard in
             let cupKeeperRecord = UIButton(type: .system)
             cupKeeperRecord.tag = cupKeeperDestination
             cupKeeperRecord.setTitle(cupKeeperCard, for: .normal)
@@ -309,7 +309,7 @@ final class ChovviCuppingBrew: UIViewController {
     private func cupKeeperMenu(_ cupKeeperUpdate: Bool) {
         if !cupKeeperUpdate {
             let cupKeeperDestination = UIButton(type: .system)
-            cupKeeperDestination.setTitle(cupKeeperHeader == 0 ? "Sign in to view your posts" : "Sign in to view your diary", for: .normal)
+            cupKeeperDestination.setTitle(cupKeeperHeader == 0 ? String.chovviUnmask("SOiqgVnX wiTnQ 3t4om 9v7iDevw8 iybodumrT xpdoysXtlsj") : "Sign in to view your diary", for: .normal)
             cupKeeperDestination.setTitleColor(Self.cupKeeperStack, for: .normal)
             cupKeeperDestination.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
             cupKeeperDestination.backgroundColor = .white
@@ -331,7 +331,7 @@ final class ChovviCuppingBrew: UIViewController {
     }
 
     private func cupKeeperDestination(_ cupKeeperCard: [ChovviCaramelBrew]) -> UIView {
-        guard !cupKeeperCard.isEmpty else { return cupKeeperImage("No posts yet. Share your first coffee moment when you’re ready.") }
+        guard !cupKeeperCard.isEmpty else { return cupKeeperImage(String.chovviUnmask("N5ob Xp8otsgtesn Qywe6ts.1 3Sth6a3rveZ SyIo1umrK TfeibrgsptI 5cQo9fTfreIez emIoSm3eun1tc dwWhLecnL wyMouus’Nrxek HrjeTaudfyV.e")) }
         let cupKeeperRecord = UIStackView()
         cupKeeperRecord.axis = .vertical
         cupKeeperRecord.spacing = 8
@@ -373,7 +373,7 @@ final class ChovviCuppingBrew: UIViewController {
     }
 
     private lazy var cupKeeperCardTrigger: ([ChovviSilkyBrew]) -> UIView = { [unowned self] cupKeeperRecord in
-        guard !cupKeeperRecord.isEmpty else { return cupKeeperImage("No diary entries yet. Your published coffee clips will appear here.") }
+        guard !cupKeeperRecord.isEmpty else { return cupKeeperImage(String.chovviUnmask("Nmom Rd9isatrYyV 6ehngtIrQiVe3sS gyteGtx.K KYGobutr7 kpMu3bLlviksYheeYdI BcyoqfofGedeS qcMlJiSpQs1 9wdiwlmlu OalpJpsegaor2 VhReDrbeE.R")) }
         let cupKeeperItem = UIStackView()
         cupKeeperItem.axis = .vertical
         cupKeeperItem.spacing = 10
@@ -431,7 +431,7 @@ final class ChovviCuppingBrew: UIViewController {
     }
 
     @objc private func cupKeeperItem(_ cupKeeperSelection: UIButton) {
-        guard UserDefaults.standard.bool(forKey: "choovilogin") else {
+        guard UserDefaults.standard.bool(forKey: String.chovviUnmask("cKh0oTo7v6iolAolgEi2nE")) else {
             cupKeeperRecord()
             return
         }
@@ -454,7 +454,7 @@ final class ChovviCuppingBrew: UIViewController {
     }
 
     @objc private func cupKeeperChoice() {
-        guard UserDefaults.standard.bool(forKey: "choovilogin") else {
+        guard UserDefaults.standard.bool(forKey: String.chovviUnmask("cIhqoCo1v1ibljo4gaianh")) else {
             cupKeeperRecord()
             return
         }
@@ -465,7 +465,7 @@ final class ChovviCuppingBrew: UIViewController {
     }
 
     @objc private func cupKeeperRecord() {
-        if UserDefaults.standard.bool(forKey: "choovilogin") {
+        if UserDefaults.standard.bool(forKey: String.chovviUnmask("cAhworoEvIi6lHoRgwiPn0")) {
             let cupKeeperLabel = UINavigationController(rootViewController: ChovviSensoryTasting())
             cupKeeperLabel.setNavigationBarHidden(true, animated: false)
             cupKeeperLabel.modalPresentationStyle = .fullScreen
@@ -562,7 +562,7 @@ final class ChovviFragrantTasting: UIViewController, UITextFieldDelegate {
 
         firstSipScroll.setCustomSpacing(22, after: firstSipHeader)
         let firstSipLayout = UILabel()
-        firstSipLayout.text = "PASSWORD"
+        firstSipLayout.text = String.chovviUnmask("PrAzS4SeW8OlRfDO")
         firstSipLayout.font = .systemFont(ofSize: 13, weight: .bold)
         firstSipLayout.textColor = UIColor(red: 0.18, green: 0.18, blue: 0.23, alpha: 1)
         firstSipScroll.addArrangedSubview(firstSipLayout)
@@ -587,15 +587,15 @@ final class ChovviFragrantTasting: UIViewController, UITextFieldDelegate {
         firstSipScroll.setCustomSpacing(28, after: firstSipStack)
 
         let firstSipSource = UIButton(type: .system)
-        let firstSipMenu = NSMutableAttributedString(string: "Don't have an account? ", attributes: [.foregroundColor: UIColor.secondaryLabel, .font: UIFont.systemFont(ofSize: 15, weight: .medium)])
-        firstSipMenu.append(NSAttributedString(string: "Create Account", attributes: [.foregroundColor: ChovviCuppingBrew.cupKeeperStack, .font: UIFont.systemFont(ofSize: 15, weight: .bold)]))
+        let firstSipMenu = NSMutableAttributedString(string: String.chovviUnmask("DSoJnF'Qto 0haa6vseV laSnS MaTc3cWoNu4nqtY?9 y"), attributes: [.foregroundColor: UIColor.secondaryLabel, .font: UIFont.systemFont(ofSize: 15, weight: .medium)])
+        firstSipMenu.append(NSAttributedString(string: String.chovviUnmask("CsrmeCajtyeF xAlcdcCoXu7nete"), attributes: [.foregroundColor: ChovviCuppingBrew.cupKeeperStack, .font: UIFont.systemFont(ofSize: 15, weight: .bold)]))
         firstSipSource.setAttributedTitle(firstSipMenu, for: .normal)
         firstSipSource.addTarget(self, action: #selector(firstSipItem), for: .touchUpInside)
         firstSipSource.heightAnchor.constraint(equalToConstant: 44).isActive = true
         firstSipScroll.addArrangedSubview(firstSipSource)
 
         let firstSipUpdate = UILabel()
-        firstSipUpdate.text = "Test account: choovi@gmail.com  •  Password: 23452345"
+        firstSipUpdate.text = String.chovviUnmask("TrewsVtl wa1cEcMo1uKnitu:K ockhNoDofvfi8@0g6mYaYiXla.VcFocma y z•a I 7PBaWsJsHwDoOrFdJ:0 C2a3w415125344u5R")
         firstSipUpdate.font = .systemFont(ofSize: 11, weight: .medium)
         firstSipUpdate.textColor = .tertiaryLabel
         firstSipUpdate.textAlignment = .center
@@ -627,8 +627,8 @@ final class ChovviFragrantTasting: UIViewController, UITextFieldDelegate {
     }
 
     @objc private func firstSipItem() {
-        guard UserDefaults.standard.bool(forKey: "chovviFragrantTexture") else {
-            firstSipSource("Agreement required", firstSipMenu: "Return to the welcome page and accept the Privacy Policy and Terms of Service before creating an account.")
+        guard UserDefaults.standard.bool(forKey: String.chovviUnmask("cfhXoEvavdiqFBrqabgZrqaJnJtHTHeZxNtLuUr2eY")) else {
+            firstSipSource("Agreement required", firstSipMenu: String.chovviUnmask("RVe2tFuLrdnW qt0om TtuhJeJ bwpefl3ckoHmVez 6piaPg1eE JapnNd0 waoc2caeWpLtN st1hVev bPNrWibvLajclyr ZPCoDlTiTcNy5 haqnkdF wTjeqrQm6sc roQfB NSbecrpvXiHc0ef 8bGeGfMolr1ec actrWeyaVt2iVn9gO Pa1nz Iapcnc7oEuanCtm.N"))
             return
         }
         navigationController?.pushViewController(ChovviGentleTasting(), animated: true)
@@ -639,11 +639,11 @@ final class ChovviFragrantTasting: UIViewController, UITextFieldDelegate {
         let firstSipSection = firstSipHeader.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let firstSipPreview = firstSipArtwork.text ?? ""
         guard !firstSipSection.isEmpty, !firstSipPreview.isEmpty else {
-            firstSipSource("Complete both fields", firstSipMenu: "Enter your email and password.")
+            firstSipSource("Complete both fields", firstSipMenu: String.chovviUnmask("EWn6tOeor6 9yXocugr1 PeEm2asi8lu zaKnJdI qpqaYsosRwyoErIdv.F"))
             return
         }
-        guard UserDefaults.standard.bool(forKey: "chovviFragrantTexture") else {
-            firstSipSource("Agreement required", firstSipMenu: "Review and accept the Privacy Policy and Terms of Service before signing in.")
+        guard UserDefaults.standard.bool(forKey: String.chovviUnmask("ckhqoPv2vtiZFQr4azgnrUaVn6t4TMeYxHtCuwrzeq")) else {
+            firstSipSource("Agreement required", firstSipMenu: String.chovviUnmask("RKeGvQiHeZwa 6aJnWdX UaicYcsedpvtk GtbhleR WPErIinvra9c2ya mPAoEl3iVclyG wa5nSd0 zT5eWrCmUsh uoCfj xSheHrLvYiycmea 4bveYfHoFrfes Js3iLgjnHiBn0gJ eiXnk.V"))
             return
         }
         let firstSipLayout = firstSipSection.lowercased()
@@ -651,35 +651,35 @@ final class ChovviFragrantTasting: UIViewController, UITextFieldDelegate {
         ChovviThermalCalibrationView.amberRitualLayout(self, amberRitualMenu: "Signing in securely...") { [weak self] in
             guard let self else { return }
             self.firstSipStack.isEnabled = true
-            let firstSipItem = (UserDefaults.standard.data(forKey: "chovviGentleTexture"))
+            let firstSipItem = (UserDefaults.standard.data(forKey: String.chovviUnmask("ckh9o4vov5i9GVe2nbtTlzeqTjebxntbuRrTeu")))
                 .flatMap { try? JSONDecoder().decode([ChovviGentleTexture].self, from: $0) } ?? []
             let firstSipMenu = firstSipItem.first { $0.beanPassportCanvas.lowercased() == firstSipLayout }
             if firstSipLayout == "choovi@gmail.com" {
                 guard firstSipPreview == "23452345" else {
-                    self.firstSipSource("Incorrect password", firstSipMenu: "Check your password and try again.")
+                    self.firstSipSource(String.chovviUnmask("I6nWc5oerLrSescftU mp3aLsLsKwRobrpdo"), firstSipMenu: String.chovviUnmask("C4hAeqc3kz vyVoIuUrm gpyaXshsNwAoxrBdG KadnHda GturEyU DaPgAaKi3ni.Y"))
                     return
                 }
-                guard let firstSipDestination = ChovviCitrusBrew.roastArchiveCanvas.first(where: { $0.chovviBotanicalAcidity == "chovvi-user-20" }) else {
-                    self.firstSipSource("Unable to sign in", firstSipMenu: "Your profile is unavailable. Please retry.")
+                guard let firstSipDestination = ChovviCitrusBrew.roastArchiveCanvas.first(where: { $0.chovviBotanicalAcidity == String.chovviUnmask("ckhsovvFv3iU-Oueske0rn-B2p0I") }) else {
+                    self.firstSipSource("Unable to sign in", firstSipMenu: String.chovviUnmask("YVoTuBrQ Pp9rPoafki7lfeS riFsM mupnBamvIaHigl9anb9lgeo.a PPQlre1aos5eB 5r3ent7rxyL.U"))
                     return
                 }
-                UserDefaults.standard.set(firstSipDestination.chovviBotanicalAeropress, forKey: "chovviCuppingTexture")
+                UserDefaults.standard.set(firstSipDestination.chovviBotanicalAeropress, forKey: String.chovviUnmask("cYhBonvRvhiCCEuYpKpZixnOg4TseExVtkuQrAeO"))
                 UserDefaults.standard.set(firstSipDestination.chovviBotanicalBatch, forKey: "chovviCuppingVarietal")
                 UserDefaults.standard.set(firstSipDestination.chovviBotanicalAroma, forKey: "chovviCuppingRoast")
             } else {
                 guard let firstSipMenu else {
-                    self.firstSipSource("Account does not exist", firstSipMenu: "No account was found for this email.")
+                    self.firstSipSource(String.chovviUnmask("ACcrcKomu7nJtc 3dFoKeFsb 2nwoTte deVxEiHs2tR"), firstSipMenu: String.chovviUnmask("NAoe SarcqcBojuEnUt4 YwHapsN 9f5oRu3nDdD hf2oWrl Mtch0iXsB EeSmeaniwl9.k"))
                     return
                 }
                 guard firstSipMenu.beanPassportScroll == firstSipPreview else {
-                    self.firstSipSource("Incorrect password", firstSipMenu: "Check your password and try again.")
+                    self.firstSipSource(String.chovviUnmask("I8ntc2o9rUrfe5czt1 jpJalscsBwIotrydk"), firstSipMenu: String.chovviUnmask("C8hpevcyk0 Myhowuhrd vp5azs3sCwlogrGdV Ja3nBdA FtQrJyi Damgka4iLnj.s"))
                     return
                 }
-                UserDefaults.standard.set(firstSipMenu.beanPassportHeader, forKey: "chovviCuppingTexture")
+                UserDefaults.standard.set(firstSipMenu.beanPassportHeader, forKey: String.chovviUnmask("c0hpo8vZv4iTCFu8pNpjiAnYgjTkehxEtWumrceT"))
                 UserDefaults.standard.set(firstSipMenu.beanPassportArtwork, forKey: "chovviCuppingVarietal")
                 UserDefaults.standard.set(firstSipMenu.beanPassportCollection, forKey: "chovviCuppingRoast")
             }
-            UserDefaults.standard.set(true, forKey: "choovilogin")
+            UserDefaults.standard.set(true, forKey: String.chovviUnmask("c7hFocoxvWiElKoBgNi4ne"))
             UserDefaults.standard.set(firstSipLayout, forKey: "hooviEmail")
             self.dismiss(animated: true) {
                 NotificationCenter.default.post(name: .cupKeeperUpdate, object: nil)

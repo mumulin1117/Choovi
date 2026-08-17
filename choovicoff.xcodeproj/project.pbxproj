@@ -143,14 +143,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = MZJ9G935YV;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = choovicoff/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Choovi;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Choovi uses the camera to capture the craft, mood, and details of your coffee moments.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Choovi uses the microphone to preserve the natural sounds around the coffee moments you choose to create.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Choovi uses your photo library so you can select coffee imagery for moments, profile images, and room covers.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Choovi uses photo access so you can send coffee images in private chats and share coffee moments.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -161,8 +162,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.linqian.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coffsindy.choovi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -182,14 +184,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = MZJ9G935YV;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = choovicoff/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Choovi;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Choovi uses the camera to capture the craft, mood, and details of your coffee moments.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Choovi uses the microphone to preserve the natural sounds around the coffee moments you choose to create.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Choovi uses your photo library so you can select coffee imagery for moments, profile images, and room covers.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Choovi uses photo access so you can send coffee images in private chats and share coffee moments.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -200,8 +203,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.linqian.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coffsindy.choovi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

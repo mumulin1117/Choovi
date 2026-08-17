@@ -29,13 +29,13 @@ final class ChovviThermalRoast {
         "vjrtmtpqdezdifux": 305
     ]
     static let amberRitualRender = [
-        "pkuljaohqmmmlfok": "$99.99",
-        "kztzimfgnmcofdxk": "$49.99",
-        "ghdlkghzmatkttpy": "$19.99",
-        "mfpjutggqzgtvwmu": "$9.99",
-        "xexbqslwphxnecin": "$4.99",
-        "hngokrucoeppwwlc": "$1.99",
-        "vjrtmtpqdezdifux": "$0.99"
+        "pkuljaohqmmmlfok": String.chovviUnmask("$K9R9C.l9y96"),
+        "kztzimfgnmcofdxk": String.chovviUnmask("$s4j9r.x9D9e"),
+        "ghdlkghzmatkttpy": String.chovviUnmask("$N1a9q.v9U9Y"),
+        "mfpjutggqzgtvwmu": String.chovviUnmask("$M9P.k9a9T"),
+        "xexbqslwphxnecin": String.chovviUnmask("$34G.P9k9z"),
+        "hngokrucoeppwwlc": String.chovviUnmask("$Z1H.u9r9K"),
+        "vjrtmtpqdezdifux": String.chovviUnmask("$G06.69V9u")
     ]
 
     private var amberRitualArtwork: Task<Void, Never>?
@@ -93,7 +93,7 @@ final class ChovviThermalRoast {
         let amberRitualMenu = String(amberRitualAction.id)
         if !amberRitualSource.contains(amberRitualMenu) {
             let amberRitualUpdate = Self.amberRitualCard(amberRitualTrigger) + amberRitualRoute
-            UserDefaults.standard.set(amberRitualUpdate, forKey: "chovviThermalTexture.\(amberRitualTrigger)")
+            UserDefaults.standard.set(amberRitualUpdate, forKey: String.chovviUnmask("cDhaovvpvriuTHhOeSrSmwatlJTOehxrt5u5r6ef.t") + amberRitualTrigger)
             amberRitualSource.insert(amberRitualMenu)
             UserDefaults.standard.set(Array(amberRitualSource), forKey: amberRitualLayout)
             NotificationCenter.default.post(name: Notification.Name("chovviThermalInfusion"), object: nil)
@@ -168,7 +168,7 @@ final class ChovviThermalTasting: UIViewController {
         amberRitualStatus.translatesAutoresizingMaskIntoConstraints = false
         amberRitualLabel.addSubview(amberRitualStatus)
         let amberRitualSection = UILabel()
-        amberRitualSection.text = "Recharge"
+        amberRitualSection.text = String.chovviUnmask("RheHcfh5aYrsgIeJ")
         amberRitualSection.font = .systemFont(ofSize: 28, weight: .black)
         amberRitualSection.translatesAutoresizingMaskIntoConstraints = false
         amberRitualLabel.addSubview(amberRitualSection)
@@ -188,7 +188,7 @@ final class ChovviThermalTasting: UIViewController {
         amberRitualTrigger.translatesAutoresizingMaskIntoConstraints = false
         amberRitualPreview.addSubview(amberRitualTrigger)
         let amberRitualLayout = UILabel()
-        amberRitualLayout.text = "Available Coins"
+        amberRitualLayout.text = String.chovviUnmask("Afvsaii3lCaBbDlAeA 9C6oCiwnOsz")
         amberRitualLayout.font = .systemFont(ofSize: 15, weight: .medium)
         amberRitualLayout.textAlignment = .center
         amberRitualLayout.translatesAutoresizingMaskIntoConstraints = false
@@ -211,13 +211,27 @@ final class ChovviThermalTasting: UIViewController {
         let amberRitualSource = ChovviThermalRoast.amberRitualScroll.sorted {
             (ChovviThermalRoast.amberRitualHeader[$0] ?? 0) < (ChovviThermalRoast.amberRitualHeader[$1] ?? 0)
         }
-        amberRitualSource.forEach { amberRitualRecord in
+        let amberRitualGrid = UIStackView()
+        amberRitualGrid.axis = .vertical
+        amberRitualGrid.spacing = 12
+        amberRitualGrid.translatesAutoresizingMaskIntoConstraints = false
+        amberRitualScroll.addArrangedSubview(amberRitualGrid)
+        var amberRitualRow: UIStackView?
+        amberRitualSource.enumerated().forEach { amberRitualOffset, amberRitualRecord in
+            if amberRitualOffset % 3 == 0 {
+                let amberRitualNewRow = UIStackView()
+                amberRitualNewRow.axis = .horizontal
+                amberRitualNewRow.spacing = 10
+                amberRitualNewRow.distribution = .fillEqually
+                amberRitualGrid.addArrangedSubview(amberRitualNewRow)
+                amberRitualRow = amberRitualNewRow
+            }
             let amberRitualCard = UIButton(type: .custom)
             amberRitualCard.accessibilityIdentifier = amberRitualRecord
             amberRitualCard.backgroundColor = UIColor(red: 0.94, green: 0.80, blue: 0.63, alpha: 1)
-            amberRitualCard.layer.cornerRadius = 22
+            amberRitualCard.layer.cornerRadius = 18
             amberRitualCard.addTarget(self, action: #selector(amberRitualItem(_:)), for: .touchUpInside)
-            amberRitualCard.heightAnchor.constraint(equalToConstant: 92).isActive = true
+            amberRitualCard.heightAnchor.constraint(equalToConstant: 132).isActive = true
 
             let amberRitualSelection = ChovviThermalRoast.amberRitualHeader[amberRitualRecord] ?? 0
             let amberRitualChoice = ChovviThermalRoast.amberRitualRender[amberRitualRecord] ?? ""
@@ -230,19 +244,16 @@ final class ChovviThermalTasting: UIViewController {
 
             let coffeeBulletinScroll = UILabel()
             coffeeBulletinScroll.text = amberRitualSelection.formatted()
-            coffeeBulletinScroll.font = .systemFont(ofSize: 22, weight: .black)
+            coffeeBulletinScroll.font = .systemFont(ofSize: 19, weight: .black)
             coffeeBulletinScroll.textColor = UIColor(red: 0.08, green: 0.08, blue: 0.11, alpha: 1)
+            coffeeBulletinScroll.textAlignment = .center
+            coffeeBulletinScroll.adjustsFontSizeToFitWidth = true
+            coffeeBulletinScroll.minimumScaleFactor = 0.72
             coffeeBulletinScroll.isUserInteractionEnabled = false
             coffeeBulletinScroll.translatesAutoresizingMaskIntoConstraints = false
             amberRitualCard.addSubview(coffeeBulletinScroll)
 
-            let coffeeBulletinRecord = UILabel()
-            coffeeBulletinRecord.text = "Coins"
-            coffeeBulletinRecord.font = .systemFont(ofSize: 13, weight: .bold)
-            coffeeBulletinRecord.textColor = UIColor(red: 0.42, green: 0.30, blue: 0.18, alpha: 1)
-            coffeeBulletinRecord.isUserInteractionEnabled = false
-            coffeeBulletinRecord.translatesAutoresizingMaskIntoConstraints = false
-            amberRitualCard.addSubview(coffeeBulletinRecord)
+          
 
             let coffeeBulletinArtwork = UIView()
             coffeeBulletinArtwork.backgroundColor = .white
@@ -253,23 +264,33 @@ final class ChovviThermalTasting: UIViewController {
 
             let coffeeBulletinCollection = UILabel()
             coffeeBulletinCollection.text = amberRitualChoice
-            coffeeBulletinCollection.font = .systemFont(ofSize: 17, weight: .black)
+            coffeeBulletinCollection.font = .systemFont(ofSize: 15, weight: .black)
             coffeeBulletinCollection.textColor = UIColor(red: 0.08, green: 0.08, blue: 0.11, alpha: 1)
             coffeeBulletinCollection.textAlignment = .center
+            coffeeBulletinCollection.adjustsFontSizeToFitWidth = true
+            coffeeBulletinCollection.minimumScaleFactor = 0.78
             coffeeBulletinCollection.translatesAutoresizingMaskIntoConstraints = false
             coffeeBulletinArtwork.addSubview(coffeeBulletinCollection)
 
             NSLayoutConstraint.activate([
-                coffeeBulletinCanvas.leadingAnchor.constraint(equalTo: amberRitualCard.leadingAnchor, constant: 18), coffeeBulletinCanvas.centerYAnchor.constraint(equalTo: amberRitualCard.centerYAnchor), coffeeBulletinCanvas.widthAnchor.constraint(equalToConstant: 42),
-                coffeeBulletinCanvas.heightAnchor.constraint(equalTo: coffeeBulletinCanvas.widthAnchor), coffeeBulletinScroll.leadingAnchor.constraint(equalTo: coffeeBulletinCanvas.trailingAnchor, constant: 14), coffeeBulletinScroll.centerYAnchor.constraint(equalTo: amberRitualCard.centerYAnchor, constant: -9),
-                coffeeBulletinScroll.trailingAnchor.constraint(lessThanOrEqualTo: coffeeBulletinArtwork.leadingAnchor, constant: -12), coffeeBulletinRecord.leadingAnchor.constraint(equalTo: coffeeBulletinScroll.leadingAnchor), coffeeBulletinRecord.topAnchor.constraint(equalTo: coffeeBulletinScroll.bottomAnchor, constant: 2),
-                coffeeBulletinArtwork.trailingAnchor.constraint(equalTo: amberRitualCard.trailingAnchor, constant: -16), coffeeBulletinArtwork.centerYAnchor.constraint(equalTo: amberRitualCard.centerYAnchor), coffeeBulletinArtwork.widthAnchor.constraint(equalToConstant: 106),
+                coffeeBulletinCanvas.topAnchor.constraint(equalTo: amberRitualCard.topAnchor, constant: 14), coffeeBulletinCanvas.centerXAnchor.constraint(equalTo: amberRitualCard.centerXAnchor), coffeeBulletinCanvas.widthAnchor.constraint(equalToConstant: 32),
+                coffeeBulletinCanvas.heightAnchor.constraint(equalTo: coffeeBulletinCanvas.widthAnchor), coffeeBulletinScroll.topAnchor.constraint(equalTo: coffeeBulletinCanvas.bottomAnchor, constant: 7), coffeeBulletinScroll.leadingAnchor.constraint(equalTo: amberRitualCard.leadingAnchor, constant: 8),
+                coffeeBulletinScroll.trailingAnchor.constraint(equalTo: amberRitualCard.trailingAnchor, constant: -8),  coffeeBulletinArtwork.leadingAnchor.constraint(equalTo: amberRitualCard.leadingAnchor, constant: 8), coffeeBulletinArtwork.trailingAnchor.constraint(equalTo: amberRitualCard.trailingAnchor, constant: -8),
+                coffeeBulletinArtwork.bottomAnchor.constraint(equalTo: amberRitualCard.bottomAnchor, constant: -10),
                 coffeeBulletinArtwork.heightAnchor.constraint(equalToConstant: 42), coffeeBulletinCollection.topAnchor.constraint(equalTo: coffeeBulletinArtwork.topAnchor), coffeeBulletinCollection.leadingAnchor.constraint(equalTo: coffeeBulletinArtwork.leadingAnchor, constant: 4),
                 coffeeBulletinCollection.trailingAnchor.constraint(equalTo: coffeeBulletinArtwork.trailingAnchor, constant: -4), coffeeBulletinCollection.bottomAnchor.constraint(equalTo: coffeeBulletinArtwork.bottomAnchor)
             ])
 
-            amberRitualScroll.addArrangedSubview(amberRitualCard)
+            amberRitualRow?.addArrangedSubview(amberRitualCard)
             amberRitualStack.append(amberRitualCard)
+        }
+        let amberRitualRemainder = amberRitualSource.count % 3
+        if amberRitualRemainder > 0 {
+            (0..<(3 - amberRitualRemainder)).forEach { _ in
+                let amberRitualFiller = UIView()
+                amberRitualFiller.heightAnchor.constraint(equalToConstant: 132).isActive = true
+                amberRitualRow?.addArrangedSubview(amberRitualFiller)
+            }
         }
 
         NSLayoutConstraint.activate([
@@ -290,7 +311,7 @@ final class ChovviThermalTasting: UIViewController {
     }
 
     @objc private func amberRitualItem(_ amberRitualSelection: UIButton) {
-        guard UserDefaults.standard.bool(forKey: "choovilogin"),
+        guard UserDefaults.standard.bool(forKey: String.chovviUnmask("cQh5o2o4v6iPliocgCi9nM")),
               let amberRitualImage = UserDefaults.standard.string(forKey: "hooviEmail"),
               !amberRitualImage.isEmpty else {
             filterRitualMenu("Sign in required", amberRitualMenu: "Sign in before selecting an item.")
@@ -314,15 +335,15 @@ final class ChovviThermalTasting: UIViewController {
                 case .amberRitualCanvas(let amberRitualScroll):
                     amberRitualRender()
                     if amberRitualScroll > 0 {
-                        filterRitualMenu("Completed", amberRitualMenu: "\(amberRitualScroll.formatted()) coins were added to your account.")
+                        filterRitualMenu("Completed", amberRitualMenu: amberRitualScroll.formatted() + String.chovviUnmask(" scboui9nIs5 rwUeOrmeM jagd8dnezdG wt5oO jytozuYr4 Oaucbc8omu4nYtv.z"))
                     }
                 case .amberRitualScroll:
-                    filterRitualMenu("Awaiting approval", amberRitualMenu: "The App Store will complete this request after approval.")
+                    filterRitualMenu("Awaiting approval", amberRitualMenu: String.chovviUnmask("TphjeR kAxplpf VSntUoGrdeX Pw1idlQlz uc3ocm9polfe0tIel 8tdhCiGsL prjeQqduceZsFtA IalfutBedr6 Sa6pIpYrnoZvBall7.h"))
                 case .amberRitualHeader:
                     break
                 }
             } catch {
-                filterRitualMenu("Unable to complete", amberRitualMenu: "The App Store could not verify this transaction. No coins were added.")
+                filterRitualMenu("Unable to complete", amberRitualMenu: String.chovviUnmask("TjhqeN hAupopy HSztroMrGec PcLoluIl3dL 5nMottV Av2eIrGiOf3yP ht2hri4sG Ftwr5avnOsZaAcztNiYoKnm.M ONIo2 cczo8iTnCsk fwheorLeH jaldpdAejdc.f"))
             }
         }
     }

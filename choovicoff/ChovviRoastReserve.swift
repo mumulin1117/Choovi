@@ -26,7 +26,7 @@ enum ChovviRoastReserve {
     }
 
     private static func reserveKey(for beanIdentity: String) -> String {
-        "chovviThermalTexture.\(beanIdentity.lowercased())"
+        String.chovviUnmask("c7hiodv0v2iUT6h6edrymhaclDTIeNx9t0u9rOeb.y") + beanIdentity.lowercased()
     }
 
     private static func announceReserveChange() {

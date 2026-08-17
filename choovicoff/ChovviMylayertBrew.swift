@@ -25,7 +25,7 @@ final class ChovviMylayertBrew: UIViewController {
         brewGatheringMenu(false, brewGatheringLayout: false)
         ChovviThermalCalibrationView.amberRitualLayout(
             self,
-            amberRitualMenu: "Loading chat rooms...",
+            amberRitualMenu: String.chovviUnmask("LYoVaZdYiAnSgs scnhCa5tx ZrzoOoHmOsu.T.j.Q"),
             amberRitualUpdate: 0.9
         ) { [weak self] in
             guard let self else { return }
@@ -59,7 +59,7 @@ final class ChovviMylayertBrew: UIViewController {
         brewGatheringScroll.addSubview(brewGatheringHeader)
 
         brewGatheringHeader.addArrangedSubview(brewGatheringRoute())
-        brewGatheringHeader.addArrangedSubview(brewGatheringSection("My Rooms"))
+        brewGatheringHeader.addArrangedSubview(brewGatheringSection(String.chovviUnmask("MXyp LRzojoEmCsT")))
 
         let brewGatheringPreview = UIScrollView()
         brewGatheringPreview.showsHorizontalScrollIndicator = false
@@ -71,7 +71,7 @@ final class ChovviMylayertBrew: UIViewController {
         brewGatheringPreview.addSubview(brewGatheringArtwork)
         brewGatheringHeader.addArrangedSubview(brewGatheringPreview)
 
-        brewGatheringHeader.addArrangedSubview(brewGatheringSection("Popular Rooms"))
+        brewGatheringHeader.addArrangedSubview(brewGatheringSection(String.chovviUnmask("PKo1p9uPl9anrk hRMobovmbsr")))
         brewGatheringCollection.axis = .vertical
         brewGatheringCollection.spacing = 12
         brewGatheringHeader.addArrangedSubview(brewGatheringCollection)
@@ -84,7 +84,7 @@ final class ChovviMylayertBrew: UIViewController {
         brewGatheringState.layer.shadowOffset = CGSize(width: 0, height: 5)
         brewGatheringState.layer.shadowRadius = 9
         brewGatheringState.setImage(UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 23, weight: .medium)), for: .normal)
-        brewGatheringState.accessibilityLabel = "Create a room"
+        brewGatheringState.accessibilityLabel = String.chovviUnmask("C5r0eSaitoeU 0aO 2rto4oumr")
         brewGatheringState.addTarget(self, action: #selector(brewGatheringSource), for: .touchUpInside)
         brewGatheringState.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(brewGatheringState)
@@ -103,7 +103,7 @@ final class ChovviMylayertBrew: UIViewController {
         let brewGatheringPreview = UIView()
         brewGatheringPreview.heightAnchor.constraint(equalToConstant: 66).isActive = true
         let brewGatheringTrigger = UILabel()
-        brewGatheringTrigger.text = "Chat Rooms"
+        brewGatheringTrigger.text = String.chovviUnmask("C7hPattd fR1odo7mCsr")
         brewGatheringTrigger.textColor = ChovviRoastedBrew.roastShelfScroll
         brewGatheringTrigger.font = UIFont.systemFont(ofSize: 29, weight: .black)
         brewGatheringTrigger.translatesAutoresizingMaskIntoConstraints = false
@@ -144,8 +144,8 @@ final class ChovviMylayertBrew: UIViewController {
 
     private func brewGatheringLabel() {
         guard
-            let brewGatheringStatus = UserDefaults.standard.data(forKey: "chovviGoldenTexture")
-                ?? UserDefaults.standard.data(forKey: "chovviGoldenTasting"),
+            let brewGatheringStatus = UserDefaults.standard.data(forKey: String.chovviUnmask("cChaowvxviiHGBo1lqdmefneToe8xut8u5rDe5"))
+                ?? UserDefaults.standard.data(forKey: String.chovviUnmask("csh4oWvCveiCGwoWlwdVe9nTTdacsItLinnfgI")),
             let brewGatheringRoute = try? JSONDecoder().decode([ChovviBrightBrew].self, from: brewGatheringStatus)
         else {
             brewGatheringCanvas = []
@@ -161,7 +161,7 @@ final class ChovviMylayertBrew: UIViewController {
         }
         if brewGatheringCanvas.isEmpty {
             let brewGatheringRoute = UIButton(type: .system)
-            brewGatheringRoute.setTitle("To Create Room  +", for: .normal)
+            brewGatheringRoute.setTitle(String.chovviUnmask("TMog 7CZrNe1aetVeG LRsoyo4mJ j T+r"), for: .normal)
             brewGatheringRoute.setTitleColor(Self.brewGatheringRender, for: .normal)
             brewGatheringRoute.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .bold)
             brewGatheringRoute.backgroundColor = .white
@@ -249,11 +249,11 @@ final class ChovviMylayertBrew: UIViewController {
         brewGatheringImage.addSubview(brewGatheringRecord)
 
         let coffeeBulletinCanvas = UILabel()
-        let coffeeBulletinScroll = Set(UserDefaults.standard.stringArray(forKey: "chovviGoldenRoast") ?? []).contains(brewGatheringSelection.chovviBrightAcidity)
+        let coffeeBulletinScroll = Set(UserDefaults.standard.stringArray(forKey: String.chovviUnmask("c5hso3vrv1ioGKoHlLdhe4nQRXoGaZsptN")) ?? []).contains(brewGatheringSelection.chovviBrightAcidity)
         let coffeeBulletinCollection = brewGatheringSelection.chovviBrightBatch + (coffeeBulletinScroll ? 1 : 0)
         coffeeBulletinCanvas.text = coffeeBulletinCollection >= 1000
-            ? String(format: "%.1fk members", Double(coffeeBulletinCollection) / 1000)
-            : "\(coffeeBulletinCollection) members"
+            ? String(format: String.chovviUnmask("%M.o1ifzkj 2mneEm8bxeGrKsf"), Double(coffeeBulletinCollection) / 1000)
+            : "\(coffeeBulletinCollection) " + String.chovviUnmask("m6eFmwbSenrjsh")
         coffeeBulletinCanvas.textColor = Self.brewGatheringRender
         coffeeBulletinCanvas.font = UIFont.systemFont(ofSize: 13, weight: .bold)
         coffeeBulletinCanvas.translatesAutoresizingMaskIntoConstraints = false
@@ -287,7 +287,7 @@ final class ChovviMylayertBrew: UIViewController {
     }
 
     private func brewGatheringImage(_ brewGatheringChoice: UIButton) {
-        let brewGatheringRecord = Set(UserDefaults.standard.stringArray(forKey: "chovviGoldenRoast") ?? [])
+        let brewGatheringRecord = Set(UserDefaults.standard.stringArray(forKey: String.chovviUnmask("cthBo5vZvZioG6oglOdreknAReoTawsVti")) ?? [])
         let coffeeBulletinCanvas = brewGatheringRecord.contains(brewGatheringChoice.accessibilityIdentifier ?? "")
         brewGatheringChoice.setTitle(coffeeBulletinCanvas ? "Joined" : "Join", for: .normal)
         brewGatheringChoice.setTitleColor(Self.brewGatheringRender, for: .normal)
@@ -327,9 +327,9 @@ final class ChovviMylayertBrew: UIViewController {
         guard let coffeeBulletinArtwork = (brewGatheringCanvas + ChovviCitrusBrew.roastArchiveScroll).first(where: { coffeeBulletinCanvas in
             coffeeBulletinCanvas.chovviBrightAcidity == brewGatheringChoice
         }) else { return }
-        var coffeeBulletinCanvas = Set(UserDefaults.standard.stringArray(forKey: "chovviGoldenRoast") ?? [])
+        var coffeeBulletinCanvas = Set(UserDefaults.standard.stringArray(forKey: String.chovviUnmask("cjhBo4vXvci3GwoelHdPeGnORSoWaNsltF")) ?? [])
         coffeeBulletinCanvas.insert(brewGatheringChoice)
-        UserDefaults.standard.set(Array(coffeeBulletinCanvas), forKey: "chovviGoldenRoast")
+        UserDefaults.standard.set(Array(coffeeBulletinCanvas), forKey: String.chovviUnmask("czhZogvPvTi2GOoilTdjeon3RXoyalsXth"))
         brewGatheringStatus()
 
         let coffeeBulletinScroll = ChovviFloralTasting(brewTableCanvas: coffeeBulletinArtwork)
@@ -370,7 +370,7 @@ final class ChovviMylayertBrew: UIViewController {
             self.brewGatheringLabel()
             self.brewGatheringStatus()
             self.brewGatheringTrigger.endRefreshing()
-            UIAccessibility.post(notification: .announcement, argument: "Rooms refreshed")
+            UIAccessibility.post(notification: .announcement, argument: String.chovviUnmask("RSoRotmUse crUeffNrTe8sRhQeQdt"))
         }
     }
 

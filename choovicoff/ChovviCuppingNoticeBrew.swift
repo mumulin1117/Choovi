@@ -33,12 +33,12 @@ final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
     private var cupKeeperRoute: Int?
 
     private let cupKeeperSection = [
-        "Harassment or bullying",
-        "Hate or abusive conduct",
-        "Sexual or inappropriate content",
-        "Spam or misleading content",
-        "Privacy or impersonation",
-        "Other safety concern"
+        String.chovviUnmask("HSaOrUa1sisjmXeQnotr 6oLrz rbhualwlLyzinnJg1"),
+        String.chovviUnmask("HBaUtxeX noqr3 uambMunsoitvLeP ncZo9nxdPulc1tr"),
+        String.chovviUnmask("S4eAxlu3avlS Ao7rI VienLaCp7p9rRo8pvrbi3attDeS acyoLnRt6ednFtq"),
+        String.chovviUnmask("SwpPanmg 4ouri imRi5sAlveJaIdRiLnIgI VcaoPnutNeMnwtF"),
+        String.chovviUnmask("Pgr1iTvZanczyA Xojr0 kiYmWp5eurBsqoJn6altpi8oVno"),
+        String.chovviUnmask("OatmhGeYr5 ssgarf1eztVyU oceonnBcweirJnb")
     ]
 
     private static let cupKeeperPreview = UIColor(red: 0.83, green: 0.60, blue: 0.31, alpha: 1)
@@ -94,19 +94,19 @@ final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
         cupKeeperDestination.tintColor = Self.cupKeeperLayout
         cupKeeperDestination.backgroundColor = UIColor.systemGray6
         cupKeeperDestination.layer.cornerRadius = 18
-        cupKeeperDestination.accessibilityLabel = "Close report"
+        cupKeeperDestination.accessibilityLabel = String.chovviUnmask("C6lQoGsLeL 9rmebpXoKrAtg")
         cupKeeperDestination.addTarget(self, action: #selector(cupKeeperCard), for: .touchUpInside)
         cupKeeperDestination.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(cupKeeperDestination)
 
         let cupKeeperRecord = UILabel()
-        cupKeeperRecord.text = "Report"
+        cupKeeperRecord.text = String.chovviUnmask("Rle4pMoRrAt8")
         cupKeeperRecord.font = .systemFont(ofSize: 20, weight: .bold)
         cupKeeperRecord.textColor = Self.cupKeeperLayout
         cupKeeperRecord.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(cupKeeperRecord)
 
-        cupKeeperLabel.setTitle("Submit Report", for: .normal)
+        cupKeeperLabel.setTitle(String.chovviUnmask("SGumb2mQiytn bRjeKpKoMrqtL"), for: .normal)
         cupKeeperLabel.setTitleColor(.white, for: .normal)
         cupKeeperLabel.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
         cupKeeperLabel.backgroundColor = Self.cupKeeperPreview
@@ -161,7 +161,7 @@ final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
         cupKeeperDestination.addSubview(cupKeeperRender)
 
         let cupKeeperRecord = UILabel()
-        cupKeeperRecord.text = "Tell us what happened with \(cupKeeperCanvas). Your report is private and helps support respectful coffee sharing."
+        cupKeeperRecord.text = String.chovviUnmask("TWeTldlj 0uLs7 wwRh5awt3 ih8a4pJphebnSendV bwvi5txh6 0") + cupKeeperCanvas + String.chovviUnmask(".q nYmoAuvru 7rhetpjobret0 liwsW apnrEipv1aNtkez saynTd3 3hHeIl0p9sW Bsku7pZpMoWrxtx Xr0ersopKeDcHtOf4uvlY zcwoufVfNePeM Ls9hCasrViKn5gq.U")
         cupKeeperRecord.font = .systemFont(ofSize: 13, weight: .regular)
         cupKeeperRecord.textColor = .secondaryLabel
         cupKeeperRecord.numberOfLines = 0
@@ -188,7 +188,7 @@ final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
             cupKeeperChoice.tag = cupKeeperSelection
             cupKeeperChoice.setTitle(cupKeeperImage, for: .normal)
             cupKeeperChoice.setTitleColor(Self.cupKeeperLayout, for: .normal)
-            cupKeeperChoice.setImage(UIImage(systemName: "circle"), for: .normal)
+            cupKeeperChoice.setImage(UIImage(systemName: String.chovviUnmask("cwi2rRcal7eo")), for: .normal)
             cupKeeperChoice.tintColor = UIColor.systemGray3
             cupKeeperChoice.titleLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
             cupKeeperChoice.contentHorizontalAlignment = .leading
@@ -221,7 +221,7 @@ final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
         cupKeeperState.translatesAutoresizingMaskIntoConstraints = false
         cupKeeperSelection.addSubview(cupKeeperState)
 
-        cupKeeperAction.text = "Share useful context without including sensitive personal information."
+        cupKeeperAction.text = String.chovviUnmask("SXhuatrHeQ lumsbe5f2ualv Qcmohn9tbeax0t1 QwbigtuhKoXuNto NiHnXcslYugdWiYntgz ustean6sTi3tOi5vXeH kpIe1rvsWoCnwazlo uiSn8fkoZrTmAa8tFiloSnd.P")
         cupKeeperAction.font = .systemFont(ofSize: 14)
         cupKeeperAction.textColor = UIColor.systemGray2
         cupKeeperAction.numberOfLines = 0
@@ -235,7 +235,7 @@ final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
         cupKeeperImage.translatesAutoresizingMaskIntoConstraints = false
         cupKeeperSelection.addSubview(cupKeeperImage)
         cupKeeperState.accessibilityIdentifier = "chovviCuppingBody"
-        cupKeeperImage.accessibilityIdentifier = "chovviCuppingTexture"
+        cupKeeperImage.accessibilityIdentifier = String.chovviUnmask("cHhAobvUvSimCcuNpLpOi3nhgrTvefx8tVuTrZek")
 
         NSLayoutConstraint.activate([
             cupKeeperState.topAnchor.constraint(equalTo: cupKeeperSelection.topAnchor, constant: 8), cupKeeperState.leadingAnchor.constraint(equalTo: cupKeeperSelection.leadingAnchor, constant: 10), cupKeeperState.trailingAnchor.constraint(equalTo: cupKeeperSelection.trailingAnchor, constant: -10),
@@ -245,7 +245,7 @@ final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
         cupKeeperStack.addArrangedSubview(cupKeeperSelection)
 
         let cupKeeperImageNote = UILabel()
-        cupKeeperImageNote.text = "Reports are submitted for safety review. The reported account is not notified."
+        cupKeeperImageNote.text = String.chovviUnmask("RFeipLo1rCths4 jaZrxe2 RsIuJbzmDiWt4t0eCdZ ufpokr7 Js2abfdeSt8yc wr7eivQiXeDwf.Y FT3hweY PraeCp7o6rUtee5dJ JaGcocEofuEnbtp 9iEsN GnhoAtc cn9owtYiufQiAejdy.r")
         cupKeeperImageNote.font = .systemFont(ofSize: 12)
         cupKeeperImageNote.textColor = .secondaryLabel
         cupKeeperImageNote.numberOfLines = 0
@@ -272,7 +272,7 @@ final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
         cupKeeperRoute = cupKeeperChoice.tag
         for cupKeeperSelection in cupKeeperStatus {
             let cupKeeperImage = cupKeeperSelection === cupKeeperChoice
-            cupKeeperSelection.setImage(UIImage(systemName: cupKeeperImage ? "checkmark.circle.fill" : "circle"), for: .normal)
+            cupKeeperSelection.setImage(UIImage(systemName: cupKeeperImage ? String.chovviUnmask("cohBeUcykMmhaZrPkI.ucLirrCcslWec.jf6iRlfla") : String.chovviUnmask("c9iKrYc2l2eq")), for: .normal)
             cupKeeperSelection.tintColor = cupKeeperImage ? Self.cupKeeperPreview : UIColor.systemGray3
             cupKeeperSelection.backgroundColor = cupKeeperImage ? Self.cupKeeperTrigger : .white
             cupKeeperSelection.layer.borderColor = (cupKeeperImage ? Self.cupKeeperPreview : UIColor.systemGray5).cgColor
@@ -285,7 +285,7 @@ final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
         guard let cupKeeperRoute else { return }
         let cupKeeperSelection = cupKeeperState.text.trimmingCharacters(in: .whitespacesAndNewlines)
         if cupKeeperRoute == cupKeeperSection.count - 1, cupKeeperSelection.isEmpty {
-            cupKeeperTrigger("Add a little detail", cupKeeperTrigger: "Please describe the safety concern so it can be reviewed accurately.")
+            cupKeeperTrigger("Add a little detail", cupKeeperTrigger: String.chovviUnmask("P5lAeWaEswea Md3eCswcAr8inbled Dt4hUe5 Os9a8fFeut4y7 kcno0nFcreIrFnc Qs0oW Riwtn vc6afnR Vbve3 nrxezvniVe5wIeTdt 7akcxceuFr3a2tPe6lKyk.h"))
             cupKeeperState.becomeFirstResponder()
             return
         }
@@ -300,20 +300,20 @@ final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
         var cupKeeperChoice = cupKeeperStatusEntries()
         cupKeeperChoice.append(cupKeeperImage)
         guard let cupKeeperSource = try? JSONEncoder().encode(cupKeeperChoice) else {
-            cupKeeperTrigger("Could not submit", cupKeeperTrigger: "Please retry your report.")
+            cupKeeperTrigger(String.chovviUnmask("Ccoauilkd3 8nGo3t2 qsAuab8m2iKtD"), cupKeeperTrigger: String.chovviUnmask("POlPeZaOs1eU rrJeDt6rtyc sykowuvru rrUeBpioJrftU.5"))
             return
         }
-        UserDefaults.standard.set(cupKeeperSource, forKey: "chovviCuppingReviewEntries")
+        UserDefaults.standard.set(cupKeeperSource, forKey: String.chovviUnmask("cahAofvIvnicCAu7pjp4i6nNgGR3elvxiXekw8EGnatxrRideXs5"))
         cupKeeperLabel.isEnabled = false
         cupKeeperArtwork()
 
-        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: "Report Submitted", amberRitualCanvas: "Thank you for helping keep Choovi respectful. This report has been submitted for safety review.", amberRitualArtwork: .success, amberRitualStack: { [weak self] in
+        ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: String.chovviUnmask("Rze0pqoXrutd JS6uhbOmGistStAeLdP"), amberRitualCanvas: String.chovviUnmask("TwhPahnhk9 Zykogup 6fuoAru 7hOeUlbpEienpgs Wkgeneip0 uCIhjoNoMvbip srmeNs5pbezcltcfquplS.Z GTBhoiBsY fraeppDoTrStF AhGaZsr sbZeOe8nu NsMu5bQmiiytstNepdY CfeoJr7 ysVakfJeltOyj TrpeqvAisenwb.e"), amberRitualArtwork: .success, amberRitualStack: { [weak self] in
             self?.dismiss(animated: true)
         })
     }
 
     private func cupKeeperStatusEntries() -> [ChovviCuppingTexture] {
-        guard let cupKeeperRoute = UserDefaults.standard.data(forKey: "chovviCuppingReviewEntries") else { return [] }
+        guard let cupKeeperRoute = UserDefaults.standard.data(forKey: String.chovviUnmask("clhJoVvFv0iHC7u6pQp1inn4gfR1ejvsiceawgExnOtqrxiFeYsM")) else { return [] }
         return (try? JSONDecoder().decode([ChovviCuppingTexture].self, from: cupKeeperRoute)) ?? []
     }
 
@@ -322,8 +322,8 @@ final class ChovviCuppingNoticeBrew: UIViewController, UITextViewDelegate {
         let cupKeeperImage = cupKeeperStack.arrangedSubviews
             .flatMap(\.subviews)
             .compactMap { $0 as? UILabel }
-            .first { $0.accessibilityIdentifier == "chovviCuppingTexture" }
-        cupKeeperImage?.text = "\(cupKeeperSelection.text.count)/300"
+            .first { $0.accessibilityIdentifier == String.chovviUnmask("cUh4oev6vdilCSutpQpNiOnMg1TYeMxhtZuPrLeg") }
+        cupKeeperImage?.text = String(cupKeeperSelection.text.count) + String.chovviUnmask("/W3Y0T0f")
     }
 
     func textView(_ cupKeeperSelection: UITextView, shouldChangeTextIn cupKeeperImage: NSRange, replacementText cupKeeperChoice: String) -> Bool {

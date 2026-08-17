@@ -15,7 +15,7 @@ final class ChovviCocoaBrew: UITabBarController {
         dailyBrewScroll = true
         ChovviThermalCalibrationView.amberRitualLayout(
             self,
-            amberRitualMenu: "Loading fresh coffee moments...",
+            amberRitualMenu: String.chovviUnmask("LwoQaLdziVn1gT mfZr9e3sMhq acKoTf3fveDeI 4muoKmIeCnxtgsR.l.h.r"),
             amberRitualUpdate: 0.8
         ) {}
     }
@@ -47,9 +47,9 @@ final class ChovviCocoaBrew: UITabBarController {
             selectedImage: UIImage(named: "chovviBotanicalRoast")?.withRenderingMode(.alwaysOriginal)
         )
         dailyBrewScroll.tabBarItem.accessibilityLabel = "Home"
-        dailyBrewHeader.tabBarItem.accessibilityLabel = "Moments"
-        dailyBrewArtwork.tabBarItem.accessibilityLabel = "Groups"
-        dailyBrewCollection.tabBarItem.accessibilityLabel = "Profile"
+        dailyBrewHeader.tabBarItem.accessibilityLabel = String.chovviUnmask("MAoPmDemnrtAsL")
+        dailyBrewArtwork.tabBarItem.accessibilityLabel = String.chovviUnmask("GvrXoju8pesm")
+        dailyBrewCollection.tabBarItem.accessibilityLabel = String.chovviUnmask("PhrGoyfQirlLeZ")
         dailyBrewScroll.tabBarItem.tag = 0
         dailyBrewHeader.tabBarItem.tag = 1
         dailyBrewArtwork.tabBarItem.tag = 2
@@ -144,7 +144,7 @@ class ChovviRoastedBrew: UIViewController {
             guard let self else { return }
             self.roastShelfUpdate()
             self.roastShelfStatus.endRefreshing()
-            UIAccessibility.post(notification: .announcement, argument: "Content refreshed")
+            UIAccessibility.post(notification: .announcement, argument: String.chovviUnmask("C3ornCtleVnut0 6rYecfGrTeWsYhre4dW"))
         }
     }
 }
@@ -183,7 +183,7 @@ final class ChovviCraftedBrew: ChovviRoastedBrew, UIGestureRecognizerDelegate {
     }
 
     private func moodGalleryCanvas() {
-        roastShelfCollection.insertArrangedSubview(roastShelfLabel("Share Your Feelings Today"), at: 0)
+        roastShelfCollection.insertArrangedSubview(roastShelfLabel(String.chovviUnmask("Snh9a3rNeI hY1oEuJrs jFRefe5lSiOn0gwsm wTPoIdka2yI")), at: 0)
         let moodGalleryImage = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedRoast") ?? [])
         let moodGalleryChoice = Set(ChovviCitrusBrew.roastArchiveRoute.map(\.chovviSilkyAcidity))
 
@@ -195,11 +195,11 @@ final class ChovviCraftedBrew: ChovviRoastedBrew, UIGestureRecognizerDelegate {
         }
         roastShelfStack.superview?.heightAnchor.constraint(equalToConstant: 270).isActive = true
 
-        let brewGatheringCollection = UIImageView(image: UIImage(named: "chovviGoldenProfile"))
+        let brewGatheringCollection = UIImageView(image: UIImage(named: String.chovviUnmask("cBhmoyvCvTiCGooPlddaeOncP0rVoGfgiYlre9")))
         brewGatheringCollection.contentMode = .scaleAspectFit
         brewGatheringCollection.clipsToBounds = true
         brewGatheringCollection.isUserInteractionEnabled = true
-        brewGatheringCollection.accessibilityLabel = "Create a new Coffee Moment"
+        brewGatheringCollection.accessibilityLabel = String.chovviUnmask("CXrUe3aJtve8 oaQ XnNetw5 uCKoUfzfEeRe3 yMyohm4eKnrt3")
         brewGatheringCollection.heightAnchor.constraint(equalTo: brewGatheringCollection.widthAnchor, multiplier: 99 / 349).isActive = true
         brewGatheringCollection.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(brewGatheringStack)))
         roastShelfCollection.insertArrangedSubview(brewGatheringCollection, at: 2)
@@ -290,7 +290,7 @@ final class ChovviCraftedBrew: ChovviRoastedBrew, UIGestureRecognizerDelegate {
         moodGalleryStack.addSubview(moodGalleryAction)
 
         let moodGalleryLabel = UILabel()
-        moodGalleryLabel.text = moodGalleryRender?.chovviBotanicalAeropress ?? "Choovi Creator"
+        moodGalleryLabel.text = moodGalleryRender?.chovviBotanicalAeropress ?? String.chovviUnmask("CAhboQoqvAio jC1r3ebaHt6o0rP")
         moodGalleryLabel.textColor = .white
         moodGalleryLabel.font = UIFont.systemFont(ofSize: 17, weight: .bold)
         moodGalleryLabel.layer.shadowColor = UIColor.black.cgColor
@@ -354,7 +354,7 @@ final class ChovviCraftedBrew: ChovviRoastedBrew, UIGestureRecognizerDelegate {
         moodGalleryLabel.addSubview(moodGallerySection)
 
         let moodGalleryTrigger = UILabel()
-        moodGalleryTrigger.text = moodGalleryPreview?.chovviBotanicalAeropress ?? "Choovi Creator"
+        moodGalleryTrigger.text = moodGalleryPreview?.chovviBotanicalAeropress ?? String.chovviUnmask("CHhaoCoDv4iF VCFr7e9a3taoRrq")
         moodGalleryTrigger.textColor = Self.roastShelfScroll
         moodGalleryTrigger.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         moodGalleryTrigger.adjustsFontSizeToFitWidth = true
@@ -434,16 +434,16 @@ final class ChovviCraftedBrew: ChovviRoastedBrew, UIGestureRecognizerDelegate {
         moodGalleryPreview.layer.cornerRadius = 18
         moodGalleryPreview.showsMenuAsPrimaryAction = true
         moodGalleryPreview.menu = moodGallerySource(moodGallerySection)
-        moodGalleryPreview.accessibilityLabel = "More creator actions"
+        moodGalleryPreview.accessibilityLabel = String.chovviUnmask("MWoBrleg zcjr3eHaCtOolr0 aaccetniboXn6sx")
         return moodGalleryPreview
     }
 
     private func moodGallerySource(_ moodGalleryTrigger: ChovviSilkyBrew) -> UIMenu {
-        let moodGalleryLayout = UIAction(title: "Report", image: UIImage(systemName: "flag")) { [weak self] moodGalleryMenu in
+        let moodGalleryLayout = UIAction(title: String.chovviUnmask("R9eYpRoJrBts"), image: UIImage(systemName: String.chovviUnmask("fFljaWgI"))) { [weak self] moodGalleryMenu in
             _ = moodGalleryMenu
             self?.moodGalleryUpdate(moodGalleryTrigger, moodGalleryDestination: false)
         }
-        let moodGalleryCard = UIAction(title: "Block Creator", image: UIImage(systemName: "hand.raised"), attributes: .destructive) { [weak self] moodGalleryRecord in
+        let moodGalleryCard = UIAction(title: String.chovviUnmask("BilGoRcOkX rCArueWa2tZo8rX"), image: UIImage(systemName: "hand.raised"), attributes: .destructive) { [weak self] moodGalleryRecord in
             _ = moodGalleryRecord
             self?.moodGalleryUpdate(moodGalleryTrigger, moodGalleryDestination: true)
         }
@@ -456,9 +456,9 @@ final class ChovviCraftedBrew: ChovviRoastedBrew, UIGestureRecognizerDelegate {
         let moodGalleryImage = moodGalleryPreview(moodGalleryItem.chovviSilkyAeropress)
         if !moodGalleryDestination {
             let brewGatheringCanvas = ChovviCuppingNoticeBrew(
-                cupKeeperCanvas: "this Coffee Moment",
+                cupKeeperCanvas: String.chovviUnmask("tXhYi2sI RCRo4f1feedeS jMPoXmoeXn3t5"),
                 cupKeeperScroll: moodGalleryItem.chovviSilkyAcidity,
-                cupKeeperHeader: "moment"
+                cupKeeperHeader: String.chovviUnmask("mXo9mkeCnwtn")
             ) {
                 var brewGatheringScroll = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedTasting") ?? [])
                 brewGatheringScroll.insert(moodGalleryItem.chovviSilkyAcidity)
@@ -467,10 +467,10 @@ final class ChovviCraftedBrew: ChovviRoastedBrew, UIGestureRecognizerDelegate {
             present(brewGatheringCanvas, animated: true)
             return
         }
-        let moodGalleryChoice = moodGalleryDestination ? "Block Creator" : "Report This Moment"
+        let moodGalleryChoice = moodGalleryDestination ? String.chovviUnmask("BulzoEc2kr VC4rKejaHtfokrm") : String.chovviUnmask("R9eup3ofrqtp ITAhtissi VMNo5mTeinBtu")
         let brewGatheringCanvas = moodGalleryDestination
-            ? "Hide future content from \(moodGalleryImage?.chovviBotanicalAeropress ?? "this creator")?"
-            : "Send this Coffee Moment for safety review?"
+            ? String.chovviUnmask("H1ikdKei qfou1tDuWrQec NcDognKtfeIn3tU WforxoZmo u") + (moodGalleryImage?.chovviBotanicalAeropress ?? String.chovviUnmask("tvhkinsO ecZrHe3a9t2ovrV")) + String.chovviUnmask("?A")
+            : String.chovviUnmask("SMeXnhdG Pt5hXiesF gC4oFfRfde3eA 1Meoemdekn9tC 1fLoxrv ws0aCfLe0t7yL TrIexvQiye6w2?B")
         ChovviThermalAlertView.amberRitualSelection(self, amberRitualChoice: moodGalleryChoice, amberRitualCanvas: brewGatheringCanvas, amberRitualScroll: "Not Now", amberRitualHeader: "Confirm", amberRitualArtwork: moodGalleryDestination ? .destructive : .caution) { } amberRitualStack: { [weak self] in
             self?.moodGalleryItem(moodGalleryItem, moodGallerySelection: moodGalleryDestination)
         }
@@ -498,8 +498,8 @@ final class ChovviCraftedBrew: ChovviRoastedBrew, UIGestureRecognizerDelegate {
 
         ChovviThermalAlertView.amberRitualSelection(
             self,
-            amberRitualChoice: moodGallerySelection ? "Creator Blocked" : "Report Received",
-            amberRitualCanvas: moodGallerySelection ? "This creator has been added to your blocked list." : "Thank you. This item has been submitted for safety review.",
+            amberRitualChoice: moodGallerySelection ? String.chovviUnmask("CPrXeoa1tMoVrg JBblooTcqkgeCdu") : String.chovviUnmask("RWeHpfoirWt1 sRLeccCexiyvGeddh"),
+            amberRitualCanvas: moodGallerySelection ? String.chovviUnmask("TDhDi5sN 1cRrLe0a9t3oKr5 jh5aRsd jb5eGeBn2 EaNd7dPeidI itUoQ iyMoiumrJ 1belGoXcKkuehdo blCiNsct8.u") : String.chovviUnmask("Tuh3aTnYkz Py7oiuS.y CTQhQics2 5iytfehmZ jh2aUsa sb8eSebne DsfuIbzmViMtPt3eDdU 4fYoprO us6aKfqe0tByc HrEe5vIiJeowN.w"),
             amberRitualArtwork: .success
         )
     }
@@ -647,7 +647,7 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
         roastShelfCollection.insertArrangedSubview(coffeeJournalArtwork(), at: 0)
         roastShelfStack.superview?.heightAnchor.constraint(equalToConstant: 132).isActive = true
 
-        roastShelfState.addArrangedSubview(coffeeJournalLabel("popular"))
+        roastShelfState.addArrangedSubview(coffeeJournalLabel(String.chovviUnmask("pfogpguNlOa4rH")))
         coffeeJournalPopular.axis = .vertical
         coffeeJournalPopular.spacing = 12
         roastShelfState.addArrangedSubview(coffeeJournalPopular)
@@ -663,7 +663,7 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
         let coffeeJournalCollection = UIView()
         coffeeJournalCollection.heightAnchor.constraint(equalToConstant: 58).isActive = true
 
-        let coffeeJournalStack = roastShelfLabel("Coffee Community")
+        let coffeeJournalStack = roastShelfLabel(String.chovviUnmask("CropfFfVe5eg iCsoXmPmxuQnxiIt1yo"))
         coffeeJournalStack.font = UIFont.systemFont(ofSize: 27, weight: .black)
         coffeeJournalStack.numberOfLines = 1
         coffeeJournalStack.adjustsFontSizeToFitWidth = true
@@ -672,7 +672,7 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
         coffeeJournalCollection.addSubview(coffeeJournalStack)
 
         let coffeeJournalState = UIButton(type: .system)
-        coffeeJournalState.setTitle("Post", for: .normal)
+        coffeeJournalState.setTitle(String.chovviUnmask("PKoRsRto"), for: .normal)
         coffeeJournalState.setTitleColor(.white, for: .normal)
         coffeeJournalState.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         coffeeJournalState.backgroundColor = UIColor(red: 1, green: 138 / 255, blue: 0, alpha: 1)
@@ -769,7 +769,7 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
         coffeeJournalSection.heightAnchor.constraint(equalToConstant: 52).isActive = true
 
         let coffeeJournalPreview = UIButton(type: .system)
-        coffeeJournalPreview.setTitle("Discover", for: .normal)
+        coffeeJournalPreview.setTitle(String.chovviUnmask("DviUsIcZodvje8r3"), for: .normal)
         coffeeJournalPreview.titleLabel?.font = UIFont.systemFont(ofSize: 23, weight: .black)
         coffeeJournalPreview.setTitleColor(.black, for: .normal)
         coffeeJournalPreview.backgroundColor = UIColor(red: 1, green: 189 / 255, blue: 119 / 255, alpha: 0.64)
@@ -778,7 +778,7 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
         coffeeJournalPreview.addTarget(self, action: #selector(coffeeJournalSource(_:)), for: .touchUpInside)
 
         let coffeeJournalTrigger = UIButton(type: .system)
-        coffeeJournalTrigger.setTitle("Follow", for: .normal)
+        coffeeJournalTrigger.setTitle(String.chovviUnmask("FEoylal2opwy"), for: .normal)
         coffeeJournalTrigger.titleLabel?.font = UIFont.systemFont(ofSize: 21, weight: .bold)
         coffeeJournalTrigger.setTitleColor(.lightGray, for: .normal)
         coffeeJournalTrigger.tag = 1
@@ -896,16 +896,16 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
         coffeeJournalItem.layer.cornerRadius = 17
         coffeeJournalItem.showsMenuAsPrimaryAction = true
         coffeeJournalItem.menu = coffeeJournalSelection(coffeeJournalRecord)
-        coffeeJournalItem.accessibilityLabel = "More post actions"
+        coffeeJournalItem.accessibilityLabel = String.chovviUnmask("MooyrQeM VpSodskt6 naJcktGiLo0nask")
         return coffeeJournalItem
     }
 
     private func coffeeJournalSelection(_ coffeeJournalRecord: ChovviCaramelBrew) -> UIMenu {
-        let coffeeJournalItem = UIAction(title: "Report", image: UIImage(systemName: "flag")) { [weak self] coffeeJournalAction in
+        let coffeeJournalItem = UIAction(title: String.chovviUnmask("ReeApIolrMtk"), image: UIImage(systemName: String.chovviUnmask("fjlkaFg4"))) { [weak self] coffeeJournalAction in
             _ = coffeeJournalAction
             self?.coffeeJournalArtwork(coffeeJournalRecord, coffeeJournalCard: false)
         }
-        let coffeeJournalLabel = UIAction(title: "Block Creator", image: UIImage(systemName: "hand.raised"), attributes: .destructive) { [weak self] coffeeJournalAction in
+        let coffeeJournalLabel = UIAction(title: String.chovviUnmask("B5lXoBcwke ICqrUexaPtMoNr5"), image: UIImage(systemName: "hand.raised"), attributes: .destructive) { [weak self] coffeeJournalAction in
             _ = coffeeJournalAction
             self?.coffeeJournalArtwork(coffeeJournalRecord, coffeeJournalCard: true)
         }
@@ -919,9 +919,9 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
         }
         if !coffeeJournalCard {
             let coffeeJournalLabel = ChovviCuppingNoticeBrew(
-                cupKeeperCanvas: "this Coffee Moment",
+                cupKeeperCanvas: String.chovviUnmask("t6h1iFsm WC0oIfuf6emet pMyoPmlehnQtf"),
                 cupKeeperScroll: coffeeJournalRecord.chovviCaramelAcidity,
-                cupKeeperHeader: "moment"
+                cupKeeperHeader: String.chovviUnmask("muoRm5eKnmtW")
             ) { [weak self] in
                 var coffeeJournalAction = Set(UserDefaults.standard.stringArray(forKey: "chovviCraftedTasting") ?? [])
                 coffeeJournalAction.insert(coffeeJournalRecord.chovviCaramelAcidity)
@@ -934,8 +934,8 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
         }
         ChovviThermalAlertView.amberRitualSelection(
             self,
-            amberRitualChoice: "Block Creator",
-            amberRitualCanvas: "Hide future content from \(coffeeJournalItem?.chovviBotanicalAeropress ?? "this creator")?",
+            amberRitualChoice: String.chovviUnmask("B4lWoIcQkF CCbr6eCastkosr4"),
+            amberRitualCanvas: String.chovviUnmask("H0ikdGep JfvuLtCuVrBet 2c3oBndtZe4natU efPrPoDme 7") + (coffeeJournalItem?.chovviBotanicalAeropress ?? String.chovviUnmask("tVhIiGst ZcOrEemaqtgonr4")) + String.chovviUnmask("?0"),
             amberRitualScroll: "Not Now",
             amberRitualHeader: "Confirm",
             amberRitualArtwork: .destructive
@@ -958,8 +958,8 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
         coffeeJournalState()
         ChovviThermalAlertView.amberRitualSelection(
             self,
-            amberRitualChoice: coffeeJournalSelection ? "Creator Blocked" : "Report Received",
-            amberRitualCanvas: coffeeJournalSelection ? "This creator has been added to your blocked list." : "This item has been submitted for safety review.",
+            amberRitualChoice: coffeeJournalSelection ? String.chovviUnmask("CKrAe6a3tlojrg sBXlBoWchkcedd0") : String.chovviUnmask("RKebpBoprbtC JRUeZcTeliXvqeSd2"),
+            amberRitualCanvas: coffeeJournalSelection ? String.chovviUnmask("T4hkiksO NcQraeRasthocr5 hhIacsa MbIeteAne xaYd7d6eTdH Gtdo4 jy0oIukr0 5b9lxoZcqkXeZd3 9l3i8sytG.u") : String.chovviUnmask("T0hVixs2 oiRtzecmW fhKahsP 8bteCeUn0 BsaujbvmIidtntVeLd9 7faoSrJ Qsoajf3eAt4yc DrLeQvUike1wt.H"),
             amberRitualArtwork: .success
         )
     }
@@ -986,7 +986,7 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
         }
         if coffeeJournalLabel.isEmpty {
             let coffeeJournalStatus = UILabel()
-            coffeeJournalStatus.text = "Follow coffee creators to see their moments here."
+            coffeeJournalStatus.text = String.chovviUnmask("Fuokl0lzoOwp 4choVfSfdeFem bcNrceIaft7ovrAsn Xtooi lsMeRe7 LtAh0ePi0rO gmLoXmbehnQtAsd ThJeMrDeS.j")
             coffeeJournalStatus.textColor = .secondaryLabel
             coffeeJournalStatus.textAlignment = .center
             coffeeJournalStatus.numberOfLines = 0
@@ -1022,7 +1022,7 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
         }
         if coffeeJournalAction.isEmpty {
             let coffeeJournalLabel = UILabel()
-            coffeeJournalLabel.text = "Blocked creators and reviewed posts are hidden from Popular."
+            coffeeJournalLabel.text = String.chovviUnmask("BLl0ozcqkEeUdU oczrQehaktsodr7sR faonkdR XrQemv9iJePwzeSd5 CpgojsPt9s2 caBrqeH NhPiUdCdsern8 KfNrSoFmy WPXoHpkuSl1aLrh.f")
             coffeeJournalLabel.textColor = .secondaryLabel
             coffeeJournalLabel.textAlignment = .center
             coffeeJournalLabel.numberOfLines = 0
@@ -1048,7 +1048,7 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
     private func coffeeJournalTrigger(_ coffeeJournalLayout: UIButton, coffeeJournalMenu: String) {
         let coffeeJournalUpdate = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaRoast") ?? [])
         let coffeeJournalDestination = coffeeJournalUpdate.contains(coffeeJournalMenu)
-        coffeeJournalLayout.setTitle(coffeeJournalDestination ? "Followed" : "Follow", for: .normal)
+        coffeeJournalLayout.setTitle(coffeeJournalDestination ? String.chovviUnmask("FEoFl9luo0wXe4dN") : String.chovviUnmask("FnoFlhlGohwL"), for: .normal)
         coffeeJournalLayout.setTitleColor(coffeeJournalDestination ? .lightGray : .white, for: .normal)
         coffeeJournalLayout.backgroundColor = coffeeJournalDestination ? Self.roastShelfScroll : UIColor(red: 1, green: 138 / 255, blue: 0, alpha: 1)
     }
@@ -1071,7 +1071,7 @@ final class ChovviCremaBrew: ChovviRoastedBrew {
     private func coffeeJournalDestination(_ coffeeJournalCard: UIButton?, coffeeJournalRecord: ChovviCaramelBrew) {
         let coffeeJournalItem = Set(UserDefaults.standard.stringArray(forKey: "chovviCremaTasting") ?? [])
         let coffeeJournalSelection = coffeeJournalItem.contains(coffeeJournalRecord.chovviCaramelAcidity)
-        coffeeJournalCard?.setTitle("🔥 \(coffeeJournalRecord.chovviCaramelBatch + (coffeeJournalSelection ? 1 : 0))", for: .normal)
+        coffeeJournalCard?.setTitle(String.chovviUnmask("🔥c 3") + String(coffeeJournalRecord.chovviCaramelBatch + (coffeeJournalSelection ? 1 : 0)), for: .normal)
     }
 
     private func coffeeJournalUpdate(_ coffeeJournalDestination: ChovviCaramelBrew, coffeeJournalCard: UIButton?) {
