@@ -6,14 +6,7 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		57A89616013A46B3F7837D3E /* Pods_choovicoff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07F8D2F0A50BBADDCD57198 /* Pods_choovicoff.framework */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		06E1AAE240350DC93D31FB24 /* Pods-choovicoff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-choovicoff.debug.xcconfig"; path = "Target Support Files/Pods-choovicoff/Pods-choovicoff.debug.xcconfig"; sourceTree = "<group>"; };
-		B07F8D2F0A50BBADDCD57198 /* Pods_choovicoff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_choovicoff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCAC4669E7FC3BFE3F86F99B /* Pods-choovicoff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-choovicoff.release.xcconfig"; path = "Target Support Files/Pods-choovicoff/Pods-choovicoff.release.xcconfig"; sourceTree = "<group>"; };
 		F58245413020712800B6BCFD /* choovicoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = choovicoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -43,27 +36,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57A89616013A46B3F7837D3E /* Pods_choovicoff.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16EAAAD0CF9902924C7FAD4F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				06E1AAE240350DC93D31FB24 /* Pods-choovicoff.debug.xcconfig */,
-				BCAC4669E7FC3BFE3F86F99B /* Pods-choovicoff.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		D4A6F3DA7037EAABFDD421D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B07F8D2F0A50BBADDCD57198 /* Pods_choovicoff.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,7 +54,6 @@
 			children = (
 				F58245433020712800B6BCFD /* choovicoff */,
 				F58245423020712800B6BCFD /* Products */,
-				16EAAAD0CF9902924C7FAD4F /* Pods */,
 				D4A6F3DA7037EAABFDD421D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -93,11 +73,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F58245543020712800B6BCFD /* Build configuration list for PBXNativeTarget "choovicoff" */;
 			buildPhases = (
-				71B795C6614EA59A5A4090FF /* [CP] Check Pods Manifest.lock */,
 				F582453D3020712800B6BCFD /* Sources */,
 				F582453E3020712800B6BCFD /* Frameworks */,
 				F582453F3020712800B6BCFD /* Resources */,
-				7FAF86E9B24C2CB1D07E3D5A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,48 +133,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		71B795C6614EA59A5A4090FF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-choovicoff-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7FAF86E9B24C2CB1D07E3D5A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-choovicoff/Pods-choovicoff-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-choovicoff/Pods-choovicoff-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-choovicoff/Pods-choovicoff-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		F582453D3020712800B6BCFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -210,17 +146,14 @@
 /* Begin XCBuildConfiguration section */
 		F58245553020712800B6BCFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06E1AAE240350DC93D31FB24 /* Pods-choovicoff.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = choovicoff/choovicoff.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6NUFR97X3A;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = choovicoff/Info.plist;
@@ -237,11 +170,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.myfy.test;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coffsindy.choovi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = test111;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -258,17 +190,14 @@
 		};
 		F58245563020712800B6BCFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCAC4669E7FC3BFE3F86F99B /* Pods-choovicoff.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = choovicoff/choovicoff.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6NUFR97X3A;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = choovicoff/Info.plist;
@@ -285,11 +214,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.myfy.test;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coffsindy.choovi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = test111;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

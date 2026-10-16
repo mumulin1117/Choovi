@@ -2,28 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>choovi</string>
-			</array>
-		</dict>
-	</array>
-	<key>FacebookAdvertiserIDCollectionEnabled
-</key>
-	<false/>
-	<key>FacebookAppID</key>
-	<string>1078716727868797</string>
-	<key>FacebookAutoLogAppEventsEnabled</key>
-	<false/>
-	<key>FacebookClientToken</key>
-	<string>0e364abddaf340d75b4272dabb247dd9</string>
-	<key>FacebookDisplayName</key>
-	<string>Chovvi</string>
 	<key>NSAppTransportSecurity</key>
 	<dict/>
 	<key>UIApplicationSceneManifest</key>

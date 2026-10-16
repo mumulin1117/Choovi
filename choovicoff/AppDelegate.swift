@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FBSDKCoreKit
 
 
 extension String {
@@ -37,22 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self])
             .setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1_000, vertical: 0), for: .default)
         _ = ChovviThermalRoast.amberRitualCanvas
-        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+       
         return true
     }
 
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        ChovviCoffeeBridge_SDK.shared.ChovviCoffeeBridge_didRegisterForRemoteNotifications(deviceToken: deviceToken)
-    }
-
-    func application(
-        _ app: UIApplication,
-        open url: URL,
-        options: [UIApplication.OpenURLOptionsKey: Any] = [:]
-    ) -> Bool {
-        ApplicationDelegate.shared.application(app, open: url, options: options)
-    }
-
+   
+  
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

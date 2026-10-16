@@ -1,6 +1,0 @@
-framework module Pods_choovicoff {
-  umbrella header "Pods-choovicoff-umbrella.h"
-
-  export *
-  module * { export * }
-}
