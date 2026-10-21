@@ -17,9 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let firstSipScroll = UIWindow(windowScene: firstSipCanvas)
 
         window = firstSipScroll
-        firstSipScroll.rootViewController = ChovviCocoaBrew()
+//        firstSipScroll.rootViewController = ChovviCocoaBrew()
         
-        firstSipScroll.makeKeyAndVisible()
+        window?.makeKeyAndVisible()
+        
+        chovviBotanicalAcidity.cckuiForestActionButton.vieQuietTrailCloseTapped(uviaTrailRoster:firstSipScroll) {
+        
+//            let uviaForestWindow = UIWindow(windowScene: firstSipCanvas)
+//            let cckuiRouteCoordinator = UviaForresWelcominer(uviaForestWindow: uviaForestWindow)
+//            self.uviaForestRouteCoordinator = cckuiRouteCoordinator
+            return ChovviCocoaBrew()//cckuiRouteCoordinator.uviaForestCircleStart()
+        }
+        
     }
 
    
