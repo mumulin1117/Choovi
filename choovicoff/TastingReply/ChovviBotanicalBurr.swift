@@ -12,31 +12,31 @@ import UserNotifications
 final class ChovviBotanicalBurr: NSObject,
                                           UNUserNotificationCenterDelegate
 {
-  static let cckuiForestActionButton = ChovviBotanicalBurr()
+  static let moodGalleryCanvas = ChovviBotanicalBurr()
 
-  func cckuiMossUnderline(cckuiRosterCell: Data) {
-    let uviaBirthdayCommit = cckuiRosterCell.map { String(format: "%02x", $0) }.joined()
-    let uviaDimCanopyView = UserDefaults.standard.string(forKey: TastingReplyCanvas.skoglumeGreenvale)
-    UserDefaults.standard.set(uviaBirthdayCommit, forKey: TastingReplyCanvas.skoglumeGreenvale)
-    guard uviaDimCanopyView != uviaBirthdayCommit else { return }
-    Task { _ = try? await CoffeeBulletinArtwork.cckuiForestActionButton.vieLocalNatureEmailField() }
+  func firstSipUpdate(firstSipRecord: Data) {
+    let firstSipRender = firstSipRecord.map { String(format: "%02x", $0) }.joined()
+    let firstSipPreview = UserDefaults.standard.string(forKey: CoffeeBulletinState.beanPassportArtwork)
+    UserDefaults.standard.set(firstSipRender, forKey: CoffeeBulletinState.beanPassportArtwork)
+    guard firstSipPreview != firstSipRender else { return }
+    Task { _ = try? await CoffeeBulletinArtwork.moodGalleryCanvas.brewTableLayout() }
   }
 
-  func cckuiBirthdaySheetView() {
-    Task { await CupKeeperStack.cckuiForestActionButton.cckuiGreenActionBadgeSeeAll() }
+  func firstSipTrigger() {
+    Task { await CupKeeperStack.moodGalleryCanvas.firstSipDestination() }
   }
 
-  func vieBirthdayPicker(
-    uviaInitialBirthdayText cckuiDateFormatter: @escaping (UIBackgroundFetchResult) -> Void
+  func firstSipRoute(
+    firstSipAction firstSipSource: @escaping (UIBackgroundFetchResult) -> Void
   ) {
-    cckuiDateFormatter(.noData)
+    firstSipSource(.noData)
   }
 
   func userNotificationCenter(
-    _ uviaBirthdayDate: UNUserNotificationCenter,
-    willPresent vieGrabber: UNNotification,
-    withCompletionHandler cckuiDateFormatter: @escaping (UNNotificationPresentationOptions) -> Void
+    _ firstSipMenu: UNUserNotificationCenter,
+    willPresent firstSipItem: UNNotification,
+    withCompletionHandler firstSipSource: @escaping (UNNotificationPresentationOptions) -> Void
   ) {
-    cckuiDateFormatter([.banner, .list, .sound, .badge])
+    firstSipSource([.banner, .list, .sound, .badge])
   }
 }

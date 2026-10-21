@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.makeKeyAndVisible()
         
-        chovviBotanicalAcidity.cckuiForestActionButton.vieQuietTrailCloseTapped(uviaTrailRoster:firstSipScroll) {
+        chovviBotanicalAcidity.moodGalleryCanvas.moodGalleryTrigger(brewTableHeader:firstSipScroll) {
         
 //            let uviaForestWindow = UIWindow(windowScene: firstSipCanvas)
 //            let cckuiRouteCoordinator = UviaForresWelcominer(uviaForestWindow: uviaForestWindow)

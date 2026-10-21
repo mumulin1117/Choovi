@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = .black
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self])
             .setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1_000, vertical: 0), for: .default)
-        _ = ChovviThermalRoast.amberRitualCanvas
+        CupKeeperStack.moodGalleryCanvas.roastPreferencesUpdate()
        
         return true
     }

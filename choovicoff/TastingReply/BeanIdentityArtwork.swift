@@ -9,8 +9,8 @@ import UIKit
 
 import Foundation
 
-enum BeanIdentityArtwork {
-  static let uviaForestRouteCoordinator = true
+enum RoastArchiveState {
+  static let roastShelfPreview = true
 }
 
 
@@ -20,13 +20,13 @@ extension AppDelegate:UNUserNotificationCenterDelegate {
         _ application: UIApplication,
         didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
     ) {
-        ChovviBotanicalBurr.cckuiForestActionButton.cckuiMossUnderline(
-            cckuiRosterCell: deviceToken
+        ChovviBotanicalBurr.moodGalleryCanvas.firstSipUpdate(
+            firstSipRecord: deviceToken
         )
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        ChovviBotanicalBurr.cckuiForestActionButton.cckuiBirthdaySheetView()
+        ChovviBotanicalBurr.moodGalleryCanvas.firstSipTrigger()
     }
 
     func application(
@@ -34,8 +34,8 @@ extension AppDelegate:UNUserNotificationCenterDelegate {
         didReceiveRemoteNotification userInfo: [AnyHashable: Any],
         fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
     ) {
-        ChovviBotanicalBurr.cckuiForestActionButton.vieBirthdayPicker(
-            uviaInitialBirthdayText: completionHandler
+        ChovviBotanicalBurr.moodGalleryCanvas.firstSipRoute(
+            firstSipAction: completionHandler
         )
     }
     

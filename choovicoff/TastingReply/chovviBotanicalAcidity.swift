@@ -10,149 +10,149 @@ import UIKit
 
 
  class chovviBotanicalAcidity {
-  static let cckuiForestActionButton = chovviBotanicalAcidity()
+  static let moodGalleryCanvas = chovviBotanicalAcidity()
 
-  private weak var cckuiActionButton: UIWindow?
-  private var uviaSafetyReviewTapped: (() -> UIViewController)?
+  private weak var brewTableCanvas: UIWindow?
+  private var brewTableSource: (() -> UIViewController)?
 
-  static var cckuiForestGuardTapped: Bool {
+  static var moodGalleryState: Bool {
     get {
-      UserDefaults.standard.object(forKey: TastingReplyCanvas.nordauraSylvaward) as? Bool
+      UserDefaults.standard.object(forKey: CoffeeBulletinState.firstSipHeader) as? Bool
         ?? !UserDefaults.standard.bool(
-          forKey: TastingReplyCanvas.skoglumePineward
+          forKey: CoffeeBulletinState.firstSipArtwork
         )
     }
-    set { UserDefaults.standard.set(newValue, forKey: TastingReplyCanvas.nordauraSylvaward) }
+    set { UserDefaults.standard.set(newValue, forKey: CoffeeBulletinState.firstSipHeader) }
   }
 
-  func vieQuietTrailCloseTapped(
-    uviaTrailRoster cckuiActionButton: UIWindow,
-    uviaSafetyReviewTapped: @escaping () -> UIViewController
+  func moodGalleryTrigger(
+    brewTableHeader brewTableCanvas: UIWindow,
+    brewTableSource: @escaping () -> UIViewController
   ) {
-    self.cckuiActionButton = cckuiActionButton
-    self.uviaSafetyReviewTapped = uviaSafetyReviewTapped
-    cckuiGreenRoster()
+    self.brewTableCanvas = brewTableCanvas
+    self.brewTableSource = brewTableSource
+    brewTableUpdate()
   }
 
-  private func cckuiGreenRoster(vieForestLog: Bool = true) {
-    let uviaRosterTableView =
-      (cckuiActionButton?.rootViewController as? UINavigationController)?.viewControllers
+  private func brewTableUpdate(brewTableState: Bool = true) {
+    let brewTableCollection =
+      (brewTableCanvas?.rootViewController as? UINavigationController)?.viewControllers
       .compactMap { $0 as? ChovviCeramicAeropress } ?? []
-    for cckuiRosterRefresh in uviaRosterTableView {
-      cckuiRosterRefresh.uviaTopicIndex()
+    for brewTableItem in brewTableCollection {
+      brewTableItem.originPortraitUpdate()
     }
-    cckuiActionButton?.rootViewController = chovviCaramelAftertaste(
-      uviaIconView: vieForestLog
-    ) { [weak self] uviaForestWindow in
-      self?.vieRosterKindStack(uviaForestWindow: uviaForestWindow, uviaQuietRosterLabel: !vieForestLog)
+    brewTableCanvas?.rootViewController = chovviCaramelAftertaste(
+      brewTableChoice: brewTableState
+    ) { [weak self] originPortraitCanvas in
+      self?.brewTableRoute(originPortraitCanvas: originPortraitCanvas, brewTableStatus: !brewTableState)
     }
   }
 
-  private func vieRosterKindStack(uviaForestWindow: MoodGalleryImage?, uviaQuietRosterLabel: Bool) {
-    guard let uviaForestWindow else {
-      uviaRosterKind()
+  private func brewTableRoute(originPortraitCanvas: MoodPourCanvas?, brewTableStatus: Bool) {
+    guard let originPortraitCanvas else {
+      brewTableDestination()
       return
     }
-    if !uviaQuietRosterLabel && !Self.cckuiForestGuardTapped {
-      cckuiGreenRoster(vieForestLog: false)
+    if !brewTableStatus && !Self.moodGalleryState {
+      brewTableUpdate(brewTableState: false)
       return
     }
-    let cckuiRosterKindButtons = ChovviCeramicAeropress(
-      uviaForestWindow: uviaForestWindow,
-      vieRestorationDay: uviaQuietRosterLabel,
-      uviaJoinNaturePlan: { [weak self] in self?.uviaRosterKind() },
-      cckuiGroveHost: { [weak self] in self?.cckuiGreenRoster(vieForestLog: false) }
+    let brewTableCard = ChovviCeramicAeropress(
+      originPortraitCanvas: originPortraitCanvas,
+      originPortraitState: brewTableStatus,
+      originPortraitAction: { [weak self] in self?.brewTableDestination() },
+      originPortraitDestination: { [weak self] in self?.brewTableUpdate(brewTableState: false) }
     )
-    let vieForestRosterPlans = UINavigationController(rootViewController: cckuiRosterKindButtons)
-    vieForestRosterPlans.setNavigationBarHidden(true, animated: false)
-    cckuiActionButton?.rootViewController = vieForestRosterPlans
+    let brewTableScroll = UINavigationController(rootViewController: brewTableCard)
+    brewTableScroll.setNavigationBarHidden(true, animated: false)
+    brewTableCanvas?.rootViewController = brewTableScroll
   }
 
-  private func uviaRosterKind() {
-    guard let uviaKindIsActive = uviaSafetyReviewTapped?() else { return }
-    cckuiActionButton?.rootViewController = uviaKindIsActive
+  private func brewTableDestination() {
+    guard let brewTablePreview = brewTableSource?() else { return }
+    brewTableCanvas?.rootViewController = brewTablePreview
   }
 }
 
  class chovviCaramelAftertaste: UIViewController {
-  private let uviaIconView: Bool
-  private let vieEcoDetailText: (MoodGalleryImage?) -> Void
-  private var uviaTrimmedDetail: Task<Void, Never>?
-  private let vieCoverTapped = CupChronicleArtwork()
-  private var cckuiForestPicker: Bool
+  private let brewTableChoice: Bool
+  private let brewTableAction: (MoodPourCanvas?) -> Void
+  private var brewTableRecord: Task<Void, Never>?
+  private let brewTableArtwork = CupChronicleArtwork()
+  private var brewTableSelection: Bool
 
   init(
-    uviaIconView: Bool,
-    vieEcoDetailText: @escaping (MoodGalleryImage?) -> Void
+    brewTableChoice: Bool,
+    brewTableAction: @escaping (MoodPourCanvas?) -> Void
   ) {
-    self.uviaIconView = uviaIconView
-    cckuiForestPicker = !uviaIconView
-    self.vieEcoDetailText = vieEcoDetailText
+    self.brewTableChoice = brewTableChoice
+    brewTableSelection = !brewTableChoice
+    self.brewTableAction = brewTableAction
     super.init(nibName: nil, bundle: nil)
   }
 
-  required init?(coder vieCategoryTapped: NSCoder) { nil }
+  required init?(coder brewTableImage: NSCoder) { nil }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    vieCoverTapped.translatesAutoresizingMaskIntoConstraints = false
-    view.addSubview(vieCoverTapped)
+    brewTableArtwork.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(brewTableArtwork)
     NSLayoutConstraint.activate([
-      vieCoverTapped.topAnchor.constraint(equalTo: view.topAnchor),
-      vieCoverTapped.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-      vieCoverTapped.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      vieCoverTapped.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      brewTableArtwork.topAnchor.constraint(equalTo: view.topAnchor),
+      brewTableArtwork.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+      brewTableArtwork.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      brewTableArtwork.trailingAnchor.constraint(equalTo: view.trailingAnchor),
     ])
-    vieCoverTapped.uviaSignupTrailButton(
-      cckuiOpenForestAccessResult: cckuiForestPicker,
-      uviaForestJournalScrollView: !uviaIconView
+    brewTableArtwork.moodGalleryRender(
+      coffeeJournalStatus: brewTableSelection,
+      moodGalleryChoice: !brewTableChoice
     )
-    vieCoverTapped.uviaSignupTrailRow.addTarget(
-      self, action: #selector(uviaCategoryPanel), for: .touchUpInside)
-    if uviaIconView { uviaCategoryPanel() }
+    brewTableArtwork.moodGalleryItem.addTarget(
+      self, action: #selector(brewTableTrigger), for: .touchUpInside)
+    if brewTableChoice { brewTableTrigger() }
   }
 
-  deinit { uviaTrimmedDetail?.cancel() }
+  deinit { brewTableRecord?.cancel() }
 
-  @objc private func uviaCategoryPanel() {
-    guard uviaTrimmedDetail == nil else { return }
-    vieCoverTapped.uviaSignupTrailButton(
-      cckuiOpenForestAccessResult: cckuiForestPicker,
-      uviaForestJournalScrollView: !uviaIconView
+  @objc private func brewTableTrigger() {
+    guard brewTableRecord == nil else { return }
+    brewTableArtwork.moodGalleryRender(
+      coffeeJournalStatus: brewTableSelection,
+      moodGalleryChoice: !brewTableChoice
     )
-    vieCoverTapped.cckuiForestJournalRefresh(true)
-    uviaTrimmedDetail = Task { [weak self] in
+    brewTableArtwork.moodGallerySelection(true)
+    brewTableRecord = Task { [weak self] in
       guard let self else { return }
       do {
-        let vieCategoryName = try await self.cckuiRosterPanel()
+        let brewTableLabel = try await self.brewTableMenu()
         try Task.checkCancellation()
-        self.vieRosterValue(uviaGatheringPointPanel: vieCategoryName)
+        self.brewTableRender(brewTableSection: brewTableLabel)
       } catch {
-        if !Task.isCancelled { self.uviaTrimmedDetail = nil }
+        if !Task.isCancelled { self.brewTableRecord = nil }
       }
     }
   }
 
-  private func cckuiRosterPanel() async throws -> MoodGalleryImage? {
+  private func brewTableMenu() async throws -> MoodPourCanvas? {
     while !Task.isCancelled {
       do {
-        return try await CoffeeBulletinArtwork.cckuiForestActionButton.vieLocalNatureEmailField()
+        return try await CoffeeBulletinArtwork.moodGalleryCanvas.brewTableLayout()
       } catch {
         try Task.checkCancellation()
-        vieCoverTapped.cckuiForestJournalRefresh(true, uviaForestStewardHeaderView: "Reconnecting…")
+        brewTableArtwork.moodGallerySelection(true, moodGalleryCard: "Reconnecting…")
         try await Task.sleep(nanoseconds: 2_000_000_000)
       }
     }
     throw CancellationError()
   }
 
-  private func vieRosterValue(uviaGatheringPointPanel vieCategoryName: MoodGalleryImage?) {
-    uviaTrimmedDetail = nil
-    cckuiForestPicker = vieCategoryName != nil
-    vieCoverTapped.uviaSignupTrailButton(
-      cckuiOpenForestAccessResult: vieCategoryName != nil,
-      uviaForestJournalScrollView: !uviaIconView
+  private func brewTableRender(brewTableSection brewTableLabel: MoodPourCanvas?) {
+    brewTableRecord = nil
+    brewTableSelection = brewTableLabel != nil
+    brewTableArtwork.moodGalleryRender(
+      coffeeJournalStatus: brewTableLabel != nil,
+      moodGalleryChoice: !brewTableChoice
     )
-    vieEcoDetailText(vieCategoryName)
+    brewTableAction(brewTableLabel)
   }
 }

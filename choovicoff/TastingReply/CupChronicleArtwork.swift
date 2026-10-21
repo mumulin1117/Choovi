@@ -8,85 +8,85 @@
 import UIKit
 
 class CupChronicleArtwork: UIView {
-  let uviaSignupTrailRow = UIButton(type: .system)
+  let moodGalleryItem = UIButton(type: .system)
 
-  private let cckuiCalmGatheringStack = UIImageView()
-  private let vieNordicGroveMark = UIActivityIndicatorView(style: .large)
-  private let uviaForestCircleTitleLabel = UILabel()
-  private let vieQuietTrailSubcckuiRosterTitleLabel = UIStackView()
+  private let amberRitualArtwork = UIImageView()
+  private let amberRitualScroll = UIActivityIndicatorView(style: .large)
+  private let amberRitualHeader = UILabel()
+  private let amberRitualStack = UIStackView()
 
-  override init(frame vieFieldBox: CGRect) {
-    super.init(frame: vieFieldBox)
+  override init(frame amberRitualLayout: CGRect) {
+    super.init(frame: amberRitualLayout)
     backgroundColor = UIColor(red: 4 / 255, green: 3 / 255, blue: 19 / 255, alpha: 1)
-    cckuiCalmGatheringStack.contentMode = .scaleAspectFill
-    cckuiCalmGatheringStack.clipsToBounds = true
-    cckuiCalmGatheringStack.translatesAutoresizingMaskIntoConstraints = false
-    addSubview(cckuiCalmGatheringStack)
+    amberRitualArtwork.contentMode = .scaleAspectFill
+    amberRitualArtwork.clipsToBounds = true
+    amberRitualArtwork.translatesAutoresizingMaskIntoConstraints = false
+    addSubview(amberRitualArtwork)
 
    
-    vieNordicGroveMark.color = .white
-    vieNordicGroveMark.hidesWhenStopped = true
-    uviaForestCircleTitleLabel.textColor = .white
-      uviaForestCircleTitleLabel.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-    uviaForestCircleTitleLabel.textAlignment = .center
-    uviaForestCircleTitleLabel.numberOfLines = 0
-    uviaSignupTrailRow.setTitle("Quick Login", for: .normal)
-    uviaSignupTrailRow.setTitleColor(.white, for: .normal)
-    uviaSignupTrailRow.setTitleColor(UIColor.white.withAlphaComponent(0.65), for: .disabled)
-    uviaSignupTrailRow.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
-      uviaSignupTrailRow.backgroundColor = UIColor.orange
-    uviaSignupTrailRow.layer.cornerRadius = 16
-    for vieJoinForestPlanRow in [vieNordicGroveMark, uviaForestCircleTitleLabel, uviaSignupTrailRow] {
-      vieQuietTrailSubcckuiRosterTitleLabel.addArrangedSubview(vieJoinForestPlanRow)
+    amberRitualScroll.color = .white
+    amberRitualScroll.hidesWhenStopped = true
+    amberRitualHeader.textColor = .white
+      amberRitualHeader.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+    amberRitualHeader.textAlignment = .center
+    amberRitualHeader.numberOfLines = 0
+    moodGalleryItem.setTitle("Quick Login", for: .normal)
+    moodGalleryItem.setTitleColor(.white, for: .normal)
+    moodGalleryItem.setTitleColor(UIColor.white.withAlphaComponent(0.65), for: .disabled)
+    moodGalleryItem.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
+      moodGalleryItem.backgroundColor = UIColor.orange
+    moodGalleryItem.layer.cornerRadius = 16
+    for amberRitualItem in [amberRitualScroll, amberRitualHeader, moodGalleryItem] {
+      amberRitualStack.addArrangedSubview(amberRitualItem)
     }
-    vieQuietTrailSubcckuiRosterTitleLabel.axis = .vertical
-    vieQuietTrailSubcckuiRosterTitleLabel.alignment = .center
-    vieQuietTrailSubcckuiRosterTitleLabel.spacing = 16
-    vieQuietTrailSubcckuiRosterTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-    addSubview(vieQuietTrailSubcckuiRosterTitleLabel)
+    amberRitualStack.axis = .vertical
+    amberRitualStack.alignment = .center
+    amberRitualStack.spacing = 16
+    amberRitualStack.translatesAutoresizingMaskIntoConstraints = false
+    addSubview(amberRitualStack)
 
-    let vieForestPaceLabel = uviaSignupTrailRow.heightAnchor.constraint(equalToConstant: 52)
-    vieForestPaceLabel.priority = UILayoutPriority(999)
+    let amberRitualSection = moodGalleryItem.heightAnchor.constraint(equalToConstant: 52)
+    amberRitualSection.priority = UILayoutPriority(999)
     NSLayoutConstraint.activate([
-      cckuiCalmGatheringStack.topAnchor.constraint(equalTo: topAnchor),
-      cckuiCalmGatheringStack.bottomAnchor.constraint(equalTo: bottomAnchor),
-      cckuiCalmGatheringStack.leadingAnchor.constraint(equalTo: leadingAnchor),
-      cckuiCalmGatheringStack.trailingAnchor.constraint(equalTo: trailingAnchor),
-      vieQuietTrailSubcckuiRosterTitleLabel.leadingAnchor.constraint(
+      amberRitualArtwork.topAnchor.constraint(equalTo: topAnchor),
+      amberRitualArtwork.bottomAnchor.constraint(equalTo: bottomAnchor),
+      amberRitualArtwork.leadingAnchor.constraint(equalTo: leadingAnchor),
+      amberRitualArtwork.trailingAnchor.constraint(equalTo: trailingAnchor),
+      amberRitualStack.leadingAnchor.constraint(
         equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 32),
-      vieQuietTrailSubcckuiRosterTitleLabel.trailingAnchor.constraint(
+      amberRitualStack.trailingAnchor.constraint(
         equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -32),
-      vieQuietTrailSubcckuiRosterTitleLabel.topAnchor.constraint(
+      amberRitualStack.topAnchor.constraint(
         greaterThanOrEqualTo: safeAreaLayoutGuide.topAnchor, constant: 16),
-      vieQuietTrailSubcckuiRosterTitleLabel.bottomAnchor.constraint(
+      amberRitualStack.bottomAnchor.constraint(
         equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -80),
     
-      uviaForestCircleTitleLabel.widthAnchor.constraint(equalTo: vieQuietTrailSubcckuiRosterTitleLabel.widthAnchor),
-      uviaSignupTrailRow.widthAnchor.constraint(equalTo: vieQuietTrailSubcckuiRosterTitleLabel.widthAnchor),
-      vieForestPaceLabel,
+      amberRitualHeader.widthAnchor.constraint(equalTo: amberRitualStack.widthAnchor),
+      moodGalleryItem.widthAnchor.constraint(equalTo: amberRitualStack.widthAnchor),
+      amberRitualSection,
     ])
   }
 
-  required init?(coder vieCanopyGrabber: NSCoder) { nil }
+  required init?(coder amberRitualSource: NSCoder) { nil }
 
-  func uviaSignupTrailButton(cckuiOpenForestAccessResult: Bool, uviaForestJournalScrollView: Bool) {
-    cckuiCalmGatheringStack.image = UIImage(
-      named: cckuiOpenForestAccessResult
-        ? BeanPassportStack.nordvikaWildsaura
-        : BeanPassportStack.nordvikaCedarnora
+  func moodGalleryRender(coffeeJournalStatus: Bool, moodGalleryChoice: Bool) {
+    amberRitualArtwork.image = UIImage(
+      named: coffeeJournalStatus
+        ? CoffeeBulletinHeader.firstSipScroll
+        : CoffeeBulletinHeader.firstSipCanvas
     )
-    vieQuietTrailSubcckuiRosterTitleLabel.isHidden = !cckuiOpenForestAccessResult
-    uviaSignupTrailRow.isHidden = !uviaForestJournalScrollView
+    amberRitualStack.isHidden = !coffeeJournalStatus
+    moodGalleryItem.isHidden = !moodGalleryChoice
   }
 
-  func cckuiForestJournalRefresh(_ vieGreenSquareContentView: Bool, uviaForestStewardHeaderView: String? = nil) {
-    uviaSignupTrailRow.isEnabled = !vieGreenSquareContentView
-    uviaSignupTrailRow.alpha = vieGreenSquareContentView ? 0.55 : 1
-    uviaForestCircleTitleLabel.text = uviaForestStewardHeaderView ?? (vieGreenSquareContentView ? "Connecting…" : nil)
-    if vieGreenSquareContentView {
-      vieNordicGroveMark.startAnimating()
+  func moodGallerySelection(_ amberRitualState: Bool, moodGalleryCard: String? = nil) {
+    moodGalleryItem.isEnabled = !amberRitualState
+    moodGalleryItem.alpha = amberRitualState ? 0.55 : 1
+    amberRitualHeader.text = moodGalleryCard ?? (amberRitualState ? "Connecting…" : nil)
+    if amberRitualState {
+      amberRitualScroll.startAnimating()
     } else {
-      vieNordicGroveMark.stopAnimating()
+      amberRitualScroll.stopAnimating()
     }
   }
 }

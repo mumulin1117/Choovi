@@ -9,336 +9,336 @@ import UIKit
 
 import Foundation
 
-struct ChovviCeramicBrewer {
-  let nordauraLarchward: String
-  let nordwispFjordrune: String
-  let skoglumeGreenvale: String
-  let nordauraMeadowaura: String
-  let nordauraFirnrune: String
-  let nordauraFirnward: String
-  let nordauraGlenaura: String
+struct RoastArchiveCanvas {
+  let beanPassportCanvas: String
+  let beanPassportHeader: String
+  let beanPassportArtwork: String
+  let beanPassportCollection: String
+  let beanPassportStack: String
+  let beanPassportState: String
+  let beanPassportRender: String
 }
 
-struct ChovviCeramicBatch {
-  let nordwispMeadowvale: String
-  let nordauraHeathvika: String
-  let nordlumeEarthlume: String
-  let nordauraTundrawisp: String
+struct RoastArchiveScroll {
+  let cremaStoryCanvas: String
+  let cremaStoryMenu: String
+  let cremaStoryRoute: String
+  let moodPourRoute: String
 }
 
-struct ChovviSilkyAcidity {
-  let nordvaleGrovelume: String
-  let nordwardSprucevale: String
-  let nordnoraGlenvale: String
-  let skogauraSkogwisp: String
-  let nordvikaMeadowward: String
-  let nordwispTrailwisp: String
-  let nordwardGlenvale: String
-  let nordvikaSylvaward: String
+struct RoastArchiveHeader {
+  let coffeeBulletinCanvas: String
+  let coffeeBulletinHeader: String
+  let coffeeBulletinArtwork: String
+  let coffeeBulletinCollection: String
+  let coffeeBulletinStack: String
+  let coffeeBulletinState: String
+  let coffeeBulletinRender: String
+  let coffeeBulletinAction: String
 }
 
-struct SkogauraEarthlume {
-  let nordauraMeadowvale: String
-  let nordauraMeadowward: String
-  let nordauraBirchlume: String
-  let nordwardSpruceward: String
-  let nordvaleCedarnora: String
-  let skogauraEarthlume: String
-  let nordnoraFlorarune: String
-  let nordwardSprucevika: String
-  let nordnoraSprucelume: String
-  let nordnoraCedarnora: String
-  let nordvikaSkogvika: String
+struct RoastArchiveArtwork {
+  let cupChronicleCanvas: String
+  let cupChronicleHeader: String
+  let cupChronicleArtwork: String
+  let cupChronicleCollection: String
+  let cupChronicleStack: String
+  let coffeeBulletinScroll: String
+  let cupChronicleState: String
+  let cupChronicleRender: String
+  let cupChronicleAction: String
+  let cupChronicleLabel: String
+  let cupChronicleStatus: String
 }
 
-struct ChovviSilkyAftertaste {
-  let nordvaleWildslume: String
-  let nordruneSkogvale: String
-  let nordauraMeadowlume: String
-  let nordnoraCedarvika: String
-  let nordauraMeadowwisp: String
+struct RoastArchiveStatus {
+  let journalDraftCanvas: String
+  let journalDraftHeader: String
+  let journalDraftArtwork: String
+  let journalDraftCollection: String
+  let journalDraftStack: String
 }
 
-private struct ChovviSilkyAroma {
-  let nordnoraBoreawisp: URL
-  let skogward: String
-  let skogauraTundravale: String
-  let nordruneHeathvale: ChovviCeramicBrewer
-  let nordruneSkogrune: ChovviCeramicBatch
-  let nordwardGrovenora: ChovviSilkyAcidity
-  let nordauraMeadownora: SkogauraEarthlume
-  let nordvikaSylvavika: ChovviSilkyAftertaste
+private struct RoastArchiveCard {
+  let roastShelfCanvas: URL
+  let roastShelfHeader: String
+  let roastShelfArtwork: String
+  let roastShelfCollection: RoastArchiveCanvas
+  let roastShelfStack: RoastArchiveScroll
+  let roastShelfState: RoastArchiveHeader
+  let roastShelfRender: RoastArchiveArtwork
+  let roastShelfAction: RoastArchiveStatus
 }
 
-enum ChovviBrightBody {
-  private static let nordwardGlenwisp = ChovviSilkyAroma(
-    nordnoraBoreawisp: URL(string: "https://choovi.zzhb34qm.link")!,
-    skogward: "/chovviUnmask/cremaStoryCard",
-    skogauraTundravale: "/chovviUnmask/coffeeBulletin",
-    nordruneHeathvale: ChovviCeramicBrewer(
-      nordauraLarchward: "chovviSilkyAftertaste",
-      nordwispFjordrune: "chovviSilkyAcidity",
-      skoglumeGreenvale: "chovviSilkyAeropress",
-      nordauraMeadowaura: "chovviSilkyBrewer",
-      nordauraFirnrune: "chovviSilkyAroma",
-      nordauraFirnward: "chovviSilkyBatch",
-      nordauraGlenaura: "chovviSilkyBloom"
+enum RoastArchiveRender {
+  private static let roastArchivePreview = RoastArchiveCard(
+    roastShelfCanvas: URL(string: "https://choovi.zzhb34qm.link")!,
+    roastShelfHeader: "/chovviUnmask/cremaStoryCard",
+    roastShelfArtwork: "/chovviUnmask/coffeeBulletin",
+    roastShelfCollection: RoastArchiveCanvas(
+      beanPassportCanvas: "chovviSilkyAftertaste",
+      beanPassportHeader: "chovviSilkyAcidity",
+      beanPassportArtwork: "chovviSilkyAeropress",
+      beanPassportCollection: "chovviSilkyBrewer",
+      beanPassportStack: "chovviSilkyAroma",
+      beanPassportState: "chovviSilkyBatch",
+      beanPassportRender: "chovviSilkyBloom"
     ),
-    nordruneSkogrune: ChovviCeramicBatch(
-      nordwispMeadowvale: "cremaStoryCanvas",
-      nordauraHeathvika: "cremaStoryMenu",
-      nordlumeEarthlume: "cremaStoryRoute",
-      nordauraTundrawisp: "brewTableCarafe"
+    roastShelfStack: RoastArchiveScroll(
+      cremaStoryCanvas: "cremaStoryCanvas",
+      cremaStoryMenu: "cremaStoryMenu",
+      cremaStoryRoute: "cremaStoryRoute",
+      moodPourRoute: "brewTableCarafe"
     ),
-    nordwardGrovenora: ChovviSilkyAcidity(
-      nordvaleGrovelume: "data",
-      nordwardSprucevale: "moodPourRender",
-      nordnoraGlenvale: "moodPourCard",
-      skogauraSkogwisp: "moodPourImage",
-      nordvikaMeadowward: "moodPourRoute",
-      nordwispTrailwisp: "moodPourStack",
-      nordwardGlenvale: "moodPourArtwork",
-      nordvikaSylvaward: "moodPourCard"
+    roastShelfState: RoastArchiveHeader(
+      coffeeBulletinCanvas: "data",
+      coffeeBulletinHeader: "moodPourRender",
+      coffeeBulletinArtwork: "moodPourCard",
+      coffeeBulletinCollection: "moodPourImage",
+      coffeeBulletinStack: "moodPourRoute",
+      coffeeBulletinState: "moodPourStack",
+      coffeeBulletinRender: "moodPourArtwork",
+      coffeeBulletinAction: "moodPourCard"
     ),
-    nordauraMeadownora: SkogauraEarthlume(
-      nordauraMeadowvale: "event",
-      nordauraMeadowward: "callbackResult",
-      nordauraBirchlume: "productId",
-      nordwardSpruceward: "success",
-      nordvaleCedarnora: "status",
-      skogauraEarthlume: "message",
-      nordnoraFlorarune: "reason",
-      nordwardSprucevika: "nativeOpenState",
-      nordnoraSprucelume: "state",
-      nordnoraCedarnora: "source",
-      nordvikaSkogvika: "native"
+    roastShelfRender: RoastArchiveArtwork(
+      cupChronicleCanvas: "event",
+      cupChronicleHeader: "callbackResult",
+      cupChronicleArtwork: "productId",
+      cupChronicleCollection: "success",
+      cupChronicleStack: "status",
+      coffeeBulletinScroll: "message",
+      cupChronicleState: "reason",
+      cupChronicleRender: "nativeOpenState",
+      cupChronicleAction: "state",
+      cupChronicleLabel: "source",
+      cupChronicleStatus: "native"
     ),
-    nordvikaSylvavika: ChovviSilkyAftertaste(
-      nordvaleWildslume: "pay",
-      nordruneSkogvale: "logout",
-      nordauraMeadowlume: "vieSeedNote",
-      nordnoraCedarvika: "payResult",
-      nordauraMeadowwisp: "linkSuccessMessage"
+    roastShelfAction: RoastArchiveStatus(
+      journalDraftCanvas: "pay",
+      journalDraftHeader: "logout",
+      journalDraftArtwork: "vieSeedNote",
+      journalDraftCollection: "payResult",
+      journalDraftStack: "linkSuccessMessage"
     )
   )
 
-  private static let nordrunePineward = ChovviSilkyAroma(
-    nordnoraBoreawisp: URL(string: "https://api.zwwtesttop.top")!,
-    skogward: "/app/open",
-    skogauraTundravale: "/app/p",
-    nordruneHeathvale: ChovviCeramicBrewer(
-      nordauraLarchward: "deviceNo",
-      nordwispFjordrune: "appVersion",
-      skoglumeGreenvale: "pushToken",
-      nordauraMeadowaura: "roomPushMsgType",
-      nordauraFirnrune: "transactionId",
-      nordauraFirnward: "payload",
-      nordauraGlenaura: "callbackResult"
+  private static let roastArchiveTrigger = RoastArchiveCard(
+    roastShelfCanvas: URL(string: "https://api.zwwtesttop.top")!,
+    roastShelfHeader: "/app/open",
+    roastShelfArtwork: "/app/p",
+    roastShelfCollection: RoastArchiveCanvas(
+      beanPassportCanvas: "deviceNo",
+      beanPassportHeader: "appVersion",
+      beanPassportArtwork: "pushToken",
+      beanPassportCollection: "roomPushMsgType",
+      beanPassportStack: "transactionId",
+      beanPassportState: "payload",
+      beanPassportRender: "callbackResult"
     ),
-    nordruneSkogrune: ChovviCeramicBatch(
-      nordwispMeadowvale: "h5Url",
-      nordauraHeathvika: "tokenResult",
-      nordlumeEarthlume: "roomId",
-      nordauraTundrawisp: "webSocketUrl"
+    roastShelfStack: RoastArchiveScroll(
+      cremaStoryCanvas: "h5Url",
+      cremaStoryMenu: "tokenResult",
+      cremaStoryRoute: "roomId",
+      moodPourRoute: "webSocketUrl"
     ),
-    nordwardGrovenora: ChovviSilkyAcidity(
-      nordvaleGrovelume: "data",
-      nordwardSprucevale: "event",
-      nordnoraGlenvale: "event",
-      skogauraSkogwisp: "event",
-      nordvikaMeadowward: "event",
-      nordwispTrailwisp: "orderCode",
-      nordwardGlenvale: "batchNo",
-      nordvikaSylvaward: "openUrl"
+    roastShelfState: RoastArchiveHeader(
+      coffeeBulletinCanvas: "data",
+      coffeeBulletinHeader: "event",
+      coffeeBulletinArtwork: "event",
+      coffeeBulletinCollection: "event",
+      coffeeBulletinStack: "event",
+      coffeeBulletinState: "orderCode",
+      coffeeBulletinRender: "batchNo",
+      coffeeBulletinAction: "openUrl"
     ),
-    nordauraMeadownora: SkogauraEarthlume(
-      nordauraMeadowvale: "event",
-      nordauraMeadowward: "callbackResult",
-      nordauraBirchlume: "productId",
-      nordwardSpruceward: "success",
-      nordvaleCedarnora: "status",
-      skogauraEarthlume: "message",
-      nordnoraFlorarune: "reason",
-      nordwardSprucevika: "nativeOpenState",
-      nordnoraSprucelume: "state",
-      nordnoraCedarnora: "source",
-      nordvikaSkogvika: "native"
+    roastShelfRender: RoastArchiveArtwork(
+      cupChronicleCanvas: "event",
+      cupChronicleHeader: "callbackResult",
+      cupChronicleArtwork: "productId",
+      cupChronicleCollection: "success",
+      cupChronicleStack: "status",
+      coffeeBulletinScroll: "message",
+      cupChronicleState: "reason",
+      cupChronicleRender: "nativeOpenState",
+      cupChronicleAction: "state",
+      cupChronicleLabel: "source",
+      cupChronicleStatus: "native"
     ),
-    nordvikaSylvavika: ChovviSilkyAftertaste(
-      nordvaleWildslume: "pay",
-      nordruneSkogvale: "logout",
-      nordauraMeadowlume: "openBrowser",
-      nordnoraCedarvika: "payResult",
-      nordauraMeadowwisp: "linkSuccessMessage"
+    roastShelfAction: RoastArchiveStatus(
+      journalDraftCanvas: "pay",
+      journalDraftHeader: "logout",
+      journalDraftArtwork: "openBrowser",
+      journalDraftCollection: "payResult",
+      journalDraftStack: "linkSuccessMessage"
     )
   )
 
-  private static var nordvaleMeadowvale: ChovviSilkyAroma {
-    BeanIdentityArtwork.uviaForestRouteCoordinator ? nordrunePineward : nordwardGlenwisp
+  private static var roastArchiveRecord: RoastArchiveCard {
+    RoastArchiveState.roastShelfPreview ? roastArchiveTrigger : roastArchivePreview
   }
 
-  static var nordnoraBoreawisp: URL { nordvaleMeadowvale.nordnoraBoreawisp }
-  static var skogward: String { nordvaleMeadowvale.skogward }
-  static var skogauraTundravale: String { nordvaleMeadowvale.skogauraTundravale }
-  static var nordruneHeathvale: ChovviCeramicBrewer { nordvaleMeadowvale.nordruneHeathvale }
-  static var nordruneSkogrune: ChovviCeramicBatch { nordvaleMeadowvale.nordruneSkogrune }
-  static var nordwardGrovenora: ChovviSilkyAcidity { nordvaleMeadowvale.nordwardGrovenora }
-  static var nordauraMeadownora: SkogauraEarthlume { nordvaleMeadowvale.nordauraMeadownora }
-  static var nordvikaSylvavika: ChovviSilkyAftertaste { nordvaleMeadowvale.nordvikaSylvavika }
+  static var roastShelfCanvas: URL { roastArchiveRecord.roastShelfCanvas }
+  static var roastShelfHeader: String { roastArchiveRecord.roastShelfHeader }
+  static var roastShelfArtwork: String { roastArchiveRecord.roastShelfArtwork }
+  static var roastShelfCollection: RoastArchiveCanvas { roastArchiveRecord.roastShelfCollection }
+  static var roastShelfStack: RoastArchiveScroll { roastArchiveRecord.roastShelfStack }
+  static var roastShelfState: RoastArchiveHeader { roastArchiveRecord.roastShelfState }
+  static var roastShelfRender: RoastArchiveArtwork { roastArchiveRecord.roastShelfRender }
+  static var roastShelfAction: RoastArchiveStatus { roastArchiveRecord.roastShelfAction }
 
-  static func nordwispTundraaura(skogauraLeafnora skogauraEarthlume: [String: Any]) -> String? {
-    let nordlumeBoreaaura = [
-      (nordvaleMeadowvale.nordwardGrovenora.nordwardSprucevale, nordvaleMeadowvale.nordvikaSylvavika.nordvaleWildslume),
-      (nordvaleMeadowvale.nordwardGrovenora.nordnoraGlenvale, nordvaleMeadowvale.nordvikaSylvavika.nordruneSkogvale),
-      (nordvaleMeadowvale.nordwardGrovenora.skogauraSkogwisp, nordvaleMeadowvale.nordvikaSylvavika.nordauraMeadowlume),
-      (nordvaleMeadowvale.nordwardGrovenora.nordvikaMeadowward, nordvaleMeadowvale.nordvikaSylvavika.nordauraMeadowwisp),
-    ].filter { nordvikaFloravale(skogauraEarthlume[$0.0]) == $0.1 }
-    guard nordlumeBoreaaura.count == 1, let (_, nordwispTundraaura) = nordlumeBoreaaura.first else { return nil }
-    return nordwispTundraaura
+  static func coffeeBulletinChoice(cremaStorySource coffeeBulletinScroll: [String: Any]) -> String? {
+    let coffeeBulletinItem = [
+      (roastArchiveRecord.roastShelfState.coffeeBulletinHeader, roastArchiveRecord.roastShelfAction.journalDraftCanvas),
+      (roastArchiveRecord.roastShelfState.coffeeBulletinArtwork, roastArchiveRecord.roastShelfAction.journalDraftHeader),
+      (roastArchiveRecord.roastShelfState.coffeeBulletinCollection, roastArchiveRecord.roastShelfAction.journalDraftArtwork),
+      (roastArchiveRecord.roastShelfState.coffeeBulletinStack, roastArchiveRecord.roastShelfAction.journalDraftStack),
+    ].filter { coffeeBulletinImage(coffeeBulletinScroll[$0.0]) == $0.1 }
+    guard coffeeBulletinItem.count == 1, let (_, coffeeBulletinChoice) = coffeeBulletinItem.first else { return nil }
+    return coffeeBulletinChoice
   }
 
-  static func nordvaleGrovelume(skogauraLeafnora skogauraEarthlume: [String: Any]) -> [String: Any] {
-    skogauraEarthlume[nordvaleMeadowvale.nordwardGrovenora.nordvaleGrovelume] as? [String: Any] ?? [:]
+  static func coffeeBulletinCanvas(cremaStorySource coffeeBulletinScroll: [String: Any]) -> [String: Any] {
+    coffeeBulletinScroll[roastArchiveRecord.roastShelfState.coffeeBulletinCanvas] as? [String: Any] ?? [:]
   }
 
-  static func nordauraBirchvika(skogauraLeafnora nordvaleGrovelume: [String: Any]) -> (
-    nordauraBirchlume: String, skogauraCedarvale: String
+  static func coffeeBulletinRecord(cremaStorySource coffeeBulletinCanvas: [String: Any]) -> (
+    cupChronicleArtwork: String, cupChronicleChoice: String
   )? {
     guard
-      let nordauraBirchlume = nordvikaFloravale(
-        nordvaleGrovelume[nordvaleMeadowvale.nordwardGrovenora.nordwardGlenvale]),
-      let skogauraCedarvale = nordvikaFloravale(nordvaleGrovelume[nordvaleMeadowvale.nordwardGrovenora.nordwispTrailwisp])
+      let cupChronicleArtwork = coffeeBulletinImage(
+        coffeeBulletinCanvas[roastArchiveRecord.roastShelfState.coffeeBulletinRender]),
+      let cupChronicleChoice = coffeeBulletinImage(coffeeBulletinCanvas[roastArchiveRecord.roastShelfState.coffeeBulletinState])
     else { return nil }
-    return (nordauraBirchlume, skogauraCedarvale)
+    return (cupChronicleArtwork, cupChronicleChoice)
   }
 
-  static func nordvaleGroveCanopy(skogauraLeafnora nordvaleGrovelume: [String: Any]) -> String? {
-    nordvikaFloravale(nordvaleGrovelume[nordvaleMeadowvale.nordwardGrovenora.nordwardGlenvale])
+  static func coffeeBulletinLast(cremaStorySource coffeeBulletinCanvas: [String: Any]) -> String? {
+    coffeeBulletinImage(coffeeBulletinCanvas[roastArchiveRecord.roastShelfState.coffeeBulletinRender])
   }
 
-  static func nordvikaSkogvale(skogauraLeafnora nordvaleGrovelume: [String: Any]) -> String? {
-    guard let cckuiNeedsRequestVeil = nordvikaFloravale(
-      nordvaleGrovelume[nordvaleMeadowvale.nordwardGrovenora.nordvikaSylvaward])
+  static func coffeeBulletinPath(cremaStorySource coffeeBulletinCanvas: [String: Any]) -> String? {
+    guard let moodPourImage = coffeeBulletinImage(
+      coffeeBulletinCanvas[roastArchiveRecord.roastShelfState.coffeeBulletinAction])
     else { return nil }
-    if cckuiNeedsRequestVeil.hasPrefix("["), cckuiNeedsRequestVeil.hasSuffix(")"),
-      let uviaForestPlan = cckuiNeedsRequestVeil.range(of: "](", options: .backwards)
+    if moodPourImage.hasPrefix("["), moodPourImage.hasSuffix(")"),
+      let moodPourSection = moodPourImage.range(of: "](", options: .backwards)
     {
-      return nordvikaFloravale(String(cckuiNeedsRequestVeil[uviaForestPlan.upperBound...].dropLast()))
+      return coffeeBulletinImage(String(moodPourImage[moodPourSection.upperBound...].dropLast()))
     }
-    return cckuiNeedsRequestVeil
+    return moodPourImage
   }
 
-  static func nordvikaFloravale(_ nordlumeNordwisp: Any?) -> String? {
-    guard let nordvikaAspenlume = nordlumeNordwisp as? String else { return nil }
-    let nordauraMeadowrune = nordvikaAspenlume.trimmingCharacters(in: .whitespacesAndNewlines)
-    return nordauraMeadowrune.isEmpty ? nil : nordauraMeadowrune
+  static func coffeeBulletinImage(_ moodPourItem: Any?) -> String? {
+    guard let moodPourRecord = moodPourItem as? String else { return nil }
+    let moodPourUpdate = moodPourRecord.trimmingCharacters(in: .whitespacesAndNewlines)
+    return moodPourUpdate.isEmpty ? nil : moodPourUpdate
   }
 
-  static func nordvikaCedaraura(skogauraTundraaura nordlumeNordwisp: Any?) -> [String: Any]? {
-    if let nordvikaCedaraura = nordlumeNordwisp as? [String: Any] { return nordvikaCedaraura }
-    guard let nordvikaAspenlume = nordlumeNordwisp as? String,
-      let skoglumeGlennora = nordvikaAspenlume.data(using: .utf8)
+  static func coffeeBulletinStore(cremaStorySelection moodPourItem: Any?) -> [String: Any]? {
+    if let coffeeBulletinStore = moodPourItem as? [String: Any] { return coffeeBulletinStore }
+    guard let moodPourRecord = moodPourItem as? String,
+      let moodPourArtwork = moodPourRecord.data(using: .utf8)
     else { return nil }
-    return (try? JSONSerialization.jsonObject(with: skoglumeGlennora)) as? [String: Any]
+    return (try? JSONSerialization.jsonObject(with: moodPourArtwork)) as? [String: Any]
   }
 
-  static func skoglumeFjordlume(_ skogauraSpruceward: URL) -> Bool {
-    guard let skoglumeFernnora = skogauraSpruceward.host?.lowercased() else { return false }
-    return ["realtime.ably.io", "realtime.ably.com"].contains(skoglumeFernnora)
-      || skoglumeFernnora.hasSuffix(".realtime.ably.io")
-      || skoglumeFernnora.hasSuffix(".realtime.ably.com")
+  static func moodPourSelection(_ moodPourSource: URL) -> Bool {
+    guard let moodPourChoice = moodPourSource.host?.lowercased() else { return false }
+    return ["realtime.ably.io", "realtime.ably.com"].contains(moodPourChoice)
+      || moodPourChoice.hasSuffix(".realtime.ably.io")
+      || moodPourChoice.hasSuffix(".realtime.ably.com")
   }
 
-  static func skoglumeFjordnora(_ skoglumeGlenvika: URL, _ nordvikaSkoglume: URL) -> Bool {
-    skoglumeGlenvika.scheme?.lowercased() == nordvikaSkoglume.scheme?.lowercased()
-      && skoglumeGlenvika.host?.lowercased() == nordvikaSkoglume.host?.lowercased()
-      && (skoglumeGlenvika.port ?? (skoglumeGlenvika.scheme == "https" ? 443 : 80))
-        == (nordvikaSkoglume.port ?? (nordvikaSkoglume.scheme == "https" ? 443 : 80))
+  static func moodPourCard(_ moodPourLayout: URL, _ moodPourMenu: URL) -> Bool {
+    moodPourLayout.scheme?.lowercased() == moodPourMenu.scheme?.lowercased()
+      && moodPourLayout.host?.lowercased() == moodPourMenu.host?.lowercased()
+      && (moodPourLayout.port ?? (moodPourLayout.scheme == "https" ? 443 : 80))
+        == (moodPourMenu.port ?? (moodPourMenu.scheme == "https" ? 443 : 80))
   }
 }
 
-enum BeanPassportStack {
+enum CoffeeBulletinHeader {
 
-  static let nordvikaCedarnora = "chovviLaunchTasting"
-  static let nordvikaWildsaura = "announceReserveChange"
+  static let firstSipCanvas = "chovviLaunchTasting"
+  static let firstSipScroll = "announceReserveChange"
 }
 
-enum TastingReplyCanvas {
-  static let nordauraLarchward = "choovi.ChovviFloralTasting"
-  static let skoglumeGreenvale = "choovi_pushChovviThermalTastingkey"
-  static let nordauraSylvaward = "choovi.ChovviThermalAlertView"
-  static let skoglumePineward = "choovi.skoglumePineward"
-  static let skoglumeFjordvale = "choovi.ChovviRoastReserve"
-  static let nordvikaLarchaura = "choovi.ChovviGranularBrew"
+enum CoffeeBulletinState {
+  static let beanPassportCanvas = "choovi.ChovviFloralTasting"
+  static let beanPassportArtwork = "choovi_pushChovviThermalTastingkey"
+  static let firstSipHeader = "choovi.ChovviThermalAlertView"
+  static let firstSipArtwork = "choovi.skoglumePineward"
+  static let firstSipCollection = "choovi.ChovviRoastReserve"
+  static let firstSipStack = "choovi.ChovviGranularBrew"
 }
 
-struct MoodGalleryImage {
-  let nordwispMeadowvale: URL
-  let nordlumeEarthlume: String
-  let nordauraTundrawisp: URL
+struct MoodPourCanvas {
+  let cremaStoryCanvas: URL
+  let cremaStoryRoute: String
+  let moodPourRoute: URL
 
-  static func skoglumeFirnrune(skogauraTundraaura nordauraSprucenora: [String: Any]) throws -> Self? {
-    let skoglumePinewisp = ChovviBrightBody.nordruneSkogrune
-    guard let skoglumeFirnnora = nordauraSprucenora[skoglumePinewisp.nordwispMeadowvale], !(skoglumeFirnnora is NSNull) else {
+  static func moodPourDestination(cremaStorySelection cremaStoryRecord: [String: Any]) throws -> Self? {
+    let cremaStoryCard = RoastArchiveRender.roastShelfStack
+    guard let cremaStoryItem = cremaStoryRecord[cremaStoryCard.cremaStoryCanvas], !(cremaStoryItem is NSNull) else {
       return nil
     }
-    if let skoglumeLeafvale = skoglumeFirnnora as? String,
-      skoglumeLeafvale.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    if let cremaStoryChoice = cremaStoryItem as? String,
+      cremaStoryChoice.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     {
       return nil
     }
-    guard let skoglumeLeafvale = ChovviBrightBody.nordvikaFloravale(skoglumeFirnnora),
-      let nordwispMeadowvale = URL(string: skoglumeLeafvale),
-      ["https", "http"].contains(nordwispMeadowvale.scheme?.lowercased() ?? ""),
-      nordwispMeadowvale.host != nil,
-      let nordlumeEarthlume = ChovviBrightBody.nordvikaFloravale(
-        nordauraSprucenora[skoglumePinewisp.nordlumeEarthlume]),
-      let skoglumeFirnaura = ChovviBrightBody.nordvikaFloravale(
-        nordauraSprucenora[skoglumePinewisp.nordauraTundrawisp]),
-      var skogauraNordnora = URLComponents(string: skoglumeFirnaura),
-      ["wss", "ws"].contains(skogauraNordnora.scheme?.lowercased() ?? ""),
-      let nordruneCedarward = skogauraNordnora.url,
-      nordruneCedarward.host != nil,
-      ChovviBrightBody.skoglumeFjordlume(nordruneCedarward)
+    guard let cremaStoryChoice = RoastArchiveRender.coffeeBulletinImage(cremaStoryItem),
+      let cremaStoryCanvas = URL(string: cremaStoryChoice),
+      ["https", "http"].contains(cremaStoryCanvas.scheme?.lowercased() ?? ""),
+      cremaStoryCanvas.host != nil,
+      let cremaStoryRoute = RoastArchiveRender.coffeeBulletinImage(
+        cremaStoryRecord[cremaStoryCard.cremaStoryRoute]),
+      let cremaStoryStatus = RoastArchiveRender.coffeeBulletinImage(
+        cremaStoryRecord[cremaStoryCard.moodPourRoute]),
+      var cremaStoryLayout = URLComponents(string: cremaStoryStatus),
+      ["wss", "ws"].contains(cremaStoryLayout.scheme?.lowercased() ?? ""),
+      let cremaStoryDestination = cremaStoryLayout.url,
+      cremaStoryDestination.host != nil,
+      RoastArchiveRender.moodPourSelection(cremaStoryDestination)
     else {
-      throw ChovviBotanicalAeropress.nordruneGroveward
+      throw MoodPourPreview.moodPourStatus
     }
 
-    let skoglumeMossward = ChovviBrightBody.nordvikaCedaraura(skogauraTundraaura: nordauraSprucenora[skoglumePinewisp.nordauraHeathvika])
-    let nordauraHeathvika =
-      skoglumeMossward == nil
-      ? ChovviBrightBody.nordvikaFloravale(nordauraSprucenora[skoglumePinewisp.nordauraHeathvika])
-      : ChovviBrightBody.nordvikaFloravale(skoglumeMossward?["token"])
-    var skoglumeMossvika = skogauraNordnora.queryItems ?? []
-    if !skoglumeMossvika.contains(where: {
+    let cremaStoryPreview = RoastArchiveRender.coffeeBulletinStore(cremaStorySelection: cremaStoryRecord[cremaStoryCard.cremaStoryMenu])
+    let cremaStoryMenu =
+      cremaStoryPreview == nil
+      ? RoastArchiveRender.coffeeBulletinImage(cremaStoryRecord[cremaStoryCard.cremaStoryMenu])
+      : RoastArchiveRender.coffeeBulletinImage(cremaStoryPreview?["token"])
+    var cremaStoryCollection = cremaStoryLayout.queryItems ?? []
+    if !cremaStoryCollection.contains(where: {
       ["accessToken", "key"].contains($0.name) && !($0.value ?? "").isEmpty
     }) {
-      guard let nordauraHeathvika else { throw ChovviBotanicalAeropress.nordruneGroveward }
-      skoglumeMossvika.append(URLQueryItem(name: "accessToken", value: nordauraHeathvika))
+      guard let cremaStoryMenu else { throw MoodPourPreview.moodPourStatus }
+      cremaStoryCollection.append(URLQueryItem(name: "accessToken", value: cremaStoryMenu))
     }
-    skoglumeMossvika.removeAll { $0.name == "format" }
-    skoglumeMossvika.append(URLQueryItem(name: "format", value: "json"))
-    skogauraNordnora.queryItems = skoglumeMossvika
-    guard let nordauraTundrawisp = skogauraNordnora.url else {
-      throw ChovviBotanicalAeropress.nordruneGroveward
+    cremaStoryCollection.removeAll { $0.name == "format" }
+    cremaStoryCollection.append(URLQueryItem(name: "format", value: "json"))
+    cremaStoryLayout.queryItems = cremaStoryCollection
+    guard let moodPourRoute = cremaStoryLayout.url else {
+      throw MoodPourPreview.moodPourStatus
     }
     return Self(
-      nordwispMeadowvale: nordwispMeadowvale, nordlumeEarthlume: nordlumeEarthlume, nordauraTundrawisp: nordauraTundrawisp)
+      cremaStoryCanvas: cremaStoryCanvas, cremaStoryRoute: cremaStoryRoute, moodPourRoute: moodPourRoute)
   }
 }
 
-enum ChovviBotanicalAeropress: LocalizedError {
-  case skoglumeGlenvale
-  case nordruneGroveward
-  case nordwispSkogvale
+enum MoodPourPreview: LocalizedError {
+  case moodPourState
+  case moodPourStatus
+  case moodPourPreview
 
   var errorDescription: String? {
     switch self {
-    case .skoglumeGlenvale:
+    case .moodPourState:
       return "Unable to connect. Please try again."
-    case .nordruneGroveward:
+    case .moodPourStatus:
       return "The connection details are incomplete. Please try again later."
-    case .nordwispSkogvale:
+    case .moodPourPreview:
       return "Your purchase is awaiting confirmation. Please try again later."
     }
   }

@@ -38,27 +38,23 @@ final class ChovviThermalRoast {
         "vjrtmtpqdezdifux": String.chovviUnmask("$G06.69V9u")
     ]
 
-    private var amberRitualArtwork: Task<Void, Never>?
-
-    private init() {
-        amberRitualArtwork = Task { [weak self] in
-            guard let self else { return }
-            for await amberRitualCollection in Transaction.updates {
-                _ = try? await self.amberRitualStack(amberRitualCollection, amberRitualStack: nil)
-            }
-        }
-    }
-
-    deinit {
-        amberRitualArtwork?.cancel()
-    }
+    private init() {}
 
     func amberRitualStatus(_ amberRitualRoute: Product, amberRitualStatus amberRitualSection: String) async throws -> ChovviThermalTexture {
+        guard Self.amberRitualHeader[amberRitualRoute.id] != nil,
+              !amberRitualSection.isEmpty else {
+            throw StoreKitError.unknown
+        }
         let amberRitualPreview = amberRitualLabel(amberRitualSection)
         let amberRitualTrigger = try await amberRitualRoute.purchase(options: [.appAccountToken(amberRitualPreview)])
         switch amberRitualTrigger {
         case .success(let amberRitualLayout):
-            let amberRitualSource = try await amberRitualStack(amberRitualLayout, amberRitualStack: amberRitualSection)
+            let amberRitualSource = try await amberRitualStack(
+                amberRitualLayout,
+                amberRitualStack: amberRitualSection,
+                amberRitualChoice: amberRitualRoute.id,
+                amberRitualPreview: amberRitualPreview
+            )
             return .amberRitualCanvas(amberRitualSource)
         case .pending:
             return .amberRitualScroll
@@ -73,7 +69,12 @@ final class ChovviThermalRoast {
         ChovviRoastReserve.availableMarks(for: amberRitualRecord)
     }
 
-    private func amberRitualStack(_ amberRitualState: VerificationResult<Transaction>, amberRitualStack amberRitualRender: String?) async throws -> Int {
+    private func amberRitualStack(
+        _ amberRitualState: VerificationResult<Transaction>,
+        amberRitualStack amberRitualRender: String,
+        amberRitualChoice: String,
+        amberRitualPreview: UUID
+    ) async throws -> Int {
         let amberRitualAction: Transaction
         switch amberRitualState {
         case .verified(let amberRitualLabel):
@@ -81,13 +82,13 @@ final class ChovviThermalRoast {
         case .unverified(_, let amberRitualStatus):
             throw amberRitualStatus
         }
-        guard let amberRitualRoute = Self.amberRitualHeader[amberRitualAction.productID] else {
-            await amberRitualAction.finish()
-            return 0
+        guard amberRitualAction.productID == amberRitualChoice,
+              amberRitualAction.appAccountToken == amberRitualPreview,
+              let amberRitualRoute = Self.amberRitualHeader[amberRitualAction.productID],
+              !amberRitualRender.isEmpty else {
+            throw StoreKitError.unknown
         }
-        let amberRitualSection = amberRitualRender ?? amberRitualPreview(amberRitualAction.appAccountToken)
-        guard let amberRitualSection, !amberRitualSection.isEmpty else { return 0 }
-        let amberRitualTrigger = amberRitualSection.lowercased()
+        let amberRitualTrigger = amberRitualRender.lowercased()
         let amberRitualLayout = "chovviThermalRoast.\(amberRitualTrigger)"
         var amberRitualSource = Set(UserDefaults.standard.stringArray(forKey: amberRitualLayout) ?? [])
         let amberRitualMenu = String(amberRitualAction.id)
@@ -118,11 +119,6 @@ final class ChovviThermalRoast {
         return amberRitualLayout
     }
 
-    private func amberRitualPreview(_ amberRitualTrigger: UUID?) -> String? {
-        guard let amberRitualTrigger else { return nil }
-        let amberRitualLayout = UserDefaults.standard.dictionary(forKey: "chovviThermalBody") as? [String: String] ?? [:]
-        return amberRitualLayout.first { $0.value.caseInsensitiveCompare(amberRitualTrigger.uuidString) == .orderedSame }?.key
-    }
 }
 
 final class ChovviThermalTasting: UIViewController {
