@@ -624,7 +624,7 @@ private final class ChovviCeramicAcidity: UIView {
     translatesAutoresizingMaskIntoConstraints = false
     isUserInteractionEnabled = false
     isAccessibilityElement = true
-    accessibilityIdentifier = "uvia.com.sharecom.viaes"
+    accessibilityIdentifier = "choovi.com.coffsindy.choovi"
     accessibilityLabel = "\(cckuiRosterSectionLine). \(vieForestActivity)"
     backgroundColor = UIColor(red: 0.08, green: 0.055, blue: 0.16, alpha: 0.97)
     layer.cornerRadius = 22

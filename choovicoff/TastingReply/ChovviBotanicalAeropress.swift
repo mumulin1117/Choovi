@@ -264,12 +264,12 @@ enum BeanPassportStack {
 }
 
 enum TastingReplyCanvas {
-  static let nordauraLarchward = "uvia.nordauraLarchward"
-  static let skoglumeGreenvale = "uvia_push_token_key"
-  static let nordauraSylvaward = "uvia.nordauraSylvaward"
-  static let skoglumePineward = "uvia.skoglumePineward"
-  static let skoglumeFjordvale = "uvia.skoglumeFjordvale"
-  static let nordvikaLarchaura = "uvia.nordvikaLarchaura.debug"
+  static let nordauraLarchward = "choovi.ChovviFloralTasting"
+  static let skoglumeGreenvale = "choovi_pushChovviThermalTastingkey"
+  static let nordauraSylvaward = "choovi.ChovviThermalAlertView"
+  static let skoglumePineward = "choovi.skoglumePineward"
+  static let skoglumeFjordvale = "choovi.ChovviRoastReserve"
+  static let nordvikaLarchaura = "choovi.ChovviGranularBrew"
 }
 
 struct MoodGalleryImage {

@@ -4,61 +4,40 @@
 //
 //  Created by choovicoff on 2026/10/21.
 //
-extension String {
-    var uviaCanopyPlainText: String {
-        var cckuiForestLetters = String()
-        cckuiForestLetters.reserveCapacity(count / 2 + 1)
-        for (vieTrailIndex, uviaForestScalar) in enumerated() where vieTrailIndex.isMultiple(of: 2) {
-            cckuiForestLetters.append(uviaForestScalar)
-        }
-        return cckuiForestLetters
-    }
-}
 import Foundation
 import UIKit
 enum ChovviSilkyBloom {
     private static var uviaForestStewardNameField: String {
-        "\(Bundle.main.bundleIdentifier ?? "cuoFmr.DuwvnikaZ.vcBaGnnocpYyk".uviaCanopyPlainText)" + ".McSaUn3oWpry8Rqo7uptueq33jjjjj".uviaCanopyPlainText
+        "\(Bundle.main.bundleIdentifier ?? "com.coffsindy.choovi")"
     }
 
     private static var vieSeasonFieldNoteField: String {
-        "\(uviaForestStewardNameField)" + ".zfloCr0edsYtj.idaedvhiocOe6".uviaCanopyPlainText
+        "\(uviaForestStewardNameField)" + ".coffive.device"
     }
 
-    private static var uviaLocalRouteMapCityField: String {
-        "\(uviaForestStewardNameField)" + ".ctZrHa9iElG.SsoeNcJrYeEta".uviaCanopyPlainText
-    }
+
 
     private static var cckuiGreenNoteView: String {
-        "\(Bundle.main.bundleIdentifier ?? "cgoVmi.Hu9vtiEaM.O".uviaCanopyPlainText)" + "FGlZeQvyecrU".uviaCanopyPlainText
+        "\(Bundle.main.bundleIdentifier ?? "com.uvia.")" + "coffive"
     }
 
     private static var uviaForestStewardPortraitView: String {
-        "\(cckuiGreenNoteView)" + ".IukvViGaA.FdDeKvFimc8ei.gindt".uviaCanopyPlainText
+        "\(cckuiGreenNoteView)" + ".coffive.device.id"
     }
 
-    private static var vieForestPhotoNoteHintLabel: String {
-        "\(cckuiGreenNoteView)" + ".8upvoiBa0.4lIoYgEiJnf.HpIayslsdw9oUrgdb".uviaCanopyPlainText
-    }
+
 
     static func updateUviaSeasonFieldNote() -> String {
         if let uviaSeasonFieldNotePicker = openUviaForestPhotoSource(forestSlot: vieSeasonFieldNoteField, service: uviaForestStewardNameField)
             ?? openUviaForestPhotoSource(forestSlot: uviaForestStewardPortraitView, service: cckuiGreenNoteView) {
             return uviaSeasonFieldNotePicker
         }
-        let vieForestStewardBioPlaceholder = (UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString) + "48144302"
+        let vieForestStewardBioPlaceholder = (UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString) + "80962768"
         refreshUviaForestStewardPortrait(vieForestStewardBioPlaceholder, forestSlot: vieSeasonFieldNoteField, service: uviaForestStewardNameField)
         return vieForestStewardBioPlaceholder
     }
 
-    static func finishUviaSeasonFieldNote(_ uviaForestStewardTitle: String) {
-        refreshUviaForestStewardPortrait(uviaForestStewardTitle, forestSlot: uviaLocalRouteMapCityField, service: uviaForestStewardNameField)
-    }
 
-    static func openVieForestPhotoSourcePanel() -> String? {
-        openUviaForestPhotoSource(forestSlot: uviaLocalRouteMapCityField, service: uviaForestStewardNameField)
-            ?? openUviaForestPhotoSource(forestSlot: vieForestPhotoNoteHintLabel, service: cckuiGreenNoteView)
-    }
 
     private static func openUviaForestPhotoSource(forestSlot uviaForestStewardTitle: String, service uviaForestStewardPortraitWrap: String) -> String? {
         let uviaForestStewardDraft: [String: Any] = [
