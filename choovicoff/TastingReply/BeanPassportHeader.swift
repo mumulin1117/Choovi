@@ -43,9 +43,26 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
   private var originPortraitLayout: DispatchWorkItem?
   private var originPortraitScroll: Task<Void, Never>?
   private var originPortraitSection = false
+#if DEBUG
+  private var dailyBrewScroll: TimeInterval?
+#endif
+
+  static func dailyBrewHeader() -> WKWebView {
+#if DEBUG
+    let dailyBrewScroll = ProcessInfo.processInfo.systemUptime
+    defer {
+      print("[Choovi B startup] webview_prepare_ms=\((ProcessInfo.processInfo.systemUptime - dailyBrewScroll) * 1000)")
+    }
+#endif
+    let dailyBrewCanvas = WKWebViewConfiguration()
+    dailyBrewCanvas.allowsInlineMediaPlayback = true
+    dailyBrewCanvas.mediaTypesRequiringUserActionForPlayback = []
+    return WKWebView(frame: .zero, configuration: dailyBrewCanvas)
+  }
 
   init(
     originPortraitCanvas: MoodPourCanvas, originPortraitState: Bool,
+    dailyBrewCanvas: WKWebView? = nil,
     originPortraitAction: @escaping () -> Void, originPortraitDestination: @escaping () -> Void
   ) {
     self.originPortraitCanvas = originPortraitCanvas
@@ -53,10 +70,17 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
     self.originPortraitAction = originPortraitAction
     self.originPortraitDestination = originPortraitDestination
     originPortraitRoute = ChovviCeramicBody(originPortraitCanvas: originPortraitCanvas)
+    originPortraitArtwork = dailyBrewCanvas
     super.init(nibName: nil, bundle: nil)
   }
   func webView(_ originPortraitArtwork: WKWebView, didFinish brewGatheringRecord: WKNavigation!) {
     guard let brewGatheringRecord, !originPortraitTrigger, brewGatheringRecord === originPortraitRecord else { return }
+#if DEBUG
+    if let dailyBrewScroll {
+      print("[Choovi B startup] web_document_ms=\((ProcessInfo.processInfo.systemUptime - dailyBrewScroll) * 1000)")
+    }
+    dailyBrewScroll = nil
+#endif
     chovviBotanicalAcidity.moodGalleryState = true
     originPortraitItem?.cancel()
     originPortraitScroll?.cancel()
@@ -99,7 +123,10 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor(red: 4 / 255, green: 3 / 255, blue: 19 / 255, alpha: 1)
-    let brewGatheringCanvas = WKWebViewConfiguration()
+#if DEBUG
+    print("[Choovi B startup] webview_reused=\(originPortraitArtwork != nil)")
+#endif
+    let brewGatheringCanvas = originPortraitArtwork?.configuration ?? WKWebViewConfiguration()
     let originPortraitSelection = BeanPassportHeader()
     originPortraitSelection.originPortraitSelection = self
     for brewGatheringArtwork in [RoastArchiveRender.roastShelfAction.journalDraftHeader, "Close"] {
@@ -107,7 +134,9 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
     }
     brewGatheringCanvas.allowsInlineMediaPlayback = true
     brewGatheringCanvas.mediaTypesRequiringUserActionForPlayback = []
-    originPortraitArtwork = WKWebView(frame: .zero, configuration: brewGatheringCanvas)
+    if originPortraitArtwork == nil {
+      originPortraitArtwork = WKWebView(frame: .zero, configuration: brewGatheringCanvas)
+    }
     originPortraitArtwork.translatesAutoresizingMaskIntoConstraints = false
     originPortraitArtwork.navigationDelegate = self
     originPortraitArtwork.uiDelegate = self
@@ -532,6 +561,9 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
 
   func webView(_ originPortraitArtwork: WKWebView, didStartProvisionalNavigation brewGatheringRecord: WKNavigation!) {
     guard !originPortraitTrigger else { return }
+#if DEBUG
+    dailyBrewScroll = ProcessInfo.processInfo.systemUptime
+#endif
     originPortraitRecord = brewGatheringRecord
     originPortraitStatus = false
   }

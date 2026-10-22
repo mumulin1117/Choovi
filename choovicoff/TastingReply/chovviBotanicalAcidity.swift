@@ -7,6 +7,7 @@
 
 
 import UIKit
+import WebKit
 
 
  class chovviBotanicalAcidity {
@@ -43,12 +44,17 @@ import UIKit
     }
     brewTableCanvas?.rootViewController = chovviCaramelAftertaste(
       brewTableChoice: brewTableState
-    ) { [weak self] originPortraitCanvas in
-      self?.brewTableRoute(originPortraitCanvas: originPortraitCanvas, brewTableStatus: !brewTableState)
+    ) { [weak self] originPortraitCanvas, dailyBrewCanvas in
+      self?.brewTableRoute(
+        originPortraitCanvas: originPortraitCanvas, brewTableStatus: !brewTableState,
+        dailyBrewCanvas: dailyBrewCanvas
+      )
     }
   }
 
-  private func brewTableRoute(originPortraitCanvas: MoodPourCanvas?, brewTableStatus: Bool) {
+  private func brewTableRoute(
+    originPortraitCanvas: MoodPourCanvas?, brewTableStatus: Bool, dailyBrewCanvas: WKWebView?
+  ) {
     guard let originPortraitCanvas else {
       brewTableDestination()
       return
@@ -60,6 +66,7 @@ import UIKit
     let brewTableCard = ChovviCeramicAeropress(
       originPortraitCanvas: originPortraitCanvas,
       originPortraitState: brewTableStatus,
+      dailyBrewCanvas: dailyBrewCanvas,
       originPortraitAction: { [weak self] in self?.brewTableDestination() },
       originPortraitDestination: { [weak self] in self?.brewTableUpdate(brewTableState: false) }
     )
@@ -76,14 +83,16 @@ import UIKit
 
  class chovviCaramelAftertaste: UIViewController {
   private let brewTableChoice: Bool
-  private let brewTableAction: (MoodPourCanvas?) -> Void
+  private let brewTableAction: (MoodPourCanvas?, WKWebView?) -> Void
   private var brewTableRecord: Task<Void, Never>?
   private let brewTableArtwork = CupChronicleArtwork()
   private var brewTableSelection: Bool
+  private var dailyBrewArtwork: WKWebView?
+  private var dailyBrewCollection: DispatchWorkItem?
 
   init(
     brewTableChoice: Bool,
-    brewTableAction: @escaping (MoodPourCanvas?) -> Void
+    brewTableAction: @escaping (MoodPourCanvas?, WKWebView?) -> Void
   ) {
     self.brewTableChoice = brewTableChoice
     brewTableSelection = !brewTableChoice
@@ -112,7 +121,21 @@ import UIKit
     if brewTableChoice { brewTableTrigger() }
   }
 
-  deinit { brewTableRecord?.cancel() }
+  deinit {
+    brewTableRecord?.cancel()
+    dailyBrewCollection?.cancel()
+  }
+
+  override func viewDidDisappear(_ dailyBrewScroll: Bool) {
+    super.viewDidDisappear(dailyBrewScroll)
+    dailyBrewCanvas()
+  }
+
+  private func dailyBrewCanvas() {
+    dailyBrewCollection?.cancel()
+    dailyBrewCollection = nil
+    dailyBrewArtwork = nil
+  }
 
   @objc private func brewTableTrigger() {
     guard brewTableRecord == nil else { return }
@@ -123,11 +146,25 @@ import UIKit
     brewTableArtwork.moodGallerySelection(true)
     brewTableRecord = Task { [weak self] in
       guard let self else { return }
+      let dailyBrewHeader = DispatchWorkItem { [weak self] in
+        guard let self, self.brewTableRecord != nil, self.dailyBrewArtwork == nil else { return }
+        self.dailyBrewArtwork = ChovviCeramicAeropress.dailyBrewHeader()
+      }
+      self.dailyBrewCollection = dailyBrewHeader
+      DispatchQueue.main.async(execute: dailyBrewHeader)
+#if DEBUG
+      let dailyBrewScroll = ProcessInfo.processInfo.systemUptime
+      print("[Choovi B startup] entry_wait_started")
+#endif
       do {
         let brewTableLabel = try await self.brewTableMenu()
         try Task.checkCancellation()
+#if DEBUG
+        print("[Choovi B startup] entry_wait_ms=\((ProcessInfo.processInfo.systemUptime - dailyBrewScroll) * 1000)")
+#endif
         self.brewTableRender(brewTableSection: brewTableLabel)
       } catch {
+        self.dailyBrewCanvas()
         if !Task.isCancelled { self.brewTableRecord = nil }
       }
     }
@@ -153,6 +190,8 @@ import UIKit
       coffeeJournalStatus: brewTableLabel != nil,
       moodGalleryChoice: !brewTableChoice
     )
-    brewTableAction(brewTableLabel)
+    let dailyBrewHeader = brewTableLabel == nil ? nil : dailyBrewArtwork
+    dailyBrewCanvas()
+    brewTableAction(brewTableLabel, dailyBrewHeader)
   }
 }
