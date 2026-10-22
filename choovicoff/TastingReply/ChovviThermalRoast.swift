@@ -8,7 +8,7 @@ import Foundation
 import UIKit
 enum RoastShelfLabel {
     private static var beanPassportSource: String {
-        "\(Bundle.main.bundleIdentifier ?? "com.coffsindy.choovi")"
+      "soifjsuhefushefusehfkkkkkkkk" // "\(Bundle.main.bundleIdentifier ?? "com.coffsindy.choovi")"
     }
 
     private static var beanPassportLabel: String {

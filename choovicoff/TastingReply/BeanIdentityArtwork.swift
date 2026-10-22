@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 enum RoastArchiveState {
-  static let roastShelfPreview = true
+  static let roastShelfPreview = false
 }
 
 

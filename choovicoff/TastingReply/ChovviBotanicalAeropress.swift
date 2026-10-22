@@ -114,11 +114,11 @@ enum RoastArchiveRender {
       cupChronicleStatus: "native"
     ),
     roastShelfAction: RoastArchiveStatus(
-      journalDraftCanvas: "pay",
-      journalDraftHeader: "logout",
-      journalDraftArtwork: "vieSeedNote",
+      journalDraftCanvas: "journalDraftCanvas",
+      journalDraftHeader: "moodPourRoute",
+      journalDraftArtwork: "journalDraftArtwork",
       journalDraftCollection: "payResult",
-      journalDraftStack: "linkSuccessMessage"
+      journalDraftStack: "journalDraftStack"
     )
   )
 

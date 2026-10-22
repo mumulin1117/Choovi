@@ -33,7 +33,7 @@ final class CoffeeBulletinArtwork {
     var cupChronicleLayout: [String: Any] = [
         cupChronicleMenu.beanPassportCanvas: RoastShelfLabel.beanPassportRecord(),
       cupChronicleMenu.beanPassportHeader: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")
-        as? String ?? "2.0",
+        as? String ?? "1.2",
     ]
     if let cremaStoryLabel = RoastArchiveRender.coffeeBulletinImage(
       UserDefaults.standard.string(forKey: CoffeeBulletinState.beanPassportArtwork)
