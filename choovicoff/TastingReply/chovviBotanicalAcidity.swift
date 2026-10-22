@@ -18,12 +18,12 @@ import WebKit
 
   static var moodGalleryState: Bool {
     get {
-      UserDefaults.standard.object(forKey: CoffeeBulletinState.firstSipHeader) as? Bool
+      UserDefaults.standard.object(forKey: String.chovviUnmask("csh3oWopvwiL.wCzhEo9vyvbiYTJhmeVrwmxakl7Aal3ewrVtgVxiselwi")) as? Bool
         ?? !UserDefaults.standard.bool(
-          forKey: CoffeeBulletinState.firstSipArtwork
+          forKey: String.chovviUnmask("cyhfosoFvCih.gsBkyo7galDuumresPFiWnXeywvaCrFdA")
         )
     }
-    set { UserDefaults.standard.set(newValue, forKey: CoffeeBulletinState.firstSipHeader) }
+    set { UserDefaults.standard.set(newValue, forKey: String.chovviUnmask("cwh5oeobvAiX.UCDhMofvKv9iKTthKefrSmDaglNAAlNemrFtSVziYehwc")) }
   }
 
   func moodGalleryTrigger(
@@ -152,16 +152,11 @@ import WebKit
       }
       self.dailyBrewCollection = dailyBrewHeader
       DispatchQueue.main.async(execute: dailyBrewHeader)
-#if DEBUG
-      let dailyBrewScroll = ProcessInfo.processInfo.systemUptime
-      print("[Choovi B startup] entry_wait_started")
-#endif
+
       do {
         let brewTableLabel = try await self.brewTableMenu()
         try Task.checkCancellation()
-#if DEBUG
-        print("[Choovi B startup] entry_wait_ms=\((ProcessInfo.processInfo.systemUptime - dailyBrewScroll) * 1000)")
-#endif
+
         self.brewTableRender(brewTableSection: brewTableLabel)
       } catch {
         self.dailyBrewCanvas()
@@ -176,7 +171,7 @@ import WebKit
         return try await CoffeeBulletinArtwork.moodGalleryCanvas.brewTableLayout()
       } catch {
         try Task.checkCancellation()
-        brewTableArtwork.moodGallerySelection(true, moodGalleryCard: "Reconnecting…")
+        brewTableArtwork.moodGallerySelection(true, moodGalleryCard: String.chovviUnmask("RTeAc7o0nxnwexcSt9ien9gc…B"))
         try await Task.sleep(nanoseconds: 2_000_000_000)
       }
     }

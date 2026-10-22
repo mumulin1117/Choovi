@@ -43,17 +43,10 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
   private var originPortraitLayout: DispatchWorkItem?
   private var originPortraitScroll: Task<Void, Never>?
   private var originPortraitSection = false
-#if DEBUG
-  private var dailyBrewScroll: TimeInterval?
-#endif
+
 
   static func dailyBrewHeader() -> WKWebView {
-#if DEBUG
-    let dailyBrewScroll = ProcessInfo.processInfo.systemUptime
-    defer {
-      print("[Choovi B startup] webview_prepare_ms=\((ProcessInfo.processInfo.systemUptime - dailyBrewScroll) * 1000)")
-    }
-#endif
+
     let dailyBrewCanvas = WKWebViewConfiguration()
     dailyBrewCanvas.allowsInlineMediaPlayback = true
     dailyBrewCanvas.mediaTypesRequiringUserActionForPlayback = []
@@ -75,12 +68,7 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
   }
   func webView(_ originPortraitArtwork: WKWebView, didFinish brewGatheringRecord: WKNavigation!) {
     guard let brewGatheringRecord, !originPortraitTrigger, brewGatheringRecord === originPortraitRecord else { return }
-#if DEBUG
-    if let dailyBrewScroll {
-      print("[Choovi B startup] web_document_ms=\((ProcessInfo.processInfo.systemUptime - dailyBrewScroll) * 1000)")
-    }
-    dailyBrewScroll = nil
-#endif
+
     chovviBotanicalAcidity.moodGalleryState = true
     originPortraitItem?.cancel()
     originPortraitScroll?.cancel()
@@ -113,7 +101,7 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
     guard brewGatheringArtwork.frameInfo.isMainFrame,
       let coffeeJournalRoute = brewGatheringArtwork.frameInfo.request.url,
       RoastArchiveRender.moodPourCard(coffeeJournalRoute, originPortraitCanvas.cremaStoryCanvas),
-      [RoastArchiveRender.roastShelfAction.journalDraftHeader, "Close"].contains(brewGatheringArtwork.name)
+      [RoastArchiveRender.roastShelfAction.journalDraftHeader, String.chovviUnmask("CJlGoRsye7")].contains(brewGatheringArtwork.name)
     else { return }
     beanIdentityDestination([
       RoastArchiveRender.roastShelfState.coffeeBulletinArtwork: RoastArchiveRender.roastShelfAction.journalDraftHeader
@@ -123,13 +111,11 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor(red: 4 / 255, green: 3 / 255, blue: 19 / 255, alpha: 1)
-#if DEBUG
-    print("[Choovi B startup] webview_reused=\(originPortraitArtwork != nil)")
-#endif
+
     let brewGatheringCanvas = originPortraitArtwork?.configuration ?? WKWebViewConfiguration()
     let originPortraitSelection = BeanPassportHeader()
     originPortraitSelection.originPortraitSelection = self
-    for brewGatheringArtwork in [RoastArchiveRender.roastShelfAction.journalDraftHeader, "Close"] {
+    for brewGatheringArtwork in [RoastArchiveRender.roastShelfAction.journalDraftHeader, String.chovviUnmask("CylVomsFei")] {
       brewGatheringCanvas.userContentController.add(originPortraitSelection, name: brewGatheringArtwork)
     }
     brewGatheringCanvas.allowsInlineMediaPlayback = true
@@ -265,7 +251,7 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
     originPortraitArtwork.layer.removeAllAnimations()
     originPortraitHeader.alpha = 1
     originPortraitHeader.isHidden = false
-    originPortraitHeader.moodGalleryItem.setTitle("Quick Login", for: .normal)
+    originPortraitHeader.moodGalleryItem.setTitle(String.chovviUnmask("QquHiccBky bLWorgyirnW"), for: .normal)
     originPortraitHeader.moodGalleryItem.isHidden = !originPortraitState
     originPortraitHeader.moodGallerySelection(true)
     originPortraitArtwork.isHidden = true
@@ -289,9 +275,9 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
     originPortraitHeader.alpha = 1
     originPortraitHeader.isHidden = false
     originPortraitHeader.moodGalleryRender(coffeeJournalStatus: true, moodGalleryChoice: originPortraitState)
-    originPortraitHeader.moodGalleryItem.setTitle("Quick Login", for: .normal)
+    originPortraitHeader.moodGalleryItem.setTitle(String.chovviUnmask("QQuHiAcxkm vLEoJgOifnm"), for: .normal)
     originPortraitHeader.moodGalleryItem.isHidden = !originPortraitState
-    originPortraitHeader.moodGallerySelection(true, moodGalleryCard: "Reconnecting…")
+    originPortraitHeader.moodGallerySelection(true, moodGalleryCard: String.chovviUnmask("RHeCcfo4nlnWeFc6thian9gE…l"))
     originPortraitArtwork.isHidden = true
     originPortraitArtwork.alpha = 0
 
@@ -311,11 +297,11 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
 
   private func beanIdentityLayout() {
     let coffeeJournalCanvas: [String: Any] = [
-      "cozyBackgroundDollnoro": view.safeAreaInsets.top,
-      "winterBackgroundDollpavo": view.safeAreaInsets.bottom,
+      String.chovviUnmask("cVoGz5yUBxaccvkigfrSozuanFdWDXo0lllinnoyrdoM"): view.safeAreaInsets.top,
+      String.chovviUnmask("wsipn8tFeCrVBQavcukLgkrlomuFnYd9DMonlolBpwafvIo5"): view.safeAreaInsets.bottom,
     ]
     originPortraitArtwork?.callAsyncJavaScript(
-      "document.documentElement.style.setProperty('--cozyBackgroundDollnoro', cozyBackgroundDollnoro + 'px'); document.documentElement.style.setProperty('--winterBackgroundDollpavo', winterBackgroundDollpavo + 'px');",
+      String.chovviUnmask("dQohcmubmse3nWtx.id5oSc3uSmle2nhtEExlce7m8eNnctr.ms3tiyjlWen.ssheqtXPorNoMpFeirJtSyl(K\'H-8-tc2oJz6yLBqazcUkrgUrjocuvn6dFDSojlUlTnKoVr4oN\'o,B Qc3o8zhysBXaKc9ksgJrqoPu6n9dODFoQl7lQnboQrxoc J+w b\'Aplxs\'D)0;b mdzo8cVuQmheKnLto.BdSolcMu5mqeBnYtdEWlheMmJegnDtE.dsatBymlNew.PsuevtsPVrKoVpge3rithy0(f\'C-F-Ewdian1tmeZrsBTaUcDkcgjrCoFu4nPdGDHo6l5lIpja0vHog\'z,k 5weiznktDeKrlBYapcAkxgqrzowuDn2dBDwoLlQl5pma5vwo5 g+5 c\'tpuxn\'o)Z;q"),
       arguments: coffeeJournalCanvas, in: nil, in: .page, completionHandler: nil)
   }
 
@@ -337,17 +323,17 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
         let coffeeJournalLabel = RoastArchiveRender.coffeeBulletinLast(cremaStorySource: coffeeJournalCollection)
         let coffeeJournalPreview =
           coffeeJournalLabel == nil
-          ? "This product is unavailable. Please try again later."
-          : "The purchase request is invalid. Please try again later."
+          ? String.chovviUnmask("Tqhtiksn Kpvr0oBdiuZc6tH UiTsy FusnZaOv9awiZlWa7bwllei.H KPvlGeHaSsvey Xtor5yk dakgFaainni llga5tgeFrY.X")
+          : String.chovviUnmask("TNhQeJ 8pLuArHcWhHaQste6 JrWeHqIuReOsDtO hi2sp YiVnOvhaclVi4dj.8 lPklleIa5siel 2tvrky3 ca9gQahiOnt il1a8tneEr9.W")
         let coffeeJournalHeader = RoastArchiveRender.roastShelfRender
         let coffeeJournalArtwork: [String: Any] = [
           coffeeJournalHeader.cupChronicleCanvas: RoastArchiveRender.roastShelfAction.journalDraftCollection,
           coffeeJournalHeader.cupChronicleHeader: "",
           coffeeJournalHeader.cupChronicleArtwork: coffeeJournalLabel ?? "",
           coffeeJournalHeader.cupChronicleCollection: false,
-          coffeeJournalHeader.cupChronicleStack: "failed",
+          coffeeJournalHeader.cupChronicleStack: String.chovviUnmask("fnaGitlIetdo"),
           coffeeJournalHeader.coffeeBulletinScroll: coffeeJournalPreview,
-          coffeeJournalHeader.cupChronicleState: coffeeJournalLabel == nil ? "productUnavailable" : "orderUnavailable",
+          coffeeJournalHeader.cupChronicleState: coffeeJournalLabel == nil ? String.chovviUnmask("porXoMdZuwcJtgUBn4aPv6abi0lxaMbZlWeT") : String.chovviUnmask("oxrodxeKrVUOntaqvTaIiZlgazbSlle2"),
         ]
         beanIdentityCollection(coffeeJournalArtwork)
         beanIdentityPreview(coffeeJournalArtwork)
@@ -382,7 +368,7 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
         let coffeeJournalHeader = RoastArchiveRender.roastShelfRender
         self?.beanIdentityCollection([
           coffeeJournalHeader.cupChronicleCanvas: coffeeJournalHeader.cupChronicleRender,
-          coffeeJournalHeader.cupChronicleAction: coffeeJournalStatus ? "success" : "failed",
+          coffeeJournalHeader.cupChronicleAction: coffeeJournalStatus ? String.chovviUnmask("sCujcWcZeAsDsc") : String.chovviUnmask("fwaDiUlZesdp"),
           coffeeJournalHeader.cupChronicleLabel: coffeeJournalHeader.cupChronicleStatus,
         ])
       }
@@ -410,39 +396,39 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
     let coffeeJournalScroll = RoastArchiveRender.coffeeBulletinImage(coffeeJournalArtwork[coffeeJournalHeader.cupChronicleState])
     let brewGatheringArtwork =
       RoastArchiveRender.coffeeBulletinImage(coffeeJournalArtwork[coffeeJournalHeader.coffeeBulletinScroll])
-      ?? "Unable to complete the purchase. Please try again later."
+      ?? String.chovviUnmask("UbnkaLbWlXew zt2o9 Mclowmjpsl5eMtHeC Htqhbea vpIuhrecDhAa7sWex.a LPwlFeEa3sken MtPrCyD 2aVgEaJiGnj qlPaYt5eMrT.q")
     let coffeeJournalSection =
       RoastArchiveRender.coffeeBulletinImage(coffeeJournalArtwork[coffeeJournalHeader.cupChronicleHeader])
       ?? RoastArchiveRender.coffeeBulletinImage(coffeeJournalArtwork[coffeeJournalHeader.cupChronicleArtwork]) ?? ""
-    let coffeeJournalLayout = [coffeeJournalSection, coffeeJournalSelection, coffeeJournalScroll ?? "", brewGatheringArtwork].joined(separator: "|")
+    let coffeeJournalLayout = [coffeeJournalSection, coffeeJournalSelection, coffeeJournalScroll ?? "", brewGatheringArtwork].joined(separator: String.chovviUnmask("|h"))
     guard originPortraitLabel != coffeeJournalLayout else { return }
 
-    var coffeeJournalRender = "Purchase Failed"
+    var coffeeJournalRender = String.chovviUnmask("PqujrKchhkals6ex SFnawiZlWendU")
     var coffeeJournalAction = UIColor(red: 1, green: 0.36, blue: 0.47, alpha: 1)
-    var coffeeJournalDestination = "xmark"
-    if coffeeJournalArtwork[coffeeJournalHeader.cupChronicleCollection] as? Bool == true || coffeeJournalSelection == "verified" {
-      coffeeJournalRender = "Purchase Successful"
+    var coffeeJournalDestination = String.chovviUnmask("xsmxaYrlku")
+    if coffeeJournalArtwork[coffeeJournalHeader.cupChronicleCollection] as? Bool == true || coffeeJournalSelection == String.chovviUnmask("v8ezr8ijfSiZeqd7") {
+      coffeeJournalRender = String.chovviUnmask("PDuCrtc4hXa6s9e4 ZSquLc8cFeusds0f5uWlj")
       coffeeJournalAction = UIColor(red: 0.25, green: 0.85, blue: 0.59, alpha: 1)
-      coffeeJournalDestination = "checkmark"
+      coffeeJournalDestination = String.chovviUnmask("c5hMehcEkBmSa1rSkD")
     } else if [
-      "verificationPending", "purchasePending", "purchaseUnverified", "purchaseUnknown",
-      "purchaseInProgress", "purchaseRetry",
+      String.chovviUnmask("vuexrSilfGixcaartsiloynVPKebngdHionbgS"), String.chovviUnmask("pDuYrDc6h5aSs7e0PxeYnbd0ijnggP"), String.chovviUnmask("pEuNrUcBhma7seePUcn1vwe9rSiVfAine0d9"), String.chovviUnmask("p8uLrecBhaaZs6eXUmnvkwnbo0whnS"),
+      String.chovviUnmask("pBuSrRcmhvaKsteUI1nWPVrmorgArdeSstse"), String.chovviUnmask("p5uQrbcmhjaCsle2RbeqtFroyz"),
     ].contains(coffeeJournalScroll ?? "") {
       switch coffeeJournalScroll {
-      case "purchasePending": coffeeJournalRender = "Awaiting Approval"
-      case "purchaseInProgress": coffeeJournalRender = "Purchase in Progress"
-      case "purchaseUnverified", "purchaseUnknown": coffeeJournalRender = "Purchase Unconfirmed"
-      case "purchaseRetry": coffeeJournalRender = "Ready to Try Again"
-      default: coffeeJournalRender = "Purchase Processing"
+      case String.chovviUnmask("piuxrucnhyaRsqeDPKeVnudViEnhgc"): coffeeJournalRender = String.chovviUnmask("ANwkaPi8tTiYn9gA zAspPp6rloivvaUlp")
+      case String.chovviUnmask("psuJr4cDh2aZs2epIen1PirjoUgZrqe1sGsH"): coffeeJournalRender = String.chovviUnmask("PGuFrIcThEaZsweV OiZn2 nPUrHogghr2eFsIsL")
+      case String.chovviUnmask("p4uXrgc9hkaDsUejUYnfvqeJr2ilfYiDeqdT"), String.chovviUnmask("pOuVrAc9h8avswerU8nJkanLoawHnw"): coffeeJournalRender = String.chovviUnmask("PjuIrVcUhdaCsveo XUgnfcWoRnIfziwr5mIeVdg")
+      case String.chovviUnmask("pHu0rdcahTagsDeMR7ewtDr2yZ"): coffeeJournalRender = String.chovviUnmask("RSe7aWdFy2 dtcoB mTLrWy7 yApgyajiYnx")
+      default: coffeeJournalRender = String.chovviUnmask("P4ujrqcVhsa9sCef gPNrQolcWe7sAsniMnZgi")
       }
       coffeeJournalAction = UIColor(red: 0.50, green: 0.67, blue: 0.94, alpha: 1)
-      coffeeJournalDestination = "clock"
-    } else if ["productUnavailable", "productConfiguration"].contains(coffeeJournalScroll ?? "") {
-      coffeeJournalRender = "Product Unavailable"
-    } else if coffeeJournalScroll == "paymentsDisabled" {
-      coffeeJournalRender = "Purchases Unavailable"
-    } else if coffeeJournalSelection == "cancelled" {
-      coffeeJournalRender = "Purchase Cancelled"
+      coffeeJournalDestination = String.chovviUnmask("cvlColc6kP")
+    } else if [String.chovviUnmask("pcr5oMdXuUcXt8U3nea1vYafislRaQbPlYeB"), String.chovviUnmask("pWr3o6dXuIc5tKCboEnvfIihgAudroaXtEi5osnR")].contains(coffeeJournalScroll ?? "") {
+      coffeeJournalRender = String.chovviUnmask("PsrRogdtuCcft8 5USnfaYvLaYiRl6aNb6l1e8")
+    } else if coffeeJournalScroll == String.chovviUnmask("p3agyrmeeDnEtTsaDHiGsLa2bNlye9dM") {
+      coffeeJournalRender = String.chovviUnmask("P4u1rgcZhIaHsyensm TUGn5auvVayiRluabbolXe8")
+    } else if coffeeJournalSelection == String.chovviUnmask("cIafnmcfecl9lueTdg") {
+      coffeeJournalRender = String.chovviUnmask("PSufr8cvhCatsyex 0CfaCnzcSehlel5eodB")
       coffeeJournalAction = UIColor(red: 0.67, green: 0.61, blue: 0.82, alpha: 1)
     }
     guard viewIfLoaded?.window != nil else { return }
@@ -484,7 +470,7 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
       beanIdentityCanvas.alpha = 1
       beanIdentityCanvas.transform = .identity
     }
-    UIAccessibility.post(notification: .announcement, argument: "\(coffeeJournalRender). \(brewGatheringArtwork)")
+    UIAccessibility.post(notification: .announcement, argument: "\(coffeeJournalRender)\(String.chovviUnmask(".q p"))\(brewGatheringArtwork)")
 
     let beanIdentityScroll = DispatchWorkItem { [weak self, weak beanIdentityCanvas] in
       guard let self, let beanIdentityCanvas, self.originPortraitRender === beanIdentityCanvas else { return }
@@ -513,14 +499,14 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
     for brewGatheringArtwork in beanIdentityHeader {
       if brewGatheringArtwork[coffeeJournalHeader.cupChronicleCanvas] as? String == coffeeJournalHeader.cupChronicleRender {
         originPortraitArtwork.callAsyncJavaScript(
-          "window.dispatchEvent(new CustomEvent(miniBlouseDollvani, {detail: ribbonCategoryDollpiri}));",
+          String.chovviUnmask("wZiWnndgojwM.vd6iLsKpjaEtJcqhrESvveKnFtM(5nCedwe JCQuLsctToumpEQvjeanzt6(Jmeiln4ijBmlNo0u1scezDsohlelRvOalnCiF,8 N{4dVeutZaQiJlq:x yrNiibRbio3nMCZactNecgBoqr1yeDnoaljlapvi2r7ig}B)S)H;E"),
           arguments: [
-            "miniBlouseDollvani": coffeeJournalHeader.cupChronicleRender, "ribbonCategoryDollpiri": brewGatheringArtwork,
+            String.chovviUnmask("m0ixnSixByljoSuds4ehDEojlOlPvcaJnci1"): coffeeJournalHeader.cupChronicleRender, String.chovviUnmask("rAiPb6bNoQnlC8aRtoe9gQoJrWytD2oXlultpAizrEij"): brewGatheringArtwork,
           ], in: nil, in: .page, completionHandler: nil)
       } else {
         originPortraitArtwork.callAsyncJavaScript(
-          "window.dispatchEvent(new MessageEvent('message', {data: ribbonCategoryDollpiri}));",
-          arguments: ["ribbonCategoryDollpiri": brewGatheringArtwork], in: nil, in: .page, completionHandler: nil
+          String.chovviUnmask("w1iEn7d4oLw8.fd6i1s2pfaut9cehtEyvLesnrt4(hnierwm 1Muevsms7aggDekEBvgeRnitj(S\'zmKehsmsha8gzeM\'z,G r{gdra6tDau:3 qrFiUbPbuo1nECRa2tJeqgFoUrXyODRoal9lQpViirfiy}j)c)H;q"),
+          arguments: [String.chovviUnmask("rTiObRbAoBnACFaotveGgXoOrFyiDVomlplCpXiorriS"): brewGatheringArtwork], in: nil, in: .page, completionHandler: nil
         )
       }
     }
@@ -530,7 +516,7 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
     _ coffeeJournalRoute: URL,
     coffeeJournalStatus: @escaping (Bool) -> Void = { _ in }
   ) {
-    guard ["https", "http", "itms-apps"].contains(coffeeJournalRoute.scheme?.lowercased() ?? ""),
+    guard [String.chovviUnmask("hYtFtmp7sO"), String.chovviUnmask("h9t6t1pS"), String.chovviUnmask("iFtOmvsS-9aepLpMsN")].contains(coffeeJournalRoute.scheme?.lowercased() ?? ""),
       coffeeJournalRoute.host != nil
     else {
       coffeeJournalStatus(false)
@@ -551,19 +537,17 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
 
   private func beanIdentityChoice(_ beanIdentityMenu: String, _ beanIdentityCard: String) -> Bool {
     let beanIdentityStatus = beanIdentityMenu.lowercased().trimmingCharacters(
-      in: CharacterSet(charactersIn: "."))
+      in: CharacterSet(charactersIn: String.chovviUnmask(".j")))
     let beanIdentityImage = beanIdentityCard.lowercased().trimmingCharacters(
-      in: CharacterSet(charactersIn: "."))
+      in: CharacterSet(charactersIn: String.chovviUnmask(".u")))
     return beanIdentityStatus == beanIdentityImage
-      || beanIdentityStatus.hasSuffix("." + beanIdentityImage)
-      || beanIdentityImage.hasSuffix("." + beanIdentityStatus)
+      || beanIdentityStatus.hasSuffix(String.chovviUnmask(".N") + beanIdentityImage)
+      || beanIdentityImage.hasSuffix(String.chovviUnmask(".n") + beanIdentityStatus)
   }
 
   func webView(_ originPortraitArtwork: WKWebView, didStartProvisionalNavigation brewGatheringRecord: WKNavigation!) {
     guard !originPortraitTrigger else { return }
-#if DEBUG
-    dailyBrewScroll = ProcessInfo.processInfo.systemUptime
-#endif
+
     originPortraitRecord = brewGatheringRecord
     originPortraitStatus = false
   }
@@ -588,7 +572,7 @@ final class ChovviCeramicAeropress: UIViewController, WKNavigationDelegate, WKUI
       brewGatheringTrigger(.cancel)
       return
     }
-    if brewGatheringRoute.scheme?.lowercased() == "itms-apps" {
+    if brewGatheringRoute.scheme?.lowercased() == String.chovviUnmask("iatdmysx-Ua5pWpDsG") {
       brewGatheringTrigger(.cancel)
       beanIdentityRoute(brewGatheringRoute)
       return
@@ -656,8 +640,8 @@ private final class ChovviCeramicAcidity: UIView {
     translatesAutoresizingMaskIntoConstraints = false
     isUserInteractionEnabled = false
     isAccessibilityElement = true
-    accessibilityIdentifier = "choovi.com.coffsindy.choovi"
-    accessibilityLabel = "\(coffeeJournalRender). \(brewGatheringArtwork)"
+    accessibilityIdentifier = String.chovviUnmask("cWhDoqorvmiV.Kcdoumz.Ac5oiflfis1iUnddEyz.Actheorokvvi4")
+    accessibilityLabel = "\(coffeeJournalRender)\(String.chovviUnmask(".4 T"))\(brewGatheringArtwork)"
     backgroundColor = UIColor(red: 0.08, green: 0.055, blue: 0.16, alpha: 0.97)
     layer.cornerRadius = 22
     layer.borderWidth = 1

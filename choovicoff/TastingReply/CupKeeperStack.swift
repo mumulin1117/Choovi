@@ -26,16 +26,57 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
       roastPreferencesRecord ?? roastPreferencesLabel.map { String($0) }
     }
 
-    private enum CodingKeys: String, CodingKey {
-      case moodGallerySection = "moodGallerySectionchoovi"
-      case coffeeJournalLabel = "coffeeJournalLabelchoovi"
-      case coffeeJournalState = "coffeeJournalStatechoovi"
-      case roastPreferencesItem = "roastPreferencesItemchoovi"
-      case roastPreferencesState = "roastPreferencesStatechoovi"
-      case roastPreferencesLabel = "roastPreferencesLabelchoovi"
-      case roastPreferencesRecord = "roastPreferencesRecordchoovi"
-      case roastPreferencesStatus = "roastPreferencesStatuschoovi"
-      case roastPreferencesChoice = "roastPreferencesChoicechoovi"
+    private enum CodingKeys: CodingKey, RawRepresentable, Hashable {
+      typealias RawValue = String
+
+      case moodGallerySection
+      case coffeeJournalLabel
+      case coffeeJournalState
+      case roastPreferencesItem
+      case roastPreferencesState
+      case roastPreferencesLabel
+      case roastPreferencesRecord
+      case roastPreferencesStatus
+      case roastPreferencesChoice
+
+      var rawValue: String {
+        switch self {
+        case .moodGallerySection: return String.chovviUnmask("mtoKozdaG9aClJlUe3rMyjSEeNc4tVisoDn6cXh4oBoOv7iQ")
+        case .coffeeJournalLabel: return String.chovviUnmask("cvokfpfqeveUJfoqunr2nzaQl3L6a5baeplichhWoJoiv5ia")
+        case .coffeeJournalState: return String.chovviUnmask("choUfffWeRecJ1ocuHr2nPa2ljS8tva8treKcBhOoRoMvjiu")
+        case .roastPreferencesItem: return String.chovviUnmask("rnoqaXsct9PUrdeQfBeQr7eknHcSeHsqIXtWebm6cth8ojoevdi0")
+        case .roastPreferencesState: return String.chovviUnmask("rcoPaYsXtYPfrUejf0e5ryeLnoczeqsdSAtvaMtheccNhAono6vri8")
+        case .roastPreferencesLabel: return String.chovviUnmask("rGoHaqsttoP3rWeXf4etr8eZnMcfeqsFLQaHb8eVl2cnhSoJomvdi2")
+        case .roastPreferencesRecord: return String.chovviUnmask("rzoMa3set9POrjeif3egrBewnBcUebsMRdegcZowrfdEcVhiofoyvbiu")
+        case .roastPreferencesStatus: return String.chovviUnmask("rRokansutvP2rve4fXecrHeQnRcieXsOSdtsaBtAu5smcJhAofoevziA")
+        case .roastPreferencesChoice: return String.chovviUnmask("rpoSaHs0tBPgrXeQfRe8r3ean7cGeJsQCdhoodiEcFeOcxhCofoUvHiq")
+        }
+      }
+
+      init?(rawValue: String) {
+        switch rawValue {
+        case Self.moodGallerySection.rawValue: self = .moodGallerySection
+        case Self.coffeeJournalLabel.rawValue: self = .coffeeJournalLabel
+        case Self.coffeeJournalState.rawValue: self = .coffeeJournalState
+        case Self.roastPreferencesItem.rawValue: self = .roastPreferencesItem
+        case Self.roastPreferencesState.rawValue: self = .roastPreferencesState
+        case Self.roastPreferencesLabel.rawValue: self = .roastPreferencesLabel
+        case Self.roastPreferencesRecord.rawValue: self = .roastPreferencesRecord
+        case Self.roastPreferencesStatus.rawValue: self = .roastPreferencesStatus
+        case Self.roastPreferencesChoice.rawValue: self = .roastPreferencesChoice
+        default: return nil
+        }
+      }
+
+      var stringValue: String { rawValue }
+
+      init?(stringValue: String) {
+        self.init(rawValue: stringValue)
+      }
+
+      var intValue: Int? { nil }
+
+      init?(intValue: Int) { nil }
     }
   }
 
@@ -44,9 +85,7 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
   var moodGalleryCollection: ((String, [String: Any]) -> Bool)?
 
   private let roastPreferencesSource =
-    RoastArchiveState.roastShelfPreview
-    ? CoffeeBulletinState.firstSipStack
-    : CoffeeBulletinState.firstSipCollection
+    String.chovviUnmask("cth6o5o4vdis.1CKhroQvPv6iVRuo5aGs9twRXeUszeerzvKed")
   private var roastPreferencesCollection: [String: RoastPreferencesCanvas]
   private(set) var moodGalleryStatus = false
   private var roastPreferencesStack: [UUID: Task<Void, Never>] = [:]
@@ -135,9 +174,9 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
         moodGallerySection: moodGallerySection,
         coffeeJournalLabel: coffeeJournalLabel,
         journalDraftState: false,
-        journalDraftStatus: "pending",
-        journalDraftImage: "Please complete the current App Store purchase before trying again.",
-        journalDraftSection: "purchaseInProgress"
+        journalDraftStatus: String.chovviUnmask("pae9nKdlionZgW"),
+        journalDraftImage: String.chovviUnmask("PGl3eMalsceJ acdoQm9pylteatDee Lt2h7ey 7cIu5r0rfe6nxtu jAqpxpk rSmtRoKrheg zpcujr6c3hgaRsMeP kbjeGflosr1e2 Bt8rTyUi7nggL Ca7gkaxi0nT.e"),
+        journalDraftSection: String.chovviUnmask("p2ufricRh2afsEevIKn7PqrVoqglrkevscsx")
       )
       return
     }
@@ -147,9 +186,9 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
         moodGallerySection: moodGallerySection,
         coffeeJournalLabel: coffeeJournalLabel,
         journalDraftState: false,
-        journalDraftStatus: "failed",
-        journalDraftImage: "This product is unavailable. Please try again later.",
-        journalDraftSection: "productUnavailable"
+        journalDraftStatus: String.chovviUnmask("f3aSi1laedd6"),
+        journalDraftImage: String.chovviUnmask("TqhjiCsF qpnrqond0u3cOtR YiPs6 9uEnJaEvBa0iVluapb0lDeS.h kPnlseRaqsJe0 VtMrTyo FaYg7aMi1nu NlSaLtyefrs.t"),
+        journalDraftSection: String.chovviUnmask("pTrioBdGu7cutTUQn9aOvTa6iVlyafbalfe2")
       )
       return
     }
@@ -159,9 +198,9 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
         moodGallerySection: moodGallerySection,
         coffeeJournalLabel: coffeeJournalLabel,
         journalDraftState: false,
-        journalDraftStatus: "failed",
-        journalDraftImage: "The purchase request is invalid. Please try again later.",
-        journalDraftSection: "orderUnavailable"
+        journalDraftStatus: String.chovviUnmask("faaViklJeidB"),
+        journalDraftImage: String.chovviUnmask("Thhmeb upvuSrFcYhFaKs1eM dr2ehqyuHeesFta vigsz mi5nOvraQlni6dH.6 PPkllegaxsSeh 2t5rkyJ mahgEaLisn7 0l3aWt3eIrd.k"),
+        journalDraftSection: String.chovviUnmask("o8rrdUevr4UPnIarvealioldaabrlYeJ")
       )
       return
     }
@@ -180,9 +219,9 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
         moodGallerySection: moodGallerySection,
         coffeeJournalLabel: coffeeJournalLabel,
         journalDraftState: false,
-        journalDraftStatus: "failed",
-        journalDraftImage: "The purchase request does not match this product. Please try again later.",
-        journalDraftSection: "orderUnavailable"
+        journalDraftStatus: String.chovviUnmask("fLa2inlAe3dK"),
+        journalDraftImage: String.chovviUnmask("TShtee lpgu1rucDhMaJsUeR urDemq5uwejsItn 4d1ocelsI Pnio3ti DmeaztOcFhY rtUhPigsR KpRrUofdOuTcCt5.S 3PYlbeEavsQeV gt9rey9 AapgqaXiynH Elra8tJeErN.A"),
+        journalDraftSection: String.chovviUnmask("oGrXd6eRrqUNneaNvqa5iQllaSbJl2ej")
       )
       return
     }
@@ -228,9 +267,9 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
         moodGallerySection: moodGallerySection,
         coffeeJournalLabel: coffeeJournalLabel,
         journalDraftState: false,
-        journalDraftStatus: "failed",
-        journalDraftImage: "In-app purchases are unavailable on this device.",
-        journalDraftSection: "paymentsDisabled"
+        journalDraftStatus: String.chovviUnmask("f1aGiFlCefd2"),
+        journalDraftImage: String.chovviUnmask("IonR-ganpspj upvuArPcMh7aIs5eMsF 0aPrsep GuHnyaBvAaJiwljagbHlGeD sofnW ttGhniYsb WdTeAvzi8cVeO.z"),
+        journalDraftSection: String.chovviUnmask("pJaeyLm8e1nAt7sYDziKsjaqbFl8e7dw")
       )
       return
     }
@@ -251,9 +290,9 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
         moodGallerySection: moodGallerySection,
         coffeeJournalLabel: coffeeJournalLabel,
         journalDraftState: false,
-        journalDraftStatus: "failed",
-        journalDraftImage: "Unable to prepare the purchase. Please try again later.",
-        journalDraftSection: "purchaseFailed"
+        journalDraftStatus: String.chovviUnmask("feaVi2lZeUdf"),
+        journalDraftImage: String.chovviUnmask("UlnmaDbKl7ew ltAoB Wp7rOenp6aRr8e9 ytnhQeh kpzuWrxc8hTaIsJeA.P uPllAenaEs9e8 ttIrpya FasgnaEiPnQ flGavtKebrM.Z"),
+        journalDraftSection: String.chovviUnmask("pxuerVc0hlawszeCFfaoiBlceTdM")
       )
       return
     }
@@ -276,14 +315,14 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
     cupKeeperSelection(
       cupKeeperHeader: cupKeeperHeader,
       cupKeeperStack: [],
-      cupKeeperSection: "Unable to load this product from the App Store. Please try again later."
+      cupKeeperSection: String.chovviUnmask("Uon3agbDlSev WtHo0 1l4oHaydP 2t5hIiXsg Fp4rjoEdHuacztS ZfyrBoOm7 OtRhwed WAvpCpf aSZtKobrsen.I ZPClpeSaLssed kthrmyh aaDgQadiSnn klRaCtLeir7.i")
     )
   }
 
   private func cupKeeperSelection(
     cupKeeperHeader: SKRequest,
     cupKeeperStack: [SKProduct],
-    cupKeeperSection: String = "This product is unavailable. Please try again later."
+    cupKeeperSection: String = String.chovviUnmask("T8hni0sF Op9rMo1dIujcutB kidsW XuKnxaivza8itlcatbIlpea.T qPpl6elaos7eO NtyrJyY HaIgjaeiZnI LlqabtyeHrW.h")
   ) {
     guard Thread.isMainThread else {
       DispatchQueue.main.async { [weak self] in
@@ -312,7 +351,7 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
       cupKeeperLabel(
         cupKeeperSource: cupKeeperItem,
         journalDraftImage: cupKeeperSection,
-        journalDraftSection: "productUnavailable"
+        journalDraftSection: String.chovviUnmask("pgr9osdjuWchtmUJnwaNvIa5iklla0bTlQeJ")
       )
       return
     }
@@ -323,8 +362,8 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
       cupKeeperDestination(cupKeeperSource: roastPreferencesCard)
       cupKeeperLabel(
         cupKeeperSource: cupKeeperItem,
-        journalDraftImage: "Unable to prepare the purchase. Please try again later.",
-        journalDraftSection: "purchaseFailed"
+        journalDraftImage: String.chovviUnmask("USnzaKb7lweV Uttoc TpqrJeKpvawr1eq HtChJe2 npou9ructhGafs4ez.y jPilHeUa7sQeX qtHrkyh aahggaHiknZ ulfaCtXeyrr.o"),
+        journalDraftSection: String.chovviUnmask("p4urr2cnhKaVs8evF6aliUl7e0db")
       )
       return
     }
@@ -358,7 +397,7 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
         break
       case .deferred:
         cupKeeperDestination(cupKeeperSource: cupKeeperItem.roastPreferencesItem)
-        try? cupKeeperStatus(cupKeeperItem, journalDraftSection: "purchasePending")
+        try? cupKeeperStatus(cupKeeperItem, journalDraftSection: String.chovviUnmask("pLucrZckhTa2sfeKP1emnvdWiJnogp"))
       case .purchased, .restored:
         let cupKeeperImageNote = roastPreferencesCard == cupKeeperItem.roastPreferencesItem
         cupKeeperDestination(cupKeeperSource: cupKeeperItem.roastPreferencesItem)
@@ -371,7 +410,7 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
       case .failed:
         cupKeeperDestination(cupKeeperSource: cupKeeperItem.roastPreferencesItem)
         let cupKeeperStatusEntries = (cupKeeperTriggerArtwork.error as? SKError)?.code == .paymentCancelled
-        try? cupKeeperChoice(cupKeeperItem, journalDraftStatus: cupKeeperStatusEntries ? "cancelled" : "failed")
+        try? cupKeeperChoice(cupKeeperItem, journalDraftStatus: cupKeeperStatusEntries ? String.chovviUnmask("cjaknNcWellClReCdX") : String.chovviUnmask("fhakiTlWepdy"))
         cupKeeperTrigger.finishTransaction(cupKeeperTriggerArtwork)
       @unknown default:
         break
@@ -484,7 +523,7 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
       moodGallerySection: cupKeeperItem.moodGallerySection,
       coffeeJournalLabel: cupKeeperItem.coffeeJournalLabel,
       journalDraftState: false,
-      journalDraftStatus: "failed",
+      journalDraftStatus: String.chovviUnmask("fOaXimlbecdr"),
       journalDraftImage: journalDraftImage,
       journalDraftSection: journalDraftSection
     )
@@ -509,7 +548,7 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
 
   private func cupKeeperChoice(
     _ cupKeeperCardTrigger: RoastPreferencesCanvas,
-    journalDraftStatus: String = "cancelled"
+    journalDraftStatus: String = String.chovviUnmask("cDaYnDc6e5lSl7e0dx")
   ) throws {
     let cupKeeperItem = roastPreferencesCollection[cupKeeperCardTrigger.roastPreferencesItem.uuidString] ?? cupKeeperCardTrigger
     guard !cupKeeperItem.roastPreferencesState, cupKeeperItem.roastPreferencesPreview == nil else {
@@ -523,10 +562,10 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
       coffeeJournalLabel: cupKeeperItem.coffeeJournalLabel,
       journalDraftState: false,
       journalDraftStatus: journalDraftStatus,
-      journalDraftImage: journalDraftStatus == "cancelled"
-        ? "Purchase cancelled."
-        : "Unable to complete the purchase. Please try again later.",
-      journalDraftSection: journalDraftStatus == "cancelled" ? "purchaseCancelled" : "purchaseFailed"
+      journalDraftImage: journalDraftStatus == String.chovviUnmask("cNayn9cse7lylleKdj")
+        ? String.chovviUnmask("PxuwrtcshVaGsXe8 tcwaFnocheclhlueVdW.l")
+        : String.chovviUnmask("URn8aTbIlpeE Vtoo3 ec1oEmhpSldegtzea ftKhLe0 bpUuhrgczhEa9s6eX.a tPMlleMaxsSeV ytvrMyR 4aBgSaViCnz olRaGtreSrT.G"),
+      journalDraftSection: journalDraftStatus == String.chovviUnmask("c8aLnkcJe6ljlGe7dc") ? String.chovviUnmask("p6uLracJhUavsCefCMa5nMcbemlVlCeNd2") : String.chovviUnmask("pQuJrucZhIanseenFWaziwldeudh")
     )
   }
 
@@ -537,24 +576,24 @@ final class CupKeeperStack: NSObject, SKProductsRequestDelegate,
     let journalDraftStatus: String
     let journalDraftImage: String
     if cupKeeperItem.roastPreferencesState {
-      journalDraftStatus = "verified"
-      journalDraftImage = "Purchase confirmed."
+      journalDraftStatus = String.chovviUnmask("vbeorXiMfdieenda")
+      journalDraftImage = String.chovviUnmask("PyuPrycxhqavsgeR Sc9o6nNfEiprwmzekdp.O")
     } else if cupKeeperItem.roastPreferencesPreview != nil {
-      journalDraftStatus = "verificationPending"
-      journalDraftImage = "Purchase completed. We’re confirming your balance. Please do not purchase again."
+      journalDraftStatus = String.chovviUnmask("vueFrqi3fsi7c6a1tWi5okndPiernKddiInzgA")
+      journalDraftImage = String.chovviUnmask("PQuXrOcjhWaXsqex Gc9oCmtpilPeEtneydx.O zWQer’yrReO xcYoPnifXiEr7mGiJn8g1 wyloYudri Pb6a7lYavn2cBeY.Z uP5l0evaIste2 rdQox knJootV UpBukr3cShragsReq raagpaSirnE.Z")
     } else {
-      journalDraftStatus = cupKeeperItem.roastPreferencesStatus ?? "purchaseUnknown"
+      journalDraftStatus = cupKeeperItem.roastPreferencesStatus ?? String.chovviUnmask("pfuQrRcAhRa8sbeMU9nGk5nYovwSn7")
       journalDraftImage =
-        journalDraftStatus == "purchasePending"
-        ? "Waiting for purchase approval. Please wait before trying again."
-        : "Waiting for Apple to confirm this purchase. Please do not purchase again."
+        journalDraftStatus == String.chovviUnmask("pJuIr3cQh1aWsdeGPdeknFdsiTnyg7")
+        ? String.chovviUnmask("WFaYiZt6iTn4g5 WfnocrJ wpTuirZcUhNacs5eK faYpTpOrzo6vVailp.g XP6lzeGaBsyen MwhaMijty ZbSehfwohryeV gtbrAyVi4nvgi 5asgpaAiRnG.h")
+        : String.chovviUnmask("Wdawijtmifnigx IfhoSrP QA9pWpLlWeN otHoO PcqoXnQfPiwrjmo ftyhniusT qpTuQrDcEhPaWsNeY.1 yPNl6eTaAs7ee Jdcod SntoytT YpzucrbcuhZamsLeW RaCgraQiLn0.n")
     }
     cupKeeperRender(
       coffeeJournalState: coffeeJournalState ?? cupKeeperItem.coffeeJournalState,
       moodGallerySection: cupKeeperItem.moodGallerySection,
       coffeeJournalLabel: cupKeeperItem.coffeeJournalLabel,
       journalDraftState: cupKeeperItem.roastPreferencesState,
-      journalDraftStatus: cupKeeperItem.roastPreferencesState ? "verified" : "pending",
+      journalDraftStatus: cupKeeperItem.roastPreferencesState ? String.chovviUnmask("vMeHr6iVfwineCdF") : String.chovviUnmask("pleunLdqiZnmgt"),
       journalDraftImage: journalDraftImage,
       journalDraftSection: cupKeeperItem.roastPreferencesState ? nil : journalDraftStatus
     )

@@ -125,15 +125,15 @@ final class ChovviCeramicBody {
     _ coffeeBulletinMessage: [String: Any],
     coffeeBulletinProfile roastArchiveCard: URLSessionWebSocketTask
   ) async throws {
-    switch coffeeBulletinMessage["action"] as? Int {
+    switch coffeeBulletinMessage[String.chovviUnmask("aUchtQiNoinb")] as? Int {
     case 4:
       try await coffeeBulletinRoute(
-        ["action": 10, "channel": originPortraitCanvas.cremaStoryRoute],
+        [String.chovviUnmask("awcvt2i3oAnP"): 10, String.chovviUnmask("cuhLaSnjnoeLlw"): originPortraitCanvas.cremaStoryRoute],
         coffeeBulletinDestination: roastArchiveCard
       )
     case 11:
       guard roastArchiveRoute === roastArchiveCard,
-        coffeeBulletinMessage["channel"] as? String == originPortraitCanvas.cremaStoryRoute
+        coffeeBulletinMessage[String.chovviUnmask("cZhYaPnAn3e6lV")] as? String == originPortraitCanvas.cremaStoryRoute
       else { return }
       roastArchiveStatus = 0
       guard roastArchiveScroll == nil else { return }
@@ -150,13 +150,13 @@ final class ChovviCeramicBody {
         }
       }
     case 15:
-      guard coffeeBulletinMessage["channel"] as? String == originPortraitCanvas.cremaStoryRoute,
-        let coffeeBulletinMenu = coffeeBulletinMessage["messages"] as? [[String: Any]]
+      guard coffeeBulletinMessage[String.chovviUnmask("cmh5a2nrn0e3lO")] as? String == originPortraitCanvas.cremaStoryRoute,
+        let coffeeBulletinMenu = coffeeBulletinMessage[String.chovviUnmask("m4eTs8sXa2gBeks5")] as? [[String: Any]]
       else { return }
       for (tastingReplySelection, coffeeBulletinBubble) in coffeeBulletinMenu.enumerated() {
         let coffeeBulletinFriend =
-          coffeeBulletinBubble["id"] as? String
-          ?? (coffeeBulletinMessage["id"] as? String).map { "\($0):\(tastingReplySelection)" }
+          coffeeBulletinBubble[String.chovviUnmask("iPd4")] as? String
+          ?? (coffeeBulletinMessage[String.chovviUnmask("iedr")] as? String).map { "\($0)\(String.chovviUnmask(":r"))\(tastingReplySelection)" }
         if let coffeeBulletinFriend {
           if roastArchiveSection.contains(coffeeBulletinFriend) { continue }
           roastArchiveSection.append(coffeeBulletinFriend)
@@ -165,7 +165,7 @@ final class ChovviCeramicBody {
         guard let coffeeBulletinAvatar = Self.coffeeBulletinLayout(coffeeBulletinLabel: coffeeBulletinBubble) else {
           continue
         }
-        let coffeeBulletinStatus = (coffeeBulletinBubble["timestamp"] ?? coffeeBulletinMessage["timestamp"]) as? Double
+        let coffeeBulletinStatus = (coffeeBulletinBubble[String.chovviUnmask("tbiOmle4sXtUaxmUp3")] ?? coffeeBulletinMessage[String.chovviUnmask("tHismDeksLtoaLmipD")]) as? Double
         moodGalleryAction?(coffeeBulletinAvatar, coffeeBulletinStatus)
       }
     case 5, 6, 8, 9, 13, 17:
@@ -176,20 +176,20 @@ final class ChovviCeramicBody {
   }
 
   static func coffeeBulletinLayout(coffeeBulletinLabel coffeeBulletinEmpty: [String: Any]) -> [String: Any]? {
-    var coffeeJournalStack: Any = coffeeBulletinEmpty["data"] ?? [:]
-    let coffeeJournalMenu = (coffeeBulletinEmpty["encoding"] as? String ?? "").split(separator: "/")
+    var coffeeJournalStack: Any = coffeeBulletinEmpty[String.chovviUnmask("d3aQtZa8")] ?? [:]
+    let coffeeJournalMenu = (coffeeBulletinEmpty[String.chovviUnmask("eHn4cloodniCnRgW")] as? String ?? "").split(separator: Character(String.chovviUnmask("/o")))
     for coffeeJournalPopular in coffeeJournalMenu.reversed() {
-      if coffeeJournalPopular == "base64",
+      if coffeeJournalPopular == String.chovviUnmask("bpaOsZea6d4Y"),
         let dailyBrewCanvas = coffeeJournalStack as? String,
         let dailyBrewArtwork = Data(base64Encoded: dailyBrewCanvas)
       {
         coffeeJournalStack = String(data: dailyBrewArtwork, encoding: .utf8) ?? ""
-      } else if coffeeJournalPopular == "json" {
+      } else if coffeeJournalPopular == String.chovviUnmask("jHsIoJns") {
         guard let dailyBrewHeader = RoastArchiveRender.coffeeBulletinStore(cremaStorySelection: coffeeJournalStack) else {
           return nil
         }
         coffeeJournalStack = dailyBrewHeader
-      } else if coffeeJournalPopular != "utf-8" {
+      } else if coffeeJournalPopular != String.chovviUnmask("uLtofT-u87") {
         return nil
       }
     }

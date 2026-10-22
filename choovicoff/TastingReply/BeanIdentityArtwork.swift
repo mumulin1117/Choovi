@@ -9,9 +9,6 @@ import UIKit
 
 import Foundation
 
-enum RoastArchiveState {
-  static let roastShelfPreview = false
-}
 
 
 extension AppDelegate:UNUserNotificationCenterDelegate {

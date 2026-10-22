@@ -30,7 +30,7 @@ class CupChronicleArtwork: UIView {
       amberRitualHeader.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
     amberRitualHeader.textAlignment = .center
     amberRitualHeader.numberOfLines = 0
-    moodGalleryItem.setTitle("Quick Login", for: .normal)
+    moodGalleryItem.setTitle(String.chovviUnmask("Q1uqi5cgkl QLxomgBiWn5"), for: .normal)
     moodGalleryItem.setTitleColor(.white, for: .normal)
     moodGalleryItem.setTitleColor(UIColor.white.withAlphaComponent(0.65), for: .disabled)
     moodGalleryItem.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
@@ -72,8 +72,8 @@ class CupChronicleArtwork: UIView {
   func moodGalleryRender(coffeeJournalStatus: Bool, moodGalleryChoice: Bool) {
     amberRitualArtwork.image = UIImage(
       named: coffeeJournalStatus
-        ? CoffeeBulletinHeader.firstSipScroll
-        : CoffeeBulletinHeader.firstSipCanvas
+        ? String.chovviUnmask("aDnwn7o4ulnWcheiRHeus5eornvee9Cyh5asnrgSel")
+        : String.chovviUnmask("c1h4oFvkv1iALFaGuRnucdhuTvaSsRtUitnGgB")
     )
     amberRitualStack.isHidden = !coffeeJournalStatus
     moodGalleryItem.isHidden = !moodGalleryChoice
@@ -82,7 +82,7 @@ class CupChronicleArtwork: UIView {
   func moodGallerySelection(_ amberRitualState: Bool, moodGalleryCard: String? = nil) {
     moodGalleryItem.isEnabled = !amberRitualState
     moodGalleryItem.alpha = amberRitualState ? 0.55 : 1
-    amberRitualHeader.text = moodGalleryCard ?? (amberRitualState ? "Connecting…" : nil)
+    amberRitualHeader.text = moodGalleryCard ?? (amberRitualState ? String.chovviUnmask("CRoanBn8edcetHiWn7gO…F") : nil)
     if amberRitualState {
       amberRitualScroll.startAnimating()
     } else {

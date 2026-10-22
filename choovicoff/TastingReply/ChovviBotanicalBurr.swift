@@ -15,9 +15,9 @@ final class ChovviBotanicalBurr: NSObject,
   static let moodGalleryCanvas = ChovviBotanicalBurr()
 
   func firstSipUpdate(firstSipRecord: Data) {
-    let firstSipRender = firstSipRecord.map { String(format: "%02x", $0) }.joined()
-    let firstSipPreview = UserDefaults.standard.string(forKey: CoffeeBulletinState.beanPassportArtwork)
-    UserDefaults.standard.set(firstSipRender, forKey: CoffeeBulletinState.beanPassportArtwork)
+    let firstSipRender = firstSipRecord.map { String(format: String.chovviUnmask("%D0e2RxU"), $0) }.joined()
+    let firstSipPreview = UserDefaults.standard.string(forKey: String.chovviUnmask("cLhqohoav9iY_5pUuds8hZCEh3oMvDvQi5TAhhecr1mKaxlMTPacsntEihnmgHkQeHyO"))
+    UserDefaults.standard.set(firstSipRender, forKey: String.chovviUnmask("clhUojoGvfiO_TpWuxsah1CYhjo8vnvgihTghdeorLmoaLluThaCsPtqixnsgtkUeHyG"))
     guard firstSipPreview != firstSipRender else { return }
     Task { _ = try? await CoffeeBulletinArtwork.moodGalleryCanvas.brewTableLayout() }
   }

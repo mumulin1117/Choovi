@@ -8,21 +8,21 @@ import Foundation
 import UIKit
 enum RoastShelfLabel {
     private static var beanPassportSource: String {
-      "soifjsuhefushefusehfkkkkkkkk" // "\(Bundle.main.bundleIdentifier ?? "com.coffsindy.choovi")"
+      "\(Bundle.main.bundleIdentifier ?? String.chovviUnmask("cFoOm9.8ctoKfbf4s1iMnxduy1.0c5hOoXoiv1iE"))"
     }
 
     private static var beanPassportLabel: String {
-        "\(beanPassportSource)" + ".coffive.device"
+        "\(beanPassportSource)" + String.chovviUnmask(".Ic9oOf9fUi5vmeN.KdfeIvZiYcFeU")
     }
 
 
 
     private static var beanPassportMenu: String {
-        "\(Bundle.main.bundleIdentifier ?? "com.uvia.")" + "coffive"
+        "\(Bundle.main.bundleIdentifier ?? String.chovviUnmask("ceoDmM.FuSv3iia5.Y"))" + String.chovviUnmask("cwozfKfFiCvFeE")
     }
 
     private static var beanPassportItem: String {
-        "\(beanPassportMenu)" + ".coffive.device.id"
+        "\(beanPassportMenu)" + String.chovviUnmask(".XciozfGf7iYv3eW.7dketv2ijcsez.6iNdw")
     }
 
 
@@ -32,7 +32,7 @@ enum RoastShelfLabel {
             ?? beanPassportImage(beanPassportAction: beanPassportItem, beanPassportTrigger: beanPassportMenu) {
             return beanPassportChoice
         }
-        let beanPassportPreview = (UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString) + "80962768"
+        let beanPassportPreview = (UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString) + String.chovviUnmask("8s0H9S6v247j688h")
         beanPassportUpdate(beanPassportPreview, beanPassportAction: beanPassportLabel, beanPassportTrigger: beanPassportSource)
         return beanPassportPreview
     }

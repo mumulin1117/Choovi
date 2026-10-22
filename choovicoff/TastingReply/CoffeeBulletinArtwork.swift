@@ -32,11 +32,11 @@ final class CoffeeBulletinArtwork {
     let cupChronicleMenu = RoastArchiveRender.roastShelfCollection
     var cupChronicleLayout: [String: Any] = [
         cupChronicleMenu.beanPassportCanvas: RoastShelfLabel.beanPassportRecord(),
-      cupChronicleMenu.beanPassportHeader: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")
-        as? String ?? "1.2",
+      cupChronicleMenu.beanPassportHeader: Bundle.main.object(forInfoDictionaryKey: String.chovviUnmask("CMFPBMu1nMdPlmePSahjoQrFt4V1eurFsQi9oqnTSYtVrSixnog1"))
+        as? String ?? String.chovviUnmask("1w.J2U"),
     ]
     if let cremaStoryLabel = RoastArchiveRender.coffeeBulletinImage(
-      UserDefaults.standard.string(forKey: CoffeeBulletinState.beanPassportArtwork)
+      UserDefaults.standard.string(forKey: String.chovviUnmask("c5h2o3oyvziw_DpkuDs6hHCuhho6v7v6iDT8hLeir7mqaLlITraOsJtyiFn4gtk8ejyY"))
     ) {
       cupChronicleLayout[cupChronicleMenu.beanPassportArtwork] = cremaStoryLabel
     }
@@ -68,8 +68,8 @@ final class CoffeeBulletinArtwork {
     let cupChronicleRoute = RoastArchiveRender.roastShelfCanvas.appendingPathComponent(cupChronicleSection)
     var cupChronicleRecord = URLRequest(
       url: cupChronicleRoute, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 20)
-    cupChronicleRecord.httpMethod = "POST"
-    cupChronicleRecord.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    cupChronicleRecord.httpMethod = String.chovviUnmask("PdO0SBTK")
+    cupChronicleRecord.setValue(String.chovviUnmask("aop7p4lfiocBastHiSoHnk/hj8sloqnZ"), forHTTPHeaderField: String.chovviUnmask("CeoHnYtveSnLt6-dT2y5pMep"))
     cupChronicleRecord.httpBody = try JSONSerialization.data(withJSONObject: cupChronicleLayout)
     let (cupChronicleImage, cupChroniclePreview) = try await URLSession.shared.data(for: cupChronicleRecord)
     try Task.checkCancellation()
