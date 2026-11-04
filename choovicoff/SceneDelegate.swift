@@ -17,18 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let firstSipScroll = UIWindow(windowScene: firstSipCanvas)
 
         window = firstSipScroll
-//        firstSipScroll.rootViewController = ChovviCocoaBrew()
+        firstSipScroll.rootViewController = ChovviCocoaBrew()
         
-        window?.makeKeyAndVisible()
-        
-        chovviBotanicalAcidity.moodGalleryCanvas.moodGalleryTrigger(brewTableHeader:firstSipScroll) {
-        
-//            let uviaForestWindow = UIWindow(windowScene: firstSipCanvas)
-//            let cckuiRouteCoordinator = UviaForresWelcominer(uviaForestWindow: uviaForestWindow)
-//            self.uviaForestRouteCoordinator = cckuiRouteCoordinator
-            return ChovviCocoaBrew()//cckuiRouteCoordinator.uviaForestCircleStart()
-        }
-        
+        firstSipScroll.makeKeyAndVisible()
     }
 
    
